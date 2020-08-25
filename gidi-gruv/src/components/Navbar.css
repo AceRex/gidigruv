@@ -1,0 +1,22 @@
+.NavbarItems{
+    height: 70%;
+    background: var(--ColorWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--ColorPink);
+
+}
+ul{
+    list-style-type: none;
+
+}
+.navbar-logo{
+    justify-self: start;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.navbar-logo img{
+    height: 100px;
+}
