@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { MenuItems } from "./menuitems";
 import Logo from "../logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
 import "./Navbar.css";
 
 class Navbar extends Component {
-state = {clicked: false}
+  state = { clicked: false };
 
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
   render() {
     return (
@@ -17,9 +24,9 @@ state = {clicked: false}
           </Link>
         </nav>
         <div className="menu-icon" onClick={this.handleClick}>
-            <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+         <li>{this.state.clicked ? <FontAwesomeIcon icon={faTimes}/> : <FontAwesomeIcon icon={faBars}/>}</li> 
         </div>
-        <ul>
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
