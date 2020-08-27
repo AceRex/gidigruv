@@ -1,0 +1,29 @@
+.alice-carousel__dots{
+    display: none;
+}
+.card{
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+}
+.image-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img{
+    width: 300px;
+    height:300px;
+}
+.detailsBtn{
+    width: 120px;
+    background-color: var(--ColorWhite);
+    color: var(--ColorPink);
+    padding: 10px;
+    font-size: 12px ;
+}
+.detailsBtn:hover{
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+}
