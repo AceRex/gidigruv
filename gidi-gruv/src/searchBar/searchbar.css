@@ -1,0 +1,92 @@
+.searchbar {
+  display: flex;
+  background-color: var(--ColorWhite);
+  height: 90px;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  margin-top: -75px;
+  box-shadow: 1px 1px 20px #0c0c0c5d;
+  color: var(--ColorPurple);
+  padding: 10px 20px;
+}
+
+input {
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px var(--ColorPurple);
+  background-color: rgb(219, 219, 219);
+  padding: 10px;
+  color: var(--ColorPurple);
+  outline: none;
+  margin: 12px 0px;
+  width: 55%;
+  margin-right: 5px;
+}
+input::placeholder {
+  color: var(--ColorPurple);
+  opacity: 0.5;
+  font-weight: 500;
+}
+input:hover,
+select:hover {
+  box-shadow: 1px 1px 10px #48108d6e;
+}
+
+select {
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px var(--ColorPurple);
+  background-color: rgb(219, 219, 219);
+  padding: 9px;
+  color: var(--ColorPurple);
+  outline: none;
+  margin: 12px 0px;
+  width: 25%;
+  margin-right: 5px;
+}
+button {
+  height: 40px;
+  border-radius: 10px;
+  border: solid 0 transparent;
+  background-color: var(--ColorPurple);
+  padding: 10px;
+  color: var(--ColorWhite);
+  outline: none;
+  margin: 12px 0px;
+  width: 25%;
+  margin-right: 5px;
+  box-shadow: 1px 1px 10px #48108d88;
+}
+button:hover {
+  background-color: var(--ColorPink);
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 600px) {
+  .searchbar {
+    display: flex;
+    top: 22.5rem;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: var(--ColorWhite);
+    height: 90px;
+    border-radius: 0;
+    width: 100%;
+    color: var(--ColorPurple);
+    padding: 10px 20px;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px var(--ColorPurple);
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    color: var(--ColorPurple);
+    outline: none;
+    margin: 12px 0px;
+    width: 55%;
+    margin-right: 5px;
+  }
+}

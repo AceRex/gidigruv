@@ -16,8 +16,9 @@ function MainCarousel() {
         infiniteLoop={true}
         swipeable={true}
         showStatus={false}
+        showArrows={false}
       >
-        <div>
+        <div >
           <img src={Image1} />
         </div>
         <div>

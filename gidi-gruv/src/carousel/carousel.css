@@ -1,6 +1,7 @@
 
 .carousel{
     padding: 2px;
+    z-index: -1;
 }
 
 
