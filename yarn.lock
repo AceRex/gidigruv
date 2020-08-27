@@ -671,6 +671,11 @@ string-convert@^0.2.0:
   resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
   integrity sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=
 
+style-component@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/style-component/-/style-component-0.0.1.tgz#5157d893e9c3dd93b00446719f8357567ef18e57"
+  integrity sha1-UVfYk+nD3ZOwBEZxn4NXVn7xjlc=
+
 tiny-invariant@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"

@@ -1,30 +1,33 @@
-import React from "react";
-import { Carousel } from "antd";
-
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import './carousel.css'
+import Image1 from "./1.png";
+import Image2 from "./2.png";
+import Image3 from "./3.png";
 
 function MainCarousel() {
   return (
-    <Carousel autoplay>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
-    </Carousel>
+    <div className="carousel">
+      <Carousel
+        showThumbs={false}
+        autoPlay={true}
+        infiniteLoop={true}
+        swipeable={true}
+        showStatus={false}
+      >
+        <div>
+          <img src={Image1} />
+        </div>
+        <div>
+          <img src={Image2} />
+        </div>
+        <div>
+          <img src={Image3} />
+        </div>
+      </Carousel>
+    </div>
   );
 }
 export default MainCarousel;

@@ -1,0 +1,14 @@
+
+.carousel{
+    padding: 2px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .carousel{
+        padding: 0;
+        z-index: -1;
+        margin-top: 3px;
+    }
+
+}
