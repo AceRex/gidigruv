@@ -32,14 +32,16 @@ function Card(props) {
 }
 
 const SingleCard = styles.div`
-  width: 280px;
+  width: 290px;
+  height: 500px;
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
 
   .title{
     font-size: 20px;
-    font-weight: bold;
+    height: 80px;
+    overflow: hidden;
   }
   .liveNowHidden{
     padding: 5px;
@@ -89,15 +91,15 @@ const SingleCard = styles.div`
   display: flex;
 }
 .image-container{
-  width: 280px;
-  height: 280px;
+  width: 290px;
+  height: 290px;
   border-radius: 10px;
   overflow: hidden;
   background-color: #000000;
 }
 .img{
-  width: 280px;
-  height: 280px;
+  width: 290px;
+  height: 290px;
   opacity: 0.6;
 }
 .detailsBtn{
@@ -110,9 +112,14 @@ const SingleCard = styles.div`
 
 @media screen and (max-width: 600px) {
   width: 140px;
+  height: 400px;
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
+  
+  .title{
+    font-size: 15px;
+  }
 
   .image-container{
     width: 140px;
@@ -189,12 +196,12 @@ export default class CardSlider extends React.Component {
 }
 
 const Carousel = styles.div`
-height: 25rem;
+height: 28rem;
 overflow: hidden;
 
 
 @media screen and (max-width: 600px) {
   width: 99%;
-  height: 17rem;
+  height: 20rem;
 }
 `

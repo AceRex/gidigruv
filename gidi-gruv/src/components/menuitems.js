@@ -11,11 +11,11 @@ export const MenuItems = [
     },
     {
         title: 'About Us',
-        url: '/',
+        url: '/about',
         cName: 'nav-links',
     },
     {
-        title: 'Login / Register',
+        title: 'Sign in',
         url: '/',
         cName: 'nav-links',
     }

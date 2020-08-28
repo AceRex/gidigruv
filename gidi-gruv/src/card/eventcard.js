@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "styled-components";
 import { Link } from "react-router-dom";
 import Image1 from "../previewImages/1.png";
@@ -6,8 +6,13 @@ import Image2 from "../previewImages/2.png";
 import Image3 from "../previewImages/3.png";
 import Image4 from "../previewImages/4.png";
 import Image5 from "../previewImages/5.png";
+import Modal from 'react-bootstrap/Modal'
 
 function Card(props) {
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <SingleCard>
       <div className="image-container">
@@ -17,17 +22,26 @@ function Card(props) {
         <div className="title">{props.title}</div>
         <div className="date">Sun, Aug 30, 2020 12:00 AM WAT</div>
         <Link to="/">
-          <button className="detailsBtn">
+          <button className="detailsBtn" onClick={handleShow}>
             <p>Show details</p>
           </button>
         </Link>
       </div>
+      
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+        </Modal.Footer>
+      </Modal>
     </SingleCard>
   );
 }
 
 const SingleCard = styles.div`
-width: 300px;
+width: 30vw;
 margin: auto;
 border: transparent;
 border-radius: 10px;
@@ -68,15 +82,15 @@ font-weight: bold;
 display: flex;
 }
 .image-container{
-width: 300px;
+width: 100%;
 height: 300px;
 border-radius: 10px;
 overflow: hidden;
 background-color: #000000;
 }
 .img{
-width: 300px;
-height: 300px;
+width: 410px;
+height: 400px;
 opacity: 0.6;
 }
 .detailsBtn{
@@ -89,33 +103,37 @@ box-shadow: 1px 1px 10px #ff149183;
 }
 
 @media screen and (max-width: 600px) {
-width: 85px;
+width: 90vw;
 margin: auto;
 border-radius: 10px;
 overflow: hidden;
+display: flex;
+margin-top: 20px;
 
 .image-container{
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
   overflow: hidden;
   background-color: #000000;
 }
 .img{
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 
 }
 .detailsBtn{
-    width: 70px;
+    width: 100px;
     margin: auto;
 }
 .title{
     font-size: 10px;
     font-weight: bold;
+    padding:5px;
 }
-.location{
-    font-size: 10px;
+.date{
+    
+  padding:5px;
 }
 `;
 
@@ -166,6 +184,7 @@ color: var(--ColorPurple);
 
 const Row = styles.div`
 display: flex;
+flex-wrap: wrap;
 width: 95vw;
 margin: auto;
 padding: 10px 0px;
@@ -176,6 +195,10 @@ padding: 10px 0px;
     font-weight: 700;
     width: 100px;
     margin: auto;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
   }
 
 `;
