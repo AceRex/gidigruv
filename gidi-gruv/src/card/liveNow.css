@@ -18,3 +18,15 @@
 p{
     font-weight: 700;
 }
+
+@media screen and (max-width: 600px) {
+    .right{
+        border-radius: 9px;
+    }
+    p{
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+
+}

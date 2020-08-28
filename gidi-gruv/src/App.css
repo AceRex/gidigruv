@@ -8,8 +8,13 @@
     --ColorPurple: #48108d;
     --ColorPink: #ff1493;
     --ColorWhite: #fff;
+    
 }
 body{
     background: var(--ColorPurple);
     color: var(--ColorWhite);
+}
+.cover{
+    background-color: var(--ColorWhite);
+    
 }

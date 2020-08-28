@@ -4,6 +4,7 @@ import Header from './components/header'
 import Carousel from './carousel/carousel'
 import SearchBar from './searchBar/searchBar'
 import LiveNowCard from './card/liveNow'
+import EventCard from './card/eventcard'
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Carousel/>      
       <SearchBar/>
       <LiveNowCard/>
+      <div className="cover">
+      <EventCard />
+      </div>
     </div>
   );
 }
