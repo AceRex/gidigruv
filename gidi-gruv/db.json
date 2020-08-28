@@ -1,0 +1,102 @@
+{
+  "LiveNowPost":[
+    {
+      "id":"1",
+      "image": "./src/previewImages/1.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"2",
+      "image": "./src/previewImages/2.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"3",
+      "image": "./src/previewImages/3.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"4",
+      "image": "./src/previewImages/4.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"5",
+      "image": "./src/previewImages/5.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"6",
+      "image": "./src/previewImages/6.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"7",
+      "image": "./src/previewImages/7.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"8",
+      "image": "./src/previewImages/8.png",
+      "details":"",
+      "date":""
+    }
+  ],
+  "EventsPost":[
+    {
+      "id":"1",
+      "image": "./src/previewImages/1.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"2",
+      "image": "./src/previewImages/2.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"3",
+      "image": "./src/previewImages/3.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"4",
+      "image": "./src/previewImages/4.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"5",
+      "image": "./src/previewImages/5.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"6",
+      "image": "./src/previewImages/6.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"7",
+      "image": "./src/previewImages/7.png",
+      "details":"",
+      "date":""
+    },
+    {
+      "id":"8",
+      "image": "./src/previewImages/8.png",
+      "details":"",
+      "date":""
+    }
+  ]
+}

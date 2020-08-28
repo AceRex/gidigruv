@@ -3,8 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import styles from "styled-components";
 import "./cardSlider.css";
 import "react-alice-carousel/lib/alice-carousel.css";
-// import LocationOnIcon from "@material-ui/icons/LocationOn";
-
+import VideocamIcon from '@material-ui/icons/Videocam';
 import Image1 from "../previewImages/1.png";
 import Image2 from "../previewImages/2.png";
 import Image3 from "../previewImages/3.png";
@@ -17,7 +16,7 @@ function Card(props) {
     <SingleCard>
       <div className="image-container">
         <img src={props.src} className="img" />
-        <span className="liveNowHidden"> LIVE NOW</span>
+        <span className="liveNowHidden"> <p>LIVE NOW </p><VideocamIcon/></span>
       </div>
       <div className="details">
       <div className="title">{props.title}</div>
@@ -44,17 +43,20 @@ const SingleCard = styles.div`
     overflow: hidden;
   }
   .liveNowHidden{
-    padding: 5px;
+    padding: 3px;
     position:absolute;
     top:15rem;
     left:0px;
     z-index:5;
-    width: 70px;
+    width: 100px;
     background-color: var(--ColorPink);
     opacity: 100%;  
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 500;
     display:none;
+    p{
+      margin:auto;
+    }
     
   }
 :hover{  
@@ -62,10 +64,11 @@ const SingleCard = styles.div`
     color: var(--ColorPink);  
   transition: all 0.3s ease-in;
   .liveNowHidden{
-    display: block;
+    display: flex;
     color: var(--ColorWhite); 
     transition: all 1s ease-in;  
     transform: translateX(10px);
+    
   }
 
   .img{

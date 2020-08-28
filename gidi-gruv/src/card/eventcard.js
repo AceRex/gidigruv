@@ -1,44 +1,203 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "styled-components";
 import { Link } from "react-router-dom";
+import { EventcardData } from "./eventcardData";
+
+//modal
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import { useSpring, animated } from "react-spring/web.cjs"; // web.cjs is required for IE 11 support
+
+import Alert from "@material-ui/lab/Alert";
+
+//icons
+import ShareIcon from "@material-ui/icons/Share";
+
+//dummy Images
 import Image1 from "../previewImages/1.png";
 import Image2 from "../previewImages/2.png";
 import Image3 from "../previewImages/3.png";
 import Image4 from "../previewImages/4.png";
 import Image5 from "../previewImages/5.png";
-import Modal from 'react-bootstrap/Modal'
+
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+}));
+
+const Fade = React.forwardRef(function Fade(props, ref) {
+  const { in: open, children, onEnter, onExited, ...other } = props;
+  const style = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: open ? 1 : 0 },
+    onStart: () => {
+      if (open && onEnter) {
+        onEnter();
+      }
+    },
+    onRest: () => {
+      if (!open && onExited) {
+        onExited();
+      }
+    },
+  });
+
+  return (
+    <animated.div ref={ref} style={style} {...other}>
+      {children}
+    </animated.div>
+  );
+});
+
+Fade.propTypes = {
+  children: PropTypes.element,
+  in: PropTypes.bool.isRequired,
+  onEnter: PropTypes.func,
+  onExited: PropTypes.func,
+};
 
 function Card(props) {
-  const [show, setShow] = useState(false);
-  
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [show, setShow] = React.useState(false);
+
+
+  const FunctionClick = () =>{
+   setShow(false);
+  }
+
   return (
-    <SingleCard>
-      <div className="image-container">
-        <img src={props.src} className="img" />
-      </div>
-      <div className="details">
-        <div className="title">{props.title}</div>
-        <div className="date">Sun, Aug 30, 2020 12:00 AM WAT</div>
-        <Link to="/">
-          <button className="detailsBtn" onClick={handleShow}>
-            <p>Show details</p>
-          </button>
-        </Link>
-      </div>
-      
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
-      </Modal>
-    </SingleCard>
+    <>
+      <SingleCard>
+        <div className="image-container">
+          <img src={props.src} className="img" />
+        </div>
+        <div className="details">
+          <div className="title">{props.title}</div>
+          <div className="date">Sun, Aug 30, 2020 12:00 AM WAT</div>
+          <Link to="/">
+            <button className="detailsBtn" onClick={handleOpen}>
+              <p>Show details</p>
+            </button>
+            <Modal
+              className={classes.modal}
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 300,
+              }}
+            >
+              <Fade in={open}>
+                <MyModal>
+                  <div className="image-container">
+                    <img src={Image4} />
+                  </div>
+                  <div className="details">
+                    <p className="title">
+                      A FEMINIST'S GUIDE TO BOTANY Online Botanical Painting
+                      Session
+                    </p>
+                    <p className="time">Sun, Aug 30, 2020 12:00 AM WAT</p>
+                    <div className="btn">
+                      <button>
+                        <i class="far fa-share-square"></i> Share Event link
+                      </button>
+                      <button>
+                        <i class="far fa-heart" onClick={FunctionClick}></i> Save Event
+                      </button>
+                    </div>
+                  </div>
+                  <div show={show}>
+                  {FunctionClick ? <Alert variant="filled" className="success">
+                    This Event has been saved, you will be notified when event
+                    is about to start
+                  </Alert> : <div></div>}
+                  </div>
+                </MyModal>
+              </Fade>
+            </Modal>
+          </Link>
+        </div>
+      </SingleCard>
+    </>
   );
 }
+
+const MyModal = styles.div`
+background-color: white;
+width: 90vw;
+height: 70vh;
+border-radius: 15px;
+outline: none;
+display: flex;
+overflow: hidden;
+padding: 10px;
+.success{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--ColorPink);
+}
+.image-container{
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+  img{
+    width: 400px;
+    height: 400px;
+  }
+
+}
+.details{
+  width: 50%;
+  margin: auto;
+  color: var(--ColorPurple);
+  overflow: hidden;
+  .title{
+    width: 90%;
+    margin: auto;
+    height:50%;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px;
+
+  }
+  .time{
+    width: 90%;
+    margin: auto;
+    color: var(--ColorBlack);
+    padding: 10px;
+
+  }
+  .btn{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    button{
+      width: 45%;
+      margin: auto;
+    }
+  }
+}
+
+`;
 
 const SingleCard = styles.div`
 width: 30vw;
@@ -89,7 +248,7 @@ overflow: hidden;
 background-color: #000000;
 }
 .img{
-width: 410px;
+width: 400px;
 height: 400px;
 opacity: 0.6;
 }
@@ -142,27 +301,27 @@ function Events(props) {
     <Container>
       <p className="header">Upcoming Events</p>
       <Row>
-        <Card src={Image1} title='Events details goes Here' />
-        <Card src={Image2} title='Events details goes Here' />
-        <Card src={Image3} title='Events details goes Here'/>
+        <Card src={Image1} title="Events details goes Here" />
+        <Card src={Image2} title="Events details goes Here" />
+        <Card src={Image3} title="Events details goes Here" />
       </Row>
       <Row>
-        <Card src={Image5} title='Events details goes Here'/>
-        <Card src={Image1} title='Events details goes Here'/>
-        <Card src={Image4} title='Events details goes Here'/>
+        <Card src={Image5} title="Events details goes Here" />
+        <Card src={Image1} title="Events details goes Here" />
+        <Card src={Image4} title="Events details goes Here" />
       </Row>
       <Row>
-        <Card src={Image3} title='Events details goes Here'/>
-        <Card src={Image2} title='Events details goes Here'/>
-        <Card src={Image5} title='Events details goes Here'/>
+        <Card src={Image3} title="Events details goes Here" />
+        <Card src={Image2} title="Events details goes Here" />
+        <Card src={Image5} title="Events details goes Here" />
       </Row>
       <Row>
-        <Card src={Image5} title='Events details goes Here'/>
-        <Card src={Image4} title='Events details goes Here'/>
-        <Card src={Image3} title='Events details goes Here'/>
+        <Card src={Image5} title="Events details goes Here" />
+        <Card src={Image4} title="Events details goes Here" />
+        <Card src={Image3} title="Events details goes Here" />
       </Row>
       <Row>
-        <Link to="/" className='morebtn'>
+        <Link to="/" className="morebtn">
           See More
         </Link>
       </Row>
