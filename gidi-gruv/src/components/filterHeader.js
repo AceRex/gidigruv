@@ -71,7 +71,7 @@ function FilterHeader() {
         </div>
         <div className='search'>
             <SearchIcon />
-            <input />
+            <input placeholder='search...' />
         </div>
       </div>
     </>

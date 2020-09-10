@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
-import Header from '../components/header'
-import { Container } from '@material-ui/core'
-import FilterHeader from '../components/filterHeader'
-import LiveNowCard from './liveNowCards'
-
+import React, { Component } from "react";
+import Header from "../components/header";
+import FilterHeader from "../components/filterHeader";
+import LiveNowCard from "./liveNowCards";
+import "./live.css";
 
 class LiveNow extends Component {
   render() {
     return (
       <div style={mainStyle}>
-      <Header/>
-      <FilterHeader />
-      <LiveNowCard />
+        <Header />
+        <FilterHeader />
+        <div className="container">
+          <LiveNowCard />
+        </div>
       </div>
-    )
+    );
   }
 }
 
 const mainStyle = {
-    backgroundColor: "#fff",
-}
+  backgroundColor: "#fff",
+};
 
-export default LiveNow
+export default LiveNow;
