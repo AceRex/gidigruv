@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./App";
-import LiveNow from './liveNowPage'
+import LiveNow from './LiveNow/liveNowPage'
 import Coming from './upcomingEvents'
 import AboutUs from './About'
 

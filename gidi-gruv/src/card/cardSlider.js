@@ -3,33 +3,99 @@ import AliceCarousel from "react-alice-carousel";
 import styles from "styled-components";
 import "./cardSlider.css";
 import "react-alice-carousel/lib/alice-carousel.css";
-import VideocamIcon from '@material-ui/icons/Videocam';
-import Image1 from "../previewImages/1.png";
-import Image2 from "../previewImages/2.png";
-import Image3 from "../previewImages/3.png";
-import Image4 from "../previewImages/4.png";
-import Image5 from "../previewImages/5.png";
+import VideocamIcon from "@material-ui/icons/Videocam";
 import { Link } from "react-router-dom";
+import { Container } from "@material-ui/core";
 
-function Card(props) {
+const Datas = [
+  {
+    id: 0,
+    title: "Story Editing: How to Assess and Fix Your First Draft",
+    image: "../previewImages/1.png",
+  },
+  {
+    id: 1,
+    title: "Story Editing: How to Assess and Fix Your First Draft",
+    image: "../previewImages/1.png",
+  },
+  {
+    id: 2,
+    title: "Manifest 2020 Virtual Convention",
+    image: "./",
+  },
+  {
+    id: 3,
+    title: "A FEMINISTS GUIDE TO BOTANY Online Botanical Painting Session",
+    image: "./",
+  },
+  {
+    id: 4,
+    title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+    image: "./",
+  },
+  {
+    id: 5,
+    title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+    image: "./",
+  },
+
+  {
+    id: 6,
+    title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+    image: "./",
+  },
+
+  {
+    id: 7,
+    title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+    image: "./",
+  },
+
+  {
+    id: 8,
+    title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+    image: "./",
+  },
+
+  {
+    id: 9,
+    title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+    image: "./",
+  },
+
+  {
+    id: 10,
+    title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+    image: "./",
+  },
+];
+
+function Card() {
   return (
-    <SingleCard>
-      <div className="image-container">
-        <img src={props.src} className="img" />
-        <span className="liveNowHidden"> <p>LIVE NOW </p><VideocamIcon/></span>
-      </div>
-      <div className="details">
-      <div className="title">{props.title}</div>
-        <Link to="/">
-          <button className="detailsBtn">
-            <p>Show details</p>
-          </button>
-        </Link>
-      </div>
-    </SingleCard>
+    <>
+      {Datas.map((data) => (
+        <SingleCard>
+          <div className="image-container">
+            <img src={data.image} className="img" />
+            <span className="liveNowHidden">
+              {" "}
+              <p>LIVE NOW </p>
+              <VideocamIcon />
+            </span>
+          </div>
+          <div className="details">
+            <div className="title">{data.title}</div>
+            <Link to="/">
+              <button className="detailsBtn">
+                <p>Show details</p>
+              </button>
+            </Link>
+          </div>
+        </SingleCard>
+      ))}
+    </>
   );
 }
-
 const SingleCard = styles.div`
   width: 290px;
   height: 500px;
@@ -186,12 +252,7 @@ export default class CardSlider extends React.Component {
           onSlideChange={this.onSlideChange}
           onSlideChanged={this.onSlideChanged}
         >
-          <Card src={Image1} title='Story Editing: How to Assess and Fix Your First Draft' />
-          <Card src={Image2} title='Manifest 2020 Virtual Convention'/>
-          <Card src={Image3} title='A FEMINISTS GUIDE TO BOTANY Online Botanical Painting Session'/>
-          <Card src={Image4} title='Avec la chaîne de blocs, imaginons le Québec de demain'/>
-          <Card src={Image5} title='2020 National Police K9 Day - Fallen K9 Memorial Run'/>
-          <Card src={Image3} title='Story Editing: How to Assess and Fix Your First Draft'/>
+          <Card />
         </AliceCarousel>
       </Carousel>
     );
@@ -207,4 +268,4 @@ overflow: hidden;
   width: 99%;
   height: 20rem;
 }
-`
+`;
