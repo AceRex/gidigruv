@@ -5,6 +5,8 @@ import App from "./App";
 import LiveNow from './LiveNow/liveNowPage'
 import Coming from './upcomingEvents'
 import AboutUs from './About'
+import PreviewPage from './preview/preview'
+import SignIn from './Sign/SignIn'
 
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
@@ -16,6 +18,10 @@ ReactDOM.render(
       <Route path="/livenow" component={LiveNow} />
       <Route path="/coming" component={Coming} />
       <Route path="/about" component={AboutUs} />
+      <Route path="/showevent" component={PreviewPage} />
+      <Route path="/signin" component={SignIn} />
+
+
 
 
     </Switch>

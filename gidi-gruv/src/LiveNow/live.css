@@ -27,16 +27,18 @@
     background-color: #d3d3d3;
     color: #fff;
     margin: 7px;
-    font-size: 13px;
+    font-size: 12px;
     padding: 3px;
     border-radius: 5px;
 }
 .viewer{
     display: flex;
     margin: 7px 0px;
+    font-size: 12px;
+
 }
 .viewer > small{
-    margin: 3px 2px;
+    margin: 6px 2px;
 }
 .container {
   display: flex;

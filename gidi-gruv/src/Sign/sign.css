@@ -1,0 +1,12 @@
+.signin-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.slider{
+    width:40%;
+}
+.form{
+    width: 60%;
+    background-color: #fff;
+}
