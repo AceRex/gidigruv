@@ -7,6 +7,7 @@ import Coming from './upcomingEvents'
 import AboutUs from './About'
 import PreviewPage from './preview/preview'
 import SignIn from './Sign/SignIn'
+import Register from './Sign/register'
 
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
@@ -20,6 +21,8 @@ ReactDOM.render(
       <Route path="/about" component={AboutUs} />
       <Route path="/showevent" component={PreviewPage} />
       <Route path="/signin" component={SignIn} />
+      <Route path="/register" component={Register} />
+
 
 
 
