@@ -19,7 +19,11 @@ const select = [
   },
   {
     id: 3,
-    option: "Less Viewed",
+    option: "Free",
+  },
+  {
+    id: 4,
+    option: "Paid",
   },
 ];
 
