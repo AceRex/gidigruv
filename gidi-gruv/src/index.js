@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./App";
 import LiveNow from './LiveNow/liveNowPage'
-import Coming from './upcomingEvents'
+import Coming from './upcomingEvents/upcomingEvents'
 import AboutUs from './About'
 import PreviewPage from './preview/preview'
 import SignIn from './Sign/SignIn'
