@@ -3,11 +3,17 @@ import "./sign.css";
 import { Link } from "react-router-dom";
 import Logo from "../previewImages/6.png";
 import TextLoop from "react-text-loop";
+import HomeIcon from '@material-ui/icons/Home';
 
 function SignIn() {
   return (
     <div className="regcontainer">
       <div className="slider">
+      <div className='home'>
+          <Link to='/'>
+          <p>Back to home <HomeIcon style={{fontSize:'15px'}}/></p>
+          </Link>
+        </div>
         <div className="logo">
           <Link to="/">
             <img src={Logo} />
@@ -27,6 +33,11 @@ function SignIn() {
         </div>
       </div>
       <div className="form">
+      <div className='home'>
+          <Link to='/'>
+          <p>Back to home <HomeIcon style={{fontSize:'15px'}}/></p>
+          </Link>
+        </div>
         <div className="register">
           <p>
             Already a Member? <Link to="/signin">Sign in Here</Link>

@@ -5,6 +5,7 @@
 }
  a{    
     text-decoration: none;
+    margin: auto;
 }
 .video-container{
     overflow: hidden;

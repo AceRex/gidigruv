@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../previewImages/7.png";
 import SVG from "../previewImages/image.svg";
 import TextLoop from "react-text-loop";
+import HomeIcon from '@material-ui/icons/Home';
 
 function SignIn() {
   return (
@@ -28,6 +29,11 @@ function SignIn() {
         </div>
       </div>
       <div className="form">
+        <div className='home'>
+          <Link to='/'>
+          <p>Back to home <HomeIcon style={{fontSize:'15px'}}/></p>
+          </Link>
+        </div>
         <div className="register">
           <p>
             Not register? <Link to="/register">Sign Up Here</Link>
