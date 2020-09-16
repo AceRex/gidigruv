@@ -11,7 +11,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 class Navbar extends Component {
-  state = { clicked: false, isLoggedin: true};
+  state = { clicked: false, isLoggedin: true };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
@@ -20,7 +20,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-      {!this.state.isLoggedin ? 
+      {this.state.isLoggedin ? 
       <nav className="NavbarItems">
       <nav className="navbar-logo">
         <Link to="/">
@@ -35,12 +35,11 @@ class Navbar extends Component {
           return (
             <li key={index}>
               <Link to={item.url} className={item.cName}>
-                {item.title}
+                {item.title} {item.username}
               </Link>
             </li>
           );
         })}
-        <li className='user'>Hello</li>
       </ul>
     </nav>
     :

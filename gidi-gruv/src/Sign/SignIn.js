@@ -36,7 +36,7 @@ function SignIn() {
         </div>
         <div className="register">
           <p>
-            Not register? <Link to="/register">Sign Up Here</Link>
+            Not registered? <Link to="/register">Sign Up Here</Link>
           </p>
         </div>
         <div className="signinform">

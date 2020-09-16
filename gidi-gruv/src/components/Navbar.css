@@ -23,7 +23,7 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 80vw;
+  width: 87vw;
   justify-content: end;
   margin-right: 2rem;
 }
@@ -39,6 +39,16 @@
   color: var(--ColorWhite);
   background-color: var(--ColorPink);
   transition: all 0.2s ease-out;
+}
+.user{
+  background-color: var(--ColorPink);
+  color: #fff;
+  padding: 13px;
+  border-radius: 4px;
+
+}
+.user:hover{
+  background-color: #da0c7a;
 }
 .nav-links-mobile {
   display: none;

@@ -13,5 +13,12 @@ export const LoggedIn = [
         title: 'About Us',
         url: '/about',
         cName: 'nav-links',
+    },
+    {
+        title: 'Hello,',
+        url: '/dashboard',
+        username: 'Oluwasegun',
+        cName: 'nav-links user',
     }
+
 ]
