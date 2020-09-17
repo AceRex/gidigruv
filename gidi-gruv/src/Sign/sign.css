@@ -97,10 +97,10 @@
 
 .registerform {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 120px;
   justify-items: center;
   align-items: center;
-  width: 80%;
+  width: 70%;
 }
 .label {
   color: var(--ColorPink) !important;
@@ -113,17 +113,9 @@
   background-color: var(--ColorPurple) !important;
   box-shadow: 2px 2px 10px var(--ColorPurple);
 }
-.entry {
-  display: flex;
-  margin: auto;
-  width: 70%;
-}
 
-.entry > .form-group {
-  margin: -10px;
-}
-.entry > .form-group > input {
-  width: 90%;
+.registerform > form > .form-group {
+  margin: -2px 0px;
 }
 
 .registerform > form > .form-group > input {

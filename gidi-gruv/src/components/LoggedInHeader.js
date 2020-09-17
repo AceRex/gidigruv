@@ -17,7 +17,7 @@ export const LoggedIn = [
     {
         title: 'Hello,',
         url: '/dashboard',
-        username: 'Oluwasegun',
+        username: 'username',
         cName: 'nav-links user',
     }
 

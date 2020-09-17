@@ -16,32 +16,32 @@ class LiveNowCard extends Component {
       {
         id: 1,
         video: "/Images/2.png",
-        viewers: "100 viewers",
+        viewers: "100 attending",
         categories: "Paid",
       },
       {
         id: 2,
         video: "/Images/3.png",
-        viewers: "50 viewers",
+        viewers: "50 attending",
         categories: "Paid",
       },
       {
         id: 3,
         video: "/Images/4.png",
-        viewers: "1000 viewers",
+        viewers: "1000 attending",
         categories: "Free",
       },
       {
         id: 4,
         video: "/Images/5.png",
-        viewers: "10,000 viewers",
+        viewers: "10,000 attending",
         categories: "Free",
       },
 
       {
         id: 5,
         video: "/Images/6.png",
-        viewers: "20 viewers",
+        viewers: "20 attending",
         categories: "Paid",
       },
 
@@ -62,14 +62,14 @@ class LiveNowCard extends Component {
       {
         id: 8,
         video: "/Images/2.png",
-        viewers: "10 viewers",
+        viewers: "10 attending",
         categories: "Paid",
       },
 
       {
         id: 9,
         video: "/Images/2.png",
-        viewers: "657 viewers",
+        viewers: "657 attending",
         categories: "Paid",
       },
     ],

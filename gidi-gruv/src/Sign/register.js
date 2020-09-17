@@ -45,16 +45,10 @@ function SignIn() {
         </div>
         <div className="registerform">
           <form >
-            <div className="entry">
-              <div className="form-group">
-                <label className="label">Name</label>
-                <input type="text" placeholder="Email / Username here..." />
-              </div>
               <div className="form-group">
                 <label className="label">Username</label>
                 <input type="text" placeholder="Email / Username here..." />
               </div>
-            </div>
             <div className="form-group">
               <label className="label">Email</label>
               <input type="email" placeholder="Email / Username here..." />

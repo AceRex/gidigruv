@@ -11,7 +11,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 class Navbar extends Component {
-  state = { clicked: false, isLoggedin: true };
+  state = { clicked: false, isLoggedin: false };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
