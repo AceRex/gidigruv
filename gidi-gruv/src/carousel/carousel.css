@@ -1,7 +1,11 @@
 
 .carousel{
     padding: 2px;
-    z-index: -1;
+    height: 30rem;
+    overflow: hidden;
+}
+.carousel > .imageContainer > .img {
+    height: 30rem;
 }
 
 

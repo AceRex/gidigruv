@@ -10,24 +10,16 @@ import Image3 from "./3.png";
 function MainCarousel() {
   return (
     <div className="carousel">
-      <Carousel
-        showThumbs={false}
-        autoPlay={true}
-        infiniteLoop={true}
-        swipeable={true}
-        showStatus={false}
-        showArrows={false}
-      >
-        <div >
+      
+        {/* <div >
           <img src={Image1} />
+        </div> */}
+        <div className='imageContainer'>
+          <img src={Image2} className='img' />
         </div>
-        <div>
-          <img src={Image2} />
-        </div>
-        <div>
+        {/* <div>
           <img src={Image3} />
-        </div>
-      </Carousel>
+        </div> */}
     </div>
   );
 }

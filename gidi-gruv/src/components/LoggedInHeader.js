@@ -10,13 +10,8 @@ export const LoggedIn = [
         cName: 'nav-links',
     },
     {
-        title: 'About Us',
-        url: '/about',
-        cName: 'nav-links',
-    },
-    {
-        title: 'Hello,',
         url: '/dashboard',
+        image: './images/7.png',
         username: 'username',
         cName: 'nav-links user',
     }

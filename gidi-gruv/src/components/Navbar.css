@@ -25,6 +25,7 @@
   text-align: center;
   width: 87vw;
   justify-content: end;
+  align-items: center;
   margin-right: 2rem;
 }
 
@@ -41,14 +42,16 @@
   transition: all 0.2s ease-out;
 }
 .user{
-  background-color: var(--ColorPink);
-  color: #fff;
-  padding: 13px;
-  border-radius: 4px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.user:hover{
-  background-color: #da0c7a;
+.user > img {
+  border: 2px;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50px;
 }
 .nav-links-mobile {
   display: none;
