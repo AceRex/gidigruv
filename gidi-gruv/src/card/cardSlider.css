@@ -1,3 +1,24 @@
-.alice-carousel__dots{
-    display: none;
+.sliderCard {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sliderCard > .image-container{
+  width: 250px;
+  height: 250px;
+}
+.sliderCard > .image-container > img{
+  width: 250px;
+  height: 250px;
+  transform: translate(-100px, 0px);
+}
+.sliderCard > .details{
+  width: 250px;
+  height: 250px;
+  position: relative;
+  background-color: #00000056;
 }
