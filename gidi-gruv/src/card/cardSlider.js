@@ -107,26 +107,28 @@ class Gallery extends React.Component {
         autoPlaySpeed={2000}
       >
         {this.state.items.map((data) => (
-          
           <div className="sliderCard" onMouseEnter={Show}>
+            {/* Hoover Part */}
+
             <div className="details">
-              <span className="liveNowHidden" handleShow={handleShow}>
-                <p>LIVE NOW </p>
-                <VideocamIcon />
-              </span>
               <div className="title">{data.title}</div>
-              <Link to="/">
-                <button className="detailsBtn">
-                  <p>Show details</p>
-                </button>
-              </Link>
+              <span className="liveNowHidden" handleShow={handleShow}>
+                <p>
+                  <span>LIVE NOW</span>
+                  <VideocamIcon />
+                </p>
+                <Link to="/">
+                  <button>
+                    <p>Show details</p>
+                  </button>
+                </Link>
+              </span>
             </div>
-            
+            {/* Image Part */}
+
             <div className="image-container">
               <img src={data.image} />
             </div>
-
-            
           </div>
         ))}
       </Carousel>
