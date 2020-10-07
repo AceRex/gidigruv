@@ -42,7 +42,7 @@ class Gallery extends React.Component {
           responsive={responsive}
           arrows={false}
           infinite={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={3000}
         >
           {liveCard}
         </Carousel>
