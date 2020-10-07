@@ -1,44 +1,43 @@
-.card{    
-    width: 280px;
-    height: 300px;
-    margin: 13px 10px;
+a {
+  text-decoration: none;
 }
- a{    
-    text-decoration: none;
+a > .card {
+  width: 150px;
+  height: 300px;
+  margin: 13px 40px;
 }
-.video-container{
-    overflow: hidden;
-    border-radius: 10px;
-    width: 280px;
-    height: 250px;
-    margin: auto;
+.video-container {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 280px;
+  height: 250px;
+  margin: auto;
 }
-.video-container > img{    
-    width: 280px;
-    height: 250px;
+.video-container > img {
+  width: 280px;
+  height: 250px;
 }
-.details{
-    display: flex;
-    color: #aaa;   
-    justify-content: space-between; 
+.details {
+  display: flex;
+  color: #aaa;
+  justify-content: space-between;
 }
 
-.details > p{
-    background-color: #d3d3d3;
-    color: #fff;
-    margin: 7px;
-    font-size: 12px;
-    padding: 3px;
-    border-radius: 5px;
+.details > p {
+  background-color: #d3d3d3;
+  color: #fff;
+  margin: 7px;
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 5px;
 }
-.viewer{
-    display: flex;
-    margin: 7px 0px;
-    font-size: 12px;
-
+.viewer {
+  display: flex;
+  margin: 7px 0px;
+  font-size: 12px;
 }
-.viewer > small{
-    margin: 6px 2px;
+.viewer > small {
+  margin: 6px 2px;
 }
 .container {
   display: flex;
@@ -49,8 +48,7 @@
 }
 
 @media screen and (max-width: 960px) {
-
-    .card{
-        margin: 25px auto;
-    }
+  .card {
+    margin: 25px auto;
+  }
 }

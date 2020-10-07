@@ -60,3 +60,5 @@ const Datas = [
       image: "/Images/1.png",
     },
   ];
+
+  export default Datas

@@ -10,6 +10,15 @@
 .sliderCard > .image-container{
   width: 250px;
   height: 250px;
+  margin-top: -250px;
+}
+.anim{
+  transform: translateY(250px);
+  transition: all linear 0.4s;
+}
+.anim-out{
+  transform: translateY(0px);
+  transition: all linear 0.4s;
 }
 .sliderCard > .image-container > img{
   width: 250px;
@@ -48,4 +57,70 @@
   color: var(--ColorWhite);
   padding: 3px 5px;
   cursor: pointer;
+}
+.Event-cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  width: 92%;
+  margin: auto;
+}
+.EventCard{
+  width: 280px;
+  height: 300px;
+  overflow: hidden; 
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px #0000002d;
+  margin-bottom: 15px;
+}
+.EventCard > .image-container{
+  width: 280px;
+  height: 170px;
+  margin: auto;
+  align-items: center;
+  overflow: hidden;
+
+}
+.EventCard > .image-container >img{
+  width: 280px;
+  height: 250px;
+}
+
+.EventCard > .Eventdetails{  
+  padding: 10px 20px;
+  color: #adabab;
+
+}
+.EventCard > .Eventdetails > p{
+  color: #5c5b5b;
+  text-align: left;
+  font-size: 18px;
+  height: 68px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.EventCard > .Eventdetails > .bottom{
+  
+}
+.EventCard > .Eventdetails > .date{
+  font-size: 13px;
+  font-weight: normal;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .sliderCard{
+    width: 180px;
+  height: 180px;
+  }
+  .sliderCard > .image-container{
+    width: 180px;
+    height: 180px;
+  }
+  .sliderCard > .image-container > img{
+    width: 180px;
+    height: 180px;
+  }
 }
