@@ -10,7 +10,7 @@ class LiveNow extends Component {
       <div style={mainStyle}>
         <Header />
         <FilterHeader />
-        <div style={container}>
+        <div>
           <LiveNowCard />
         </div>
       </div>
@@ -20,13 +20,6 @@ class LiveNow extends Component {
 
 const mainStyle = {
   backgroundColor: "#fff",
-  heigth: '100vh',
 };
-const container = {
-  width: '87%',
-  margin: 'auto',
-  display: 'flex',
-  flexWrap: 'wrap',
-}
 
 export default LiveNow;

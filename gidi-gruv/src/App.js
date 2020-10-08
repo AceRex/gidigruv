@@ -4,6 +4,7 @@ import Header from './components/header'
 import Carousel from './carousel/carousel'
 import LiveNowCard from './card/liveNow'
 import EventCard from './card/eventcard'
+import EventCart from './eventCategoryList/eventCategory'
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
       <Carousel/>   
       <LiveNowCard/>
       <div className="cover">
-      <EventCard />
+      <EventCard />      
+      <EventCart />
       </div>
+      
     </div>
   );
 }

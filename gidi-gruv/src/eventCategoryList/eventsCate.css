@@ -1,0 +1,21 @@
+.other-pages{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.other-pages > span{
+    color: #141414;
+    width: 32%;
+    padding: 15px 3%;
+    margin: auto;
+    cursor: pointer;
+}
+.other-pages > span:hover{
+    transform: translateX(10px);
+    background-color: #aaa;
+    color: #fff;
+    transition: all linear 0.5s;
+}

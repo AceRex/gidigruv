@@ -20,7 +20,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-      {this.state.isLoggedin ? 
+      {!this.state.isLoggedin ? 
       <nav className="NavbarItems">
       <nav className="navbar-logo">
         <Link to="/">

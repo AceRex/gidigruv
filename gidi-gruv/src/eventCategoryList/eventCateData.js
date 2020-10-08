@@ -1,0 +1,23 @@
+const items=  [
+    {item: 'Tech'},
+    {item: 'Music'},
+    {item: 'Sports'},
+    {item: 'Social'},
+    {item: 'Conferences'},
+    {item: 'Health & Lifestyle'},
+    {item: 'Trade Shows'},
+    {item: 'Workshops'},
+    {item:'Seminars'},
+    {item:'Commemorative events'},
+    {item:'Product Launch'},
+    {item:'Awareness'},
+    {item:'Lifestyle'},
+    {item:'Corporate off-sites '},
+    {item:'Executive meetings'},
+    {item:'Career & Business'},
+    {item:'Exhibiton'},
+    {item:'Family'},
+    {item:'Religious'},
+    {item:'Movements'},
+]
+export default items

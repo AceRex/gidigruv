@@ -68,7 +68,7 @@
   margin: auto;
 }
 .EventCard{
-  width: 280px;
+  width: 260px;
   height: 300px;
   overflow: hidden; 
   border-radius: 10px;
@@ -76,7 +76,7 @@
   margin-bottom: 15px;
 }
 .EventCard > .image-container{
-  width: 280px;
+  width: 260px;
   height: 170px;
   margin: auto;
   align-items: center;
@@ -84,7 +84,8 @@
 
 }
 .EventCard > .image-container >img{
-  width: 280px;
+  width: 260px;
+  margin: auto;
   height: 250px;
 }
 
