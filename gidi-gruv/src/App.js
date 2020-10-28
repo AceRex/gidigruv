@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Carousel />
       <EventByCategory />
-      <LiveNow id='#Live'/>
+      <LiveNow/>
       <EventsNearYou />
     </div>
   );

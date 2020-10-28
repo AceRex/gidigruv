@@ -15,7 +15,7 @@ export default class EventByCategory extends React.Component {
             <br /> Near You
           </p>
           <div className="category-cards">
-              
+             
           </div>
         </div>
       </div>
