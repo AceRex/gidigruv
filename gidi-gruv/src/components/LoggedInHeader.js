@@ -1,9 +1,7 @@
 export const LoggedIn = [
-    
-    {
-        url: '/dashboard',
-        image: './images/7.png',
-        username: 'username',
+        {
+        image: './images/5.png',
+        username: 'John Doe',
         cName: 'nav-links user',
     }
 

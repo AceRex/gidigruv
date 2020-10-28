@@ -1,72 +1,116 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { MenuItems } from "./NotLoggedInHeader";
+import { NotLoggedIn } from "./NotLoggedInHeader";
 import { LoggedIn } from "./LoggedInHeader";
-
-import Logo from "../logo.png";
+import Logo from "../headerLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-
 import "./Navbar.css";
 
 class Navbar extends Component {
-  state = { clicked: false, isLoggedin: true };
+  constructor() {
+    super();
+    this.state = {
+      clicked: false,
+      isLoggedin: true,
+      StaticMenu: [{menu: 'Live Events', url: '#Live'}, {menu: 'Events Near you', url: '/eventsnearyou'} ]
+    };
+  }
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
-
   render() {
     return (
       <>
-      {!this.state.isLoggedin ? 
-      <nav className="NavbarItems">
-      <nav className="navbar-logo">
-        <Link to="/">
-          <img src={Logo} />
-        </Link>
-      </nav>
-      <div className="menu-icon" onClick={this.handleClick}>
-       <li>{this.state.clicked ? <FontAwesomeIcon icon={faTimes}/> : <FontAwesomeIcon icon={faBars}/>}</li> 
-      </div>
-      <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-        {LoggedIn.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link to={item.url} className={item.cName}>
-                {item.title} <img src={item.image} /> {item.username}
+        {this.state.isLoggedin ? (
+          <nav className="NavbarItems">
+            <nav className="navbar-logo">
+              <Link to="/">
+                <img src={Logo} />
               </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-    :
-      <nav className="NavbarItems">
-        <nav className="navbar-logo">
-          <Link to="/">
-            <img src={Logo} />
-          </Link>
-        </nav>
-        <div className="menu-icon" onClick={this.handleClick}>
-         <li>{this.state.clicked ? <FontAwesomeIcon icon={faTimes}/> : <FontAwesomeIcon icon={faBars}/>}</li> 
-        </div>
-        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link to={item.url} className={item.cName}>
-                  {item.title}
-                </Link>
+            </nav>
+            <nav className="navbar-static-link">
+              {this.state.StaticMenu.map((item) => {
+                return(
+                  <li>
+                  <Link to={item.url}>
+                  {item.menu}
+                  </Link>
+                 </li>
+                )
+               
+              })}
+            </nav>
+            <div className="menu-icon" onClick={this.handleClick}>
+              <li>
+                {this.state.clicked ? (
+                  <FontAwesomeIcon icon={faTimes} />
+                ) : (
+                  <FontAwesomeIcon icon={faBars} />
+                )}
               </li>
-            );
-          })}
-        </ul>
-      </nav>
-      
-    }
-    </>
+            </div>
+            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+              <>
+                <li> Create Event
+                </li>
+                {LoggedIn.map((item, index) => {
+                  return (
+                    <li key={index} onMouseOver={this.handleOnHover}>
+                      <div className={item.cName}>
+                        {item.username} <img src={item.image} />
+                      </div>
+                    </li>
+                  );
+                })}
+              </>
+            </ul>
+          </nav>
+        ) : (
+          <nav className="NavbarItems">
+            <nav className="navbar-logo">
+              <Link to="/">
+                <img src={Logo} />
+              </Link>
+            </nav>            
+            <nav className="navbar-static-link">
+              {this.state.StaticMenu.map((item) => {
+                return(
+                  <li>
+                  <Link to={item.url}>
+                  {item.menu}
+                  </Link>
+                 </li>
+                )
+               
+              })}
+            </nav>
+            <div className="menu-icon" onClick={this.handleClick}>
+              <li>
+                {this.state.clicked ? (
+                  <FontAwesomeIcon icon={faTimes} />
+                ) : (
+                  <FontAwesomeIcon icon={faBars} />
+                )}
+              </li>
+            </div>
+            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+              
+              {NotLoggedIn.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link to={item.url} className={item.cName}>
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        )}
+      </>
     );
   }
 }
