@@ -5,6 +5,7 @@ import Carousel from "./carousel/carousel";
 import EventByCategory from "./eventByCategory/EventByCategory";
 import LiveNow from "./LiveNow/livenow";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <EventByCategory />
       <LiveNow/>
       <EventsNearYou />
+      <Footer />
     </div>
   );
 }

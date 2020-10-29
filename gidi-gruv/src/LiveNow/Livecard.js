@@ -4,10 +4,11 @@ import { GrLocationPin } from "react-icons/gr";
 import { HiOutlineUpload } from "react-icons/hi";
 import { IoIosHeart } from "react-icons/io";
 import { TiTime } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 export default function Card(props) {
   return (
-    <div className="LiveCard">
+    <Link to='/showeventdetails' className="LiveCard">
       <div className="top-details">
         <div className="sub">
           <p>{props.pay}</p>
@@ -36,6 +37,6 @@ export default function Card(props) {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

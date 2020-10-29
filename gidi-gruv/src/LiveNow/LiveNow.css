@@ -1,4 +1,8 @@
-
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .Live-container {
   width: 97%;
   margin: auto;
@@ -19,6 +23,7 @@
   border-radius: 10px;
   overflow: hidden;
   margin: 15px;
+  text-decoration: none;
 }
 
 .LiveCard > .image-container {
@@ -96,4 +101,31 @@
   border-radius: 25%;
   padding: 0.3rem 10px;
   text-align: center;
+}
+.load-more{
+  background-color: #c3b6fc;
+  color: var(--ColorPurple);
+  border: none;
+  padding: 20px;
+  margin: auto;
+  margin-top: 5rem;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.load-more:hover{
+  background-color: var(--ColorPurple);
+  color: var(--ColorWhite);
+  transition: all linear 0.2s;
+}
+
+@media screen and (max-width: 960px) {
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
+  .LiveCard{
+    width: 90%;
+  }
 }

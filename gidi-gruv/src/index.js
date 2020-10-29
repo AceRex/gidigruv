@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./App";
 import AboutUs from './About'
-import PreviewPage from './preview/preview'
+import SED from './showEventDetails/SED'
 import SignIn from './Sign/SignIn'
 import Register from './Sign/register'
 import Dashboard from './dashboard/dashboard'
@@ -16,7 +16,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" exact component={App} />
       <Route path="/about" component={AboutUs} />
-      <Route path="/showevent" component={PreviewPage} />
+      <Route path="/showeventdetails" component={SED} />
       <Route path="/signin" component={SignIn} />
       <Route path="/register" component={Register} />
       <Route path="/dashboard" component={Dashboard} />

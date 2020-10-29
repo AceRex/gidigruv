@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import LiveCard from './Livecard'
+import { Link } from 'react-router-dom'
 import './LiveNow.css'
 
 
@@ -15,7 +16,7 @@ export default class EventByCategory extends React.Component {
         pay: 'PAID',
         MM: 'JUN',
         DD: '12',
-        location: "Ikeja, Lagos. NG",
+        location: "Kuje, Abuja. NG",
         time: '08:00pm'
       },
       {
@@ -35,7 +36,7 @@ export default class EventByCategory extends React.Component {
         img: "/Images/12.jpg",
         MM: 'AUG',
         DD: '10',
-        location: "Ikeja, Lagos. NG",
+        location: "Dugbe, Oyo. NG",
         time: '08:00pm'
       },
       {
@@ -45,7 +46,7 @@ export default class EventByCategory extends React.Component {
         img: "/Images/13.jpg",
         MM: 'MAR',
         DD: '16',
-        location: "Ikeja, Lagos. NG",
+        location: "Surulere, Lagos. NG",
         time: '08:00pm'
       },
       {
@@ -65,7 +66,7 @@ export default class EventByCategory extends React.Component {
         pay: 'PAID',
         MM: 'DEC',
         DD: '26',
-        location: "Ikeja, Lagos. NG",
+        location: "New Karu, Abuja. NG",
         time: '08:00pm'
       },
     
@@ -76,7 +77,7 @@ export default class EventByCategory extends React.Component {
         pay: 'FREE',
         MM: 'APR',
         DD: '09',
-        location: "Ikeja, Lagos. NG",
+        location: "Kwamba, Abuja. NG",
         time: '08:00pm'
       },
     
@@ -87,7 +88,7 @@ export default class EventByCategory extends React.Component {
         pay: 'FREE',
         MM: 'OCT',
         DD: '05',
-        location: "Ikeja, Lagos. NG",
+        location: "Tafo, Kumasi. GH",
         time: '08:00pm'
       },
     
@@ -98,7 +99,7 @@ export default class EventByCategory extends React.Component {
         pay: 'PAID',
         MM: 'NOV',
         DD: '12',
-        location: "Ikeja, Lagos. NG",
+        location: "Lekki, Lagos. NG",
         time: '08:00pm'
       },
     
@@ -109,7 +110,7 @@ export default class EventByCategory extends React.Component {
         pay: 'PAID',
         MM: 'FEB',
         DD: '12',
-        location: "Ikeja, Lagos. NG",
+        location: "Gbawe, Accra. GH",
         time: '08:00pm'
       },
     
@@ -120,7 +121,7 @@ export default class EventByCategory extends React.Component {
         pay: 'FREE',
         MM: 'MAY',
         DD: '20',
-        location: "Ikeja, Lagos. NG",
+        location: "Molete, Oyo. NG",
         time: '08:00pm'
       },
       {
@@ -130,7 +131,7 @@ export default class EventByCategory extends React.Component {
         pay: 'FREE',
         MM: 'JAN',
         DD: '01',
-        location: "Ikeja, Lagos. NG",
+        location: "Lapaz, Accra. GH",
         time: '08:00pm'
       }
     ]
@@ -145,12 +146,15 @@ export default class EventByCategory extends React.Component {
           <p>
             Live Now
           </p>
-          <div className="category-cards">
+          <div className="cards">
             {this.state.Datas.map((items) => {
               return(                
               <LiveCard pay={items.pay} img={items.img} MM={items.MM} DD={items.DD} title={items.title} location={items.location} time={items.time}/>
               )
             })}
+            <Link to='/' className="load-more">
+              Load More Events
+            </Link>
           </div>
         </div>
       </div>

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { NotLoggedIn } from "./NotLoggedInHeader";
 import { LoggedIn } from "./LoggedInHeader";
 import Logo from "../headerLogo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
 
 class Navbar extends Component {
@@ -46,9 +44,9 @@ class Navbar extends Component {
             <div className="menu-icon" onClick={this.handleClick}>
               <li>
                 {this.state.clicked ? (
-                  <FontAwesomeIcon icon={faTimes} />
+                  <FaTimes />
                 ) : (
-                  <FontAwesomeIcon icon={faBars} />
+                  <FaBars />
                 )}
               </li>
             </div>
@@ -90,9 +88,9 @@ class Navbar extends Component {
             <div className="menu-icon" onClick={this.handleClick}>
               <li>
                 {this.state.clicked ? (
-                  <FontAwesomeIcon icon={faTimes} />
+                  <FaTimes />
                 ) : (
-                  <FontAwesomeIcon icon={faBars} />
+                  <FaBars />
                 )}
               </li>
             </div>
