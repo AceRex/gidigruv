@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/header";
 import Carousel from "./carousel/carousel";
@@ -7,7 +7,14 @@ import LiveNow from "./LiveNow/livenow";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";
 import Footer from "./components/footer";
 
-function App() {
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      loading : true,
+    }
+  }
+  render(){
   return (
     <div className="App">
       <Header />
@@ -18,6 +25,7 @@ function App() {
       <Footer />
     </div>
   );
+}
 }
 
 export default App;

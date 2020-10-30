@@ -4,17 +4,26 @@ import Footer from "../components/footer";
 import "./SED.css";
 import Img from "./10.jpg";
 import { TiTime } from "react-icons/ti";
-import { GrLocationPin } from "react-icons/gr";
 import { BsCalendarFill, BsCameraVideoFill } from "react-icons/bs";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import { HiOutlineUpload } from "react-icons/hi";
 import { IoIosHeart } from "react-icons/io";
 import { Link } from "react-router-dom";
+import SameCate from "./samecategory/samecategory";
+import SameLocation from "./samelocation/sameLocation";
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import { GrLocationPin } from "react-icons/gr";
+import TabSelect from './Tabs'
+
+
 
 class ShowEventDetails extends React.Component {
   constructor() {
     super();
+    this.state = {
+    };
+
   }
+
   render() {
     const containerStyle = {
       position: "relative",
@@ -81,19 +90,20 @@ class ShowEventDetails extends React.Component {
 
                 <InfoWindow onClose={this.onInfoWindowClose}>
                   {/* <div>
-                  <h1>{this.state.selectedPlace.name}</h1>
-                </div> */}
+              <h1>{this.state.selectedPlace.name}</h1>
+            </div> */}
                 </InfoWindow>
               </Map>
             </div>
           </div>
-          
         </div>
-        {/* <Footer /> */}
+        <TabSelect />
+        <Footer />
       </>
     );
   }
 }
+
 export default GoogleApiWrapper({
   apiKey: "AIzaSyC5yIoWOoZvzfKIwot1znM466dbuhQsUAs",
 })(ShowEventDetails);

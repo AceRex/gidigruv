@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import './LiveNow.css'
 
 
+
 export default class EventByCategory extends React.Component {
   constructor() {
     super();
@@ -11,7 +12,7 @@ export default class EventByCategory extends React.Component {
       Datas : [
       {
         id: 0,
-        title: "MUSIC CONCERT",
+        title: {},
         img: "/Images/10.jpg",
         pay: 'PAID',
         MM: 'JUN',
@@ -21,7 +22,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 1,
-        title: "Story Editing: How to Assess and Fix Your First Draft",
+        title: {},
         img: "/Images/11.jpg",
         pay: 'FREE',
         MM: 'SEP',
@@ -31,7 +32,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 2,
-        title: "Manifest 2020 Virtual Convention",
+        title: {},
         pay: 'PAID',
         img: "/Images/12.jpg",
         MM: 'AUG',
@@ -41,7 +42,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 3,
-        title: "A FEMINISTS GUIDE TO BOTANY Online Botanical Painting Session",
+        title: {},
         pay: 'PAID',
         img: "/Images/13.jpg",
         MM: 'MAR',
@@ -51,7 +52,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 4,
-        title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+        title: {},
         img: "/Images/14.jpg",
         pay: 'FREE',
         MM: 'JUL',
@@ -61,7 +62,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 5,
-        title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+        title: {},
         img: "/Images/15.jpg",
         pay: 'PAID',
         MM: 'DEC',
@@ -72,7 +73,7 @@ export default class EventByCategory extends React.Component {
     
       {
         id: 6,
-        title: "Avec la chaîne de blocs, imaginons le Québec de demain",
+        title: {},
         img: "/Images/9.jpg",
         pay: 'FREE',
         MM: 'APR',
@@ -83,7 +84,7 @@ export default class EventByCategory extends React.Component {
     
       {
         id: 7,
-        title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+        title: {},
         img: "/Images/16.jpg",
         pay: 'FREE',
         MM: 'OCT',
@@ -94,7 +95,7 @@ export default class EventByCategory extends React.Component {
     
       {
         id: 8,
-        title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+        title: {},
         img: "/Images/17.jpg",
         pay: 'PAID',
         MM: 'NOV',
@@ -105,7 +106,7 @@ export default class EventByCategory extends React.Component {
     
       {
         id: 9,
-        title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+        title: {},
         img: "/Images/18.jpg",
         pay: 'PAID',
         MM: 'FEB',
@@ -116,7 +117,7 @@ export default class EventByCategory extends React.Component {
     
       {
         id: 10,
-        title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+        title: {},
         img: "/Images/19.jpg",
         pay: 'FREE',
         MM: 'MAY',
@@ -126,7 +127,7 @@ export default class EventByCategory extends React.Component {
       },
       {
         id: 11,
-        title: "2020 National Police K9 Day - Fallen K9 Memorial Run",
+        title: {},
         img: "/Images/15.jpg",
         pay: 'FREE',
         MM: 'JAN',
@@ -137,6 +138,16 @@ export default class EventByCategory extends React.Component {
     ]
   }
    
+  }
+  
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/albums')
+    .then(response => response.json())
+    .then( data =>
+      this.setState({
+        title: data
+      })
+    )
   }
 
   render() {
@@ -149,7 +160,7 @@ export default class EventByCategory extends React.Component {
           <div className="cards">
             {this.state.Datas.map((items) => {
               return(                
-              <LiveCard pay={items.pay} img={items.img} MM={items.MM} DD={items.DD} title={items.title} location={items.location} time={items.time}/>
+              <LiveCard key={items.id} pay={items.pay} img={items.img} MM={items.MM} DD={items.DD} title={items.title.title} location={items.location} time={items.time}/>
               )
             })}
             <Link to='/' className="load-more">
