@@ -124,9 +124,6 @@ export default class EventByCategory extends React.Component {
     return (
       <div className="container">
         <div className="Live-container">
-          <p>
-            Same Location
-          </p>
           <div className="cards">
             {this.state.Datas.map((items) => {
               return(                

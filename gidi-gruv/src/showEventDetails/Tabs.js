@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import './SED.css'
 import SameCate from './samecategory/samecategory'
@@ -7,26 +7,32 @@ import SameLoc from './samelocation/sameLocation'
 
   
 
-export default function TabSelect(){
-    const[active, setActive] = useState('#ffffff6e')
-
-    const handleActive = (active) => {
-        setActive('#fff');
+export default class TabSelect extends Component{
+  constructor(){
+    super()
+    this.state = {
+      active: ' ', 
+      click: true,     
     }
+    this.handleActive = this.handleActive.bind(this)
+  }
+  handleActive(){
+   this.setState({
+         active: 'active'
+   })
+  }
+  handleNotActive(){
+    this.setState({
+      active: 'null'
 
-    const list = {
-        marginRight: "2rem",
-        fontSize: 25,
-        borderbottom: 'solid 2px transparent', 
-        color: `${active}`,
-        cursor: 'pointer',
-    
-      };
-    return(
+    })
+  }
+    render(){
+      return(
         <Tabs>
-          <TabList style={styles}>
-            <Tab style={list} >Events by Category</Tab>
-            <Tab style={list} >Events by Location </Tab>
+          <TabList className='hello'>
+            <Tab className={this.state.active} onClick={this.state.click ? this.handleActive : this.handleNotActive }>Same Category</Tab>
+            <Tab className={this.state.active} onClick={this.state.click ? this.handleActive : this.handleNotActive }>Same Location </Tab>
           </TabList>
 
           <TabPanel>
@@ -37,6 +43,8 @@ export default function TabSelect(){
           </TabPanel>
         </Tabs>
     )
+    }
+    
 }
 const styles = {
     display: "flex",

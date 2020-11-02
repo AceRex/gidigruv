@@ -117,8 +117,12 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
+.hello{
+  display: flex;
+}
 .active{
-  color: #fff;
+  color: var(--ColorPink);
 }
 @media screen and (max-width: 960px) {
   .SED-container {

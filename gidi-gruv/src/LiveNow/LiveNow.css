@@ -122,7 +122,6 @@
   color: var(--ColorWhite);
   transition: all linear 0.2s;
 }
-
 @media screen and (max-width: 960px) {
   .cards{
     display: flex;
