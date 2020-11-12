@@ -1,7 +1,11 @@
-.cards{
+.Live-container > .cards{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+}
+.Live-container > .cards > .swiper-wrapper{
+  width: 100%;
 }
 .Live-container {
   width: 97%;
@@ -74,7 +78,7 @@
 }
 .LiveCard > .top-details {
   display: flex;
-  width: 25%;
+  width: 21.5%;
   justify-content: space-between;
   position: absolute;
   color: #fff;
@@ -83,7 +87,7 @@
 .LiveCard > .top-details > .sub > p {
   background-color: #fff;
   padding: 5px 13px;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 700;
   color: #363535;
   border-radius: 10px;
@@ -96,7 +100,7 @@
 .LiveCard > .top-details > .share-like > span {
   color: #363535;
   background-color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   margin: 0px 5px;
   border-radius: 25%;
   padding: 0.3rem 10px;

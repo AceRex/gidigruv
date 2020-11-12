@@ -31,8 +31,8 @@ export default class TabSelect extends Component{
       return(
         <Tabs>
           <TabList className='hello'>
-            <Tab className={this.state.active} onClick={this.state.click ? this.handleActive : this.handleNotActive }>Same Category</Tab>
-            <Tab className={this.state.active} onClick={this.state.click ? this.handleActive : this.handleNotActive }>Same Location </Tab>
+            <Tab>Same Category</Tab>
+            <Tab>Same Location </Tab>
           </TabList>
 
           <TabPanel>

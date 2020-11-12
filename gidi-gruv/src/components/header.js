@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { NotLoggedIn } from "./NotLoggedInHeader";
 import { LoggedIn } from "./LoggedInHeader";
-import Logo from "../headerLogo.png";
+import Logo from "../logo.png";
 import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
 
@@ -12,7 +12,6 @@ class Navbar extends Component {
     this.state = {
       clicked: false,
       isLoggedin: true,
-      StaticMenu: [{menu: 'Live Events', url: '#Live'}, {menu: 'Events Near you', url: '/eventsnearyou'} ]
     };
   }
 
@@ -29,18 +28,6 @@ class Navbar extends Component {
                 <img src={Logo} />
               </Link>
             </nav>
-            <nav className="navbar-static-link">
-              {this.state.StaticMenu.map((item) => {
-                return(
-                  <li>
-                  <Link to={item.url}>
-                  {item.menu}
-                  </Link>
-                 </li>
-                )
-               
-              })}
-            </nav>
             <div className="menu-icon" onClick={this.handleClick}>
               <li>
                 {this.state.clicked ? (
@@ -52,15 +39,13 @@ class Navbar extends Component {
             </div>
             <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
               <>
-                <li> Create Event
-                </li>
                 {LoggedIn.map((item, index) => {
                   return (
-                    <li key={index} onMouseOver={this.handleOnHover}>
+                    <Link to={item.link} key={index} onMouseOver={this.handleOnHover}>
                       <div className={item.cName}>
                         {item.username} <img src={item.image} />
                       </div>
-                    </li>
+                    </Link>
                   );
                 })}
               </>
@@ -72,19 +57,7 @@ class Navbar extends Component {
               <Link to="/">
                 <img src={Logo} />
               </Link>
-            </nav>            
-            <nav className="navbar-static-link">
-              {this.state.StaticMenu.map((item) => {
-                return(
-                  <li>
-                  <Link to={item.url}>
-                  {item.menu}
-                  </Link>
-                 </li>
-                )
-               
-              })}
-            </nav>
+            </nav> 
             <div className="menu-icon" onClick={this.handleClick}>
               <li>
                 {this.state.clicked ? (

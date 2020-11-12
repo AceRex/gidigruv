@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, IndexRoute, Switch } from "react-router-dom";
 import App from "./App";
-import AboutUs from './About'
+import AboutUs from './About/About'
 import SED from './showEventDetails/SED'
 import SignIn from './Sign/SignIn'
 import Register from './Sign/register'

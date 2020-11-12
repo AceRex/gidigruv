@@ -14,10 +14,13 @@
     
 }
 body{
-    background: var(--ColorPurple);
+    background: var(--ColorWhite);
     color: var(--ColorWhite);
 }
 .cover{
-    background-color: var(--ColorWhite);
-    
+    background-color: var(--ColorWhite);    
+}
+.container {
+    min-width: fit-content;
+    background-color: #fafafa; 
 }

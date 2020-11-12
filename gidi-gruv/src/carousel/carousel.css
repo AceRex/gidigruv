@@ -1,5 +1,6 @@
 
 .carousel{
+    background-color: var(--ColorPurple);
     padding: 2px;
     height: 30rem;
     overflow: hidden;

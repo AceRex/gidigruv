@@ -1,0 +1,61 @@
+.evn-container{
+    width: 70%;
+    margin: auto;
+} 
+.evn-container > p{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size:25px ;
+    font-weight: 700;
+    padding-left: 2rem;
+    color:  var(--ColorPurple);
+}
+.evn-container > p > span{
+   color: var(--ColorPink);
+
+}
+.evn-container > .cards > .react-tabs{
+    min-width: 100%;
+    margin: auto;
+}
+.evn-container > .cards > .react-tabs > .react-tabs__tab-list{
+    display: flex;
+    min-width: 57%;
+    margin-left: 13rem;
+    color: var(--ColorPurple);
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.evn-container > .cards > .react-tabs > .react-tabs__tab-list > li{
+    padding:  5px 20px;
+    cursor: pointer;
+}
+.evn-container > .cards > .react-tabs > .react-tabs__tab-list > 
+.react-tabs__tab--selected{
+color: var(--ColorPink);
+font-weight: bold;
+}
+.evn-container > .cards > .react-tabs > .react-tabs__tab-panel{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.load-more-btn {
+    width: 25%;
+    margin: auto;
+}
+.load-more-btn > button{
+    background-color: #c3b6fc;
+    color: var(--ColorPurple);
+    border: none;
+    width: 100%;    
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    outline: none;
+}

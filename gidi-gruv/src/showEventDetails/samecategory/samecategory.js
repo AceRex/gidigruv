@@ -92,6 +92,7 @@ export default class EventByCategory extends React.Component {
             {this.state.Datas.map((items) => {
               return (
                 <LiveCard
+                  key= {items.id}
                   pay={items.pay}
                   img={items.img}
                   MM={items.MM}
@@ -104,7 +105,7 @@ export default class EventByCategory extends React.Component {
             })}
           </div>
         </div>
-          <button className="load-more">Load More Events</button>
+          <button className="load-more" >Load More Events</button>
       </div>
     );
   }
