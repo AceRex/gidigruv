@@ -122,6 +122,7 @@ export default class EventByCategory extends React.Component {
 
   render() {
     return (
+      <>
       <div className="container">
         <div className="Live-container">
           <div className="cards">
@@ -132,11 +133,12 @@ export default class EventByCategory extends React.Component {
             })}
             
           </div>
-          <Link to='/' className="load-more">
-              Load More Events
-            </Link>
         </div>
       </div>
+      <div className='load-more'>
+      <button className="load-more-btn" >Load More Events</button>
+      </div>
+      </>
     );
   }
 }

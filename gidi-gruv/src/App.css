@@ -22,5 +22,5 @@ body{
 }
 .container {
     min-width: fit-content;
-    background-color: #fafafa; 
+    /* background-color: #FAFAFA;  */
 }

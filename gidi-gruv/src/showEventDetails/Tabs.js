@@ -30,11 +30,11 @@ export default class TabSelect extends Component{
     render(){
       return(
         <Tabs>
-          <TabList className='hello'>
-            <Tab>Same Category</Tab>
-            <Tab>Same Location </Tab>
+          <p>You May Also Like:</p>
+          <TabList>
+            <Tab>Events from Same Category</Tab>
+            <Tab>Events from Same Location </Tab>
           </TabList>
-
           <TabPanel>
             <SameCate />
           </TabPanel>
@@ -45,20 +45,4 @@ export default class TabSelect extends Component{
     )
     }
     
-}
-const styles = {
-    display: "flex",
-    padding: "2rem 0rem",
-    listStyleType: "none",
-  };
-
-const container = {
-    width: '85%',
-    margin: 'auto'
-}
-
-
-const activeList = {
-    color: '#fff',
-    borderbottom: 'solid 2px var(--ColorPink)', 
 }

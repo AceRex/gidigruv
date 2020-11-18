@@ -1,0 +1,101 @@
+import React, { Component, useState } from "react";
+import Header from "../components/header";
+import Preview from "./imageUpload";
+import Select from "react-select";
+import Date from "./DatePicker";
+
+export default class CreateEvent extends Component {
+  constructor() {
+    super();
+    this.state = {
+      LoggedIn: true,
+    };
+  }
+
+  render() {
+    const options = [
+      { value: "Entertainment", label: "Entertainment" },
+      { value: "Business Seminar", label: "Business Seminar" },
+      { value: "Art", label: "Art" },
+      { value: "Music", label: "Music" },
+      { value: "Life Style", label: "Life Style" },
+      { value: "Technology", label: "Technology" },
+      { value: "Religious", label: "Religious" },
+      { value: "Sports", label: "Sports" },
+      { value: "Health Care and Medical", label: "Health Care and Medical" },
+      { value: "Workshop", label: "Workshop" },
+    ];
+    return (
+      <>
+        <Header />
+        <div className="CE-container">
+          <form className="CE-form">
+            <div className="CE-form-left">
+              <Preview />
+              <div className="Ev-des ">
+                <label>Give us the full details of this Event :</label>
+                <textarea cols="5" rows="7" />
+              </div>
+            </div>
+            <div className="CE-form-right">
+              <div className="form-group">
+                <label>What's the Title/Theme of this Event?</label>
+                <input
+                  type="text"
+                  maxlength="65"
+                  placeholder="Enter Title of Event Here"
+                  className="Ev-title"
+                />
+              </div>
+              <div className="form-group">
+                <label>Select Category of Event</label>
+                <Select options={options} />
+              </div>
+              <div className="form-group">
+                <label>
+                  If this Event will be physical, Where will it hold?{" "}
+                  <small>(Kindly Enter Address in Full)</small>
+                </label>
+                <input
+                  type="address"
+                  maxlength="65"
+                  placeholder="Enter Full Address to Event Here"
+                  className="Ev-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>
+                  If this event will be online, Kindly Enter the Link to the
+                  Event
+                </label>
+                <input
+                  type="link"
+                  maxlength="65"
+                  placeholder="Enter Link to Event"
+                  className="Ev-input"
+                />
+              </div>
+              <div className="form-group">
+                <label>Select the correct date and time of the Event</label>
+                <Date />
+              </div>
+            </div>
+          </form>
+          <hr />
+          <div className='payment-info'>
+            
+          </div>
+          <div className="btn">
+            <button type="reset" className="reset-btn">
+              Reset
+            </button>
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  }
+}

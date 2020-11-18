@@ -1,0 +1,212 @@
+.CE-form {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+}
+hr{
+    width: 80%;
+    margin: 2rem auto;
+    border: solid 3px #e2e1e1;
+}
+
+.container {
+    margin: 1rem auto;
+}
+.CE-form label {
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.CE-form .form-group {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+.CE-form>.CE-form-right, .CE-form>.CE-form-left {
+    width: 50%;
+}
+
+.CE-form-left {
+    display: table;
+}
+
+.CE-form-left>.Ev-des {
+    width: 70%;
+    margin: auto;
+}
+
+.Ev-des textarea {
+    width: 100%;
+    margin: auto;
+    resize: none;
+    border: solid 2px #e2e1e1;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.CE-form>.CE-form-right {
+    padding: 2rem;
+    display: table;
+}
+
+.CE-form>.CE-form-right .Ev-title {
+    width: 80%;
+    padding: 9px 5px;
+    outline: none;
+    border: solid 2px #e2e1e1;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.CE-form>.CE-form-right .Ev-title::placeholder {
+    color: #e2e1e1;
+}
+
+.css-2b097c-container {
+    color: #cfb4cf;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    width: 80%;
+}
+
+.css-yk16xz-control {
+    border: solid 2px #e2e1e1 !important;
+    border-radius: 10px !important;
+}
+
+.css-1uccc91-singleValue {
+    color: #aaa;
+}
+
+.css-1pahdxg-control {
+    border: solid 2px #aaa !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+}
+
+.css-2613qy-menu {
+    color: red;
+}
+
+.react-calendar__navigation {
+    color: var(--ColorWhite);
+}
+
+.react-calendar__tile--active {
+    background-color: var(--ColorPurple) !important;
+    color: var(--ColorWhite) !important;
+}
+
+.react-calendar__tile--now {
+    background-color: #fdabd7 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: var(--ColorPink) !important;
+    font-weight: 600;
+}
+
+
+.Ev-input {
+    width: 80%;
+    padding: 9px 5px;
+    outline: none;
+    border: solid 2px #e2e1e1;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Ev-input::placeholder {
+    color: #e2e1e1;
+    font-weight: 600;
+}
+
+.container>.dropzone {
+    outline: none;
+    text-align: center;
+    border: solid 2px #e2e1e1;
+    border-radius: 10px;
+    color: #e2e1e1;
+    overflow: hidden;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    padding: 2rem 0px;
+    background-color: var(--ColorPurple);
+}
+
+.btn {
+    display: flex;
+    width: 90%;
+    margin: 2rem 0px;
+}
+
+.btn > button {
+    margin: 2rem;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.btn  .reset-btn {
+    background-color: #eaeaea;
+    color: var(--ColorPurple);
+}
+.btn  .submit-btn {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+}
+
+.container>.dropzone>.icon {
+    font-size: 60px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 700px;
+    height: 145px;
+}
+
+.image-container>.thumb {
+    display: inline-flex;
+    border-radius: 2px;
+    border: 1px solid #eaeaea;
+    margin-right: 8px;
+    margin-top: 0px;
+    margin-left: 8px;
+    width: 489px;
+    margin: auto;
+    height: 300px;
+    padding: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 5.6rem;
+}
+
+.image-container>.thumb>.thumbInner {
+    display: flex;
+    overflow: hidden;
+}
+
+.image-container>.thumb>.thumbInner>img {
+    width: 100%;
+}

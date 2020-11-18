@@ -11,6 +11,7 @@ import Dashboard from './dashboard/dashboard'
 
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
+import CreateEvent from "./createEvent/createEvent";
 
 ReactDOM.render(
   <Router>
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/" exact component={App} />
       <Route path="/about" component={AboutUs} />      
       <Route path="/signin" component={SignIn} />
+      <Route path="/create-event" component={CreateEvent} />
       <Route path="/register" component={Register} />
       <Route path="/showeventdetails" component={SED} />
       <Route path="/dashboard" component={Dashboard} />

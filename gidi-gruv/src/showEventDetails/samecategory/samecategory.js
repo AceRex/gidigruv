@@ -86,6 +86,7 @@ export default class EventByCategory extends React.Component {
 
   render() {
     return (
+     <> 
       <div className="container">
         <div className="Live-container">
           <div className="cards">
@@ -105,8 +106,12 @@ export default class EventByCategory extends React.Component {
             })}
           </div>
         </div>
-          <button className="load-more" >Load More Events</button>
+          
       </div>
+      <div className='load-more'>
+      <button className="load-more-btn" >Load More Events</button>
+      </div>
+      </>
     );
   }
 }

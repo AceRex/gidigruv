@@ -1,0 +1,21 @@
+.react-datetime-picker{
+    width: 80%;
+    border: solid 2px #e2e1e1 !important;
+    padding: 8px 5px;
+    color: var(--ColorPurple);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.react-datetime-picker__wrapper{
+    border: none !important;
+}
+.react-datetime-picker__inputGroup{
+    width: 70%;
+}
+.react-datetime-picker__inputGroup__input{
+    outline: none !important;
+}
+.react-datetime-picker__inputGroup > button{
+    color: var(--ColorPurple);
+}
