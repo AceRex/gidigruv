@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
+import Header from "../components/header";
+import "./categoryPage.css";
+import { GoSearch } from "react-icons/go";
 import LiveCard from "../LiveNow/Livecard";
-import "./EventsNear.css";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Footer from "../components/footer";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-export default class EventByCategory extends React.Component {
+export default class CategoryPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -115,7 +118,7 @@ export default class EventByCategory extends React.Component {
         {
           id: 4,
           title: "Avec la chaîne de blocs, imaginons le Québec de demain",
-          img: "/Images/1.jpg",
+          img: "/Images/11.jpg",
           pay: "FREE",
           MM: "JUL",
           DD: "30",
@@ -125,7 +128,7 @@ export default class EventByCategory extends React.Component {
         {
           id: 5,
           title: "Avec la chaîne de blocs, imaginons le Québec de demain",
-          img: "/Images/2.jpg",
+          img: "/Images/10.jpg",
           pay: "PAID",
           MM: "DEC",
           DD: "26",
@@ -201,85 +204,68 @@ export default class EventByCategory extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="evn-container">
-          <p>Upcoming Events <span>Near You</span></p>
-          <div className="cards">
-            <Tabs>
-              <TabList>
-              <Tab>All Categories</Tab>
-              <Tab>Paid</Tab>
-              <Tab>Free</Tab>
-              <Tab>Today</Tab>
-              <Tab>Tommorrow</Tab>
-
-            </TabList>
-            <TabPanel>
-              {this.state.All.map((items) => {
-              return (
-                <LiveCard
-                  pay={items.pay}
-                  img={items.img}
-                  MM={items.MM}
-                  DD={items.DD}
-                  title={items.title}
-                  location={items.location}
-                  time={items.time}
-                />
-              );
-            })}
-            <div className="load-more-btn">
-          <button>Load More</button>
-        </div>
-            </TabPanel>
-            <TabPanel>
-              {this.state.Paid.map((items) => {
-              return (
-                <LiveCard
-                  pay={items.pay}
-                  img={items.img}
-                  MM={items.MM}
-                  DD={items.DD}
-                  title={items.title}
-                  location={items.location}
-                  time={items.time}
-                />
-              );
-            })}
-            <div className="load-more-btn">
-          <button>Load More</button>
-        </div>
-            </TabPanel>
-            <TabPanel>
-              {this.state.Free.map((items) => {
-              return (
-                <LiveCard
-                  pay={items.pay}
-                  img={items.img}
-                  MM={items.MM}
-                  DD={items.DD}
-                  title={items.title}
-                  location={items.location}
-                  time={items.time}
-                />
-              );
-            })}
-            <div className="load-more-btn">
-          <button>Load More</button>
-        </div>
-            </TabPanel>
-            <TabPanel>
-              No Events Available
-            </TabPanel>
-            <TabPanel>
-              No Events Available
-            </TabPanel>
-            </Tabs>
-            
+      <>
+        <Header />
+        <div className="cat-container">
+          <div className="cat-bg">
+            <div className="cat-search">
+              <GoSearch className="icon" />
+              <input placeholder="Search" maxLength="60" />
+            </div>
           </div>
+          <section className="cat-content">
+            <div className="cat-title">
+              <h2>Entertainment</h2>
+              <small>Category</small>
+            </div>
+              <Tabs className='cat-tab-container'>
+                <TabList className='cat-tab'>
+                  <Tab>All Categories</Tab>
+                  <Tab>Paid</Tab>
+                  <Tab>Free</Tab>
+                  <Tab>This Month</Tab>
+                  <Tab>This Week</Tab>
+                </TabList>
+                <TabPanel className="cat-items">
+                  {this.state.Free.map((items) => {
+                    return (
+                      <LiveCard
+                        pay={items.pay}
+                        img={items.img}
+                        MM={items.MM}
+                        DD={items.DD}
+                        title={items.title}
+                        location={items.location}
+                        time={items.time}
+                      />
+                    );
+                  })}
+                </TabPanel>
+              </Tabs>
+            <div className="cat-title">
+              <h2>
+                By Location - <p>Accra, GH</p>
+              </h2>
+            </div>
+            <div className="cat-items">
+              {this.state.All.map((items) => {
+                return (
+                  <LiveCard
+                    pay={items.pay}
+                    img={items.img}
+                    MM={items.MM}
+                    DD={items.DD}
+                    title={items.title}
+                    location={items.location}
+                    time={items.time}
+                  />
+                );
+              })}
+            </div>
+          </section>
         </div>
-        
-      </div>
+        <Footer />
+      </>
     );
   }
 }

@@ -20,16 +20,16 @@ export default class EventByCategory extends React.Component {
     super();
     this.state = {
       Categories: [
-        { category: "Entertainment", color: "var(--ColorPink)", link: '/',icon: <GiFilmSpool/>},
-        { category: "Business Seminar", color: '#9F11E1', link: '/', icon: <MdBusinessCenter />},
-        { category: "Art", color: '#9F11E1', link: '/', icon: <FaDrawPolygon />},
-        { category: "Music", color: '#9F11E1', link: '/', icon: <GiMusicalNotes />},
-        { category: "Life Style", color: '#E99108', link: '/', icon: <GiLifeBuoy/>},
-        { category: "Technology", color: '#0817E9', link: '/', icon: <ImConnection/>},
-        { category: "Religious", color: 'var(--ColorPurple)', link: '/', icon: <BiChurch/>},
-        { category: "Sports", color: '#9F11E1', link: '/', icon: <BiBasketball/>},
-        { category: "Health Care and Medical", color: '#0817E9', link: '/', icon: <IoIosThermometer/>},
-        { category: "Workshop", color: 'var(--ColorPink)', link: '/', icon: <AiOutlineShop/>},
+        { category: "Entertainment", color: "var(--ColorPink)", link: '/category-page',icon: <GiFilmSpool/>},
+        { category: "Business Seminar", color: '#9F11E1', link: '/category-page', icon: <MdBusinessCenter />},
+        { category: "Art", color: '#9F11E1', link: '/category-page', icon: <FaDrawPolygon />},
+        { category: "Music", color: '#9F11E1', link: '/category-page', icon: <GiMusicalNotes />},
+        { category: "Life Style", color: '#E99108', link: '/category-page', icon: <GiLifeBuoy/>},
+        { category: "Technology", color: '#0817E9', link: '/category-page', icon: <ImConnection/>},
+        { category: "Religious", color: 'var(--ColorPurple)', link: '/category-page', icon: <BiChurch/>},
+        { category: "Sports", color: '#9F11E1', link: '/category-page', icon: <BiBasketball/>},
+        { category: "Health Care and Medical", color: '#0817E9', link: '/category-page', icon: <IoIosThermometer/>},
+        { category: "Workshop", color: 'var(--ColorPink)', link: '/category-page', icon: <AiOutlineShop/>},
 
       ],
     };
@@ -45,7 +45,7 @@ export default class EventByCategory extends React.Component {
           <div className="category-cards">
               {this.state.Categories.map((items) => {
                   return(
-                    <Card category={items.category} link={items.link} color={items.color} icon={items.icon}/>
+                    <Card category={items.category} Link={items.link} color={items.color} icon={items.icon}/>
                    
                   )
               })}
