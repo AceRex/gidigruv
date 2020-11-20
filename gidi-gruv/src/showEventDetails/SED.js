@@ -39,6 +39,7 @@ class ShowEventDetails extends React.Component {
     };
   }
 
+
   render() {
     const containerStyle = {
       position: "relative",

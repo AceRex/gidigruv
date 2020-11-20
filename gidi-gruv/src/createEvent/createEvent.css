@@ -4,11 +4,6 @@
     display: flex;
     box-sizing: border-box;
 }
-hr{
-    width: 80%;
-    margin: 2rem auto;
-    border: solid 3px #e2e1e1;
-}
 
 .container {
     margin: 1rem auto;
@@ -209,4 +204,13 @@ hr{
 
 .image-container>.thumb>.thumbInner>img {
     width: 100%;
+}
+.payment{
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1.5rem 0;
+}
+.payment > input{
+    margin: 0 2rem;
 }

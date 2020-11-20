@@ -80,20 +80,35 @@ export default class CreateEvent extends Component {
                 <label>Select the correct date and time of the Event</label>
                 <Date />
               </div>
+              <div className="form-group">
+                <div className="payment">
+                  <label>Will this event be; </label>
+                  <input type="radio" />
+                  Free
+                  <input type="radio" />
+                  Paid
+                </div>
+              </div>
+              <div className='form-group'>
+                <label>Cost for Attending</label>
+                <input type='text' placeholder='₦' className='Ev-input' />
+              </div>
+              <div className='form-group'>
+                <div className='payment'>
+                  <input type='checkbox' />
+                  <label>I agree to Gidi Gruv <a href='/Termsandconditions_201118_154817.pdf'>Terms and Condition.</a></label>
+              </div>
+                </div>
+              <div className="btn">
+                <button type="reset" className="reset-btn">
+                  Reset
+                </button>
+                <button type="submit" className="submit-btn">
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
-          <hr />
-          <div className='payment-info'>
-            
-          </div>
-          <div className="btn">
-            <button type="reset" className="reset-btn">
-              Reset
-            </button>
-            <button type="submit" className="submit-btn">
-              Submit
-            </button>
-          </div>
         </div>
       </>
     );

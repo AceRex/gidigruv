@@ -22,12 +22,13 @@
 }
 .LiveCard {
   background-color: var(--ColorWhite);
-  width: 30%;
+  max-width: 30%;
   height: 18%;
   border-radius: 10px;
   overflow: hidden;
   margin: 15px;
   text-decoration: none;
+  box-shadow: 2px 2px 10px #a8a8a841;
 }
 
 .LiveCard > .image-container {
@@ -36,7 +37,7 @@
   overflow: hidden;
 }
 .image-container > img {
-  width: 100%;
+  width: 300px;
   height: 100%;
 }
 .details {

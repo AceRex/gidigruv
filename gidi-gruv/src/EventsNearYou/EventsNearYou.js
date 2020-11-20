@@ -3,6 +3,8 @@ import LiveCard from "../LiveNow/Livecard";
 import "./EventsNear.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
+
+
 export default class EventByCategory extends React.Component {
   constructor() {
     super();
@@ -198,6 +200,8 @@ export default class EventByCategory extends React.Component {
       ],
     };
   }
+
+  
 
   render() {
     return (

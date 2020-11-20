@@ -1,5 +1,5 @@
 .SED-container {
-  width: 100%;
+  max-width: 100%;
   height: 572px;
   box-sizing: border-box;
   margin: auto;
@@ -11,15 +11,21 @@
 .SED-container>.eventsDetails {
   width: 50%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .SED-container>.eventsDetails>.image-container {
   width: 100%;
   height: 79%;
   overflow: hidden;
+
+}
+.SED-container>.eventsDetails>.image-container > img{
+  width: 675px;
+  height: 452px;
 }
 
-.SED-container>.eventsDetails>.title {
+.SED-container>.eventsDetails >.title {
   padding-left: 3rem;
   width: 100%;
   margin: 0;
@@ -75,7 +81,7 @@
 
 .SED-container>.details>.more-des>.event-date {
   width: 60%;
-  margin: 2rem auto;
+  margin: 1.85rem auto;
   display: flex;
   font-size: 14px;
 }
@@ -173,14 +179,15 @@
   margin: 1rem auto;
   font-weight: 600;
   font-size: 33px;
-  color: #888787;
+  color: var(--ColorPurple);
 }
 
 .react-tabs > .react-tabs__tab-list {
   display: flex;
-  color: var(--ColorPurple);
+  color: #aaaaaa;
   list-style-type: none;
   width: 80%;
+  font-size: 14px;
   margin: auto;
   cursor: pointer;
 }
