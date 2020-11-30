@@ -1,5 +1,5 @@
 .CE-form {
-    width: 100%;
+    max-width: 100%;
     margin: auto;
     display: flex;
     box-sizing: border-box;
@@ -8,6 +8,7 @@
 .container {
     margin: 1rem auto;
 }
+
 .CE-form label {
     color: black;
     font-size: 13px;
@@ -112,7 +113,6 @@
     font-weight: 600;
 }
 
-
 .Ev-input {
     width: 80%;
     padding: 9px 5px;
@@ -128,7 +128,7 @@
     font-weight: 600;
 }
 
-.container>.dropzone {
+.dropzone-container>.dropzone {
     outline: none;
     text-align: center;
     border: solid 2px #e2e1e1;
@@ -148,7 +148,7 @@
     margin: 2rem 0px;
 }
 
-.btn > button {
+.btn>button {
     margin: 2rem;
     width: 30%;
     margin: auto;
@@ -160,11 +160,12 @@
     border-radius: 10px;
 }
 
-.btn  .reset-btn {
+.btn .reset-btn {
     background-color: #eaeaea;
     color: var(--ColorPurple);
 }
-.btn  .submit-btn {
+
+.btn .submit-btn {
     background-color: var(--ColorPurple);
     color: var(--ColorWhite);
 }
@@ -205,12 +206,53 @@
 .image-container>.thumb>.thumbInner>img {
     width: 100%;
 }
-.payment{
+
+.payment {
     color: black;
     font-size: 14px;
     font-weight: 600;
     padding: 1.5rem 0;
 }
-.payment > input{
+
+.payment>input {
     margin: 0 2rem;
+}
+
+@media screen and (max-width: 1080px) {
+    .CE-form {
+        max-width: 98%;
+        flex-direction: column;
+    }
+    .CE-form-left {
+        width: 90%;
+    }
+    .CE-form-left>.Ev-des {}
+    .CE-form>.CE-form-right {
+        width: 100%;
+    }
+    .container {
+        margin: 0;
+    }
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width:500px;
+        height: 145px;
+    }
+    .image-container>.thumb {
+        display: inline-flex;
+        border-radius: 2px;
+        border: 1px solid #eaeaea;
+        margin-right: 8px;
+        margin-top: 0px;
+        margin-left: 8px;
+        width: 350px;
+        margin: auto;
+        height: 280px;
+        padding: 0 4px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 5.6rem;
+    }
 }

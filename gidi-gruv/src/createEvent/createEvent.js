@@ -3,28 +3,12 @@ import Header from "../components/header";
 import Preview from "./imageUpload";
 import Select from "react-select";
 import Date from "./DatePicker";
+import Datas from '../Data/data'
 
 export default class CreateEvent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      LoggedIn: true,
-    };
-  }
-
+  
   render() {
-    const options = [
-      { value: "Entertainment", label: "Entertainment" },
-      { value: "Business Seminar", label: "Business Seminar" },
-      { value: "Art", label: "Art" },
-      { value: "Music", label: "Music" },
-      { value: "Life Style", label: "Life Style" },
-      { value: "Technology", label: "Technology" },
-      { value: "Religious", label: "Religious" },
-      { value: "Sports", label: "Sports" },
-      { value: "Health Care and Medical", label: "Health Care and Medical" },
-      { value: "Workshop", label: "Workshop" },
-    ];
+
     return (
       <>
         <Header />
@@ -49,7 +33,7 @@ export default class CreateEvent extends Component {
               </div>
               <div className="form-group">
                 <label>Select Category of Event</label>
-                <Select options={options} />
+                <Select options={Datas.options} />
               </div>
               <div className="form-group">
                 <label>

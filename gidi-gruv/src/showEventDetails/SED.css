@@ -235,4 +235,7 @@
 .map{
   display: none;
 }
+.react-tabs {
+  margin: 50rem 0;
+}
 }

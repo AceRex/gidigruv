@@ -2,7 +2,6 @@ import React from "react";
 import "./sign.css";
 import { Link } from "react-router-dom";
 import Logo from "../previewImages/7.png";
-import SVG from "../previewImages/image.svg";
 import TextLoop from "react-text-loop";
 import HomeIcon from '@material-ui/icons/Home';
 

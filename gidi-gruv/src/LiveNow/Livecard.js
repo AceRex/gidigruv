@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./LiveNow.css";
 import { GrLocationPin } from "react-icons/gr";
 import { HiOutlineUpload } from "react-icons/hi";
@@ -7,6 +7,10 @@ import { TiTime } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 export default function Card(props) {
+ const [color, setcolor] = useState(' ');
+
+    
+
   return (
     <Link to='/showeventdetails' className="LiveCard">
       <div className="top-details">
@@ -17,7 +21,7 @@ export default function Card(props) {
           <span>
             <HiOutlineUpload />
           </span>
-          <span>
+          <span style={{color:'var(--ColorPink)'}}>
             <IoIosHeart />
           </span>
         </div>

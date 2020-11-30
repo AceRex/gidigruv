@@ -1,4 +1,6 @@
-export default const Datas = [
+ const Datas = {
+    
+ CardItems : [
     {
       id: 0,
       title: "Story Editing: How to Assess and Fix Your First Draft",
@@ -112,6 +114,20 @@ export default const Datas = [
       location: "Ikeja, Lagos. NG",
       time: '08:00pm'
     }
-  ];
+  ],
+  IsLoggedIn : false,
+  options : [
+    { value: "Entertainment", label: "Entertainment" },
+    { value: "Business Seminar", label: "Business Seminar" },
+    { value: "Art", label: "Art" },
+    { value: "Music", label: "Music" },
+    { value: "Life Style", label: "Life Style" },
+    { value: "Technology", label: "Technology" },
+    { value: "Religious", label: "Religious" },
+    { value: "Sports", label: "Sports" },
+    { value: "Health Care and Medical", label: "Health Care and Medical" },
+    { value: "Workshop", label: "Workshop" },
+  ]
+}
 
-  
+export default Datas;

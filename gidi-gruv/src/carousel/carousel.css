@@ -1,20 +1,121 @@
-
-.carousel{
+.carousel {
     background-color: var(--ColorPurple);
-    padding: 2px;
-    height: 30rem;
+    height: 32rem;
     overflow: hidden;
-}
-.carousel > .imageContainer > .img {
-    height: 30rem;
+    display: flex;
+    min-width: 100%;
+    padding: 10px;
 }
 
+.carousel>.textSlider {
+    width: 60%;
+    margin: auto;
+    padding: 0 2rem;
+    font-size: 50px;
+}
 
-@media screen and (max-width: 960px) {
-    .carousel{
+.carousel>.textSlider>.create-button>a {
+    padding: 10px;
+    background-color: var(--ColorWhite);
+    border: none;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.carousel>.textSlider>.create-button>a:hover {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+}
+
+.carousel>.textSlider>.create-button>.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 60%;
+    height: 10%;
+    border: solid 1px #fff;
+}
+
+.carousel>.textSlider>.create-button>.search>p {
+    background-color: var(--ColorWhite);
+    color: var(--ColorPurple);
+}
+
+.carousel>.textSlider>.create-button>.search>input {
+    height: 50px;
+    width: 90%;
+    background-color: var(--ColorWhite);
+    border: none;
+    outline: none;
+    color: var(--ColorPurple);
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.carousel>.textSlider>.create-button>.search>input::placeholder {
+    color: #aaa;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.carousel>.textSlider>.create-button>.search>button {
+    height: 50px;
+    padding: 5px;
+    background-color: var(--ColorPurple);
+    outline: none;
+    color: var(--ColorWhite);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.create-button>.search>button>p {
+    padding: 0 10px;
+    position: relative;
+    animation: mymove 2s infinite;
+}
+
+.carousel>.textSlider>.create-button>.search>p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.carousel>.slider {
+    background-color: White;
+    margin: 6px 0px;
+    height: 97%;
+}
+
+@keyframes mymove {
+    from {
+        left: -50px;
+    }
+    to {
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .carousel {
         padding: 0;
         z-index: -1;
-        margin-top: 3px;
+        min-width: 100%;
+        flex-direction: column;
+        height: 18rem;
     }
-
+    .carousel>.textSlider {
+        width: 90%;
+        padding: 0;
+    }
+    .carousel>.textSlider> .text-loop {
+        font-size: 35px;
+    }
+    .carousel>.slider {
+        display: none;
+    }
+.carousel>.textSlider>.create-button>.search {
+    width: 100%;
 }
+    }

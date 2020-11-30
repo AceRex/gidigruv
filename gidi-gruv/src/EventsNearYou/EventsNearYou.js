@@ -281,6 +281,25 @@ export default class EventByCategory extends React.Component {
             </Tabs>
             
           </div>
+          {/* NOTE=== the below is the View On Mobile(the all categories will be fetched here) and the above will only display on web */}
+          <div className='on_mobile'>
+          {this.state.All.map((items) => {
+              return (
+                <LiveCard
+                  pay={items.pay}
+                  img={items.img}
+                  MM={items.MM}
+                  DD={items.DD}
+                  title={items.title}
+                  location={items.location}
+                  time={items.time}
+                />
+              );
+            })}
+            <div className="load-more-btn">
+          <button>Load More</button>
+        </div>
+          </div>
         </div>
         
       </div>

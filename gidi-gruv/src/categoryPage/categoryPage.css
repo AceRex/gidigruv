@@ -94,3 +94,12 @@
     width: 100%;
     margin: auto;
 }
+
+@media screen and (max-width: 1080px) {
+.cat-search {
+    max-width: 90%;
+}
+.cat-content {
+    width: 98%;
+}
+}

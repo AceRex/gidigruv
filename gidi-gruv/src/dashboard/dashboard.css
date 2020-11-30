@@ -1,7 +1,36 @@
-.sidebar{
+.db-container {
+    max-width: 100%;
+    margin: auto;
+    background-color: #f5f3f3;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+.db-container > .profile{
     display: flex;
-    height: 100vh;
-    width: 20vw;
+    width: 80%;
+    margin:auto;
     background-color: var(--ColorWhite);
-    color: purple;
+    color: #aaa;
+    padding: 3rem 2rem;
+}
+.db-container > .profile > .img-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    overflow:hidden;
+}
+.db-container > .profile > .img-container > img{
+    width: 100%;
+    height: 100%;
+}
+.db-container > .profile > .profile-details{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.profile-details > .fullName{
+    font-size: 30px;
+    font-weight: 600;
 }

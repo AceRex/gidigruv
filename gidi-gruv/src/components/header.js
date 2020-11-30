@@ -5,13 +5,15 @@ import { LoggedIn } from "./LoggedInHeader";
 import Logo from "../logo.png";
 import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
+import Datas from '../Data/data'
+
+
 
 class Navbar extends Component {
   constructor() {
     super();
     this.state = {
       clicked: false,
-      isLoggedin: true,
     };
   }
 
@@ -21,7 +23,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        {this.state.isLoggedin ? (
+        {Datas.IsLoggedIn ? (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">

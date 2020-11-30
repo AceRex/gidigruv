@@ -42,7 +42,7 @@ export default function Previews(props) {
   );
 
   return (
-    <section className="container">
+    <section className="dropzone-container">
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} />
         <aside className='image-container'>{thumbs}</aside>

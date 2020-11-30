@@ -134,6 +134,13 @@
     flex-direction: column;
   }
   .LiveCard{
-    width: 90%;
+    max-width: 45%;
+    margin: 11px;
   }
+.LiveCard > .top-details {
+  width: 46%;
+}
+.details{
+  padding: 0;
+}
 }

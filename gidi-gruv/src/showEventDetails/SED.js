@@ -84,7 +84,7 @@ class ShowEventDetails extends React.Component {
                   </p>
                   <span>
                     <p>Kuje, Abuja. NG</p>
-                    <a href="#map">
+                    <a href="https://www.google.ng/maps/" target='_blank'>
                       Get location to physical event on Map here
                     </a>
                   </span>
@@ -171,7 +171,7 @@ class ShowEventDetails extends React.Component {
             </div>
           )}
         </div>
-        <div className="map" id="map">
+        {/* <div className="map" id="map">
           <div className="map-view">
             <Map
               containerStyle={containerStyle}
@@ -187,7 +187,7 @@ class ShowEventDetails extends React.Component {
               </InfoWindow>
             </Map>
           </div>
-        </div>
+        </div> */}
         <TabSelect />
         <Footer />
       </>
