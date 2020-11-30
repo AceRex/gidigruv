@@ -115,7 +115,7 @@
       time: '08:00pm'
     }
   ],
-  IsLoggedIn : false,
+  IsLoggedIn : {},
   options : [
     { value: "Entertainment", label: "Entertainment" },
     { value: "Business Seminar", label: "Business Seminar" },

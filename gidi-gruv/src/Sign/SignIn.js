@@ -1,11 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 import "./sign.css";
 import { Link } from "react-router-dom";
 import Logo from "../previewImages/7.png";
 import TextLoop from "react-text-loop";
 import HomeIcon from '@material-ui/icons/Home';
+import Datas from '../Data/data'
 
-function SignIn() {
+class SignIn extends Component {
+  constructor(props){
+    super(props);
+    this.state = {}
+
+    this.onChange = this.onChange.bind(this);
+    
+  }
+  onChange (e){ 
+    e.target.name == e.target.name ?
+     this.setState({[Datas.IsLoggedIn] : false})
+     :
+     this.setState({[Datas.IsLoggedIn] : true})
+     
+  }
+
+  render(){
   return (
     <div className="sigincontainer">
       <div className="slider">
@@ -39,23 +56,24 @@ function SignIn() {
           </p>
         </div>
         <div className="signinform">
-          <form>
+          <form action='/'>
             <div className="form-group">
               <label>Email / Username</label>
-              <input type='email' placeholder="Email / Username here..." />
+              <input type='email' name='email' value='user@user.com' placeholder="Email / Username here..." />
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input type='password' placeholder="Password here..." />
+              <input type='password' name='password' value='userpass' placeholder="Password here..." />
             </div>
             <div className="form-group">
-            <button className="btn">SIGN IN</button>
+            <button className="btn" onClick={this.onChange}>SIGN IN</button>
             </div>
           </form>
         </div>
       </div>
     </div>
   );
+}
 }
 
 export default SignIn;

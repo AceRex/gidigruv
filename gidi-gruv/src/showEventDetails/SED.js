@@ -171,7 +171,7 @@ class ShowEventDetails extends React.Component {
             </div>
           )}
         </div>
-        {/* <div className="map" id="map">
+        <div className="map" id="map">
           <div className="map-view">
             <Map
               containerStyle={containerStyle}
@@ -187,7 +187,7 @@ class ShowEventDetails extends React.Component {
               </InfoWindow>
             </Map>
           </div>
-        </div> */}
+        </div>
         <TabSelect />
         <Footer />
       </>

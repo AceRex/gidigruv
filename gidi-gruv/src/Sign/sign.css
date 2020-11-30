@@ -85,8 +85,9 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.signinform > form > .form-group > button > .btn{
-  text-align: center;
+.signinform > form > .form-group > .btn{
+  text-align: center !important;
+  padding: auto;
   font-size: 20px;
 }
 .signinform > form > .form-group > button:hover{
@@ -111,8 +112,12 @@
 .regcontainer {
   width: 100%;
   display: flex;
+}
+.regcontainer > .slider{
+
   background-color: var(--ColorPink);
 }
+
 
 .registerform {
   margin: auto;

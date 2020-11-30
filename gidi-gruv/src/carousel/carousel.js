@@ -4,6 +4,8 @@ import "./carousel.css";
 import TextLoop from "react-text-loop";
 import { RiSearch2Line } from "react-icons/ri";
 import { CgArrowLongRight } from "react-icons/cg";
+import Banner from './bbn.png'
+
 
 function MainCarousel() {
   return (
@@ -42,7 +44,7 @@ function MainCarousel() {
         </div>
       </div>
       <div className="slider">
-        
+        <img src={Banner} />
       </div>
     </div>
   );
