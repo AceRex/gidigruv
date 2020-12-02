@@ -39,3 +39,12 @@
     to{top: 15px;}
 
 }
+@media screen and (max-width: 960px) {
+    .load-container > img{
+        width: 100px;
+        margin: auto;
+        top: 35.5%;
+        left: 39.5%;
+        position: absolute;
+    }
+}
