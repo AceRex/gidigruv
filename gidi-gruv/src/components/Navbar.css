@@ -33,6 +33,7 @@
 }
 
 .nav-links {  
+  font-size: 15px;
   color: var(--ColorPurple) !important;
   text-decoration: none !important;
   padding: 0.5rem 0.6rem;

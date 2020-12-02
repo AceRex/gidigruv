@@ -5,27 +5,34 @@ import { HiOutlineUpload } from "react-icons/hi";
 import { IoIosHeart } from "react-icons/io";
 import { TiTime } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import Datas from '../Data/data'
+
 
 export default function Card(props) {
- const [color, setcolor] = useState(' ');
-
+ const [color, setColor] = useState(' ');
+ 
     
 
   return (
-    <Link to='/showeventdetails' className="LiveCard">
+    <div className="LiveCard">
       <div className="top-details">
         <div className="sub">
           <p>{props.pay}</p>
         </div>
+        {Datas.IsLoggedIn ?
         <div className="share-like">
           <span>
             <HiOutlineUpload />
           </span>
-          <span style={{color:'var(--ColorPink)'}}>
+          <span style={{color:`${color}`}} onClick={()=> setColor(Datas.IsLiked ? 'var(--ColorPink)' : `${color}`) }>
             <IoIosHeart />
           </span>
-        </div>
+        </div> :
+        ''}
+        
       </div>
+      
+    <Link to='/showeventdetails' >
       <div className="image-container">
         <img src={props.img} />
       </div>
@@ -42,5 +49,7 @@ export default function Card(props) {
         </div>
       </div>
     </Link>
+    
+    </div>
   );
 }

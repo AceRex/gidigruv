@@ -25,25 +25,3 @@ body {
 .container {
     min-width: 100%;
 }
-
-.load-container {
-    width: 70%;    
-    margin: 15rem auto;
-    justify-items: center;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-    color: var(--ColorPurple);
-    
-}
-.load-container > img{
-    width: 100px;
-    position: relative;
-    animation: Loading 1s infinite;
-}
-
-@keyframes Loading{
-    from{top: 0px;}
-    to{top: 15px;}
-
-}

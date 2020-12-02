@@ -9,13 +9,13 @@ import { AiOutlineLink } from "react-icons/ai";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import TabSelect from "./Tabs";
+import Datas from '../Data/data'
 
 class ShowEventDetails extends React.Component {
   constructor() {
     super();
     this.state = {
       clicked: true,
-      isLoggedin: true,
       attendees: [
         "a",
         "b",
@@ -66,7 +66,7 @@ class ShowEventDetails extends React.Component {
           </div>
 
           {/* Check if user is logged in */}
-          {this.state.isLoggedin ? (
+          {Datas.IsLoggedIn ? (
             <div className="details">
               <div className="more-des">
                 <div className="event-date">
@@ -141,9 +141,6 @@ class ShowEventDetails extends React.Component {
                   </p>
                   <span>
                     <p>Kuje, Abuja. NG</p>
-                    {/* <a href="#map">
-                      Get location to physical event on Map here
-                    </a> */}
                   </span>
                 </div>
                 <div className="event-date">
@@ -171,6 +168,7 @@ class ShowEventDetails extends React.Component {
             </div>
           )}
         </div>
+        {Datas.IsLoggedIn ?
         <div className="map" id="map">
           <div className="map-view">
             <Map
@@ -187,7 +185,8 @@ class ShowEventDetails extends React.Component {
               </InfoWindow>
             </Map>
           </div>
-        </div>
+        </div> :  ''}
+        
         <TabSelect />
         <Footer />
       </>

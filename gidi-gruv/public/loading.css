@@ -1,0 +1,41 @@
+.load-container {
+    width: 70%;    
+    font-family: 'Poppins', sans-serif;
+    margin: 10rem auto;
+    justify-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #48108d;
+    
+}
+.load-container > img{
+    width: 100px;
+    margin: auto;
+    top: 34%;
+    left: 46.5%;
+    position: absolute;
+}
+.load-container >.loader {
+    border: 13px solid #f3f3f3;
+    border-top: 13px solid #48108d;
+    border-right: 13px solid #850cbd;
+    border-bottom: 13px solid#ff1493;
+    border-left: 13px solid #fa78bd;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+@keyframes Loading{
+    from{top: 0px;}
+    to{top: 15px;}
+
+}

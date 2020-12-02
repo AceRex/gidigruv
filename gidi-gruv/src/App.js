@@ -9,6 +9,9 @@ import LiveNow from "./LiveNow/livenow";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";
 import Footer from "./components/footer";
 import Loading from './loading'
+import Datas from './Data/data'
+import HIW from './HowItWorks/HIW'
+
 
 class App extends Component {
   constructor(){
@@ -24,11 +27,11 @@ class App extends Component {
     
   return (
     <div className="App">
-      {/* <Loading /> */}
       <Header />
       <Carousel />
       <EventByCategory />
-      <EventsNearYou />      
+      <EventsNearYou /> 
+      {!Datas.IsLoggedIn ? <HIW /> : '' }     
       <Footer />
     </div>
   );

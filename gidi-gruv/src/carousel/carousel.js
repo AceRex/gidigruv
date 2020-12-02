@@ -4,8 +4,8 @@ import "./carousel.css";
 import TextLoop from "react-text-loop";
 import { RiSearch2Line } from "react-icons/ri";
 import { CgArrowLongRight } from "react-icons/cg";
-import Banner from './bbn.png'
-
+import Banner from "./bbn.png";
+import Datas from "../Data/data";
 
 function MainCarousel() {
   return (
@@ -29,18 +29,25 @@ function MainCarousel() {
           </TextLoop>
         </div>
         <div className="create-button">
-          {/* if user is NotLoggedIn it shows button */}
-          {/* <Link to='/register'>
-            Click to Get Started <CgArrowLongRight />{" "}
-          </Link> */}
-          {/* if user is LoggedIn it shows search */}
-          <div className="search">
+          {Datas.IsLoggedIn ? (
+            <div className="search">
             <p>
               <RiSearch2Line />
             </p>
             <input type="text" placeholder="Search For Events Near you" />
-            <button><p><CgArrowLongRight /></p></button>
+            <button>
+              <p>
+                <CgArrowLongRight />
+              </p>
+            </button>
           </div>
+
+            
+          ) : (
+            <Link to="/register">
+              Click to Get Started <CgArrowLongRight />{" "}
+            </Link> 
+          )}{" "}
         </div>
       </div>
       <div className="slider">

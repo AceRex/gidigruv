@@ -15,9 +15,7 @@ class SignIn extends Component {
     
   }
   onChange (e){ 
-    e.target.name == e.target.name ?
-     this.setState({[Datas.IsLoggedIn] : false})
-     :
+    e.preventDefault()
      this.setState({[Datas.IsLoggedIn] : true})
      
   }
@@ -66,7 +64,7 @@ class SignIn extends Component {
               <input type='password' name='password' value='userpass' placeholder="Password here..." />
             </div>
             <div className="form-group">
-            <button className="btn" onClick={this.onChange}>SIGN IN</button>
+            <button className="signin-btn" onClick={this.onChange}>SIGN IN</button>
             </div>
           </form>
         </div>
