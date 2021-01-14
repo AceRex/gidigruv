@@ -10,14 +10,14 @@ export default class Footer extends React.Component {
     super();
     this.state = {
       list: [
-        { id: 0, link: "About", url: "/about" },
+        { id: 0, link: "Become a partner", url: "/" },
         { id: 1, link: "How It Works", url: "/HIW" },
-        { id: 2, link: "Support", url: "/support" },
+        { id: 2, link: "Sponsor your event", url: "/support" },
         { id: 3, link: "Privacy & Legals", url: "/P&L" },
         { id: 4, link: "Contact", url: "/contact" },
-        { id: 4, link: <GrFacebookOption/>, url: "www.facebook.com/gidigruv" },
-        { id: 4, link: <GrTwitter/> , url: "www.twitter.com/gidigruv" },
-        { id: 4, link: <GrInstagram/>, url: "www.instagram.com/gidigruv" },
+        { id: 5, link: <GrFacebookOption/>, url: "https://www.facebook.com/Gidigruv" },
+        { id: 6, link: <GrTwitter/> , url: "www.twitter.com/gidigruv" },
+        { id: 7, link: <GrInstagram/>, url: "https://www.instagram.com/gidigruv/" },
 
       ],
     };
@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
         </div>
         <div className="list">
           {this.state.list.map((list) => {
-            return <Link to={list.url}>{list.link}</Link>;
+            return <a href={list.url}>{list.link}</a>;
           })}
         </div>
       </div>

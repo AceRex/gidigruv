@@ -1,0 +1,67 @@
+.HIW-container {
+  max-width: 100%;
+  color: var(--ColorPurple);
+  background-image: url("./bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.HIW-container .HIW-contain {
+  width: 90%;
+  height: 350px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--ColorWhite);
+}
+
+.HIW-container .HIW-contain .title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.HIW-container .HIW-contain .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+}
+
+.HIW-container .HIW-contain .content-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HIW-container .HIW-contain .content-container .content p {
+  font-size: 50px;
+  margin: 0px 15px;
+  font-weight: 600;
+  color: var(--ColorPink);
+}
+
+.HIW-container .HIW-contain .content-container .content .content-content {
+  text-align: center;
+}
+
+.HIW-container .HIW-contain .content-container .content .content-content p {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ColorPurple);
+}
+
+.HIW-container .HIW-contain .content-container .content .content-content small {
+  font-size: 13px;
+  font-weight: none;
+  text-transform: none;
+}
+/*# sourceMappingURL=style.css.map */

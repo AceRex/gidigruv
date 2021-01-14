@@ -1,41 +1,37 @@
 import React, { Component } from "react";
 import "./App.css";
-import {useHistory } from  "react-router-dom"
+import { useHistory } from "react-router-dom";
 import Header from "./components/header";
 import Carousel from "./carousel/carousel";
-import EventByCategory from "./eventByCategory/EventByCategory";
-import About from './About/About'
-import LiveNow from "./LiveNow/livenow";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";
 import Footer from "./components/footer";
-import Loading from './loading'
-import WWD from './whatwedo/whatwedo'
-import Datas from './Data/data'
-import HIW from './HowItWorks/HIW'
-
+import WWD from "./whatwedo/whatwedo";
+import HIW from "./HowItWorks/HIW";
+import Contact from "./contact/contact"
+import HowItWorks from "./HowItWorks/HowItWorks";
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      loading : true,
-    }
+      loading: true,
+    };
   }
-  
-  
 
-  render(){
-    
-  return (
-    <div className="App">
-      <Header />
-      <Carousel />
-      <WWD/>
-      {Datas.IsLoggedIn ? '' : <HIW /> }       
-      <Footer />
-    </div>
-  );
-}
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Carousel />
+        <WWD />
+        <HowItWorks />
+        <HIW />
+        <EventsNearYou />
+        <Contact />
+        <Footer />
+      </div>
+    );
+  }
 }
 // const history = useHistory ();
 //     console.log(history);
