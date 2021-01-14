@@ -1,67 +1,83 @@
-.HIW-container {
+.contact-container {
   max-width: 100%;
   color: var(--ColorPurple);
-  background-image: url("./bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.HIW-container .HIW-contain {
-  width: 90%;
-  height: 350px;
+.contact-container .contact-contain {
+  width: 80%;
+  height: 500px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: var(--ColorWhite);
 }
 
-.HIW-container .HIW-contain .title {
+.contact-container .contact-contain form {
+  width: 65%;
+  text-align: center;
+}
+
+.contact-container .contact-contain form .title {
+  font-size: 40px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.contact-container .contact-contain form p {
+  width: 55%;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ColorPink);
+  margin: auto;
+}
+
+.contact-container .contact-contain form input {
+  width: 70%;
+  border: none;
+  border-bottom: solid 2px #c9c8c8;
+  margin: 30px auto;
+}
+
+.contact-container .contact-contain form button {
+  width: 70%;
+  padding: 10px;
+  background-color: var(--ColorPurple);
+  border: none;
+  color: var(--ColorWhite);
+  letter-spacing: 10px;
+  font-weight: 600;
+  margin: 30px auto;
+}
+
+.contact-container .contact-contain .contact-card {
+  width: 35%;
+  background-image: url("./bg.png");
+  background-blend-mode: overlay;
+  background-color: #00000023;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.contact-container .contact-contain .contact-card .title {
+  width: 100%;
   text-align: center;
   font-size: 30px;
-  font-weight: 700;
+  letter-spacing: 20px;
+  color: var(--ColorWhite);
   text-transform: uppercase;
-  margin-bottom: 2rem;
 }
 
-.HIW-container .HIW-contain .content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 90%;
-  margin: auto;
-}
-
-.HIW-container .HIW-contain .content-container .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 32%;
-  margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.HIW-container .HIW-contain .content-container .content p {
-  font-size: 50px;
-  margin: 0px 15px;
-  font-weight: 600;
-  color: var(--ColorPink);
-}
-
-.HIW-container .HIW-contain .content-container .content .content-content {
+.contact-container .contact-contain .contact-card .contacts {
   text-align: center;
+  font-size: 17px;
+  color: var(--ColorWhite);
+  padding: 50px;
 }
 
-.HIW-container .HIW-contain .content-container .content .content-content p {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--ColorPurple);
-}
-
-.HIW-container .HIW-contain .content-container .content .content-content small {
-  font-size: 13px;
-  font-weight: none;
-  text-transform: none;
+.contact-container .contact-contain .contact-card .contacts p {
+  margin: 30px;
 }
 /*# sourceMappingURL=style.css.map */

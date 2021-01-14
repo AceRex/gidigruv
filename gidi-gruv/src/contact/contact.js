@@ -1,56 +1,39 @@
 import React from "react";
 import { Component } from "react";
 import "./style.css";
-import Rotate from 'react-reveal/Rotate'
+import Rotate from "react-reveal/Rotate";
 
 export default class HowItWorks extends Component {
-  // constructor(){
-  //     super();
-  //     this.state=
-  // }
-
   render() {
     return (
-      <div className="container HIW-container">
-        <div className="HIW-contain">
-          <div className="title">How It works</div>
-          <div className="content-container">
-              <Rotate top left delay='500'>
-            <div className="content">
-              <p>1.</p>
-              <div className="content-content">
-                <p>Plan your event</p>
-                <small>
-                  We take all events, think of any category of event we are here to push to your target audience.
-                </small>
-              </div>
-            </div>
-            </Rotate>
-            <Rotate top center delay='500'>
-            <div className="content">
-              <p>2.</p>
-              <div className="content-content">
-                <p>Register the Event with us</p>
-                <small>
-                  Register your event on this platform for us to have the event you want to broadcast.
-                </small>
-              </div>
-            </div>
-            </Rotate>
-            <Rotate top right delay='500'>
-            <div className="content">
-              <p>3.</p>
-              <div className="content-content">
-                <p>We Broadcast</p>
-                <small>
-                  We broadcast your events by location, by category to all
-                  registered users on our platform and not registered users you
-                  can't imagine to reach
-                </small>
-              </div>
-            </div>
-            </Rotate>
+      <div className="container contact-container">
+        <div className="contact-contain">
+        <div className="contact-card">
+          <div className="title">
+            Contact
           </div>
+          <div className="contacts">
+            <p>info@gidigruv.com</p>
+            <p>support@gidigruv.com</p>
+            <p>+234 813 659 1944</p>
+
+
+          </div>
+        </div>
+
+          <form>
+            <div className="title">Leave us a Message</div>
+            <p>
+              Feel free to contact us any time, we will get back to you as soon
+              as we can!
+            </p>
+            <input placeholder="Name" />
+            <input placeholder="Email"/>
+            <input placeholder="Message"/>
+            <button type="submit">
+              SEND
+            </button>
+          </form>
         </div>
       </div>
     );
