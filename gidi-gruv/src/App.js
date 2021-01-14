@@ -9,6 +9,7 @@ import LiveNow from "./LiveNow/livenow";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";
 import Footer from "./components/footer";
 import Loading from './loading'
+import WWD from './whatwedo/whatwedo'
 import Datas from './Data/data'
 import HIW from './HowItWorks/HIW'
 
@@ -29,9 +30,8 @@ class App extends Component {
     <div className="App">
       <Header />
       <Carousel />
-      <EventByCategory />
-      <EventsNearYou /> 
-      {!Datas.IsLoggedIn ? <HIW /> : '' }     
+      <WWD/>
+      {Datas.IsLoggedIn ? '' : <HIW /> }       
       <Footer />
     </div>
   );

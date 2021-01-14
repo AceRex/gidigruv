@@ -45,7 +45,7 @@ function MainCarousel() {
             
           ) : (
             <Link to="/register">
-              Click to Get Started <CgArrowLongRight />{" "}
+              Register An Event <CgArrowLongRight />{" "}
             </Link> 
           )}{" "}
         </div>

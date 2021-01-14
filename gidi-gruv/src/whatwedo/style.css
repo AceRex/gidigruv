@@ -1,0 +1,50 @@
+.wwd {
+  max-width: 80%;
+  margin: auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 15px 30px 10px #00000027;
+          box-shadow: 10px 15px 30px 10px #00000027;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wwd .left-class,
+.wwd .right-class {
+  max-width: 50%;
+}
+
+.wwd .left-class {
+  color: var(--ColorPurple);
+  padding: 40px;
+  border-right: solid 5px var(--ColorPurple);
+}
+
+.wwd .left-class h2 {
+  padding: 40px;
+  min-width: 50%;
+  font-size: 40px;
+  text-align: right;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.wwd .left-class p {
+  min-width: 50%;
+  padding: 30px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.wwd .right-class {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("bg.png");
+  background-position: center;
+}
+/*# sourceMappingURL=style.css.map */

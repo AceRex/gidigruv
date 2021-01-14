@@ -1,0 +1,46 @@
+.wwd {
+    max-width: 80%;
+    margin: auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 10px 15px 30px 10px #00000027;
+    display: flex;
+    justify-content: space-between;
+
+    .left-class,
+    .right-class {
+        max-width: 50%;
+    }
+
+    .left-class {
+        color: var(--ColorPurple);
+        padding: 40px;
+        border-right: solid 5px var(--ColorPurple);
+
+
+        h2 {
+            padding: 40px;
+            min-width: 50%;
+            font-size: 40px;
+            text-align: right;
+            line-height: 20px;
+            text-transform: uppercase;
+            
+        }
+
+        p {
+            min-width: 50%;
+            padding: 30px;
+            text-align: right;
+            font-size: 16px;
+        }
+    
+    }
+    .right-class{
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('bg.png');
+        background-position: center;
+    }
+}

@@ -14,7 +14,6 @@
 }
 
 body {
-    background: var(--ColorWhite);
     color: var(--ColorWhite);
 }
 
@@ -23,5 +22,5 @@ body {
 }
 
 .container {
-    min-width: 100%;
+    max-width: 100%;
 }

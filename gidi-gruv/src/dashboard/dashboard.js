@@ -6,6 +6,7 @@ import Logo from "../logo.png";
 import { Link } from "react-router-dom";
 import ProfilePhoto from './p-photo.png'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Datas from '../Data/data'
 
 export default class Dashboard extends React.Component {
   constructor() {
@@ -16,12 +17,7 @@ export default class Dashboard extends React.Component {
       }
     };
   }
-  // componentDidMount(){
-  //   axios
-  //   .get('https://jsonplaceholder.typicode.com/photos')
-  //   .then(res => this.state.profile.image(res))
-  //   .catch(err => console.error(err));
-  // }
+  
   render() {
     return (
       <>
@@ -32,10 +28,36 @@ export default class Dashboard extends React.Component {
             <img src={ProfilePhoto} />
             </div>
             <div className='profile-details'>
-              <label className='fullName'> Are Oluwasegun Johnson</label>
-              <label className='email'> email@emailprovider.com</label>
-              <label className='phone-number'> +234 70 700 7000</label>
-              <label className='address'> Lagos state location</label>
+              <form action='get'>
+                <div className='f-group'>
+                  <label>Fullname</label>
+                  <input className='db-input' value={Datas.Userdata.Fullname} /> 
+                </div>
+                <div className='f-group'>
+                  <label>Phone Number</label>
+                  <input className='db-input' value={Datas.Userdata.PhoneNumber} /> 
+                </div>
+                <div className='f-group'>
+                  <label>Street</label>
+                  <input className='db-input' value={Datas.Userdata.Street} /> 
+                </div>
+                <div className='f-group'>
+                  <label>L.G.A</label>
+                  <input className='db-input' value={Datas.Userdata.LGA} /> 
+                </div>
+                <div className='f-group'>
+                  <label>Country</label>
+                  <input className='db-input' value={Datas.Userdata.Country} /> 
+                </div>
+                <div className='f-group'>
+                  <label>Interest</label>
+                  <input className='db-input'  /> 
+                </div>
+                <div className='f-group'>
+                  <button className='db-btn'>Save Details</button>
+                </div>
+              </form>
+              
             </div>
           </div>
         </div>

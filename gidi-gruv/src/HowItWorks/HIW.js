@@ -3,7 +3,8 @@ import './HIW.css'
 
 export default function HowItWorks() {
   return (
-    <div className="container">
+    <div className="container"
+    style={{backgroundColor: 'var(--ColorPurple)'}}>
       <div className="search-event">
         <div className="search-text">
           <span>You can see all events around you</span>
