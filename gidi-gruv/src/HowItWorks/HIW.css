@@ -40,15 +40,55 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px #0000003a;
 }
-.search-event > .search-input > button{
+.search-event > .search-input > a{
     height: 40%;
     width: 30%;
     border: none;
     border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
     outline: none;
     background-color: var(--ColorPink);
     color: var(--ColorWhite);
     font-size: 15px;
     font-weight: 600;
     box-shadow: 5px 5px 10px #0000003a;
+}
+@media screen and (max-width: 1080px) {
+
+    .search-event{
+        display:flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        background-color:var(--ColorPurple);
+        height: 15rem;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    .search-event > .search-text{
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        margin-bottom: -10%;
+        justify-content: center;
+        align-content: center;
+    }
+    .search-event > .search-input{
+        display: flex;
+        width: 98%;
+    }
+    .search-event > .search-input > input{
+        width: 80%;
+        height: 90%;
+        padding: 20px;
+    }
+    .search-event > .search-input > a{
+        height: 90%;
+        width: 20%;
+        
+    } 
 }

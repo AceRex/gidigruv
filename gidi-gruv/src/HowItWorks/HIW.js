@@ -1,5 +1,6 @@
 import React from "react";
 import './HIW.css'
+import {Link} from 'react-router-dom'
 
 export default function HowItWorks() {
   return (
@@ -12,7 +13,7 @@ export default function HowItWorks() {
         </div>
         <div className='search-input'>
         <input type="text" placeholder="Enter the Location you want to search for event" />
-        <button type='submit'>Search</button>
+        <Link to='/not-available'>Search</Link>
         </div>
       </div>
     </div>

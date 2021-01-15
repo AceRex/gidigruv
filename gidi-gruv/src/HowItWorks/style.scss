@@ -60,3 +60,121 @@
         }
     }
 }
+@media screen and (max-width: 640px) {
+    .HIW-container {
+
+    .HIW-contain {
+        width: 90%;
+        height: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: var(--ColorWhite);
+
+        .title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .content-container {
+            flex-direction: column;
+            max-width: 90%;
+            margin: auto;
+
+            .content {
+                display: flex;
+                width: 97%;
+                margin: 20px auto;
+                align-items: center;
+
+                p {
+                    font-size: 50px;
+                    margin: 0px 15px;
+                    font-weight: 600;
+                    color: var(--ColorPink);
+                }
+
+                .content-content {
+                    text-align: center;
+
+                    p{  
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: var(--ColorPurple);
+                    }
+
+
+                    small {
+                        font-size: 13px;
+                        font-weight: none;
+                        text-transform: none;
+
+                    }
+                }
+            }
+        }
+    }
+}
+}
+@media screen and ( min-width:641px) and ( max-width:1007px) {
+    .HIW-container {
+
+        .HIW-contain {
+            width: 90%;
+            height: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: var(--ColorWhite);
+    
+            .title {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+    
+            .content-container {
+                flex-direction: column;
+                max-width: 90%;
+                margin: auto;
+    
+                .content {
+                    display: flex;
+                    width: 97%;
+                    margin: 20px auto;
+                    align-items: center;
+    
+                    p {
+                        font-size: 50px;
+                        margin: 0px 15px;
+                        font-weight: 600;
+                        color: var(--ColorPink);
+                    }
+    
+                    .content-content {
+                        text-align: center;
+    
+                        p{  
+                        font-size: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: var(--ColorPurple);
+                        }
+    
+    
+                        small {
+                            font-size: 13px;
+                            font-weight: none;
+                            text-transform: none;
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

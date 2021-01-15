@@ -12,6 +12,7 @@ import SED from "./showEventDetails/SED";
 import SignIn from "./Sign/SignIn";
 import Register from "./Sign/register";
 import Dashboard from "./dashboard/dashboard";
+import NotAvailable from  './NotAvailable'
 import CreateEvent from "./createEvent/createEvent";
 import CategoryPage from "./categoryPage/categoryPage";
 import "./App.css";
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/" exact component={App} />
       <Route path="/about" component={AboutUs} />
       <Route path="/signin" component={SignIn} />
+      <Route path="/not-available" component={NotAvailable} />
       <Route path="/create-event" component={CreateEvent} />
       <Route path="/category-page" component={CategoryPage} />
       <Route path="/register" component={Register} />

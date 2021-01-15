@@ -79,3 +79,107 @@
         }
     }
 }
+@media screen and (max-width: 640px) {
+    .contact-container {
+  
+        .contact-contain {
+            width: 100%;
+            height: 500px;
+            margin: auto;
+            padding: 40px 0px;
+            display: flex;
+            background-color: var(--ColorWhite);
+    
+            form {
+                width: 65%;
+                text-align: center;
+    
+                .title {
+                    font-size: 30px;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                }
+    
+                p {
+                    width: 90%;
+                }
+    
+                input {
+                    width: 90%;
+                }
+            }
+    
+            .contact-card {
+    
+                .title {
+                    text-align: center;
+                    font-size: 19px;
+                    letter-spacing: 10px;
+                }
+    
+                .contacts {
+                    text-align: center;
+                    font-size: 13px;
+                    color: var(--ColorWhite);
+                    padding: 10px;
+    
+                    p {
+                        margin: 50px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 641px) and (max-width:1007px) {
+    .contact-container {
+  
+        .contact-contain {
+            width: 100%;
+            height: 500px;
+            margin: auto;
+            padding: 40px 0px;
+            display: flex;
+            background-color: var(--ColorWhite);
+    
+            form {
+                width: 65%;
+                text-align: center;
+    
+                .title {
+                    font-size: 30px;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                }
+    
+                p {
+                    width: 90%;
+                }
+    
+                input {
+                    width: 90%;
+                }
+            }
+    
+            .contact-card {
+    
+                .title {
+                    text-align: center;
+                    font-size: 26px;
+                    letter-spacing: 16px;
+                }
+    
+                .contacts {
+                    text-align: center;
+                    font-size: 13px;
+                    color: var(--ColorWhite);
+                    padding: 10px;
+    
+                    p {
+                        margin: 50px 0px;
+                    }
+                }
+            }
+        }
+    }
+}

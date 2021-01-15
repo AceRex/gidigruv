@@ -24,3 +24,33 @@ body {
 .container {
     max-width: 100%;
 }
+.not-av{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #352d2d;
+}
+.not-av > img{
+max-width: 100%;
+margin: auto;
+}
+.not-av > span{
+    font-size: 15px;
+}
+@media screen and (max-width: 1080px) {
+    
+.not-av{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #352d2d;
+}
+.not-av > img{
+max-width: 100%;
+margin: auto;
+}
+}

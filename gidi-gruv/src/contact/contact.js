@@ -1,12 +1,11 @@
 import React from "react";
 import { Component } from "react";
 import "./style.css";
-import Rotate from "react-reveal/Rotate";
 
 export default class HowItWorks extends Component {
   render() {
     return (
-      <div className="container contact-container">
+      <div id="#contact-us" className="container contact-container">
         <div className="contact-contain">
         <div className="contact-card">
           <div className="title">

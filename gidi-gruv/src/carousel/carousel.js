@@ -13,7 +13,7 @@ function MainCarousel() {
       <div className="textSlider">
         <div className="text-loop">
           <TextLoop>
-            <span>Live Streaming</span>
+            <span>Broadcast your</span>
             <span>Register an</span>
             <span>Watch Live</span>
             <span>See </span>
@@ -44,8 +44,8 @@ function MainCarousel() {
 
             
           ) : (
-            <Link to="/register">
-              Register An Event <CgArrowLongRight />{" "}
+            <Link to="/not-available">
+              Create An Event <CgArrowLongRight />{" "}
             </Link> 
           )}{" "}
         </div>

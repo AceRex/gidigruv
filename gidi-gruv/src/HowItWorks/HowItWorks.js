@@ -4,10 +4,7 @@ import "./style.css";
 import Rotate from 'react-reveal/Rotate'
 
 export default class HowItWorks extends Component {
-  // constructor(){
-  //     super();
-  //     this.state=
-  // }
+ 
 
   render() {
     return (

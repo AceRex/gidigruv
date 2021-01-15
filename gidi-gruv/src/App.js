@@ -27,7 +27,7 @@ class App extends Component {
         <HowItWorks />
         <HIW />
         <EventsNearYou />
-        <Contact />
+        <Contact/>
         <Footer />
       </div>
     );

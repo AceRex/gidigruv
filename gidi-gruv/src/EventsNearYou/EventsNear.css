@@ -48,21 +48,31 @@
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 640px) {
     .evn-container {
         max-width: 100%;
     }
     .evn-container>p {
-        font-size: 19px;
+        font-size: 20px;
         width: 96%;
     }
-    .evn-container>.cards>.react-tabs {
-        display: none;
+    .evn-container>p>span {
+        color: var(--ColorPink);
     }
-    .on_mobile{
-        width: 98%;
-        margin: auto;
+    
+     .evn-container>.cards{
         display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        color: #aaaaaa;
+        list-style-type: none;
+        margin: 2rem auto;
     }
+    
+    .evn-container>.cards {
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
 }

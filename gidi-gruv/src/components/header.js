@@ -23,7 +23,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        {Datas.IsLoggedIn ? (
+        {/* {Datas.IsLoggedIn ? (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
@@ -53,7 +53,7 @@ class Navbar extends Component {
               </>
             </ul>
           </nav>
-        ) : (
+        ) : ( */}
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
@@ -74,15 +74,15 @@ class Navbar extends Component {
               {NotLoggedIn.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={item.url} className={item.cName}>
+                    <a href={item.url} className={item.cName}>
                       {item.title}
-                    </Link>
+                    </a>
                   </li>
                 );
               })}
             </ul>
           </nav>
-        )}
+        {/* )} */}
       </>
     );
   }
