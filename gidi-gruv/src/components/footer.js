@@ -10,11 +10,11 @@ export default class Footer extends React.Component {
     super();
     this.state = {
       list: [
-        { id: 0, link: "Become a partner", url: "/" },
-        { id: 1, link: "How It Works", url: "/HIW" },
-        { id: 2, link: "Sponsor your event", url: "/support" },
-        { id: 3, link: "Privacy & Legals", url: "/P&L" },
-        { id: 4, link: "Contact", url: "/contact" },
+        { id: 0, link: "Become a partner", url: "/not-available" },
+        { id: 1, link: "How It Works", url: "#HIW" },
+        { id: 2, link: "Sponsor your event", url: "/not-available" },
+        { id: 3, link: "Privacy & Legals", url: "/not-available" },
+        { id: 4, link: "Contact", url: "/not-available" },
         { id: 5, link: <GrFacebookOption/>, url: "https://www.facebook.com/Gidigruv" },
         { id: 6, link: <GrTwitter/> , url: "www.twitter.com/gidigruv" },
         { id: 7, link: <GrInstagram/>, url: "https://www.instagram.com/gidigruv/" },
