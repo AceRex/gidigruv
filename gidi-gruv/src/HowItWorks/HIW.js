@@ -1,5 +1,5 @@
 import React from "react";
-import './HIW.css'
+import './style.css'
 import {Link} from 'react-router-dom'
 
 export default function HowItWorks() {

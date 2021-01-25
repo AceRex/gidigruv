@@ -74,9 +74,9 @@ class Navbar extends Component {
               {NotLoggedIn.map((item, index) => {
                 return (
                   <li key={index}>
-                    <a href={item.url} className={item.cName}>
+                    <Link to={item.url} className={item.cName}>
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
