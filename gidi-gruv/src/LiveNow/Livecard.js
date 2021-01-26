@@ -13,7 +13,7 @@ export default function Card(props) {
 
   return (
     <Bounce>
-      <div className="LiveCard">
+      <div className="LiveCard" key={props.id}>
         <div className="top-details">
           <div className="sub">
             <p>{props.pay}</p>
@@ -37,7 +37,7 @@ export default function Card(props) {
           )}
         </div>
 
-        <Link to="/showeventdetails">
+        <Link to="/showeventdetails" key={props.id}>
           <div className="image-container">
             <img src={props.img} />
           </div>

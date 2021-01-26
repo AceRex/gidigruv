@@ -39,8 +39,7 @@ export default class EventByCategory extends React.Component {
         },
         {
           id: 3,
-          title:
-            "Special Carols and Drama Night",
+          title: "Special Carols and Drama Night",
           pay: "PAID",
           img: "/Images/anotherevents.jpg",
           MM: "MAR",
@@ -68,6 +67,26 @@ export default class EventByCategory extends React.Component {
           location: "Ikeja, Lagos. NG",
           time: "08:00pm",
         },
+        {
+          id: 6,
+          title: "Raising Intelligent Kids in Times Like This!",
+          img: "/Images/business.jpg",
+          pay: "PAID",
+          MM: "DEC",
+          DD: "26",
+          location: "Ikeja, Lagos. NG",
+          time: "08:00pm",
+        },
+        {
+          id: 7,
+          title: "Raising Intelligent Kids in Times Like This!",
+          img: "/Images/business.jpg",
+          pay: "PAID",
+          MM: "DEC",
+          DD: "26",
+          location: "Ikeja, Lagos. NG",
+          time: "08:00pm",
+        },
       ],
     };
   }
@@ -83,6 +102,7 @@ export default class EventByCategory extends React.Component {
             {this.state.All.map((items) => {
               return (
                 <LiveCard
+                  id={items.id}
                   pay={items.pay}
                   img={items.img}
                   MM={items.MM}
