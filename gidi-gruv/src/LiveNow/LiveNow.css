@@ -28,8 +28,7 @@
   }
   .LiveCard {
     background-color: var(--ColorWhite);
-    max-width: 49%;
-    height: 18%;
+    width: 210px;
     margin: 10px auto;
     border-radius: 10px;
     overflow: hidden;
@@ -81,48 +80,48 @@
     padding: 0.2rem 10px;
     text-align: center;
   }
-  .LiveCard a {
+  .LiveCard .Card {
     text-decoration: none;
-  }
-  .LiveCard a .image-container {
     max-width: 100%;
-    height: 12rem;
+  }
+  .LiveCard .Card .image-container {
+    width: 100%;
+    height: 200px;
     overflow: hidden;
   }
-  .LiveCard a img {
-    min-width: 48%;
-    height: 100%;
+  .LiveCard .Card .image-container img {
+    width: 220px;
   }
-  .LiveCard a .details {
+  .LiveCard .Card .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -40px;
+    padding: 4px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .LiveCard a .details .date {
+  .LiveCard .Card .details .date {
     width: 20%;
     padding: 5px;
     text-align: center;
   }
-  .LiveCard a .details .date p {
+  .LiveCard .Card .details .date p {
     font-size: 17px;
     font-weight: 500;
     color: var(--ColorPink);
   }
-  .LiveCard a .details .date span {
+  .LiveCard .Card .details .date span {
     font-size: 30.15px;
     font-weight: 600;
     color: #363535;
   }
-  .LiveCard a .details .title-details {
+  .LiveCard .Card .details .title-details {
     width: 80%;
     padding: 5px;
   }
-  .LiveCard a .details .title-details p {
-    font-size: 14px;
+  .LiveCard .Card .details .title-details p {
+    font-size: 13px;
     font-weight: 600;
     color: #363535;
     height: 3rem;
@@ -130,7 +129,7 @@
     margin-bottom: -0.5rem;
     text-overflow: ellipsis;
   }
-  .LiveCard a .details .title-details span {
+  .LiveCard .Card .details .title-details span {
     font-size: 10px;
     font-weight: 300;
     color: #363535;
@@ -167,8 +166,7 @@
   }
   .LiveCard {
     background-color: var(--ColorWhite);
-    max-width: 49%;
-    height: 18%;
+    width: 32%;
     margin: 10px auto;
     border-radius: 10px;
     overflow: hidden;
@@ -224,19 +222,17 @@
     text-decoration: none;
   }
   .LiveCard a .image-container {
-    max-width: 100%;
-    height: 15rem;
+    width: 100%;
+    height: 200px;
     overflow: hidden;
   }
   .LiveCard a img {
-    min-width: 60%;
-    height: 100%;
+    width: 200px;
   }
   .LiveCard a .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -307,7 +303,6 @@
   .LiveCard {
     background-color: var(--ColorWhite);
     max-width: 32%;
-    height: 18%;
     margin: 10px auto;
     border-radius: 10px;
     overflow: hidden;
@@ -363,19 +358,17 @@
     text-decoration: none;
   }
   .LiveCard a .image-container {
-    max-width: 100%;
-    height: 14rem;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
   .LiveCard a img {
-    min-width: 300px;
-    height: 100%;
+    width: 20px;
   }
   .LiveCard a .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -446,7 +439,6 @@
   .LiveCard {
     background-color: var(--ColorWhite);
     max-width: 32%;
-    height: 18%;
     margin: 10px auto;
     border-radius: 10px;
     overflow: hidden;
@@ -502,19 +494,18 @@
     text-decoration: none;
   }
   .LiveCard a .image-container {
-    max-width: 100%;
-    height: 14rem;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
   .LiveCard a img {
-    min-width: 300px;
+    width: 300px;
     height: 100%;
   }
   .LiveCard a .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -585,7 +576,6 @@
   .LiveCard {
     background-color: var(--ColorWhite);
     max-width: 24%;
-    height: 18%;
     margin: 10px 5px;
     border-radius: 10px;
     overflow: hidden;
@@ -641,19 +631,19 @@
     text-decoration: none;
   }
   .LiveCard a .image-container {
-    max-width: 100%;
-    height: 14rem;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     overflow: hidden;
   }
   .LiveCard a img {
-    min-width: 300px;
-    height: 100%;
+    width: 300px;
   }
   .LiveCard a .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

@@ -5,7 +5,6 @@ import { HiOutlineUpload } from "react-icons/hi";
 import { IoIosHeart } from "react-icons/io";
 import { TiTime } from "react-icons/ti";
 import { Link } from "react-router-dom";
-import Datas from "../Data/data";
 import Bounce from "react-reveal/Bounce";
 
 export default function Card(props) {
@@ -18,7 +17,7 @@ export default function Card(props) {
           <div className="sub">
             <p>{props.pay}</p>
           </div>
-          {Datas.IsLoggedIn ? (
+          {/* {Datas.IsLoggedIn ? (
             <div className="share-like">
               <span>
                 <HiOutlineUpload />
@@ -34,10 +33,10 @@ export default function Card(props) {
             </div>
           ) : (
             ""
-          )}
+          )} */}
         </div>
 
-        <Link to="/showeventdetails" key={props.id}>
+        <Link to="/showeventdetails" className="Card" key={props.id}>
           <div className="image-container">
             <img src={props.img} />
           </div>
