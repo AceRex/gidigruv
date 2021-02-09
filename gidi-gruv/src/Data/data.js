@@ -209,7 +209,15 @@
       type: "Free",
     },
   ],
+  Userdata:{
+    Fullname: 'Chioma Abiodun Abdul',
+    PhoneNumber: '07034343434',
+    Email: 'email@emailprovider.com',
+    Street: 'MainStreet',
+    LGA: 'Kosofe L.G.A',
+    Country: 'Nigeria',
+  },
+
   IsLiked:true,
 }
-
 export default Datas;

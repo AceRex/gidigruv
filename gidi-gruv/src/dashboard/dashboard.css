@@ -7,16 +7,16 @@
 
 }
 .db-container > .profile{
-    display: flex;
-    width: 80%;
+    width: 70%;
     margin:auto;
     background-color: var(--ColorWhite);
     color: #aaa;
     padding: 3rem 2rem;
 }
 .db-container > .profile > .img-container{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
     border-radius: 100%;
     overflow:hidden;
 }
@@ -26,11 +26,37 @@
 }
 .db-container > .profile > .profile-details{
     width: 70%;
-    display: flex;
-    flex-direction: column;
+    margin: auto;
     text-align: center;
 }
-.profile-details > .fullName{
-    font-size: 30px;
-    font-weight: 600;
+/* .db-container > .profile > .profile-details > form{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+} */
+.db-container > .profile > .profile-details > form > .f-group{
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: space-between;
+}
+.db-container > .profile > .profile-details > form > .f-group > label{
+    width: 30%;
+    margin: 0px 10px;
+    padding: 10px;
+}
+.db-input{
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+}
+.db-btn{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
 }

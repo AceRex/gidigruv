@@ -1,150 +1,685 @@
-.Live-container > .cards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.Live-container > .cards > .swiper-wrapper{
-  width: 100%;
-}
-.Live-container {
-  width: 97%;
-  margin: auto;
-  padding: 2.5rem 5rem;
-  color: var(--ColorPurple);
-}
-
-.Live-container > p{
+@media (max-width: 575.98px) {
+  .Live-container {
+    width: 97%;
+    margin: auto;
+    padding: 2.5rem 5rem;
+    color: var(--ColorPurple);
+  }
+  .Live-container p {
     width: 95%;
     margin: auto;
-    font-size:35px ;
+    font-size: 35px;
     font-weight: bold;
-}
-.LiveCard {
-  background-color: var(--ColorWhite);
-  max-width: 30%;
-  height: 18%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 15px;
-  text-decoration: none;
-  box-shadow: 2px 2px 10px #a8a8a841;
-}
-.LiveCard > a{  
-  text-decoration: none;
+  }
+  .Live-container .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .Live-container .cards .swiper-wrapper {
+    width: 100%;
+  }
+  .LiveCard {
+    background-color: var(--ColorWhite);
+    width: 210px;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 10px #a8a8a841;
+            box-shadow: 2px 2px 10px #a8a8a841;
+  }
+  .LiveCard .top-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 0.5rem;
+    top: 0;
+  }
+  .LiveCard .top-details .sub {
+    margin-top: -2.5rem;
+  }
+  .LiveCard .top-details .sub p {
+    background-color: #fff;
+    padding: 0px 13px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #363535;
+    border-radius: 10px;
+  }
+  .LiveCard .top-details .share-like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .LiveCard .top-details .share-like span {
+    color: #363535;
+    background-color: #fff;
+    font-size: 17px;
+    margin: 0px 5px;
+    border-radius: 25%;
+    padding: 0.2rem 10px;
+    text-align: center;
+  }
+  .LiveCard .Card {
+    text-decoration: none;
+    max-width: 100%;
+  }
+  .LiveCard .Card .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .LiveCard .Card .image-container img {
+    width: 220px;
+  }
+  .LiveCard .Card .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .LiveCard .Card .details .date {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  .LiveCard .Card .details .date p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ColorPink);
+  }
+  .LiveCard .Card .details .date span {
+    font-size: 30.15px;
+    font-weight: 600;
+    color: #363535;
+  }
+  .LiveCard .Card .details .title-details {
+    width: 80%;
+    padding: 5px;
+  }
+  .LiveCard .Card .details .title-details p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #363535;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: -0.5rem;
+    text-overflow: ellipsis;
+  }
+  .LiveCard .Card .details .title-details span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #363535;
+  }
 }
 
-.LiveCard > a >.image-container {
-  width: 100%;
-  height: 14rem;
-  overflow: hidden;
-}
-.image-container > img {
-  width: 300px;
-  height: 100%;
-}
-a > .details {
-  display: flex;
-  height: 8rem;
-  padding: 1rem;
-}
- .details > .date {
-  padding: 10px;
-  width: 20%;
-  text-align: center;  
-}
-.details > .date > p {
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--ColorPink);
-}
-.details > .date > span {
-  font-size: 30.15px;
-  font-weight: 600;
-  color: #363535;
-}
-.details > .title-details {
-  padding: 0.5rem;
-  width: 80%;
-}
-.details > .title-details > p {
-  font-size: 15px;
-  font-weight: 600;
-  color: #363535;
-  height: 3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.details > .title-details > span {
-  font-size: 12px;
-  font-weight: 300;
-  color: #363535;
-}
-.LiveCard > .top-details {
-  display: flex;
-  width: 21.5%;
-  justify-content: space-between;
-  position: absolute;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.7rem 1rem;
-}
-.LiveCard > .top-details > .sub > p {
-  background-color: #fff;
-  padding: 5px 13px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #363535;
-  border-radius: 10px;
-}
-.LiveCard > .top-details > .share-like{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.LiveCard > .top-details > .share-like > span {
-  color: #363535;
-  background-color: #fff;
-  font-size: 17px;
-  margin: 0px 5px;
-  border-radius: 25%;
-  padding: 0.2rem 10px;
-  text-align: center;
-}
- .load-more{
- width: 40%;
- margin: auto;
-}
-.load-more > .load-more-btn{
-  background-color: #c3b6fc;
-  color: var(--ColorPurple);
-  border: none;
-  width: 100%;
-  padding: 20px;
-  margin-top: 5rem;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 10px;
-}
-.load-more-btn:hover{
-  background-color: var(--ColorPurple);
-  color: var(--ColorWhite);
-  transition: all linear 0.2s;
-}
-@media screen and (max-width: 960px) {
-  .cards{
-    display: flex;
-    flex-direction: column;
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Live-container {
+    width: 97%;
+    margin: auto;
+    padding: 2.5rem 5rem;
+    color: var(--ColorPurple);
   }
-  .LiveCard{
-    max-width: 45%;
-    margin: 11px;
+  .Live-container p {
+    width: 95%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
   }
-.LiveCard > .top-details {
-  width: 46%;
+  .Live-container .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .Live-container .cards .swiper-wrapper {
+    width: 100%;
+  }
+  .LiveCard {
+    background-color: var(--ColorWhite);
+    width: 32%;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 10px #a8a8a841;
+            box-shadow: 2px 2px 10px #a8a8a841;
+  }
+  .LiveCard .top-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 0.5rem;
+    top: 0;
+  }
+  .LiveCard .top-details .sub {
+    margin-top: -2.5rem;
+  }
+  .LiveCard .top-details .sub p {
+    background-color: #fff;
+    padding: 0px 13px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #363535;
+    border-radius: 10px;
+  }
+  .LiveCard .top-details .share-like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .LiveCard .top-details .share-like span {
+    color: #363535;
+    background-color: #fff;
+    font-size: 17px;
+    margin: 0px 5px;
+    border-radius: 25%;
+    padding: 0.2rem 10px;
+    text-align: center;
+  }
+  .LiveCard a {
+    text-decoration: none;
+  }
+  .LiveCard a .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .LiveCard a img {
+    width: 200px;
+  }
+  .LiveCard a .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .LiveCard a .details .date {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  .LiveCard a .details .date p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ColorPink);
+  }
+  .LiveCard a .details .date span {
+    font-size: 30.15px;
+    font-weight: 600;
+    color: #363535;
+  }
+  .LiveCard a .details .title-details {
+    width: 80%;
+    padding: 5px;
+  }
+  .LiveCard a .details .title-details p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #363535;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: -0.5rem;
+    text-overflow: ellipsis;
+  }
+  .LiveCard a .details .title-details span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #363535;
+  }
 }
-.details{
-  padding: 0;
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .Live-container {
+    width: 97%;
+    margin: auto;
+    padding: 2.5rem 5rem;
+    color: var(--ColorPurple);
+  }
+  .Live-container p {
+    width: 95%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .Live-container .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .Live-container .cards .swiper-wrapper {
+    width: 100%;
+  }
+  .LiveCard {
+    background-color: var(--ColorWhite);
+    max-width: 32%;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 10px #a8a8a841;
+            box-shadow: 2px 2px 10px #a8a8a841;
+  }
+  .LiveCard .top-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 0.5rem;
+    top: 0;
+  }
+  .LiveCard .top-details .sub {
+    margin-top: -2.5rem;
+  }
+  .LiveCard .top-details .sub p {
+    background-color: #fff;
+    padding: 0px 13px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #363535;
+    border-radius: 10px;
+  }
+  .LiveCard .top-details .share-like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .LiveCard .top-details .share-like span {
+    color: #363535;
+    background-color: #fff;
+    font-size: 17px;
+    margin: 0px 5px;
+    border-radius: 25%;
+    padding: 0.2rem 10px;
+    text-align: center;
+  }
+  .LiveCard a {
+    text-decoration: none;
+  }
+  .LiveCard a .image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .LiveCard a img {
+    width: 20px;
+  }
+  .LiveCard a .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .LiveCard a .details .date {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  .LiveCard a .details .date p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ColorPink);
+  }
+  .LiveCard a .details .date span {
+    font-size: 30.15px;
+    font-weight: 600;
+    color: #363535;
+  }
+  .LiveCard a .details .title-details {
+    width: 80%;
+    padding: 5px;
+  }
+  .LiveCard a .details .title-details p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #363535;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: -0.5rem;
+    text-overflow: ellipsis;
+  }
+  .LiveCard a .details .title-details span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #363535;
+  }
 }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .Live-container {
+    width: 97%;
+    margin: auto;
+    padding: 2.5rem 5rem;
+    color: var(--ColorPurple);
+  }
+  .Live-container p {
+    width: 95%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .Live-container .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .Live-container .cards .swiper-wrapper {
+    width: 100%;
+  }
+  .LiveCard {
+    background-color: var(--ColorWhite);
+    max-width: 32%;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 10px #a8a8a841;
+            box-shadow: 2px 2px 10px #a8a8a841;
+  }
+  .LiveCard .top-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 0.5rem;
+    top: 0;
+  }
+  .LiveCard .top-details .sub {
+    margin-top: -2.5rem;
+  }
+  .LiveCard .top-details .sub p {
+    background-color: #fff;
+    padding: 0px 13px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #363535;
+    border-radius: 10px;
+  }
+  .LiveCard .top-details .share-like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .LiveCard .top-details .share-like span {
+    color: #363535;
+    background-color: #fff;
+    font-size: 17px;
+    margin: 0px 5px;
+    border-radius: 25%;
+    padding: 0.2rem 10px;
+    text-align: center;
+  }
+  .LiveCard a {
+    text-decoration: none;
+  }
+  .LiveCard a .image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .LiveCard a img {
+    width: 300px;
+    height: 100%;
+  }
+  .LiveCard a .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .LiveCard a .details .date {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  .LiveCard a .details .date p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ColorPink);
+  }
+  .LiveCard a .details .date span {
+    font-size: 30.15px;
+    font-weight: 600;
+    color: #363535;
+  }
+  .LiveCard a .details .title-details {
+    width: 80%;
+    padding: 5px;
+  }
+  .LiveCard a .details .title-details p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #363535;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: -0.5rem;
+    text-overflow: ellipsis;
+  }
+  .LiveCard a .details .title-details span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #363535;
+  }
 }
+
+@media (min-width: 1200px) {
+  .Live-container {
+    width: 97%;
+    margin: auto;
+    padding: 2.5rem 5rem;
+    color: var(--ColorPurple);
+  }
+  .Live-container p {
+    width: 95%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .Live-container .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .Live-container .cards .swiper-wrapper {
+    width: 100%;
+  }
+  .LiveCard {
+    background-color: var(--ColorWhite);
+    max-width: 24%;
+    margin: 10px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 10px #a8a8a841;
+            box-shadow: 2px 2px 10px #a8a8a841;
+  }
+  .LiveCard .top-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 0.5rem;
+    top: 0;
+  }
+  .LiveCard .top-details .sub {
+    margin-top: -2.5rem;
+  }
+  .LiveCard .top-details .sub p {
+    background-color: #fff;
+    padding: 0px 13px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #363535;
+    border-radius: 10px;
+  }
+  .LiveCard .top-details .share-like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .LiveCard .top-details .share-like span {
+    color: #363535;
+    background-color: #fff;
+    font-size: 17px;
+    margin: 0px 5px;
+    border-radius: 25%;
+    padding: 0.2rem 10px;
+    text-align: center;
+  }
+  .LiveCard a {
+    text-decoration: none;
+  }
+  .LiveCard a .image-container {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .LiveCard a img {
+    width: 300px;
+  }
+  .LiveCard a .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .LiveCard a .details .date {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  .LiveCard a .details .date p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ColorPink);
+  }
+  .LiveCard a .details .date span {
+    font-size: 30.15px;
+    font-weight: 600;
+    color: #363535;
+  }
+  .LiveCard a .details .title-details {
+    width: 80%;
+    padding: 5px;
+  }
+  .LiveCard a .details .title-details p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #363535;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: -0.5rem;
+    text-overflow: ellipsis;
+  }
+  .LiveCard a .details .title-details span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #363535;
+  }
+}
+/*# sourceMappingURL=LiveNow.css.map */
