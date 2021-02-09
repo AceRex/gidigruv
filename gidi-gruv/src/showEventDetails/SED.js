@@ -9,7 +9,7 @@ import { AiOutlineLink } from "react-icons/ai";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import TabSelect from "./Tabs";
-import Datas from '../Data/data'
+import Datas from "../Data/data";
 
 class ShowEventDetails extends React.Component {
   constructor() {
@@ -39,7 +39,6 @@ class ShowEventDetails extends React.Component {
     };
   }
 
-
   render() {
     const containerStyle = {
       position: "relative",
@@ -50,144 +49,35 @@ class ShowEventDetails extends React.Component {
     return (
       <>
         <Header />
-        <div className="SED-container">
-          <div className="eventsDetails">
-            <div className="image-container">
-              <img src={Img} />
-            </div>
-            <div className="title">
-              <p className="COE">Entertainment</p>
-              <div className="des">
-                <h2>
-                  Ask me Anything session with Marty Cagan Christian Idiodi
-                </h2>
-              </div>
-            </div>
+        <section className="SED-container">
+          <div className="img-container">
+            <img src={Img} alt="Image" />
           </div>
-
-          {/* Check if user is logged in */}
-          {Datas.IsLoggedIn ? (
-            <div className="details">
-              <div className="more-des">
-                <div className="event-date">
-                  <p>
-                    <WiTime10 />
-                  </p>
-                  <span>
-                    <p>Thursday, November 18, 2020</p>
-                    7:00 PM to 8:00 PM GMT+1
-                  </span>
-                </div>
-                <div className="event-date">
-                  <p>
-                    <TiLocationOutline />
-                  </p>
-                  <span>
-                    <p>Kuje, Abuja. NG</p>
-                    <a href="https://www.google.ng/maps/" target='_blank'>
-                      Get location to physical event on Map here
-                    </a>
-                  </span>
-                </div>
-                <div className="event-date">
-                  <p>
-                    <AiOutlineLink />
-                  </p>
-                  <span>
-                    <p>Link to online Event</p>
-                    <a href="https://meet.google.com/xgp-hixs-nrc" target='_blank'>
-                      https://meet.google.com/xgp-hixs-nrc
-                    </a>
-                  </span>
-                </div>
-                <div className="event-date">
-                  <p className="attendees">
-                    {this.state.attendees.length} will be attending
-                  </p>
-                </div>
-                <h3> About This Event</h3>
-                <div className="About-event">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit, nec
-                  curabitur aptent nullam facilisis sodales nam laoreet,
-                  dignissim netus lobortis nulla tellus cras. Gravida mi libero
-                  potenti faucibus montes dictumst, quis eget vitae ac mattis
-                  himenaeos varius,
-                </div>
-                <div className="share-link">
-                  <div className="share">
-                    <span>
-                      {this.state.clicked ? <BsHeart /> : <BsHeartFill />}
-                    </span>
-                    <button>Register for this Event</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="details">
-              <div className="more-des">
-                <div className="event-date">
-                  <p>
-                    <WiTime10 />
-                  </p>
-                  <span>
-                    <p>Thursday, November 18, 2020</p>
-                    7:00 PM to 8:00 PM GMT+1
-                  </span>
-                </div>
-                <div className="event-date">
-                  <p>
-                    <TiLocationOutline />
-                  </p>
-                  <span>
-                    <p>Kuje, Abuja. NG</p>
-                  </span>
-                </div>
-                <div className="event-date">
-                  <p>
-                    <AiOutlineLink />
-                  </p>
-                  <span>
-                    <p>Event will be online</p>
-                  </span>
-                </div>{" "}
-                <div className="event-date">
-                  <p className="attendees">
-                    {this.state.attendees.length} will be attending
-                  </p>
-                </div>
-                <h3> About This Event</h3>
-                <div className="About-event">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit, nec
-                  curabitur aptent nullam facilisis sodales nam laoreet,
-                  dignissim netus lobortis nulla tellus cras. Gravida mi libero
-                  potenti faucibus montes dictumst, quis eget vitae ac mattis
-                  himenaeos varius,
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-        {Datas.IsLoggedIn ?
-        <div className="map" id="map">
-          <div className="map-view">
-            <Map
-              containerStyle={containerStyle}
-              google={this.props.google}
-              zoom={14}
-            >
-              <Marker onClick={this.onMarkerClick} name={"Current location"} />
-
-              <InfoWindow onClose={this.onInfoWindowClose}>
-                <div>
-                  <h1>{this.state.selectedPlace.name}</h1>
-                </div>
-              </InfoWindow>
-            </Map>
+          <div className="SED-details">
+            <p>Replib Live;</p>
+            <table>
+              <tr>
+                <td className='td1'>Description</td>
+                <td>
+                  sampkpkj nsjsjsjs jsjsjsjsjs sjssjssjsjsjbss jsnsjdhjshdshdjsd
+                  sd sjds dsjdbsjd djb dj
+                </td>
+              </tr>
+              <tr>
+                <td className='td1'>Date</td>
+                <td>9/02/2021</td>
+              </tr>
+              <tr>
+                <td className='td1'>Time</td>
+                <td>08:00pm</td>
+              </tr>
+              <tr>
+                <td className='td1'>Address</td>
+                <td>Time</td>
+              </tr>
+            </table>
           </div>
-        </div> :  ''}
-        
-        <TabSelect />
+        </section>
         <Footer />
       </>
     );

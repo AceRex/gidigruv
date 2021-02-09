@@ -1,7 +1,7 @@
 import React from "react";
 import "./sign.css";
 import { Link } from "react-router-dom";
-import Logo from "../previewImages/6.png";
+// import Logo from "../../public/Images/6.png";
 import TextLoop from "react-text-loop";
 import HomeIcon from '@material-ui/icons/Home';
 
@@ -16,7 +16,7 @@ function SignIn() {
         </div>
         <div className="logo">
           <Link to="/">
-            <img src={Logo} />
+            <img src="" alt='logo' />
           </Link>
         </div>
         <div className="textSlider">

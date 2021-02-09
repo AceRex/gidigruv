@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -25,18 +25,10 @@
 .footer > .list {
   font-size: 12px;
   font-weight: 700;
+  max-width: 100%;
 }
 .footer > .list > a {
   margin: 12px;
   color: #fff;
   text-decoration: none;
-}
-
-@media screen and (max-width: 960px) {
-  .footer {
-    flex-direction: column;
-  }
-  .footer > .list {
-    margin: 10px;
-  }
 }
