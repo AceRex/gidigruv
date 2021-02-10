@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --ColorPurple: #48108d;
+    --ColorPink: #ff1493;
+    --ColorWhite: #fff;
+    --ColorBlack: #161616;
+    --ColorLight: #d8d6d6;
+}
+
+body {
+    color: var(--ColorWhite);
+}
+
+.cover {
+    background-color: var(--ColorWhite);
+}
+
+.container {
+    max-width: 100%;
+}
+@media (max-width: 575.98px) { 
+    .pop-up{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #3f0263ce;
+        font-weight: 500;
+        font-size: 12px;
+        z-index: 1;
+       
+        .buttons{
+            width: 90% ;
+            margin: 10px auto;
+
+            a{
+                border: solid 2px var(--ColorPink);
+                background-color: transparent;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                color: var(--ColorPink);
+                text-decoration: none;
+                font-size: 14px;
+                width: 50%;
+            }
+        }
+       
+    }
+ }
+
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// @media (min-width: 1200px) { ... }

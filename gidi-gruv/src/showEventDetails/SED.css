@@ -5,7 +5,7 @@
     background-color: #f0eff5;
   }
   .SED-container .img-container {
-    width: 60%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -16,7 +16,7 @@
     width: 100%;
   }
   .SED-container .SED-details {
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 5px;
   }
@@ -44,7 +44,7 @@
     background-color: #7300ff2f;
   }
   .SED-container .btn-container {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
   }
   .SED-container .btn-container button {
@@ -52,13 +52,21 @@
     padding: 15px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
     background-color: var(--ColorPurple);
     color: var(--ColorWhite);
   }
+  .SED-container .btn-container button:hover {
+    -webkit-transition: ease 1s linear;
+    transition: ease 1s linear;
+    -webkit-box-shadow: 2px 2px 10px #4701b96e;
+            box-shadow: 2px 2px 10px #4701b96e;
+  }
   .SED-container .map {
-    max-width: 80%;
+    max-width: 90%;
+    overflow: hidden;
     margin: auto;
-    height: 350px;
+    height: 300px;
     border-radius: 5px;
     background-color: #444343;
   }
@@ -79,6 +87,91 @@
     font-weight: bold;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #00000057;
+  }
+  .modal .feeback-form {
+    width: 80%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--ColorWhite);
+  }
+  .modal .feeback-form p {
+    font-size: 13px;
+    color: var(--ColorPurple);
+    margin: 10px;
+  }
+  .modal .feeback-form .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 10px;
+    border-left: solid 6px #FF1493;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .modal .feeback-form .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+  .modal .feeback-form .success .icon {
+    font-size: 90px;
+    color: #04db82;
+  }
+  .modal .feeback-form .success p {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .modal .feeback-form .close {
+    font-size: 40px;
+    color: var(--ColorPink);
+    position: absolute;
+    top: 5.5%;
+    right: 6%;
+    cursor: pointer;
+  }
+  .modal .feeback-form .notify {
+    font-size: 70px;
+    color: var(--ColorPink);
+  }
+  .modal .feeback-form form {
+    margin-top: 1rem;
+  }
+  .modal .feeback-form form input {
+    width: 90%;
+    padding: 7px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #c6c6c7;
+    outline: none;
+  }
+  .modal .feeback-form form button {
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 5px;
+    color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #36049470;
+            box-shadow: 5px 5px 10px #36049470;
   }
 }
 
@@ -135,9 +228,16 @@
     width: 100%;
     padding: 15px;
     border: none;
+    outline: none;
     border-radius: 5px;
     background-color: var(--ColorPurple);
     color: var(--ColorWhite);
+  }
+  .SED-container .btn-container button:hover {
+    -webkit-transition: ease 1s linear;
+    transition: ease 1s linear;
+    -webkit-box-shadow: 2px 2px 10px #4701b96e;
+            box-shadow: 2px 2px 10px #4701b96e;
   }
   .SED-container .map {
     max-width: 80%;
@@ -147,7 +247,7 @@
     background-color: #444343;
   }
   .SED-container .more {
-    max-width: 100%;
+    max-width: 98%;
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -163,6 +263,91 @@
     font-weight: bold;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #00000057;
+  }
+  .modal .feeback-form {
+    width: 80%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--ColorWhite);
+  }
+  .modal .feeback-form p {
+    font-size: 13px;
+    color: var(--ColorPurple);
+    margin: 10px;
+  }
+  .modal .feeback-form .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 10px;
+    border-left: solid 6px #FF1493;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .modal .feeback-form .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+  .modal .feeback-form .success .icon {
+    font-size: 90px;
+    color: #04db82;
+  }
+  .modal .feeback-form .success p {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .modal .feeback-form .close {
+    font-size: 40px;
+    color: var(--ColorPink);
+    position: absolute;
+    top: 5.5%;
+    right: 6%;
+    cursor: pointer;
+  }
+  .modal .feeback-form .notify {
+    font-size: 70px;
+    color: var(--ColorPink);
+  }
+  .modal .feeback-form form {
+    margin-top: 1rem;
+  }
+  .modal .feeback-form form input {
+    width: 90%;
+    padding: 7px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #c6c6c7;
+    outline: none;
+  }
+  .modal .feeback-form form button {
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 5px;
+    color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #36049470;
+            box-shadow: 5px 5px 10px #36049470;
   }
 }
 
@@ -248,6 +433,91 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #00000057;
+  }
+  .modal .feeback-form {
+    width: 60%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--ColorWhite);
+  }
+  .modal .feeback-form p {
+    font-size: 13px;
+    color: var(--ColorPurple);
+    margin: 10px;
+  }
+  .modal .feeback-form .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 10px;
+    border-left: solid 6px #FF1493;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .modal .feeback-form .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+  .modal .feeback-form .success .icon {
+    font-size: 90px;
+    color: #04db82;
+  }
+  .modal .feeback-form .success p {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .modal .feeback-form .close {
+    font-size: 40px;
+    color: var(--ColorPink);
+    position: absolute;
+    top: 5.5%;
+    right: 18%;
+    cursor: pointer;
+  }
+  .modal .feeback-form .notify {
+    font-size: 70px;
+    color: var(--ColorPink);
+  }
+  .modal .feeback-form form {
+    margin-top: 1rem;
+  }
+  .modal .feeback-form form input {
+    width: 90%;
+    padding: 7px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #c6c6c7;
+    outline: none;
+  }
+  .modal .feeback-form form button {
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 5px;
+    color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #36049470;
+            box-shadow: 5px 5px 10px #36049470;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -255,96 +525,8 @@
     max-width: 100%;
     padding: 10px;
     background-color: #f0eff5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
-  .SED-container .img-container {
-    width: 40%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    -webkit-box-shadow: 6px 6px 5px #c6c6c7;
-            box-shadow: 6px 6px 5px #c6c6c7;
-  }
-  .SED-container .img-container img {
-    width: 100%;
-  }
-  .SED-container .SED-details {
-    width: 50%;
-    margin: auto;
-    padding: 5px;
-  }
-  .SED-container .SED-details p {
-    font-size: 35px;
-    font-weight: 800;
-    text-align: center;
-    color: var(--ColorPurple);
-  }
-  .SED-container .SED-details table {
-    width: 100%;
-    padding: 10px;
-  }
-  .SED-container .SED-details table td {
-    padding: 15px;
-    color: #363535;
-    font-size: 12px;
-  }
-  .SED-container .SED-details table .td1 {
-    color: var(--ColorPink);
-    font-size: 15px;
-    font-weight: 700;
-  }
-  .SED-container .SED-details table tr:nth-child(even) {
-    background-color: #7300ff2f;
-  }
-  .SED-container .btn-container {
-    width: 50%;
-    margin: 3rem auto;
-  }
-  .SED-container .btn-container button {
-    width: 100%;
-    margin: auto;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--ColorPurple);
-    color: var(--ColorWhite);
-  }
-  .SED-container .map {
-    max-width: 80%;
-    margin: auto;
-    height: 350px;
-    border-radius: 5px;
-    background-color: #444343;
-  }
-  .SED-container .more {
-    max-width: 100%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    list-style-type: none;
-    margin: 2rem auto;
-    padding: 5px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1200px) {
-  .SED-container {
-    max-width: 100%;
-    padding: 10px;
-    background-color: #f0eff5;
+  .SED-container .grp {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -363,7 +545,7 @@
     width: 100%;
   }
   .SED-container .SED-details {
-    width: 50%;
+    width: 45%;
     margin: auto;
     padding: 5px;
   }
@@ -404,7 +586,7 @@
     color: var(--ColorWhite);
   }
   .SED-container .map {
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
     height: 350px;
     border-radius: 5px;
@@ -427,6 +609,268 @@
     font-weight: bold;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #00000057;
+  }
+  .modal .feeback-form {
+    width: 50%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--ColorWhite);
+  }
+  .modal .feeback-form p {
+    font-size: 13px;
+    color: var(--ColorPurple);
+    margin: 10px;
+  }
+  .modal .feeback-form .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 10px;
+    border-left: solid 6px #FF1493;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .modal .feeback-form .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+  .modal .feeback-form .success .icon {
+    font-size: 90px;
+    color: #04db82;
+  }
+  .modal .feeback-form .success p {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .modal .feeback-form .close {
+    font-size: 40px;
+    color: var(--ColorPink);
+    position: absolute;
+    top: 5.5%;
+    right: 23%;
+    cursor: pointer;
+  }
+  .modal .feeback-form .notify {
+    font-size: 70px;
+    color: var(--ColorPink);
+  }
+  .modal .feeback-form form {
+    margin-top: 1rem;
+  }
+  .modal .feeback-form form input {
+    width: 90%;
+    padding: 7px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #c6c6c7;
+    outline: none;
+  }
+  .modal .feeback-form form button {
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 5px;
+    color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #36049470;
+            box-shadow: 5px 5px 10px #36049470;
+  }
+}
+
+@media (min-width: 1200px) {
+  .SED-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: #f0eff5;
+  }
+  .SED-container .grp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+  }
+  .SED-container .img-container {
+    width: 35%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-box-shadow: 6px 6px 5px #c6c6c7;
+            box-shadow: 6px 6px 5px #c6c6c7;
+  }
+  .SED-container .img-container img {
+    width: 100%;
+  }
+  .SED-container .SED-details {
+    width: 50%;
+    margin: auto;
+  }
+  .SED-container .SED-details p {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--ColorPurple);
+  }
+  .SED-container .SED-details table {
+    width: 100%;
+  }
+  .SED-container .SED-details table td {
+    padding: 15px;
+    color: #363535;
+    font-size: 12px;
+  }
+  .SED-container .SED-details table .td1 {
+    color: var(--ColorPink);
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .SED-container .SED-details table tr:nth-child(even) {
+    background-color: #7300ff2f;
+  }
+  .SED-container .btn-container {
+    width: 50%;
+    margin: 3rem auto;
+  }
+  .SED-container .btn-container button {
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+  }
+  .SED-container .map {
+    max-width: 90%;
+    margin: 25px auto;
+    height: 250px;
+    border-radius: 5px;
+    background-color: #444343;
+  }
+  .SED-container .more {
+    max-width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    margin: 2rem auto;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #00000057;
+  }
+  .modal .feeback-form {
+    width: 40%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--ColorWhite);
+  }
+  .modal .feeback-form p {
+    font-size: 13px;
+    color: var(--ColorPurple);
+    margin: 10px;
+  }
+  .modal .feeback-form .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 10px;
+    border-left: solid 6px #FF1493;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .modal .feeback-form .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+  .modal .feeback-form .success .icon {
+    font-size: 90px;
+    color: #04db82;
+  }
+  .modal .feeback-form .success p {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .modal .feeback-form .close {
+    font-size: 40px;
+    color: var(--ColorPink);
+    position: absolute;
+    top: 5.5%;
+    right: 29%;
+    cursor: pointer;
+  }
+  .modal .feeback-form .notify {
+    font-size: 70px;
+    color: var(--ColorPink);
+  }
+  .modal .feeback-form form {
+    margin-top: 1rem;
+  }
+  .modal .feeback-form form input {
+    width: 90%;
+    padding: 7px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #c6c6c7;
+    outline: none;
+  }
+  .modal .feeback-form form button {
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 5px;
+    color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #36049470;
+            box-shadow: 5px 5px 10px #36049470;
   }
 }
 /*# sourceMappingURL=SED.css.map */

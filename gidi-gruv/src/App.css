@@ -1,56 +1,57 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
-    --ColorPurple: #48108d;
-    --ColorPink: #ff1493;
-    --ColorWhite: #fff;
-    --ColorBlack: #161616;
-    --ColorLight: #d8d6d6;
+  --ColorPurple: #48108d;
+  --ColorPink: #ff1493;
+  --ColorWhite: #fff;
+  --ColorBlack: #161616;
+  --ColorLight: #d8d6d6;
 }
 
 body {
-    color: var(--ColorWhite);
+  color: var(--ColorWhite);
 }
 
 .cover {
-    background-color: var(--ColorWhite);
+  background-color: var(--ColorWhite);
 }
 
 .container {
-    max-width: 100%;
+  max-width: 100%;
 }
-.not-av{
-    width: 40%;
-    margin: auto;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    color: #352d2d;
+
+@media (max-width: 575.98px) {
+  .pop-up {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #3f0263ce;
+    font-weight: 500;
+    font-size: 12px;
+    z-index: 1;
+  }
+  .pop-up .buttons {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .pop-up .buttons a {
+    border: solid 2px var(--ColorPink);
+    background-color: transparent;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--ColorPink);
+    text-decoration: none;
+    font-size: 14px;
+    width: 50%;
+  }
 }
-.not-av > img{
-max-width: 100%;
-margin: auto;
-}
-.not-av > span{
-    font-size: 15px;
-}
-@media screen and (max-width: 1080px) {
-    
-.not-av{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    color: #352d2d;
-}
-.not-av > img{
-max-width: 100%;
-margin: auto;
-}
-}
+/*# sourceMappingURL=App.css.map */
