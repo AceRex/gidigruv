@@ -5,7 +5,6 @@ import "./SED.css";
 import Img from "./11.jpg";
 import Livecard from "../LiveNow/Livecard";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-import TabSelect from "./Tabs";
 import Data from "../Data/data.json";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { IoMdNotifications, IoMdCheckmarkCircleOutline } from "react-icons/io";

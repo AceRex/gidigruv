@@ -1,0 +1,280 @@
+@media (max-width: 575.98px) {
+  .hero {
+    margin-top: -13px;
+    padding: 70px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
+    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  }
+  .hero p {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hero span {
+    font-size: 12px;
+  }
+  .form {
+    margin: 2rem auto;
+    width: 90%;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #0000003f;
+            box-shadow: 5px 5px 10px #0000003f;
+  }
+  .form form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+  }
+  .form form p {
+    color: var(--ColorPink);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .form form input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form button {
+    padding: 10px;
+    width: 70%;
+    color: var(--ColorWhite);
+    border: none;
+    background-color: var(--ColorPink);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero {
+    margin-top: -13px;
+    padding: 70px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
+    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  }
+  .hero p {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hero span {
+    font-size: 12px;
+  }
+  .form {
+    margin: 2rem auto;
+    width: 90%;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #0000003f;
+            box-shadow: 5px 5px 10px #0000003f;
+  }
+  .form form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+  }
+  .form form p {
+    color: var(--ColorPink);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .form form input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form button {
+    padding: 10px;
+    width: 70%;
+    color: var(--ColorWhite);
+    border: none;
+    background-color: var(--ColorPink);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero {
+    margin-top: -13px;
+    padding: 70px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
+    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  }
+  .hero p {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hero span {
+    font-size: 14px;
+  }
+  .form {
+    margin: 2rem auto;
+    width: 60%;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #0000003f;
+            box-shadow: 5px 5px 10px #0000003f;
+  }
+  .form form {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+  }
+  .form form p {
+    color: var(--ColorPink);
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .form form input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form button {
+    padding: 10px;
+    width: 50%;
+    color: var(--ColorWhite);
+    border: none;
+    background-color: var(--ColorPink);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero {
+    margin-top: -13px;
+    padding: 70px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
+    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  }
+  .hero p {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hero span {
+    font-size: 14px;
+  }
+  .form {
+    margin: 2rem auto;
+    width: 60%;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #0000003f;
+            box-shadow: 5px 5px 10px #0000003f;
+  }
+  .form form {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+  }
+  .form form p {
+    color: var(--ColorPink);
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .form form input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form button {
+    padding: 10px;
+    width: 50%;
+    color: var(--ColorWhite);
+    border: none;
+    background-color: var(--ColorPink);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    margin-top: -13px;
+    padding: 70px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
+    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  }
+  .hero p {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hero span {
+    font-size: 14px;
+  }
+  .form {
+    margin: 2rem auto;
+    width: 60%;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 5px 5px 10px #0000003f;
+            box-shadow: 5px 5px 10px #0000003f;
+  }
+  .form form {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+  }
+  .form form p {
+    color: var(--ColorPink);
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .form form input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .form form button {
+    padding: 10px;
+    width: 50%;
+    color: var(--ColorWhite);
+    border: none;
+    background-color: var(--ColorPink);
+  }
+}
+/*# sourceMappingURL=contactPage.css.map */

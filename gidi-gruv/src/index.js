@@ -17,6 +17,7 @@ import CreateEvent from "./createEvent/createEvent";
 import CategoryPage from "./categoryPage/categoryPage";
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
+import contactPage from "./contactPage/contactPage";
 
 ReactDOM.render(
   <Router>
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path="/" exact component={App} />
       <Route path="/about" component={AboutUs} />
       <Route path="/signin" component={SignIn} />
+      <Route path="/contact-us" component={contactPage} />
       <Route path="/not-available" component={NotAvailable} />
       <Route path="/create-event" component={CreateEvent} />
       <Route path="/category-page" component={CategoryPage} />

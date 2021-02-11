@@ -1,17 +1,54 @@
 import React, { Component } from "react";
 import "./sign.css";
-import Logo from '../logo.png'
-import Logo2 from '../headerLogo.png'
-
+import Logo from "../logo.png";
+import Logo2 from "../headerLogo.png";
 import { Link } from "react-router-dom";
 import TextLoop from "react-text-loop";
 import { AiOutlineHome } from "react-icons/ai";
-import Datas from "../Data/data";
+import { FiAlertTriangle } from "react-icons/fi";
 
 class SignIn extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      email: "",
+      phoneNumber: "",
+      password: "",
+      alert: false,
+      wrongInput: false,
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    if (this.state.email === "" || this.state.password === "") {
+      this.setState({
+        alert: true,
+        wrongInput: false,
+      });
+    } else if (
+      this.state.email !== "testing" ||
+      this.state.password !== "12345678"
+    ) {
+      this.setState({
+        alert: false,
+        wrongInput: true,
+      });
+    } else {
+      this.setState({
+        alert: false,
+        wrongInput: false,
+        email: "",
+        password: "",
+      });
+    }
   }
 
   render() {
@@ -28,7 +65,6 @@ class SignIn extends Component {
               <span>We Broadcast Your</span>
               <span>Register your</span>
               <span>We bring Updates On</span>
-
             </TextLoop>
             <p>Events</p>
           </div>
@@ -37,30 +73,47 @@ class SignIn extends Component {
           </div>
         </div>
         <div className="form">
-          <div className='Logo'>
+          
+          <div className="Logo">
             <img src={Logo} alt="Logo" />
+          </div>
+          <div className={this.state.alert ? "alert" : "hidden"}>
+            <p className="icon">
+              <FiAlertTriangle />
+            </p>
+            The Feilds below cannot be empty
+          </div>
+          <div className={this.state.wrongInput ? "alert" : "hidden"}>
+            <p className="icon">
+              <FiAlertTriangle />
+            </p>
+            Wrong Email or Password
           </div>
           <form action="/">
             <div className="form-group">
-              <label>Email / Username</label>
               <input
                 type="email"
                 name="email"
-                value="user@user.com"
+                value={this.state.email}
+                onChange={this.handleChange}
                 placeholder="Email / Username here..."
               />
             </div>
             <div className="form-group">
-              <label>Password</label>
               <input
                 type="password"
                 name="password"
-                value="userpass"
+                value={this.state.password}
+                onChange={this.handleChange}
                 placeholder="Password here..."
               />
             </div>
             <div className="form-group">
-              <button className="signin-btn" onClick={this.onChange}>
+              <button
+                type="submit"
+                className="signin-btn"
+                onClick={this.handleSubmit}
+              >
                 SIGN IN
               </button>
             </div>
@@ -70,14 +123,14 @@ class SignIn extends Component {
               Not registered? <Link to="/register">Sign Up Here</Link>
             </p>
           </div>
-          
-        <div className="home">
-          <Link to="/">
-            <p>
-              Back to home <AiOutlineHome />
-            </p>
-          </Link>
-        </div>
+
+          <div className="home">
+            <Link to="/">
+              <p>
+                Back to home <AiOutlineHome />
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     );

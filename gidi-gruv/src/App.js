@@ -39,6 +39,7 @@ class App extends Component {
             <div className="buttons">
               Click the button to
               <Link to='/register'>Register</Link>
+              /
               <Link to='/signin'>Login</Link>
             </div>
           </div>
