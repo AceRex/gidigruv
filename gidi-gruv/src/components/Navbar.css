@@ -12,12 +12,12 @@
 }
 .navbar-logo {
   justify-self: start;
-  margin-left: 4rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 .navbar-logo img {
   margin: 5px;
-  height: 55px;
+  height: 50px;
 }
 .nav-menu {
   display: grid;

@@ -17,7 +17,14 @@ class App extends Component {
     super();
     this.state = {
       loading: true,
+      LoggedIn: true,
     };
+    this.handleClose = this.handleClose.bind(this)
+  }
+  handleClose(){
+    this.setState({
+      loading: true,
+    })
   }
   componentDidMount() {
     setTimeout(
@@ -35,7 +42,9 @@ class App extends Component {
       <div className="App">
         <Fade bottom>
           <div className={this.state.loading ? "hidden" : "pop-up"}>
-            
+            <div className='close' onClick={this.handleClose}>
+              X
+            </div>
             <div className="buttons">
               Click the button to
               <Link to='/register'>Register</Link>
@@ -56,7 +65,5 @@ class App extends Component {
     );
   }
 }
-// const history = useHistory ();
-//     console.log(history);
 
 export default App;

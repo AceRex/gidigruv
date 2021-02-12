@@ -1,10 +1,5 @@
 export const NotLoggedIn = [
-    {
-        title: 'Create An Event',
-        url: '/not-available',
-        cName: 'nav-links',
-    },    
-    {
+      {
         title: 'Contact Us',
         url: '/contact-us',
         cName: 'nav-links',

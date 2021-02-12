@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function HowItWorks() {
   return (
     <div className="container"
-    style={{backgroundColor: 'var(--ColorPurple)', height: '14rem'}}>
+    style={{backgroundColor: 'var(--ColorPurple)'}}>
       <div className="search-event">
         <div className="search-text">
           <span>You can see all events around you</span>

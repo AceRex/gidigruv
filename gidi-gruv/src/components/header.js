@@ -5,15 +5,16 @@ import { LoggedIn } from "./LoggedInHeader";
 import Logo from "../logo.png";
 import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
-import Datas from '../Data/data'
+// import Datas from '../Data/data'
 
 
 
 class Navbar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       clicked: false,
+      LoggedIn : this.props.LoggedIn
     };
   }
 
@@ -23,7 +24,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        {/* {Datas.IsLoggedIn ? (
+        {this.state.LoggedIn ? (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
@@ -53,7 +54,7 @@ class Navbar extends Component {
               </>
             </ul>
           </nav>
-        ) : ( */}
+        ) : (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
@@ -82,7 +83,7 @@ class Navbar extends Component {
               })}
             </ul>
           </nav>
-        {/* )} */}
+        )}
       </>
     );
   }

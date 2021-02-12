@@ -11,6 +11,7 @@ export default class WWD extends Component {
     super();
     this.state = {
       scroll: false,
+      
     };
   }
   render() {
@@ -21,7 +22,7 @@ export default class WWD extends Component {
             <Fade right>
               <h2>What We Do </h2>
             </Fade>
-            <Slide opposite duration="2000" right>
+            <Slide opposite duration={2000} right>
 
             <p>
               We provide a strong broadcast for your events, we broadcast all

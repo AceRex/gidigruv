@@ -1,0 +1,295 @@
+@media (max-width: 575.98px) {
+    .carousel {
+        // background-color: var(--ColorPurple);
+        height: 15rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            margin-top: 2rem;
+            padding: 20px;
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--ColorPurple);
+            white-space: pre-wrap;
+
+            .text-loop {
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorPurple);
+                    color: var(--ColorWhite);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorPurple);
+                }
+            }
+        }
+
+        .slider {
+            display: none;
+            // margin: 6px 0px;
+            // width: 40%;
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel {
+        // background-color: var(--ColorPurple);
+        height: 15rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            margin-top: 2rem;
+            padding: 20px;
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--ColorPurple);
+            white-space: pre-wrap;
+
+            .text-loop {
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorPurple);
+                    color: var(--ColorWhite);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorPurple);
+                }
+            }
+        }
+
+        .slider {
+            display: none;
+            // margin: 6px 0px;
+            // width: 40%;
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel {
+        background-color: var(--ColorPurple);
+        height: 20rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            margin-top: 10rem;
+            padding: 20px;
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--ColorWhite);
+            white-space: pre-wrap;
+
+            .text-loop {
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+                margin: 10px 0;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorWhite);
+                    color: var(--ColorPurple);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
+                }
+            }
+        }
+
+        .slider {
+            margin: 0;
+            width: 40%;
+
+            img {
+                width: 316px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel {
+        background-color: var(--ColorPurple);
+        height: 25rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            margin-top: 12rem;
+            padding: 20px 50px;
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--ColorWhite);
+            white-space: pre-wrap;
+            
+            .text-loop {
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+                margin: 10px 0;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorWhite);
+                    color: var(--ColorPurple);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
+                }
+            }
+        }
+
+        .slider {
+            margin: 0;
+            width: 40%;
+
+            img {
+                width: 395px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel {
+        background-color: var(--ColorPurple);
+        height: 30rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            margin-top: 12rem;
+            padding: 20px 7rem;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--ColorWhite);
+            white-space: pre-wrap;
+            
+            .text-loop {
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+                margin: 10px 0;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorWhite);
+                    color: var(--ColorPurple);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
+                }
+            }
+        }
+
+        .slider {
+            margin: 0;
+            width: 40%;
+
+            img {
+                width: 475px;
+            }
+        }
+    }
+}

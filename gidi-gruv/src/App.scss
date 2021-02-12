@@ -53,6 +53,12 @@ body {
                 width: 50%;
             }
         }
+        .close{
+            position: absolute;
+            right: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
        
     }
  }
@@ -85,6 +91,12 @@ body {
                 width: 50%;
             }
         }
+        .close{
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            font-size: 12px;
+        }
        
     }
  }
@@ -116,6 +128,12 @@ body {
                 font-size: 14px;
                 width: 50%;
             }
+        }
+        .close{
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            font-size: 13px;
         }
        
     }
@@ -150,8 +168,14 @@ body {
                 width: 50%;
             }
         }
-       
+        .close{
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            font-size: 12px;
+        }
     }
+
  }
 
 @media (min-width: 1200px) { 
@@ -182,6 +206,12 @@ body {
                 font-size: 20px;
                 width: 50%;
             }
+        }
+        .close{
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            font-size: 12px;
         }
        
     }

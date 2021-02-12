@@ -12,7 +12,7 @@ export default class HowItWorks extends Component {
         <div className="HIW-contain">
           <div className="title">How It works</div>
           <div className="content-container">
-              <Rotate top left delay='500'>
+              <Rotate top left delay={500}>
             <div className="content">
               <p>1.</p>
               <div className="content-content">
@@ -23,7 +23,7 @@ export default class HowItWorks extends Component {
               </div>
             </div>
             </Rotate>
-            <Rotate top center delay='500'>
+            <Rotate top center delay={500}>
             <div className="content">
               <p>2.</p>
               <div className="content-content">
@@ -34,7 +34,7 @@ export default class HowItWorks extends Component {
               </div>
             </div>
             </Rotate>
-            <Rotate top right delay='500'>
+            <Rotate top right delay={500}>
             <div className="content">
               <p>3.</p>
               <div className="content-content">

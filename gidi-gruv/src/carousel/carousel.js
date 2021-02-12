@@ -15,9 +15,9 @@ function MainCarousel() {
           <TextLoop>
             <span>Broadcast your</span>
             <span>Register an</span>
-            <span>Watch Live</span>
-            <span>See </span>
-            <span>We give you all kinds of</span>
+            <span>Get Live Updates on </span>
+            <span>Get Direction to an</span>
+            <span className='lg'>We give you all kinds of</span>
           </TextLoop>{" "}
           Events{" "}
           <TextLoop>
@@ -44,8 +44,8 @@ function MainCarousel() {
 
             
           ) : (
-            <Link to="/not-available">
-              Create An Event <CgArrowLongRight />{" "}
+            <Link to="/register">
+              Click to Register <CgArrowLongRight />{" "}
             </Link> 
           )}{" "}
         </div>

@@ -10,15 +10,14 @@
   .HIW-container .HIW-contain {
     width: 90%;
     margin: auto;
-    padding: 20px;
     background-color: var(--ColorWhite);
   }
   .HIW-container .HIW-contain .title {
+    padding: 20px;
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 2rem;
   }
   .HIW-container .HIW-contain .content-container {
     display: -webkit-box;
@@ -43,7 +42,7 @@
             align-items: center;
   }
   .HIW-container .HIW-contain .content-container .content p {
-    font-size: 50px;
+    font-size: 70px;
     margin: 0px 15px;
     font-weight: 600;
     color: var(--ColorPink);
@@ -52,7 +51,7 @@
     text-align: center;
   }
   .HIW-container .HIW-contain .content-container .content .content-content p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--ColorPurple);
@@ -61,13 +60,14 @@
     font-size: 13px;
     font-weight: none;
     text-transform: none;
+    text-align: justify;
   }
   .search-event {
-    width: 90%;
+    width: 100%;
     margin: auto;
     background-color: var(--ColorPurple);
-    padding: 19px;
-    height: 12rem;
+    padding: 20px;
+    height: 10rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -91,12 +91,12 @@
         align-content: center;
   }
   .search-event .search-text span {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     margin: 1px 0;
   }
   .search-event .search-text p {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
   }
   .search-event .search-input {
@@ -104,14 +104,15 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .search-event .search-input input {
-    width: 80%;
+    width: 100%;
     padding: 12px;
-    margin: 0 10px;
+    margin: 0 5px;
     outline: none;
     border: none;
+    font-size: 12px;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 10px #0000003a;
             box-shadow: 5px 5px 10px #0000003a;
@@ -127,8 +128,7 @@
     outline: none;
     background-color: var(--ColorPink);
     color: var(--ColorWhite);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 12px;
     -webkit-box-shadow: 5px 5px 10px #0000003a;
             box-shadow: 5px 5px 10px #0000003a;
   }
@@ -146,15 +146,14 @@
   .HIW-container .HIW-contain {
     width: 90%;
     margin: auto;
-    padding: 20px;
     background-color: var(--ColorWhite);
   }
   .HIW-container .HIW-contain .title {
+    padding: 20px;
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 2rem;
   }
   .HIW-container .HIW-contain .content-container {
     display: -webkit-box;
@@ -179,7 +178,7 @@
             align-items: center;
   }
   .HIW-container .HIW-contain .content-container .content p {
-    font-size: 50px;
+    font-size: 70px;
     margin: 0px 15px;
     font-weight: 600;
     color: var(--ColorPink);
@@ -188,9 +187,10 @@
     text-align: center;
   }
   .HIW-container .HIW-contain .content-container .content .content-content p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: justify;
     color: var(--ColorPurple);
   }
   .HIW-container .HIW-contain .content-container .content .content-content small {
@@ -199,11 +199,11 @@
     text-transform: none;
   }
   .search-event {
-    width: 90%;
+    width: 100%;
     margin: auto;
     background-color: var(--ColorPurple);
-    padding: 19px;
-    height: 12rem;
+    padding: 20px;
+    height: 10rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -227,12 +227,12 @@
         align-content: center;
   }
   .search-event .search-text span {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     margin: 1px 0;
   }
   .search-event .search-text p {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
   }
   .search-event .search-input {
@@ -240,14 +240,15 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .search-event .search-input input {
-    width: 80%;
+    width: 100%;
     padding: 12px;
-    margin: 0 10px;
+    margin: 0 5px;
     outline: none;
     border: none;
+    font-size: 12px;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 10px #0000003a;
             box-shadow: 5px 5px 10px #0000003a;
@@ -263,8 +264,7 @@
     outline: none;
     background-color: var(--ColorPink);
     color: var(--ColorWhite);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 12px;
     -webkit-box-shadow: 5px 5px 10px #0000003a;
             box-shadow: 5px 5px 10px #0000003a;
   }
@@ -280,15 +280,15 @@
     background-repeat: no-repeat;
   }
   .HIW-container .HIW-contain {
-    width: 90%;
+    width: 75%;
     margin: auto;
     padding: 20px;
     background-color: var(--ColorWhite);
   }
   .HIW-container .HIW-contain .title {
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
@@ -307,7 +307,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: 20px auto;
     padding: 10px;
     -webkit-box-align: center;
@@ -333,6 +333,7 @@
     font-size: 13px;
     font-weight: none;
     text-transform: none;
+    text-align: justify;
   }
   .search-event {
     width: 90%;
@@ -416,15 +417,15 @@
     background-repeat: no-repeat;
   }
   .HIW-container .HIW-contain {
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding: 5px;
     background-color: var(--ColorWhite);
   }
   .HIW-container .HIW-contain .title {
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
@@ -446,7 +447,7 @@
             align-items: center;
   }
   .HIW-container .HIW-contain .content-container .content p {
-    font-size: 50px;
+    font-size: 70px;
     margin: 0px 15px;
     font-weight: 600;
     color: var(--ColorPink);
@@ -455,15 +456,16 @@
     text-align: center;
   }
   .HIW-container .HIW-contain .content-container .content .content-content p {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--ColorPurple);
   }
   .HIW-container .HIW-contain .content-container .content .content-content small {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: none;
     text-transform: none;
+    text-align: justify;
   }
   .search-event {
     width: 90%;
@@ -555,8 +557,8 @@
   }
   .HIW-container .HIW-contain .title {
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
@@ -578,8 +580,8 @@
             align-items: center;
   }
   .HIW-container .HIW-contain .content-container .content p {
-    font-size: 50px;
-    margin: 0px 15px;
+    font-size: 90px;
+    margin: 0px 10px;
     font-weight: 600;
     color: var(--ColorPink);
   }
@@ -587,7 +589,7 @@
     text-align: center;
   }
   .HIW-container .HIW-contain .content-container .content .content-content p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--ColorPurple);
@@ -596,6 +598,7 @@
     font-size: 13px;
     font-weight: none;
     text-transform: none;
+    text-align: justify;
   }
   .search-event {
     width: 90%;
@@ -623,7 +626,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 50%;
+    width: 60%;
     text-align: center;
     margin-top: 5px;
   }
@@ -639,7 +642,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
+    width: 40%;
+    margin: auto;
   }
   .search-event .search-input input {
     width: 80%;

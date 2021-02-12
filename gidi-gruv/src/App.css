@@ -53,6 +53,12 @@ body {
     font-size: 14px;
     width: 50%;
   }
+  .pop-up .close {
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -82,6 +88,12 @@ body {
     font-size: 14px;
     width: 50%;
   }
+  .pop-up .close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -110,6 +122,12 @@ body {
     text-decoration: none;
     font-size: 14px;
     width: 50%;
+  }
+  .pop-up .close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 13px;
   }
 }
 
@@ -141,6 +159,12 @@ body {
     font-size: 20px;
     width: 50%;
   }
+  .pop-up .close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -170,6 +194,12 @@ body {
     text-decoration: none;
     font-size: 20px;
     width: 50%;
+  }
+  .pop-up .close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=App.css.map */
