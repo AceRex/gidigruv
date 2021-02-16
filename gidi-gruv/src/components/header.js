@@ -24,7 +24,7 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        {this.state.LoggedIn ? (
+        {!this.state.LoggedIn ? (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
