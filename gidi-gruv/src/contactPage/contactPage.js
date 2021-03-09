@@ -15,7 +15,6 @@ export default class contactPage extends Component {
   render() {
     return (
       <>
-        <Header />
         <section className="container">
           <div className="hero">
             <p>Contact us</p>
@@ -60,7 +59,6 @@ export default class contactPage extends Component {
           </form>
           </div>
         </section>
-        <Footer />
       </>
     );
   }

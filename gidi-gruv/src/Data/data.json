@@ -1,84 +1,141 @@
 {
-    "All " : [
-        {
-            "id": 0,
-            "title": "Best Of Kiss Daniel Mixtape",
-            "img": "/Images/mixtape.jpeg",
-            "pay": "PAID",
-            "MM": "JUN",
-            "DD": "12",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 1,
-            "title": "The Spiritual Generation",
-            "img": "/Images/churchevent.jpg",
-            "pay": "FREE",
-            "MM": "JUN",
-            "DD": "19",
-            "location": "Ikeja, Lagos. NG",
-            "time": "06:00pm"
-          },
-          {
-            "id": 2,
-            "title": "Replib Live",
-            "pay": "PAID",
-            "img": "/Images/chrcuh.jpg",
-            "MM": "AUG",
-            "DD": "10",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 3,
-            "title": "Special Carols and Drama Night",
-            "pay": "PAID",
-            "img": "/Images/anotherevents.jpg",
-            "MM": "MAR",
-            "DD": "16",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 4,
-            "title": "The Mashup concert with Efe Oraka",
-            "img": "/Images/events.jpg",
-            "pay": "FREE",
-            "MM": "JUL",
-            "DD": "30",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 5,
-            "title": "Raising Intelligent Kids in Times Like This!",
-            "img": "/Images/business.jpg",
-            "pay": "PAID",
-            "MM": "DEC",
-            "DD": "26",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 6,
-            "title": "Raising Intelligent Kids in Times Like This!",
-            "img": "/Images/business.jpg",
-            "pay": "PAID",
-            "MM": "DEC",
-            "DD": "26",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          },
-          {
-            "id": 7,
-            "title": "Raising Intelligent Kids in Times Like This!",
-            "img": "/Images/business.jpg",
-            "pay": "PAID",
-            "MM": "DEC",
-            "DD": "26",
-            "location": "Ikeja, Lagos. NG",
-            "time": "08:00pm"
-          }
-        ]
+  "All ": [
+    {
+      "id": 0,
+      "title": "Best Of Kiss Daniel Mixtape",
+      "img": "/Images/mixtape.jpeg",
+      "pay": "PAID",
+      "date": {
+        "YY": "2021",
+        "MM": "DEC",
+        "DD": "24"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 1,
+      "title": "The Spiritual Generation",
+      "img": "/Images/churchevent.jpg",
+      "pay": "FREE",
+      "date": {
+        "YY": "2021",
+        "MM": "JAN",
+        "DD": "12"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 2,
+      "title": "Replib Live",
+      "pay": "PAID",
+      "img": "/Images/chrcuh.jpg",
+      "date": {
+        "YY": "2021",
+        "MM": "FEB",
+        "DD": "14"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 3,
+      "title": "Special Carols and Drama Night",
+      "pay": "PAID",
+      "img": "/Images/anotherevents.jpg",
+      "date": {
+        "YY": "2021",
+        "MM": "MAR",
+        "DD": "10"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 4,
+      "title": "The Mashup concert with Efe Oraka",
+      "img": "/Images/events.jpg",
+      "pay": "FREE",
+      "date": {
+        "YY": "2021",
+        "MM": "APR",
+        "DD": "08"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 5,
+      "title": "Raising Intelligent Kids in Times Like This!",
+      "img": "/Images/business.jpg",
+      "pay": "PAID",
+      "date": {
+        "YY": "2021",
+        "MM": "MAY",
+        "DD": "12"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 6,
+      "title": "White Testing",
+      "img": "/Images/2.png",
+      "pay": "PAID",
+      "date": {
+        "YY": "2021",
+        "MM": "JUN",
+        "DD": "01"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    },
+    {
+      "id": 7,
+      "title": "Testing",
+      "img": "/Images/1.png",
+      "pay": "PAID",
+      "date": {
+        "YY": "2021",
+        "MM": "JUL",
+        "DD": "21"
+      },
+      "time": {
+        "HH" : "08",
+        "MM" : "45"
+      },
+      "location": "Ikeja, Lagos. NG",
+      "Description": "   Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit amet consectetur adipiscing elit dolor sit amet consectetur adipiscing elit sit amet consectetur adipiscing elit "
+    }
+  ]
 }

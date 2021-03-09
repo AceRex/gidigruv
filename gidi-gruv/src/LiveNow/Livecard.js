@@ -36,7 +36,7 @@ export default function Card(props) {
           )} */}
         </div>
 
-        <Link to="/showeventdetails" className="Card" key={props.id}>
+        <Link to={`/showeventdetails/${props.title}`} className="Card" key={props.id}>
           <div className="image-container">
             <img src={props.img} />
           </div>
@@ -48,7 +48,7 @@ export default function Card(props) {
             <div className="title-details">
               <p>{props.title} </p>
               <span>
-                <GrLocationPin /> {props.location} - <TiTime /> {props.time}
+                <GrLocationPin /> {props.location} - <TiTime /> {props.time.HH}{" : "}{props.time.MM}
               </span>
             </div>
           </div>

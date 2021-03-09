@@ -1,102 +1,20 @@
 {
-  "LiveNowPost":[
+  "products": [
     {
-      "id":"1",
-      "image": "./src/previewImages/1.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"2",
-      "image": "./src/previewImages/2.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"3",
-      "image": "./src/previewImages/3.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"4",
-      "image": "./src/previewImages/4.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"5",
-      "image": "./src/previewImages/5.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"6",
-      "image": "./src/previewImages/6.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"7",
-      "image": "./src/previewImages/7.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"8",
-      "image": "./src/previewImages/8.png",
-      "details":"",
-      "date":""
-    }
-  ],
-  "EventsPost":[
-    {
-      "id":"1",
-      "image": "./src/previewImages/1.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"2",
-      "image": "./src/previewImages/2.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"3",
-      "image": "./src/previewImages/3.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"4",
-      "image": "./src/previewImages/4.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"5",
-      "image": "./src/previewImages/5.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"6",
-      "image": "./src/previewImages/6.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"7",
-      "image": "./src/previewImages/7.png",
-      "details":"",
-      "date":""
-    },
-    {
-      "id":"8",
-      "image": "./src/previewImages/8.png",
-      "details":"",
-      "date":""
+      "_id": 0,
+      "title": "Ghana Batique",
+      "img": "/Image/ghana.jpg",
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "address": "Ikeja, Lagos",
+      "Date": {
+        "Month": "JUN",
+        "Year": "2021",
+        "Day": "13"
+      },
+      "time": {
+        "HH": 10,
+        "MM": "05"
+      }
     }
   ]
 }

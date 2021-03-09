@@ -14,7 +14,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       clicked: false,
-      LoggedIn : this.props.LoggedIn
+      LoggedIn : !this.props.LoggedIn
     };
   }
 

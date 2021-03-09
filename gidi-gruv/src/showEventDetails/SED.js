@@ -1,8 +1,5 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import "./SED.css";
-import Img from "./11.jpg";
 import Livecard from "../LiveNow/Livecard";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import Data from "../Data/data.json";
@@ -11,10 +8,51 @@ import { IoMdNotifications, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Zoom from "react-reveal/HeadShake";
 import Flash from "react-reveal/Flash";
 import { FiAlertTriangle } from "react-icons/fi";
+import { useParams } from "react-router-dom";
 
+function EventDetail() {
+  const { title } = useParams();
+  const Events = Data["All "]
+  return (
+    <div className="grp">
+      {Events.filter((items) => items.title === title ).map((Event) => (
+        <>
+
+          <div className="img-container">
+            <img src={Event.img} alt="Image" />
+          </div>
+          <div className="SED-details">
+            <p>{Event.title}</p>
+            <table>
+              <tr>
+                <td className="td1">Description</td>
+                <td>
+                  {Event.Description}
+                </td>
+              </tr>
+              <tr>
+                <td className="td1">Date</td>
+                <td>{Event.date.DD} / {Event.date.MM} / {Event.date.YY}</td>
+              </tr>
+              <tr>
+                <td className="td1">Time</td>
+                <td>{Event.time.HH}{" : "}{Event.time.MM}</td>
+              </tr>
+              <tr>
+                <td className="td1">Address</td>
+                <td>{Event.location}</td>
+              </tr>
+            </table>
+          </div>
+        </>
+      ))}
+
+    </div>
+  )
+}
 class ShowEventDetails extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       clicked: false,
       Items: Data["All "],
@@ -47,7 +85,7 @@ class ShowEventDetails extends React.Component {
       success: false,
       email: '',
       phoneNumber: '',
-      
+
     });
   }
   handleSubmit(event) {
@@ -73,7 +111,6 @@ class ShowEventDetails extends React.Component {
     };
     return (
       <>
-        <Header />
         <section className={this.state.clicked ? "modal" : "hidden"}>
           <Zoom>
             <div className="feeback-form">
@@ -123,45 +160,14 @@ class ShowEventDetails extends React.Component {
                     <IoMdCheckmarkCircleOutline />
                   </div>
                 </Flash>
-                  <p>You Will Receive Notification Soon</p>
+                <p>You Will Receive Notification Soon</p>
               </div>
             </div>
           </Zoom>
         </section>
 
         <section className="SED-container">
-          <div className="grp">
-            <div className="img-container">
-              <img src={Img} alt="Image" />
-            </div>
-            <div className="SED-details">
-              <p>Replib Live;</p>
-              <table>
-                <tr>
-                  <td className="td1">Description</td>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit, nec
-                    curabitur aptent nullam facilisis sodales nam laoreet,
-                    dignissim netus lobortis nulla tellus cras. Gravida mi
-                    libero potenti faucibus montes dictumst, quis eget vitae ac
-                    mattis himenaeos varius,
-                  </td>
-                </tr>
-                <tr>
-                  <td className="td1">Date</td>
-                  <td>9/02/2021</td>
-                </tr>
-                <tr>
-                  <td className="td1">Time</td>
-                  <td>08:00pm</td>
-                </tr>
-                <tr>
-                  <td className="td1">Address</td>
-                  <td>Time</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+          <EventDetail />
           <div className="map">
             <Map
               containerStyle={containerStyle}
@@ -187,8 +193,8 @@ class ShowEventDetails extends React.Component {
                   id={items.id}
                   pay={items.pay}
                   img={items.img}
-                  MM={items.MM}
-                  DD={items.DD}
+                  MM={items.date.MM}
+                  DD={items.date.DD}
                   title={items.title}
                   location={items.location}
                   time={items.time}
@@ -197,7 +203,6 @@ class ShowEventDetails extends React.Component {
             })}
           </div>
         </section>
-        <Footer />
       </>
     );
   }

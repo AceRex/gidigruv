@@ -21,7 +21,6 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <>
-        <Header />
         <div className="db-container">
           <div className="profile">
             <div className='img-container'>

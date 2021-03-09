@@ -11,7 +11,6 @@ export default class CreateEvent extends Component {
 
     return (
       <>
-        <Header />
         <div className="CE-container">
           <form className="CE-form">
             <div className="CE-form-left">
