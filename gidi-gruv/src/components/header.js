@@ -1,77 +1,78 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { NotLoggedIn } from "./NotLoggedInHeader";
-import { LoggedIn } from "./LoggedInHeader";
 import Logo from "../logo.png";
 import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
-// import Datas from '../Data/data'
+import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/UserAction";
 
 
 
-class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicked: false,
-      LoggedIn : !this.props.LoggedIn
-    };
-  }
+function Navbar(props) {
+  const [clicked, setClicked] = useState(false);
+  const [img, setImg] = useState('./images/5.png')
+  const user = useSelector(selectUser);
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
-  };
-  render() {
-    return (
-      <>
-        {!this.state.LoggedIn ? (
+  
+  return (
+    <>
+      {user ? (
+        <nav className="NavbarItems">
+          <nav className="navbar-logo">
+            <Link to="/">
+              <img src={Logo} />
+            </Link>
+          </nav>
+          <div className="menu-icon" onClick={() => setClicked(!clicked)}>
+            <li>
+              {clicked ? (
+                <FaTimes />
+              ) : (
+                  <FaBars />
+                )}
+            </li>
+          </div>
+          <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+            <>
+              
+                  <Link to='/create-event'
+                  //  onMouseOver={this.handleOnHover}
+                   >
+                    <div className='nav-links'>
+                    Create Event
+                    </div>
+                  </Link>
+                  <Link to='/dashboard'
+                  //  onMouseOver={this.handleOnHover}
+                   >
+                    <div className='nav-links user'>
+                    {user.name} <img src={img} />
+                    </div>
+                  </Link>
+            </>
+          </ul>
+        </nav>
+      ) : (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
                 <img src={Logo} />
               </Link>
             </nav>
-            <div className="menu-icon" onClick={this.handleClick}>
+            <div className="menu-icon"
+             onClick={() => setClicked(!clicked)}
+             >
               <li>
-                {this.state.clicked ? (
+                {clicked ? (
                   <FaTimes />
                 ) : (
-                  <FaBars />
-                )}
+                    <FaBars />
+                  )}
               </li>
             </div>
-            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-              <>
-                {LoggedIn.map((item, index) => {
-                  return (
-                    <Link to={item.link} key={index} onMouseOver={this.handleOnHover}>
-                      <div className={item.cName}>
-                        {item.username} <img src={item.image} />
-                      </div>
-                    </Link>
-                  );
-                })}
-              </>
-            </ul>
-          </nav>
-        ) : (
-          <nav className="NavbarItems">
-            <nav className="navbar-logo">
-              <Link to="/">
-                <img src={Logo} />
-              </Link>
-            </nav> 
-            <div className="menu-icon" onClick={this.handleClick}>
-              <li>
-                {this.state.clicked ? (
-                  <FaTimes />
-                ) : (
-                  <FaBars />
-                )}
-              </li>
-            </div>
-            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-              
+            <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+
               {NotLoggedIn.map((item, index) => {
                 return (
                   <li key={index}>
@@ -84,9 +85,8 @@ class Navbar extends Component {
             </ul>
           </nav>
         )}
-      </>
-    );
-  }
+    </>
+  );
 }
 
 export default Navbar;

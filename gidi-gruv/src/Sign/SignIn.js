@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./sign.css";
 import Logo from "../logo.png";
 import Logo2 from "../headerLogo.png";
@@ -6,52 +6,31 @@ import { Link } from "react-router-dom";
 import TextLoop from "react-text-loop";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiAlertTriangle } from "react-icons/fi";
+import { useDispatch } from 'react-redux'
+import { login } from '../Redux/UserAction'
+import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/UserAction";
 
-class SignIn extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      phoneNumber: "",
-      password: "",
-      alert: false,
-      wrongInput: false,
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value,
-    });
-  }
-  handleSubmit(event) {
+function SignIn () {
+      const [email, setEmail] = useState("");
+      const [password, setPassword] = useState("")
+      const [alert, setAlert] = useState(false)
+      const [wrongInput, setWrongInput] = useState(false)
+
+      const dispatch = useDispatch()
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.email === "" || this.state.password === "") {
-      this.setState({
-        alert: true,
-        wrongInput: false,
-      });
-    } else if (
-      this.state.email !== "testing" ||
-      this.state.password !== "12345678"
-    ) {
-      this.setState({
-        alert: false,
-        wrongInput: true,
-      });
-    } else {
-      this.setState({
-        alert: false,
-        wrongInput: false,
-        email: "",
-        password: "",
-      });
-    }
+
+    dispatch(
+      login({
+        email: email,
+        password: password,
+        loggedIn: true
+      })
+    )
   }
 
-  render() {
     return (
       <div className="sigincontainer">
         <div className="slider">
@@ -77,13 +56,13 @@ class SignIn extends Component {
           <div className="Logo">
             <img src={Logo} alt="Logo" />
           </div>
-          <div className={this.state.alert ? "alert" : "hidden"}>
+          <div className={alert ? "alert" : "hidden"}>
             <p className="icon">
               <FiAlertTriangle />
             </p>
             The Feilds below cannot be empty
           </div>
-          <div className={this.state.wrongInput ? "alert" : "hidden"}>
+          <div className={wrongInput ? "alert" : "hidden"}>
             <p className="icon">
               <FiAlertTriangle />
             </p>
@@ -94,8 +73,8 @@ class SignIn extends Component {
               <input
                 type="email"
                 name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email / Username here..."
               />
             </div>
@@ -103,8 +82,8 @@ class SignIn extends Component {
               <input
                 type="password"
                 name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password here..."
               />
             </div>
@@ -112,7 +91,7 @@ class SignIn extends Component {
               <button
                 type="submit"
                 className="signin-btn"
-                onClick={this.handleSubmit}
+                onClick={(e) => handleSubmit(e)}
               >
                 SIGN IN
               </button>
@@ -135,6 +114,5 @@ class SignIn extends Component {
       </div>
     );
   }
-}
 
 export default SignIn;

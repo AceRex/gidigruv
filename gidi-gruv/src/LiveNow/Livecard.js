@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LiveNow.css";
 import { GrLocationPin } from "react-icons/gr";
 import { HiOutlineUpload } from "react-icons/hi";
 import { IoIosHeart } from "react-icons/io";
 import { TiTime } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Bounce from "react-reveal/Bounce";
 
+
+function ScrollToTop(){
+  const {pathname} = useLocation();
+  console.log(pathname)
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [pathname]);
+  return null
+}
+
 export default function Card(props) {
+
   const [color, setColor] = useState(" ");
+
 
   return (
     <Bounce>
+      <ScrollToTop/>
       <div className="LiveCard" key={props.id}>
         <div className="top-details">
           <div className="sub">

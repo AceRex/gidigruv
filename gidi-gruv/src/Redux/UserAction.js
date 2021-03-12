@@ -1,28 +1,22 @@
-export function IsLoggedIn(value) {
-    return {
-        type: "IS-LOGGED-IN",
-        payload: value
-    }
-}
-export function IsNotLoggedIn(value) {
-    return {
-        type: "IS-NOT-LOGGED-IN",
-        payload: value
-    }
-}
-function userActionReducer(userAction, action) {
-    switch(action.type) {
-        case "IS-LOGGED-IN":
-            return {
-              userAction: true,
-            }
-        case "DECREMENT":
-            return count - 1
-        default:
-            return count
-    }
-}
+import { createSlice } from '@reduxjs/toolkit'
 
+export const userSlice = createSlice({
+    name: "user",
+    initialState: {
+        user: null
+    },
+    reducers: {
+        login: (state, action) => {
+            state.user = action.payload;
+        },
+        logout: (state) => {
+            state.user = null
+        },
+    },
+});
 
+export const { login, logout } = userSlice.actions;
 
-export default userActionReducer
+export const selectUser = (state) => state.user.user;
+
+export default userSlice.reducer;

@@ -13,11 +13,11 @@ export default class EventByCategory extends React.Component {
             Coming <span>Events</span>
           </p>
           <div className="cards">
-            {this.props.Events.map((Events) => {
+            {this.props.Events.map((Events,index) => {
               return (
                 
                 <LiveCard
-                  id={Events.id}
+                  id={index}
                   pay={Events.pay}
                   img={Events.img}
                   MM={Events.date.MM}

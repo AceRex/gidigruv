@@ -1,62 +1,638 @@
-.db-container {
+@media (max-width: 575.98px) {
+  .db-container {
     max-width: 100%;
-    margin: auto;
     background-color: #f5f3f3;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
-}
-.db-container > .profile{
-    width: 70%;
-    margin:auto;
+    padding: 3rem 0px;
+  }
+  .db-container .db__container {
+    width: 100%;
+  }
+  .db-container .db__container .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: var(--ColorWhite);
+    width: 98%;
+    margin: auto;
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .link a {
     color: #aaa;
-    padding: 3rem 2rem;
-}
-.db-container > .profile > .img-container{
-    width: 150px;
-    height: 150px;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .db-container .db__container .link .active {
+    background-color: #e6e6e6;
+    color: #8f8f8f;
+    border-radius: 5px;
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPurple);
+  }
+  .db-container .db__container .link::-webkit-scrollbar {
+    width: 100%;
+  }
+  .db-container .db__container .content {
+    background-color: var(--ColorWhite);
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .content .profile {
+    width: 100%;
+    margin: auto;
+    color: #aaa;
+    padding: 3rem 1rem;
+  }
+  .db-container .db__container .content .profile .img-container {
+    width: 120px;
+    height: 120px;
     margin: auto;
     border-radius: 100%;
-    overflow:hidden;
-}
-.db-container > .profile > .img-container > img{
+    overflow: hidden;
+  }
+  .db-container .db__container .content .profile .img-container img {
     width: 100%;
     height: 100%;
-}
-.db-container > .profile > .profile-details{
-    width: 70%;
+  }
+  .db-container .db__container .content .profile form {
+    width: 100%;
     margin: auto;
     text-align: center;
-}
-/* .db-container > .profile > .profile-details > form{
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-} */
-.db-container > .profile > .profile-details > form > .f-group{
+    margin-bottom: 1rem;
+  }
+  .db-container .db__container .content .profile form .form-group {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group {
     width: 90%;
-    padding: 10px 0;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    align-items: space-between;
-}
-.db-container > .profile > .profile-details > form > .f-group > label{
-    width: 30%;
-    margin: 0px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group input {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group label {
     padding: 10px;
-}
-.db-input{
+    font-size: 12px;
+  }
+  .db-container .db-input {
     height: 40px;
     width: 70%;
     padding: 0 10px;
-}
-.db-btn{
+  }
+  .db-container .db-btn {
     width: 40%;
     margin: auto;
     padding: 10px;
     border: none;
     color: var(--ColorWhite);
     background-color: var(--ColorPurple);
+  }
 }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .db-container {
+    max-width: 100%;
+    background-color: #f5f3f3;
+    padding: 3rem 0px;
+  }
+  .db-container .db__container {
+    width: 80%;
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .db-container .db__container .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorWhite);
+    width: 25%;
+    height: 65vh;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .link a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .db-container .db__container .link .active {
+    background-color: #e6e6e6;
+    color: #8f8f8f;
+    border-radius: 5px;
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPurple);
+  }
+  .db-container .db__container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .content .profile {
+    width: 90%;
+    margin: auto;
+    background-color: var(--ColorWhite);
+    color: #aaa;
+    padding: 3rem 1rem;
+  }
+  .db-container .db__container .content .profile .img-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .db-container .db__container .content .profile .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .db-container .db__container .content .profile form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .db-container .db__container .content .profile form .form-group {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group {
+    width: 90%;
+    margin: auto;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group input {
+    width: 95%;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group label {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .db-container .db-input {
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+  }
+  .db-container .db-btn {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .db-container {
+    max-width: 100%;
+    background-color: #f5f3f3;
+    padding: 3rem 0px;
+  }
+  .db-container .db__container {
+    width: 80%;
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .db-container .db__container .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorWhite);
+    width: 25%;
+    height: 65vh;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .link a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .db-container .db__container .link .active {
+    background-color: #e6e6e6;
+    color: #8f8f8f;
+    border-radius: 5px;
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPurple);
+  }
+  .db-container .db__container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .content .profile {
+    width: 90%;
+    margin: auto;
+    background-color: var(--ColorWhite);
+    color: #aaa;
+    padding: 3rem 1rem;
+  }
+  .db-container .db__container .content .profile .img-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .db-container .db__container .content .profile .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .db-container .db__container .content .profile form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .db-container .db__container .content .profile form .form-group {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group {
+    width: 90%;
+    margin: auto;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group input {
+    width: 95%;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group label {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .db-container .db-input {
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+  }
+  .db-container .db-btn {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .db-container {
+    max-width: 100%;
+    background-color: #f5f3f3;
+    padding: 3rem 0px;
+  }
+  .db-container .db__container {
+    width: 80%;
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .db-container .db__container .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorWhite);
+    width: 25%;
+    height: 65vh;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .link a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .db-container .db__container .link .active {
+    background-color: #e6e6e6;
+    color: #8f8f8f;
+    border-radius: 5px;
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPurple);
+  }
+  .db-container .db__container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .content .profile {
+    width: 90%;
+    margin: auto;
+    background-color: var(--ColorWhite);
+    color: #aaa;
+    padding: 3rem 1rem;
+  }
+  .db-container .db__container .content .profile .img-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .db-container .db__container .content .profile .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .db-container .db__container .content .profile form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .db-container .db__container .content .profile form .form-group {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group {
+    width: 90%;
+    margin: auto;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group input {
+    width: 95%;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group label {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .db-container .db-input {
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+  }
+  .db-container .db-btn {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+}
+
+@media (min-width: 1200px) {
+  .db-container {
+    max-width: 100%;
+    background-color: #f5f3f3;
+    padding: 3rem 0px;
+  }
+  .db-container .db__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .db-container .db__container .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorWhite);
+    width: 25%;
+    height: 65vh;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .link a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .db-container .db__container .link .active {
+    background-color: #e6e6e6;
+    color: #8f8f8f;
+    border-radius: 5px;
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPurple);
+  }
+  .db-container .db__container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
+            box-shadow: 5px 5px 10px #aaaaaa4b;
+  }
+  .db-container .db__container .content .profile {
+    width: 90%;
+    margin: auto;
+    background-color: var(--ColorWhite);
+    color: #aaa;
+    padding: 3rem 1rem;
+  }
+  .db-container .db__container .content .profile .img-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .db-container .db__container .content .profile .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .db-container .db__container .content .profile form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .db-container .db__container .content .profile form .form-group {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group {
+    width: 90%;
+    margin: auto;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group input {
+    width: 95%;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group .password {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group .password input {
+    width: 90%;
+    margin-left: 0;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group .password .icon {
+    font-size: 25px;
+  }
+  .db-container .db__container .content .profile form .form-group .input__group label {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .db-container .db-input {
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+  }
+  .db-container .db-btn {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */

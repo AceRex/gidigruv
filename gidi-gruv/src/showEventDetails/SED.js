@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./SED.css";
 import Livecard from "../LiveNow/Livecard";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
@@ -10,14 +10,22 @@ import Flash from "react-reveal/Flash";
 import { FiAlertTriangle } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 
+
+function ScrollToToponMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return null
+}
 function EventDetail() {
   const { title } = useParams();
   const Events = Data["All "]
+
   return (
     <div className="grp">
-      {Events.filter((items) => items.title === title ).map((Event) => (
+      {Events.filter((items) => items.title === title).map((Event) => (
         <>
-
+          <ScrollToToponMount />
           <div className="img-container">
             <img src={Event.img} alt="Image" />
           </div>
