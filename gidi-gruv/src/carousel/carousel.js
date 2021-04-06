@@ -6,8 +6,12 @@ import { RiSearch2Line } from "react-icons/ri";
 import { CgArrowLongRight } from "react-icons/cg";
 import Banner from "./bbn.png";
 import Datas from "../Data/data";
+import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/UserAction";
 
 function MainCarousel() {
+  const user = useSelector(selectUser);
+
   return (
     <div className="carousel">
       <div className="textSlider">
@@ -29,7 +33,7 @@ function MainCarousel() {
           </TextLoop>
         </div>
         <div className="create-button">
-          {Datas.IsLoggedIn ? (
+          {user ? (
             <div className="search">
             <p>
               <RiSearch2Line />

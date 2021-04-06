@@ -19,7 +19,7 @@ import contactPage from "./contactPage/contactPage";
 import WWD from "./whatwedo/whatwedo";
 import HIW from "./HowItWorks/HIW";
 import Overview from "./dashboard/Overview"
-import Password from "./dashboard/Password"
+import Interest from "./dashboard/Interest"
 import Contact from "./contact/contact";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import Fade from "react-reveal/Fade";
@@ -65,22 +65,7 @@ function App() {
   // };
   return (
     <div className="App">
-      <Fade bottom>
-        <div className={loading ? "hidden" : "pop-up"}>
-          <div className='close'
-          //  onClick={handleClose}
-          >
-            X
-            </div>
-          <div className="buttons">
-            Click the button to
-              <Link to='/register'>Register</Link>
-              /
-              <Link to='/signin'>Login</Link>
-          </div>
-        </div>
-      </Fade>
-      <Header />
+            <Header />
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/about" component={AboutUs} />

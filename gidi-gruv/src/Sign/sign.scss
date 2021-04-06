@@ -1,7 +1,9 @@
 @media (max-width: 575.98px) {
     .sigincontainer {
         max-width: 100%;
-
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 150%;
         .slider {
             display: none;
         }
@@ -18,44 +20,75 @@
                 width: 20%;
                 margin: auto;
                 align-items: center;
+                display: none;
 
                 img {
                     width: 70px;
                     margin: auto;
                 }
             }
+            h3 {
+                color: var(--ColorPurple);
+                font-size: 20px;
+                margin: 10px 0px;
+                text-align: center;
+                padding: 10px;
 
+            }
+
+            p {
+                font-size: 14px;
+                text-transform: lowercase;
+                font-weight: 500;
+                text-align: center;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
             .form-group {
-                width: 80%;
-                margin: 10px auto;
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
 
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 8px;
+                    width: 25%;
+                    text-align: left;
+                }
+                
                 input {
-                    width: 100%;
+                    width: 75%;
                     padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPurple);
+                    margin: auto;
                     border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
+                    outline: none;
                 }
             }
 
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPurple);
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #aaa;
+                color: #e7e6e6;
+            }
 
             .reg-link {
                 width: 90%;
@@ -84,11 +117,16 @@
         }
 
     }
-    .reg-container{
+
+    .reg-container {
         max-width: 100%;
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 60%;
         .slider {
             display: none;
         }
+
         .form {
             width: 90%;
             margin: 5rem auto;
@@ -98,6 +136,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
 
             .Logo {
+                display: none;
                 width: 20%;
                 margin: auto;
                 align-items: center;
@@ -108,37 +147,77 @@
                 }
             }
 
-            .form-group {
-                width: 80%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPink);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #d6d5d5;
-                    color: var(--ColorPink);
-                }
+            h3 {
+                color: var(--ColorPink);
+                font-size: 20px;
+                text-align: left;
+                margin: 10px 0px;
             }
 
+            p {
+                font-size: 10px;
+                text-align: left;
+                text-transform: lowercase;
+                font-weight: 500;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 2rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+                font-size: 8px;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    width: 25%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 75%;
+                    padding: 10px;
+                    margin: auto;
+                    outline: none;
+                    border: none;
+                }
+                input::placeholder{
+                    color: transparent;
+                }
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+            }
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPink);
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #d6d5d5;
+                color: var(--ColorPink);
+            }
 
             .reg-link {
                 width: 90%;
@@ -154,7 +233,7 @@
             }
 
             .home {
-                width: 80%;
+                width: 90%;
                 margin: 10px auto;
                 font-size: 13px;
                 text-align: center;
@@ -166,8 +245,9 @@
             }
         }
 
-    
+
     }
+
     .alert {
         background-color: #ff59b23b;
         color: var(--ColorPink);
@@ -192,7 +272,9 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     .sigincontainer {
         max-width: 100%;
-
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 150%;
         .slider {
             display: none;
         }
@@ -208,46 +290,76 @@
             .Logo {
                 width: 20%;
                 margin: auto;
-                overflow: hidden;
                 align-items: center;
+                display: none;
 
                 img {
                     width: 70px;
                     margin: auto;
                 }
             }
+            h3 {
+                color: var(--ColorPurple);
+                font-size: 20px;
+                margin: 10px 0px;
+                text-align: center;
+                padding: 10px;
 
+            }
+
+            p {
+                font-size: 14px;
+                text-transform: lowercase;
+                font-weight: 500;
+                text-align: center;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
             .form-group {
-                width: 80%;
-                margin: 10px auto;
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
 
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 8px;
+                    width: 25%;
+                    text-align: left;
+                }
+                
                 input {
-                    width: 100%;
+                    width: 75%;
                     padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPurple);
+                    margin: auto;
                     border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
+                    outline: none;
                 }
             }
 
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPurple);
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #aaa;
+                color: #e7e6e6;
+            }
 
             .reg-link {
                 width: 90%;
@@ -276,11 +388,16 @@
         }
 
     }
-    .reg-container{
+
+    .reg-container {
         max-width: 100%;
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 60%;
         .slider {
             display: none;
         }
+
         .form {
             width: 90%;
             margin: 5rem auto;
@@ -290,6 +407,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
 
             .Logo {
+                display: none;
                 width: 20%;
                 margin: auto;
                 align-items: center;
@@ -300,37 +418,77 @@
                 }
             }
 
-            .form-group {
-                width: 80%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPink);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #d6d5d5;
-                    color: var(--ColorPink);
-                }
+            h3 {
+                color: var(--ColorPink);
+                font-size: 20px;
+                text-align: left;
+                margin: 10px 0px;
             }
 
+            p {
+                font-size: 10px;
+                text-align: left;
+                text-transform: lowercase;
+                font-weight: 500;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 2rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+                font-size: 8px;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    width: 25%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 75%;
+                    padding: 10px;
+                    margin: auto;
+                    outline: none;
+                    border: none;
+                }
+                input::placeholder{
+                    color: transparent;
+                }
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+            }
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPink);
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #d6d5d5;
+                color: var(--ColorPink);
+            }
 
             .reg-link {
                 width: 90%;
@@ -346,7 +504,7 @@
             }
 
             .home {
-                width: 80%;
+                width: 90%;
                 margin: 10px auto;
                 font-size: 13px;
                 text-align: center;
@@ -358,8 +516,9 @@
             }
         }
 
-    
+
     }
+
     .alert {
         background-color: #ff59b23b;
         color: var(--ColorPink);
@@ -399,7 +558,6 @@
             .Logo {
                 width: 20%;
                 margin: auto;
-                overflow: hidden;
                 align-items: center;
 
                 img {
@@ -467,11 +625,16 @@
         }
 
     }
-    .reg-container{
+
+    .reg-container {
         max-width: 100%;
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 60%;
         .slider {
             display: none;
         }
+
         .form {
             width: 90%;
             margin: 5rem auto;
@@ -481,6 +644,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
 
             .Logo {
+                display: none;
                 width: 20%;
                 margin: auto;
                 align-items: center;
@@ -491,37 +655,77 @@
                 }
             }
 
-            .form-group {
-                width: 80%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPink);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #d6d5d5;
-                    color: var(--ColorPink);
-                }
+            h3 {
+                color: var(--ColorPink);
+                font-size: 20px;
+                text-align: left;
+                margin: 10px 0px;
             }
 
+            p {
+                font-size: 10px;
+                text-align: left;
+                text-transform: lowercase;
+                font-weight: 500;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 2rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+                font-size: 8px;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    width: 25%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 75%;
+                    padding: 10px;
+                    margin: auto;
+                    outline: none;
+                    border: none;
+                }
+                input::placeholder{
+                    color: transparent;
+                }
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+            }
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPink);
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #d6d5d5;
+                color: var(--ColorPink);
+            }
 
             .reg-link {
                 width: 90%;
@@ -537,7 +741,7 @@
             }
 
             .home {
-                width: 80%;
+                width: 90%;
                 margin: 10px auto;
                 font-size: 13px;
                 text-align: center;
@@ -549,8 +753,9 @@
             }
         }
 
-    
+
     }
+
     .alert {
         background-color: #ff59b23b;
         color: var(--ColorPink);
@@ -572,257 +777,12 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .sigincontainer {
-        height: 100vh;
-        display: flex;
-        background-image: url('../LogopurpleTrans.png');
-        background-repeat: no-repeat;
-        background-position: 170% ;
-        .slider {
-            margin: 0;
-            width: 40%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--ColorPurple);
-
-            .logo {
-                width: 30%;
-                margin: auto;
-                margin-top: 10rem;
-                margin-bottom: 10px;
-
-
-                img {
-                    width: 100px;
-                    margin: auto;
-                }
-            }
-
-            .textSlider {
-                width: 80%;
-                margin: 5px auto;
-                text-align: center;
-                font-size: 25px;
-                font-weight: 700;
-                p{
-                    margin: 10px;
-                }
-            }
-
-            .socialLinks {
-                position: absolute;
-                bottom: 0;
-                font-size: 12px;
-                width: 80%;
-                padding: 10px;
-
-            }
-
-        }
-
-        .form {
-            width: 50%;
-            margin: 7rem auto;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: var(--ColorWhite);
-            box-shadow: 5px 5px 20px #49494944;
-            .Logo {
-                display: none;
-            }
-
-            .form-group {
-                width: 60%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPurple);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
-                }
-            }
-
-
-            .reg-link {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-                color: var(--ColorPurple);
-                font-size: 13px;
-
-                a {
-                    color: var(--ColorPink);
-
-                }
-            }
-
-            .home {
-               display: none;
-            }
-        }
-
-    }
-    .reg-container{
-        height: 100vh;
-        display: flex;
-        background-image: url('../LogopurpleTrans.png');
-        background-repeat: no-repeat;
-        background-position: 170% ;
-        .slider {
-            margin: 0;
-            width: 40%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--ColorPink);
-
-            .logo {
-                width: 30%;
-                margin: auto;
-                margin-top: 10rem;
-                margin-bottom: 10px;
-
-
-                img {
-                    width: 100px;
-                    margin: auto;
-                }
-            }
-
-            .textSlider {
-                width: 80%;
-                margin: 5px auto;
-                text-align: center;
-                font-size: 25px;
-                font-weight: 700;
-                p{
-                    margin: 10px;
-                }
-            }
-
-            .socialLinks {
-                position: absolute;
-                bottom: 0;
-                font-size: 12px;
-                width: 80%;
-                padding: 10px;
-
-            }
-
-        }
-
-        .form {
-            width: 50%;
-            margin: 7rem auto;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: var(--ColorWhite);
-            box-shadow: 5px 5px 20px #49494944;
-            .Logo {
-                display: none;
-            }
-
-            .form-group {
-                width: 60%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPink);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
-                }
-            }
-
-
-            .reg-link {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-                color: var(--ColorPurple);
-                font-size: 13px;
-
-                a {
-                    color: var(--ColorPink);
-
-                }
-            }
-
-            .home {
-               display: none;
-            }
-        }
-
-    
-    
-    }
-    .alert {
-        background-color: #ff59b23b;
-        color: var(--ColorPink);
-        font-size: 10px;
-        border-left: solid 6px #FF1493;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: 45%;
-        margin: auto;
-        padding: 5px;
-
-        p {
-            color: var(--ColorPink);
-            font-size: 20px;
-        }
-    }
-}
-
-
-@media (min-width: 1200px) { 
-    .sigincontainer {
         max-width: 100%;
-        height: 100vh;
         display: flex;
         background-image: url('../LogopurpleTrans.png');
         background-repeat: no-repeat;
-        background-position: 150% ;
+        background-position: 150%;
+
         .slider {
             margin: 0;
             width: 40%;
@@ -852,7 +812,8 @@
                 font-weight: 700;
                 display: flex;
                 align-items: center;
-                p{
+
+                p {
                     margin: 10px;
                 }
             }
@@ -869,77 +830,110 @@
         }
 
         .form {
-            width: 40%;
-            margin: 7rem auto;
+            width: 50%;
+            margin: 1rem auto;
             border-radius: 10px;
-            padding: 20px;
             background-color: var(--ColorWhite);
+            padding: 20px 0;
             box-shadow: 5px 5px 20px #49494944;
+
             .Logo {
                 display: none;
             }
 
-            .form-group {
-                width: 60%;
-                margin: 10px auto;
+            h3 {
+                color: var(--ColorPurple);
+                font-size: 25px;
+                margin: 10px 0px;
+                text-align: center;
+                padding: 10px;
 
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPurple);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
-                }
             }
 
-
-            .reg-link {
-                width: 90%;
-                margin: auto;
+            p {
+                font-size: 14px;
+                text-transform: lowercase;
+                font-weight: 500;
                 text-align: center;
-                color: var(--ColorPurple);
-                font-size: 13px;
+                color: #a0a0a0;
 
                 a {
                     color: var(--ColorPink);
+                }
 
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 11px;
+                    width: 30%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 70%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+                input::placeholder {
+                    color: #cac9c9;
+                }
+
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
                 }
             }
 
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPurple);
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                cursor: pointer;
+                outline: none;
+            }
+
+            button:hover {
+                background-color: #aaa;
+                color: #e7e6e6;
+            }
+
+
             .home {
-               display: none;
+                display: none;
             }
         }
-
     }
-    .reg-container{
-        height: 100vh;
+
+    .reg-container {
         display: flex;
         background-image: url('../LogopurpleTrans.png');
         background-repeat: no-repeat;
-        background-position: 170% ;
+        background-position: 170%;
+
         .slider {
             margin: 0;
             width: 40%;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             background-color: var(--ColorPink);
@@ -963,7 +957,8 @@
                 text-align: center;
                 font-size: 25px;
                 font-weight: 700;
-                p{
+
+                p {
                     margin: 10px;
                 }
             }
@@ -981,83 +976,428 @@
 
         .form {
             width: 50%;
-            margin: 7rem auto;
+            margin: 1rem auto;
             border-radius: 10px;
-            padding: 20px;
             background-color: var(--ColorWhite);
+            padding: 20px 0;
             box-shadow: 5px 5px 20px #49494944;
+
             .Logo {
                 display: none;
             }
 
-            .form-group {
-                width: 60%;
-                margin: 10px auto;
-
-                input {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px 0px;
-                    border-right: none;
-                    border-left: none;
-                    border-top: none;
-                    border-bottom: solid 1px #a0a0a0;
-                }
-
-                button {
-                    margin: 20px auto;
-                    width: 100%;
-                    height: 50px;
-                    background-color: var(--ColorPink);
-                    border: none;
-                    color: #fff;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    background-color: #aaa;
-                    color: #e7e6e6;
-                }
+            h3 {
+                color: var(--ColorPink);
+                font-size: 25px;
+                text-align: left;
+                margin: 10px 0px;
             }
 
-
-            .reg-link {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-                color: var(--ColorPurple);
-                font-size: 13px;
+            p {
+                font-size: 14px;
+                text-align: left;
+                text-transform: lowercase;
+                font-weight: 500;
+                color: #a0a0a0;
 
                 a {
                     color: var(--ColorPink);
+                }
 
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 11px;
+                    width: 20%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+                input::placeholder {
+                    color: #cac9c9;
+                }
+
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
                 }
             }
 
+
+
+
             .home {
-               display: none;
+                display: none;
             }
         }
 
-    
-    
+        button {
+            margin: 20px auto;
+            width: 100%;
+            height: 50px;
+            background-color: var(--ColorPink);
+            border: none;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #aaa;
+            color: #e7e6e6;
+        }
+
+
+
     }
+
     .alert {
         background-color: #ff59b23b;
         color: var(--ColorPink);
-        font-size: 10px;
-        border-left: solid 6px #FF1493;
+        font-size: 14px;
         display: flex;
         align-items: center;
-        text-align: center;
-        width: 40%;
+        width: 100%;
         margin: auto;
-        padding: 5px;
+        padding: 10px 20px;
 
         p {
             color: var(--ColorPink);
             font-size: 20px;
         }
     }
- }
+}
+
+
+@media (min-width: 1200px) {
+    .sigincontainer {
+        max-width: 100%;
+        display: flex;
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 150%;
+
+        .slider {
+            margin: 0;
+            width: 40%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--ColorPurple);
+
+            .logo {
+                width: 30%;
+                margin: auto;
+                margin-top: 10rem;
+                margin-bottom: 10px;
+
+
+                img {
+                    width: 100px;
+                    margin: auto;
+                }
+            }
+
+            .textSlider {
+                width: 80%;
+                margin: 5px auto;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin: 10px;
+                }
+            }
+
+            .socialLinks {
+                position: absolute;
+                bottom: 0;
+                font-size: 12px;
+                width: 80%;
+                padding: 10px;
+
+            }
+
+        }
+
+        .form {
+            width: 50%;
+            margin: 1rem auto;
+            border-radius: 10px;
+            background-color: var(--ColorWhite);
+            padding: 20px 0;
+            box-shadow: 5px 5px 20px #49494944;
+
+            .Logo {
+                display: none;
+            }
+
+            h3 {
+                color: var(--ColorPurple);
+                font-size: 25px;
+                margin: 10px 0px;
+                text-align: center;
+                padding: 10px;
+
+            }
+
+            p {
+                font-size: 14px;
+                text-transform: lowercase;
+                font-weight: 500;
+                text-align: center;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 11px;
+                    width: 30%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 70%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+                input::placeholder {
+                    color: #cac9c9;
+                }
+
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+
+            button {
+                margin: 20px auto;
+                width: 100%;
+                height: 50px;
+                background-color: var(--ColorPurple);
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                cursor: pointer;
+                outline: none;
+            }
+
+            button:hover {
+                background-color: #aaa;
+                color: #e7e6e6;
+            }
+
+
+            .home {
+                display: none;
+            }
+        }
+    }
+
+    .reg-container {
+        display: flex;
+        background-image: url('../LogopurpleTrans.png');
+        background-repeat: no-repeat;
+        background-position: 170%;
+
+        .slider {
+            margin: 0;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--ColorPink);
+
+            .logo {
+                width: 30%;
+                margin: auto;
+                margin-top: 10rem;
+                margin-bottom: 10px;
+
+
+                img {
+                    width: 100px;
+                    margin: auto;
+                }
+            }
+
+            .textSlider {
+                width: 80%;
+                margin: 5px auto;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 700;
+
+                p {
+                    margin: 10px;
+                }
+            }
+
+            .socialLinks {
+                position: absolute;
+                bottom: 0;
+                font-size: 12px;
+                width: 80%;
+                padding: 10px;
+
+            }
+
+        }
+
+        .form {
+            width: 50%;
+            margin: 1rem auto;
+            border-radius: 10px;
+            background-color: var(--ColorWhite);
+            padding: 20px 0;
+            box-shadow: 5px 5px 20px #49494944;
+
+            .Logo {
+                display: none;
+            }
+
+            h3 {
+                color: var(--ColorPink);
+                font-size: 25px;
+                text-align: left;
+                margin: 10px 0px;
+            }
+
+            p {
+                font-size: 14px;
+                text-align: left;
+                text-transform: lowercase;
+                font-weight: 500;
+                color: #a0a0a0;
+
+                a {
+                    color: var(--ColorPink);
+                }
+
+            }
+
+            .form-group {
+                width: 100%;
+                margin: 3rem auto;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 1px #a0a0a0;
+
+                label {
+                    color: #a0a0a0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 11px;
+                    width: 20%;
+                    text-align: left;
+                }
+
+                input {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+
+                input::placeholder {
+                    color: #cac9c9;
+                }
+
+                select {
+                    width: 80%;
+                    padding: 10px;
+                    margin: auto;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+
+
+
+            .home {
+                display: none;
+            }
+        }
+
+        button {
+            margin: 20px auto;
+            width: 100%;
+            height: 50px;
+            background-color: var(--ColorPink);
+            border: none;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #aaa;
+            color: #e7e6e6;
+        }
+
+
+
+    }
+
+    .alert {
+        background-color: #ff59b23b;
+        color: var(--ColorPink);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        padding: 10px 20px;
+
+        p {
+            color: var(--ColorPink);
+            font-size: 20px;
+        }
+    }
+}

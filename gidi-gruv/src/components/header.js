@@ -47,7 +47,7 @@ function Navbar(props) {
                   //  onMouseOver={this.handleOnHover}
                    >
                     <div className='nav-links user'>
-                    {user.name} <img src={img} />
+                    {user.Name} <img src={img} />
                     </div>
                   </Link>
             </>

@@ -1,6 +1,9 @@
 @media (max-width: 575.98px) {
   .sigincontainer {
     max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 150%;
   }
   .sigincontainer .slider {
     display: none;
@@ -20,25 +23,56 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: none;
   }
   .sigincontainer .form .Logo img {
     width: 70px;
     margin: auto;
   }
-  .sigincontainer .form .form-group {
-    width: 80%;
-    margin: 10px auto;
-  }
-  .sigincontainer .form .form-group input {
-    width: 100%;
-    padding: 10px;
+  .sigincontainer .form h3 {
+    color: var(--ColorPurple);
+    font-size: 20px;
     margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
+    text-align: center;
+    padding: 10px;
+  }
+  .sigincontainer .form p {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  .sigincontainer .form p a {
+    color: var(--ColorPink);
+  }
+  .sigincontainer .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: solid 1px #a0a0a0;
   }
-  .sigincontainer .form .form-group button {
+  .sigincontainer .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 8px;
+    width: 25%;
+    text-align: left;
+  }
+  .sigincontainer .form .form-group input {
+    width: 75%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
@@ -48,7 +82,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .sigincontainer .form .form-group button:hover {
+  .sigincontainer .form button:hover {
     background-color: #aaa;
     color: #e7e6e6;
   }
@@ -73,6 +107,9 @@
   }
   .reg-container {
     max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 60%;
   }
   .reg-container .slider {
     display: none;
@@ -87,6 +124,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
   }
   .reg-container .form .Logo {
+    display: none;
     width: 20%;
     margin: auto;
     -webkit-box-align: center;
@@ -97,20 +135,68 @@
     width: 70px;
     margin: auto;
   }
+  .reg-container .form h3 {
+    color: var(--ColorPink);
+    font-size: 20px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .reg-container .form p {
+    font-size: 10px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
   .reg-container .form .form-group {
-    width: 80%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 2rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 8px;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 25%;
+    text-align: left;
   }
   .reg-container .form .form-group input {
-    width: 100%;
+    width: 75%;
     padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
+    margin: auto;
+    outline: none;
+    border: none;
   }
-  .reg-container .form .form-group button {
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
@@ -120,7 +206,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .reg-container .form .form-group button:hover {
+  .reg-container .form button:hover {
     background-color: #d6d5d5;
     color: var(--ColorPink);
   }
@@ -135,7 +221,7 @@
     color: var(--ColorPurple);
   }
   .reg-container .form .home {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     font-size: 13px;
     text-align: center;
@@ -168,6 +254,9 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   .sigincontainer {
     max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 150%;
   }
   .sigincontainer .slider {
     display: none;
@@ -184,29 +273,59 @@
   .sigincontainer .form .Logo {
     width: 20%;
     margin: auto;
-    overflow: hidden;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: none;
   }
   .sigincontainer .form .Logo img {
     width: 70px;
     margin: auto;
   }
-  .sigincontainer .form .form-group {
-    width: 80%;
-    margin: 10px auto;
-  }
-  .sigincontainer .form .form-group input {
-    width: 100%;
-    padding: 10px;
+  .sigincontainer .form h3 {
+    color: var(--ColorPurple);
+    font-size: 20px;
     margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
+    text-align: center;
+    padding: 10px;
+  }
+  .sigincontainer .form p {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  .sigincontainer .form p a {
+    color: var(--ColorPink);
+  }
+  .sigincontainer .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: solid 1px #a0a0a0;
   }
-  .sigincontainer .form .form-group button {
+  .sigincontainer .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 8px;
+    width: 25%;
+    text-align: left;
+  }
+  .sigincontainer .form .form-group input {
+    width: 75%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
@@ -216,7 +335,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .sigincontainer .form .form-group button:hover {
+  .sigincontainer .form button:hover {
     background-color: #aaa;
     color: #e7e6e6;
   }
@@ -241,6 +360,9 @@
   }
   .reg-container {
     max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 60%;
   }
   .reg-container .slider {
     display: none;
@@ -255,6 +377,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
   }
   .reg-container .form .Logo {
+    display: none;
     width: 20%;
     margin: auto;
     -webkit-box-align: center;
@@ -265,20 +388,68 @@
     width: 70px;
     margin: auto;
   }
+  .reg-container .form h3 {
+    color: var(--ColorPink);
+    font-size: 20px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .reg-container .form p {
+    font-size: 10px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
   .reg-container .form .form-group {
-    width: 80%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 2rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 8px;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 25%;
+    text-align: left;
   }
   .reg-container .form .form-group input {
-    width: 100%;
+    width: 75%;
     padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
+    margin: auto;
+    outline: none;
+    border: none;
   }
-  .reg-container .form .form-group button {
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
@@ -288,7 +459,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .reg-container .form .form-group button:hover {
+  .reg-container .form button:hover {
     background-color: #d6d5d5;
     color: var(--ColorPink);
   }
@@ -303,7 +474,7 @@
     color: var(--ColorPurple);
   }
   .reg-container .form .home {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     font-size: 13px;
     text-align: center;
@@ -352,7 +523,6 @@
   .sigincontainer .form .Logo {
     width: 20%;
     margin: auto;
-    overflow: hidden;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -409,6 +579,9 @@
   }
   .reg-container {
     max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 60%;
   }
   .reg-container .slider {
     display: none;
@@ -423,6 +596,7 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
   }
   .reg-container .form .Logo {
+    display: none;
     width: 20%;
     margin: auto;
     -webkit-box-align: center;
@@ -433,20 +607,68 @@
     width: 70px;
     margin: auto;
   }
+  .reg-container .form h3 {
+    color: var(--ColorPink);
+    font-size: 20px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .reg-container .form p {
+    font-size: 10px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
   .reg-container .form .form-group {
-    width: 80%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 2rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 8px;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 25%;
+    text-align: left;
   }
   .reg-container .form .form-group input {
-    width: 100%;
+    width: 75%;
     padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
+    margin: auto;
+    outline: none;
+    border: none;
   }
-  .reg-container .form .form-group button {
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
@@ -456,7 +678,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .reg-container .form .form-group button:hover {
+  .reg-container .form button:hover {
     background-color: #d6d5d5;
     color: var(--ColorPink);
   }
@@ -471,7 +693,7 @@
     color: var(--ColorPurple);
   }
   .reg-container .form .home {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     font-size: 13px;
     text-align: center;
@@ -503,233 +725,7 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .sigincontainer {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url("../LogopurpleTrans.png");
-    background-repeat: no-repeat;
-    background-position: 170%;
-  }
-  .sigincontainer .slider {
-    margin: 0;
-    width: 40%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: var(--ColorPurple);
-  }
-  .sigincontainer .slider .logo {
-    width: 30%;
-    margin: auto;
-    margin-top: 10rem;
-    margin-bottom: 10px;
-  }
-  .sigincontainer .slider .logo img {
-    width: 100px;
-    margin: auto;
-  }
-  .sigincontainer .slider .textSlider {
-    width: 80%;
-    margin: 5px auto;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-  }
-  .sigincontainer .slider .textSlider p {
-    margin: 10px;
-  }
-  .sigincontainer .slider .socialLinks {
-    position: absolute;
-    bottom: 0;
-    font-size: 12px;
-    width: 80%;
-    padding: 10px;
-  }
-  .sigincontainer .form {
-    width: 50%;
-    margin: 7rem auto;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 20px #49494944;
-            box-shadow: 5px 5px 20px #49494944;
-  }
-  .sigincontainer .form .Logo {
-    display: none;
-  }
-  .sigincontainer .form .form-group {
-    width: 60%;
-    margin: 10px auto;
-  }
-  .sigincontainer .form .form-group input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
-  }
-  .sigincontainer .form .form-group button {
-    margin: 20px auto;
-    width: 100%;
-    height: 50px;
-    background-color: var(--ColorPurple);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .sigincontainer .form .form-group button:hover {
-    background-color: #aaa;
-    color: #e7e6e6;
-  }
-  .sigincontainer .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPurple);
-    font-size: 13px;
-  }
-  .sigincontainer .form .reg-link a {
-    color: var(--ColorPink);
-  }
-  .sigincontainer .form .home {
-    display: none;
-  }
-  .reg-container {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url("../LogopurpleTrans.png");
-    background-repeat: no-repeat;
-    background-position: 170%;
-  }
-  .reg-container .slider {
-    margin: 0;
-    width: 40%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: var(--ColorPink);
-  }
-  .reg-container .slider .logo {
-    width: 30%;
-    margin: auto;
-    margin-top: 10rem;
-    margin-bottom: 10px;
-  }
-  .reg-container .slider .logo img {
-    width: 100px;
-    margin: auto;
-  }
-  .reg-container .slider .textSlider {
-    width: 80%;
-    margin: 5px auto;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-  }
-  .reg-container .slider .textSlider p {
-    margin: 10px;
-  }
-  .reg-container .slider .socialLinks {
-    position: absolute;
-    bottom: 0;
-    font-size: 12px;
-    width: 80%;
-    padding: 10px;
-  }
-  .reg-container .form {
-    width: 50%;
-    margin: 7rem auto;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 20px #49494944;
-            box-shadow: 5px 5px 20px #49494944;
-  }
-  .reg-container .form .Logo {
-    display: none;
-  }
-  .reg-container .form .form-group {
-    width: 60%;
-    margin: 10px auto;
-  }
-  .reg-container .form .form-group input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
-  }
-  .reg-container .form .form-group button {
-    margin: 20px auto;
-    width: 100%;
-    height: 50px;
-    background-color: var(--ColorPink);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .reg-container .form .form-group button:hover {
-    background-color: #aaa;
-    color: #e7e6e6;
-  }
-  .reg-container .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPurple);
-    font-size: 13px;
-  }
-  .reg-container .form .reg-link a {
-    color: var(--ColorPink);
-  }
-  .reg-container .form .home {
-    display: none;
-  }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 10px;
-    border-left: solid 6px #FF1493;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    padding: 5px;
-  }
-  .alert p {
-    color: var(--ColorPink);
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .sigincontainer {
     max-width: 100%;
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -784,59 +780,98 @@
     padding: 10px;
   }
   .sigincontainer .form {
-    width: 40%;
-    margin: 7rem auto;
+    width: 50%;
+    margin: 1rem auto;
     border-radius: 10px;
-    padding: 20px;
     background-color: var(--ColorWhite);
+    padding: 20px 0;
     -webkit-box-shadow: 5px 5px 20px #49494944;
             box-shadow: 5px 5px 20px #49494944;
   }
   .sigincontainer .form .Logo {
     display: none;
   }
-  .sigincontainer .form .form-group {
-    width: 60%;
-    margin: 10px auto;
-  }
-  .sigincontainer .form .form-group input {
-    width: 100%;
-    padding: 10px;
+  .sigincontainer .form h3 {
+    color: var(--ColorPurple);
+    font-size: 25px;
     margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
+    text-align: center;
+    padding: 10px;
+  }
+  .sigincontainer .form p {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  .sigincontainer .form p a {
+    color: var(--ColorPink);
+  }
+  .sigincontainer .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: solid 1px #a0a0a0;
   }
-  .sigincontainer .form .form-group button {
+  .sigincontainer .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    width: 30%;
+    text-align: left;
+  }
+  .sigincontainer .form .form-group input {
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form .form-group input::-webkit-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input:-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input::-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input::placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form button {
     margin: 20px auto;
     width: 100%;
     height: 50px;
     background-color: var(--ColorPurple);
     border: none;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    outline: none;
   }
-  .sigincontainer .form .form-group button:hover {
+  .sigincontainer .form button:hover {
     background-color: #aaa;
     color: #e7e6e6;
-  }
-  .sigincontainer .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPurple);
-    font-size: 13px;
-  }
-  .sigincontainer .form .reg-link a {
-    color: var(--ColorPink);
   }
   .sigincontainer .form .home {
     display: none;
   }
   .reg-container {
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -847,7 +882,6 @@
   .reg-container .slider {
     margin: 0;
     width: 40%;
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -886,71 +920,412 @@
   }
   .reg-container .form {
     width: 50%;
-    margin: 7rem auto;
+    margin: 1rem auto;
     border-radius: 10px;
-    padding: 20px;
     background-color: var(--ColorWhite);
+    padding: 20px 0;
     -webkit-box-shadow: 5px 5px 20px #49494944;
             box-shadow: 5px 5px 20px #49494944;
   }
   .reg-container .form .Logo {
     display: none;
   }
-  .reg-container .form .form-group {
-    width: 60%;
-    margin: 10px auto;
-  }
-  .reg-container .form .form-group input {
-    width: 100%;
-    padding: 10px;
+  .reg-container .form h3 {
+    color: var(--ColorPink);
+    font-size: 25px;
+    text-align: left;
     margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
   }
-  .reg-container .form .form-group button {
-    margin: 20px auto;
+  .reg-container .form p {
+    font-size: 14px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
+  .reg-container .form .form-group {
     width: 100%;
-    height: 50px;
-    background-color: var(--ColorPink);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .reg-container .form .form-group button:hover {
-    background-color: #aaa;
-    color: #e7e6e6;
-  }
-  .reg-container .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPurple);
-    font-size: 13px;
-  }
-  .reg-container .form .reg-link a {
-    color: var(--ColorPink);
-  }
-  .reg-container .form .home {
-    display: none;
-  }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 10px;
-    border-left: solid 6px #FF1493;
+    margin: 3rem auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
-    width: 40%;
+    border-bottom: solid 1px #a0a0a0;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    width: 20%;
+    text-align: left;
+  }
+  .reg-container .form .form-group input {
+    width: 80%;
+    padding: 10px;
     margin: auto;
-    padding: 5px;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form .home {
+    display: none;
+  }
+  .reg-container button {
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    background-color: var(--ColorPink);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .reg-container button:hover {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  .alert p {
+    color: var(--ColorPink);
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sigincontainer {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 150%;
+  }
+  .sigincontainer .slider {
+    margin: 0;
+    width: 40%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorPurple);
+  }
+  .sigincontainer .slider .logo {
+    width: 30%;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 10px;
+  }
+  .sigincontainer .slider .logo img {
+    width: 100px;
+    margin: auto;
+  }
+  .sigincontainer .slider .textSlider {
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sigincontainer .slider .textSlider p {
+    margin: 10px;
+  }
+  .sigincontainer .slider .socialLinks {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    width: 80%;
+    padding: 10px;
+  }
+  .sigincontainer .form {
+    width: 50%;
+    margin: 1rem auto;
+    border-radius: 10px;
+    background-color: var(--ColorWhite);
+    padding: 20px 0;
+    -webkit-box-shadow: 5px 5px 20px #49494944;
+            box-shadow: 5px 5px 20px #49494944;
+  }
+  .sigincontainer .form .Logo {
+    display: none;
+  }
+  .sigincontainer .form h3 {
+    color: var(--ColorPurple);
+    font-size: 25px;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 10px;
+  }
+  .sigincontainer .form p {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  .sigincontainer .form p a {
+    color: var(--ColorPink);
+  }
+  .sigincontainer .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+  }
+  .sigincontainer .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    width: 30%;
+    text-align: left;
+  }
+  .sigincontainer .form .form-group input {
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form .form-group input::-webkit-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input:-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input::-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group input::placeholder {
+    color: #cac9c9;
+  }
+  .sigincontainer .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form button {
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    background-color: var(--ColorPurple);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+  }
+  .sigincontainer .form button:hover {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .sigincontainer .form .home {
+    display: none;
+  }
+  .reg-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 170%;
+  }
+  .reg-container .slider {
+    margin: 0;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorPink);
+  }
+  .reg-container .slider .logo {
+    width: 30%;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 10px;
+  }
+  .reg-container .slider .logo img {
+    width: 100px;
+    margin: auto;
+  }
+  .reg-container .slider .textSlider {
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .reg-container .slider .textSlider p {
+    margin: 10px;
+  }
+  .reg-container .slider .socialLinks {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    width: 80%;
+    padding: 10px;
+  }
+  .reg-container .form {
+    width: 50%;
+    margin: 1rem auto;
+    border-radius: 10px;
+    background-color: var(--ColorWhite);
+    padding: 20px 0;
+    -webkit-box-shadow: 5px 5px 20px #49494944;
+            box-shadow: 5px 5px 20px #49494944;
+  }
+  .reg-container .form .Logo {
+    display: none;
+  }
+  .reg-container .form h3 {
+    color: var(--ColorPink);
+    font-size: 25px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .reg-container .form p {
+    font-size: 14px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
+  .reg-container .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    width: 20%;
+    text-align: left;
+  }
+  .reg-container .form .form-group input {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: #cac9c9;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form .home {
+    display: none;
+  }
+  .reg-container button {
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    background-color: var(--ColorPink);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .reg-container button:hover {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .alert {
+    background-color: #ff59b23b;
+    color: var(--ColorPink);
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
   }
   .alert p {
     color: var(--ColorPink);
