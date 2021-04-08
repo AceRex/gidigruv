@@ -3,12 +3,16 @@ import "./dashboard.css";
 import { Route, NavLink, Link, useHistory } from "react-router-dom";
 import Overview from "./Overview";
 import Interest from './Interest'
+import Events from './Events'
 import { useDispatch } from 'react-redux'
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
 import { logout } from "../Redux/UserAction";
 import { useDropzone } from "react-dropzone";
 import ProfilePhoto from './profilePicture.jpg'
+import { FaBars, FaTimes } from 'react-icons/fa'
+
+
 
 function Links() {
 
@@ -37,7 +41,7 @@ function Links() {
       <NavLink to='/dashboard/created_events'
         activeClassName='active'
       >
-        Created Events
+        Events
       </NavLink>
       <Link to='/' onClick={(e) => handleLogout(e)}>
         Logout
@@ -51,11 +55,29 @@ function Dashboard() {
 
   const [displayPicture, setDisplayPicture] = useState(ProfilePhoto)
   const [Name, setName] = useState(user.Name)
+  const [clicked, setClicked] = useState(false)
+  const [close, setClose] = useState(false)
+
+  const handleClicked = () => {
+    setClicked(!clicked)
+  }
   return (
     <div className="db-container">
+      <div className={close ? 'hidden' : 'Notification'}>
+        <span>Kindly Check your registered email to verify your Account</span>
+        <p onClick={() => setClose(true)}> <FaTimes /></p>
+      </div>
       <div className="db__container">
 
-        <nav>
+      <p
+          className={clicked ? 'mobile-menu' : 'mobile-menu-off'}
+          onClick={handleClicked}
+          >
+            <FaBars />
+          </p>
+        <nav className={clicked ? 'nav' : 'nav nav-active'}
+        >
+         
           <div className='user_Image'>
             <div className='img__'>
               <div className='img__container'>
@@ -76,7 +98,7 @@ function Dashboard() {
             <Interest />
           </Route>
           <Route exact path="/dashboard/created_events">
-            <Overview />
+            <Events />
           </Route>
         </div>
       </div>

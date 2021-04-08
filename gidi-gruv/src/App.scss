@@ -61,6 +61,18 @@ body {
         }
        
     }
+    .Notification{
+        background-color: #ff1493;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        p{
+            width: 5%;
+        }
+        span{
+            width: 95%;
+        }
+      }
  }
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -99,6 +111,18 @@ body {
         }
        
     }
+    .Notification{
+        background-color: #ff1493;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        p{
+            width: 5%;
+        }
+        span{
+            width: 95%;
+        }
+      }
  }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
@@ -137,6 +161,18 @@ body {
         }
        
     }
+    .Notification{
+        background-color: #ff1493;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        p{
+            width: 5%;
+        }
+        span{
+            width: 95%;
+        }
+      }
  }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
@@ -175,6 +211,18 @@ body {
             font-size: 12px;
         }
     }
+    .Notification{
+        background-color: #ff1493;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        p{
+            width: 5%;
+        }
+        span{
+            width: 95%;
+        }
+      }
 
  }
 
@@ -215,4 +263,17 @@ body {
         }
        
     }
+    .Notification{
+        background-color: #ff1493;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        p{
+            width: 5%;
+        }
+        span{
+            width: 95%;
+        }
+       
+      }
  }

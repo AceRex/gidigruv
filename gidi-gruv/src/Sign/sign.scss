@@ -129,7 +129,7 @@
 
         .form {
             width: 90%;
-            margin: 5rem auto;
+            margin: 3rem auto;
             border-radius: 10px;
             padding: 20px;
             background-color: var(--ColorWhite);
@@ -137,14 +137,6 @@
 
             .Logo {
                 display: none;
-                width: 20%;
-                margin: auto;
-                align-items: center;
-
-                img {
-                    width: 70px;
-                    margin: auto;
-                }
             }
 
             h3 {
@@ -169,7 +161,7 @@
 
             .form-group {
                 width: 100%;
-                margin: 2rem auto;
+                margin: 1rem auto;
                 display: flex;
                 align-items: center;
                 border-bottom: solid 1px #a0a0a0;
@@ -179,12 +171,12 @@
                     color: #a0a0a0;
                     text-transform: uppercase;
                     font-weight: 600;
-                    width: 25%;
+                    width: 20%;
                     text-align: left;
                 }
 
                 input {
-                    width: 75%;
+                    width: 80%;
                     padding: 10px;
                     margin: auto;
                     outline: none;
@@ -975,7 +967,7 @@
         }
 
         .form {
-            width: 50%;
+            width: 55%;
             margin: 1rem auto;
             border-radius: 10px;
             background-color: var(--ColorWhite);

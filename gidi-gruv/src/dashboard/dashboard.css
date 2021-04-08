@@ -2,81 +2,16 @@
   .db-container {
     max-width: 100%;
     background-color: #f5f3f3;
-    padding: 3rem 0px;
   }
   .db-container .db__container {
-    width: 100%;
-  }
-  .db-container .db__container .link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: var(--ColorWhite);
-    width: 98%;
-    margin: auto;
-    overflow: hidden;
-    overflow-x: scroll;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .link a {
-    color: #aaa;
-    text-decoration: none;
-    padding: 20px;
-    margin: 5px 0px;
-    text-align: center;
-  }
-  .db-container .db__container .link .active {
-    background-color: #e6e6e6;
-    color: #8f8f8f;
-    border-radius: 5px;
-    font-weight: 700;
-    border-right: solid 5px var(--ColorPurple);
-  }
-  .db-container .db__container .link::-webkit-scrollbar {
     width: 100%;
   }
-  .db-container .db__container .content {
-    background-color: var(--ColorWhite);
-    width: 100%;
-    border-radius: 5px;
-    margin: auto;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .content .profile {
-    width: 100%;
-    margin: auto;
-    color: #aaa;
-    padding: 3rem 1rem;
-  }
-  .db-container .db__container .content .profile .img-container {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-  .db-container .db__container .content .profile .img-container img {
-    width: 100%;
-    height: 100%;
-  }
-  .db-container .db__container .content .profile form {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .db-container .db__container .content .profile form .form-group {
-    width: 100%;
-    margin: auto;
-    padding: 5px 0;
-  }
-  .db-container .db__container .content .profile form .form-group .input__group {
-    width: 90%;
-    margin: auto;
+  .db-container .db__container .nav {
+    position: absolute;
+    left: 0%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -84,30 +19,242 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: var(--ColorPurple);
+    width: 50%;
+    padding-bottom: 3rem;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 2;
   }
-  .db-container .db__container .content .profile form .form-group .input__group input {
-    width: 80%;
+  .db-container .db__container .nav .user_Image {
+    padding: 20px;
+    width: 100%;
+  }
+  .db-container .db__container .nav .user_Image .img__ {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: solid 1px var(--ColorWhite);
+    padding: 5px;
+  }
+  .db-container .db__container .nav .user_Image .img__ .img__container {
+    width: 85px;
+    height: 85px;
+    border: solid 5px var(--ColorWhite);
+    border-radius: 50%;
     margin: auto;
-    border: 2px solid #e6e6e6;
-    border-radius: 5px;
+    overflow: hidden;
+  }
+  .db-container .db__container .nav .user_Image .img__ .img__container img {
+    width: 85px;
+    height: 85px;
+  }
+  .db-container .db__container .nav .user_Image .user__name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px var(--ColorWhite);
+  }
+  .db-container .db__container .nav a {
+    font-size: 15px;
+    color: var(--ColorWhite);
+    text-decoration: none;
+    padding: 5px;
+    margin: 1.2rem 0px;
+    text-align: center;
+  }
+  .db-container .db__container .nav .active {
+    color: var(--ColorPink);
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPink);
+  }
+  .db-container .db__container .mobile-menu {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 30%;
+    left: 30%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .nav-active {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .db-container .db__container .mobile-menu-off {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 30%;
+    left: -20%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content {
+    width: 100%;
+  }
+  .db-container .db__container .content .account__ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .db-container .db__container .content .account__ .profile {
+    width: 100%;
+    padding: 2rem;
+  }
+  .db-container .db__container .content .account__ .profile h3 {
+    font-size: 25px;
+    color: var(--ColorPink);
+    font-weight: 500;
+  }
+  .db-container .db__container .content .account__ .profile .social_media_link {
+    padding: 3px 0px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .db-container .db__container .content .account__ .profile .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 20%;
+    text-align: left;
+    padding: 0px 5px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    outline: none;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    border: none;
     outline: none;
   }
-  .db-container .db__container .content .profile form .form-group .input__group label {
-    padding: 10px;
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container {
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer {
     font-size: 12px;
-  }
-  .db-container .db-input {
-    height: 40px;
-    width: 70%;
-    padding: 0 10px;
-  }
-  .db-container .db-btn {
-    width: 40%;
-    margin: auto;
-    padding: 10px;
+    font-weight: 500;
     border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1rhbuit-multiValue {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-12jo7m5 {
     color: var(--ColorWhite);
     background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-2613qy-menu {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #a0a0a0;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group .MuiSwitch-colorPrimary.Mui-checked {
+    color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn {
+    width: 50%;
+    margin: auto;
+    margin-right: 0.5rem;
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button {
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button:hover {
+    background-color: #a0a0a0;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
   }
 }
 
@@ -115,20 +262,16 @@
   .db-container {
     max-width: 100%;
     background-color: #f5f3f3;
-    padding: 3rem 0px;
   }
   .db-container .db__container {
-    width: 80%;
-    height: 70vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: auto;
+    width: 100%;
   }
-  .db-container .db__container .link {
+  .db-container .db__container .nav {
+    position: absolute;
+    left: 0%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -136,105 +279,242 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: var(--ColorWhite);
-    width: 25%;
-    height: 65vh;
-    margin: auto;
-    border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
+    background-color: var(--ColorPurple);
+    width: 50%;
+    padding-bottom: 3rem;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 2;
   }
-  .db-container .db__container .link a {
-    color: #aaa;
-    text-decoration: none;
+  .db-container .db__container .nav .user_Image {
     padding: 20px;
-    margin: 5px 0px;
-    text-align: center;
+    width: 100%;
   }
-  .db-container .db__container .link .active {
-    background-color: #e6e6e6;
-    color: #8f8f8f;
-    border-radius: 5px;
-    font-weight: 700;
-    border-right: solid 5px var(--ColorPurple);
+  .db-container .db__container .nav .user_Image .img__ {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: solid 1px var(--ColorWhite);
+    padding: 5px;
   }
-  .db-container .db__container .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: var(--ColorWhite);
-    width: 70%;
-    border-radius: 5px;
+  .db-container .db__container .nav .user_Image .img__ .img__container {
+    width: 85px;
+    height: 85px;
+    border: solid 5px var(--ColorWhite);
+    border-radius: 50%;
     margin: auto;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .content .profile {
-    width: 90%;
-    margin: auto;
-    background-color: var(--ColorWhite);
-    color: #aaa;
-    padding: 3rem 1rem;
-  }
-  .db-container .db__container .content .profile .img-container {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 100%;
     overflow: hidden;
   }
-  .db-container .db__container .content .profile .img-container img {
-    width: 100%;
-    height: 100%;
+  .db-container .db__container .nav .user_Image .img__ .img__container img {
+    width: 85px;
+    height: 85px;
   }
-  .db-container .db__container .content .profile form {
-    width: 100%;
-    margin: auto;
+  .db-container .db__container .nav .user_Image .user__name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px var(--ColorWhite);
+  }
+  .db-container .db__container .nav a {
+    font-size: 15px;
+    color: var(--ColorWhite);
+    text-decoration: none;
+    padding: 5px;
+    margin: 1.2rem 0px;
     text-align: center;
   }
-  .db-container .db__container .content .profile form .form-group {
+  .db-container .db__container .nav .active {
+    color: var(--ColorPink);
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPink);
+  }
+  .db-container .db__container .mobile-menu {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 20%;
+    left: 40%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .nav-active {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .db-container .db__container .mobile-menu-off {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 20%;
+    left: -10%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content {
     width: 100%;
-    margin: auto;
-    padding: 10px 0;
+  }
+  .db-container .db__container .content .account__ {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
   }
-  .db-container .db__container .content .profile form .form-group .input__group {
-    width: 90%;
-    margin: auto;
+  .db-container .db__container .content .account__ .profile {
+    width: 100%;
+    padding: 2rem;
   }
-  .db-container .db__container .content .profile form .form-group .input__group input {
-    width: 95%;
+  .db-container .db__container .content .account__ .profile h3 {
+    font-size: 25px;
+    color: var(--ColorPink);
+    font-weight: 500;
+  }
+  .db-container .db__container .content .account__ .profile .social_media_link {
+    padding: 3px 0px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .db-container .db__container .content .account__ .profile .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 20%;
+    text-align: left;
+    padding: 0px 5px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
     margin: auto;
-    border: 2px solid #e6e6e6;
-    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    border: none;
     outline: none;
   }
-  .db-container .db__container .content .profile form .form-group .input__group label {
-    padding: 10px;
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container {
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer {
     font-size: 12px;
-  }
-  .db-container .db-input {
-    height: 40px;
-    width: 70%;
-    padding: 0 10px;
-  }
-  .db-container .db-btn {
-    width: 40%;
-    margin: auto;
-    padding: 10px;
+    font-weight: 500;
     border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1rhbuit-multiValue {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-12jo7m5 {
     color: var(--ColorWhite);
     background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-2613qy-menu {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #a0a0a0;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group .MuiSwitch-colorPrimary.Mui-checked {
+    color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn {
+    width: 50%;
+    margin: auto;
+    margin-right: 0.5rem;
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button {
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button:hover {
+    background-color: #a0a0a0;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
   }
 }
 
@@ -242,20 +522,16 @@
   .db-container {
     max-width: 100%;
     background-color: #f5f3f3;
-    padding: 3rem 0px;
   }
   .db-container .db__container {
-    width: 80%;
-    height: 70vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: auto;
+    width: 100%;
   }
-  .db-container .db__container .link {
+  .db-container .db__container .nav {
+    position: absolute;
+    left: 0%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -263,105 +539,242 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: var(--ColorWhite);
-    width: 25%;
-    height: 65vh;
-    margin: auto;
-    border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
+    background-color: var(--ColorPurple);
+    width: 50%;
+    padding-bottom: 3rem;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 2;
   }
-  .db-container .db__container .link a {
-    color: #aaa;
-    text-decoration: none;
+  .db-container .db__container .nav .user_Image {
     padding: 20px;
-    margin: 5px 0px;
-    text-align: center;
+    width: 100%;
   }
-  .db-container .db__container .link .active {
-    background-color: #e6e6e6;
-    color: #8f8f8f;
-    border-radius: 5px;
-    font-weight: 700;
-    border-right: solid 5px var(--ColorPurple);
+  .db-container .db__container .nav .user_Image .img__ {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: solid 1px var(--ColorWhite);
+    padding: 5px;
   }
-  .db-container .db__container .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: var(--ColorWhite);
-    width: 70%;
-    border-radius: 5px;
+  .db-container .db__container .nav .user_Image .img__ .img__container {
+    width: 85px;
+    height: 85px;
+    border: solid 5px var(--ColorWhite);
+    border-radius: 50%;
     margin: auto;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .content .profile {
-    width: 90%;
-    margin: auto;
-    background-color: var(--ColorWhite);
-    color: #aaa;
-    padding: 3rem 1rem;
-  }
-  .db-container .db__container .content .profile .img-container {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 100%;
     overflow: hidden;
   }
-  .db-container .db__container .content .profile .img-container img {
-    width: 100%;
-    height: 100%;
+  .db-container .db__container .nav .user_Image .img__ .img__container img {
+    width: 85px;
+    height: 85px;
   }
-  .db-container .db__container .content .profile form {
-    width: 100%;
-    margin: auto;
+  .db-container .db__container .nav .user_Image .user__name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px var(--ColorWhite);
+  }
+  .db-container .db__container .nav a {
+    font-size: 15px;
+    color: var(--ColorWhite);
+    text-decoration: none;
+    padding: 5px;
+    margin: 1.2rem 0px;
     text-align: center;
   }
-  .db-container .db__container .content .profile form .form-group {
+  .db-container .db__container .nav .active {
+    color: var(--ColorPink);
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPink);
+  }
+  .db-container .db__container .mobile-menu {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 20%;
+    left: 40%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .nav-active {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .db-container .db__container .mobile-menu-off {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+    width: 20%;
+    left: -10%;
+    color: var(--ColorWhite);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content {
     width: 100%;
-    margin: auto;
-    padding: 10px 0;
+  }
+  .db-container .db__container .content .account__ {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
   }
-  .db-container .db__container .content .profile form .form-group .input__group {
-    width: 90%;
-    margin: auto;
+  .db-container .db__container .content .account__ .profile {
+    width: 100%;
+    padding: 2rem;
   }
-  .db-container .db__container .content .profile form .form-group .input__group input {
-    width: 95%;
+  .db-container .db__container .content .account__ .profile h3 {
+    font-size: 25px;
+    color: var(--ColorPink);
+    font-weight: 500;
+  }
+  .db-container .db__container .content .account__ .profile .social_media_link {
+    padding: 3px 0px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .db-container .db__container .content .account__ .profile .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 20%;
+    text-align: left;
+    padding: 0px 5px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
     margin: auto;
-    border: 2px solid #e6e6e6;
-    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    border: none;
     outline: none;
   }
-  .db-container .db__container .content .profile form .form-group .input__group label {
-    padding: 10px;
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container {
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer {
     font-size: 12px;
-  }
-  .db-container .db-input {
-    height: 40px;
-    width: 70%;
-    padding: 0 10px;
-  }
-  .db-container .db-btn {
-    width: 40%;
-    margin: auto;
-    padding: 10px;
+    font-weight: 500;
     border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1rhbuit-multiValue {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-12jo7m5 {
     color: var(--ColorWhite);
     background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-2613qy-menu {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #a0a0a0;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group .MuiSwitch-colorPrimary.Mui-checked {
+    color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn {
+    width: 50%;
+    margin: auto;
+    margin-right: 0.5rem;
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button {
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button:hover {
+    background-color: #a0a0a0;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
   }
 }
 
@@ -369,139 +782,18 @@
   .db-container {
     max-width: 100%;
     background-color: #f5f3f3;
-    padding: 3rem 0px;
-  }
-  .db-container .db__container {
-    width: 80%;
-    height: 70vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: auto;
-  }
-  .db-container .db__container .link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: var(--ColorWhite);
-    width: 25%;
-    height: 65vh;
-    margin: auto;
-    border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .link a {
-    color: #aaa;
-    text-decoration: none;
-    padding: 20px;
-    margin: 5px 0px;
-    text-align: center;
-  }
-  .db-container .db__container .link .active {
-    background-color: #e6e6e6;
-    color: #8f8f8f;
-    border-radius: 5px;
-    font-weight: 700;
-    border-right: solid 5px var(--ColorPurple);
-  }
-  .db-container .db__container .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: var(--ColorWhite);
-    width: 70%;
-    border-radius: 5px;
-    margin: auto;
-    -webkit-box-shadow: 5px 5px 10px #aaaaaa4b;
-            box-shadow: 5px 5px 10px #aaaaaa4b;
-  }
-  .db-container .db__container .content .profile {
-    width: 90%;
-    margin: auto;
-    background-color: var(--ColorWhite);
-    color: #aaa;
-    padding: 3rem 1rem;
-  }
-  .db-container .db__container .content .profile .img-container {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-  .db-container .db__container .content .profile .img-container img {
-    width: 100%;
-    height: 100%;
-  }
-  .db-container .db__container .content .profile form {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-  .db-container .db__container .content .profile form .form-group {
-    width: 100%;
-    margin: auto;
-    padding: 10px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
-  }
-  .db-container .db__container .content .profile form .form-group .input__group {
-    width: 90%;
-    margin: auto;
-  }
-  .db-container .db__container .content .profile form .form-group .input__group input {
-    width: 95%;
-    margin: auto;
-    border: 2px solid #e6e6e6;
-    border-radius: 5px;
-    outline: none;
-  }
-  .db-container .db__container .content .profile form .form-group .input__group label {
-    padding: 10px;
-    font-size: 12px;
-  }
-  .db-container .db-input {
-    height: 40px;
-    width: 70%;
-    padding: 0 10px;
-  }
-  .db-container .db-btn {
-    width: 40%;
-    margin: auto;
-    padding: 10px;
-    border: none;
-    color: var(--ColorWhite);
-    background-color: var(--ColorPurple);
-  }
-}
-
-@media (min-width: 1200px) {
-  .db-container {
-    max-width: 100%;
-    background-color: #f5f3f3;
   }
   .db-container .db__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+  }
+  .db-container .db__container .mobile-menu {
+    display: none;
+  }
+  .db-container .db__container .mobile-menu-off {
+    display: none;
   }
   .db-container .db__container nav {
     display: -webkit-box;
@@ -635,6 +927,46 @@
     border: none;
     outline: none;
   }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container {
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1rhbuit-multiValue {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-12jo7m5 {
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-2613qy-menu {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #aaa;
+  }
   .db-container .db__container .content .account__ .profile .form-toggle-group {
     width: 90%;
     margin: 2rem 0;
@@ -646,6 +978,236 @@
         -ms-flex-align: center;
             align-items: center;
     color: #a0a0a0;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group .MuiSwitch-colorPrimary.Mui-checked {
+    color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn {
+    width: 30%;
+    margin: auto;
+    margin-right: 3rem;
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .account_save_btn button:hover {
+    background-color: #a0a0a0;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+  }
+}
+
+@media (min-width: 1200px) {
+  .db-container {
+    max-width: 100%;
+    background-color: #f5f3f3;
+  }
+  .db-container .db__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .db-container .db__container .mobile-menu {
+    display: none;
+  }
+  .db-container .db__container .mobile-menu-off {
+    display: none;
+  }
+  .db-container .db__container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--ColorPurple);
+    width: 25%;
+    -webkit-box-shadow: 10px 10px 10px #aaaaaa4b;
+            box-shadow: 10px 10px 10px #aaaaaa4b;
+    padding-bottom: 3rem;
+  }
+  .db-container .db__container nav .user_Image {
+    padding: 20px;
+    width: 100%;
+  }
+  .db-container .db__container nav .user_Image .img__ {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: solid 1px var(--ColorWhite);
+    padding: 5px;
+  }
+  .db-container .db__container nav .user_Image .img__ .img__container {
+    width: 108px;
+    height: 108px;
+    border: solid 5px var(--ColorWhite);
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .db-container .db__container nav .user_Image .img__ .img__container img {
+    width: 108px;
+    height: 108px;
+  }
+  .db-container .db__container nav .user_Image .user__name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px var(--ColorWhite);
+  }
+  .db-container .db__container nav a {
+    font-size: 15px;
+    color: var(--ColorWhite);
+    text-decoration: none;
+    padding: 5px;
+    margin: 1.2rem 0px;
+    text-align: center;
+  }
+  .db-container .db__container nav .active {
+    color: var(--ColorPink);
+    font-weight: 700;
+    border-right: solid 5px var(--ColorPink);
+  }
+  .db-container .db__container .content {
+    width: 75%;
+  }
+  .db-container .db__container .content .account__ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .db-container .db__container .content .account__ .profile {
+    width: 50%;
+    padding: 2rem;
+  }
+  .db-container .db__container .content .account__ .profile h3 {
+    font-size: 25px;
+    color: var(--ColorPink);
+    font-weight: 500;
+  }
+  .db-container .db__container .content .account__ .profile .social_media_link {
+    padding: 3px 0px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group {
+    width: 90%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .db-container .db__container .content .account__ .profile .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 20%;
+    text-align: left;
+    padding: 0px 5px;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input {
+    width: 80%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    outline: none;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::-ms-input-placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group input::placeholder {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group select {
+    width: 80%;
+    padding: 10px;
+    background-color: transparent;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container {
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-1rhbuit-multiValue {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-yk16xz-control .css-g1d714-ValueContainer .css-12jo7m5 {
+    color: var(--ColorWhite);
+    background-color: var(--ColorPurple);
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control {
+    background-color: transparent;
+    border: none !important;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-1pahdxg-control .css-g1d714-ValueContainer .css-1wa3eu0-placeholder {
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-group .css-2b097c-container .css-2613qy-menu {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #aaa;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group {
+    width: 90%;
+    margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #a0a0a0;
+  }
+  .db-container .db__container .content .account__ .profile .form-toggle-group .MuiSwitch-colorPrimary.Mui-checked {
+    color: var(--ColorPurple);
   }
   .db-container .db__container .content .account__ .profile .account_save_btn {
     width: 30%;

@@ -37,14 +37,14 @@ function Navbar(props) {
             <>
               
                   <Link to='/create-event'
-                  //  onMouseOver={this.handleOnHover}
+                  onClick={() => setClicked(!clicked)}
                    >
                     <div className='nav-links'>
                     Create Event
                     </div>
                   </Link>
                   <Link to='/dashboard'
-                  //  onMouseOver={this.handleOnHover}
+                  onClick={() => setClicked(!clicked)}
                    >
                     <div className='nav-links user'>
                     {user.Name} <img src={img} />

@@ -59,6 +59,20 @@ body {
     font-size: 12px;
     cursor: pointer;
   }
+  .Notification {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Notification p {
+    width: 5%;
+  }
+  .Notification span {
+    width: 95%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -94,6 +108,20 @@ body {
     cursor: pointer;
     font-size: 12px;
   }
+  .Notification {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Notification p {
+    width: 5%;
+  }
+  .Notification span {
+    width: 95%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -128,6 +156,20 @@ body {
     right: 20px;
     cursor: pointer;
     font-size: 13px;
+  }
+  .Notification {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Notification p {
+    width: 5%;
+  }
+  .Notification span {
+    width: 95%;
   }
 }
 
@@ -165,6 +207,20 @@ body {
     cursor: pointer;
     font-size: 12px;
   }
+  .Notification {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Notification p {
+    width: 5%;
+  }
+  .Notification span {
+    width: 95%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -200,6 +256,20 @@ body {
     right: 20px;
     cursor: pointer;
     font-size: 12px;
+  }
+  .Notification {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Notification p {
+    width: 5%;
+  }
+  .Notification span {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=App.css.map */

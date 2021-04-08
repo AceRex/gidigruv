@@ -573,8 +573,9 @@
     background-color: #7300ff2f;
   }
   .SED-container .btn-container {
-    width: 50%;
+    width: 30%;
     margin: 3rem auto;
+    margin-right: 10%;
   }
   .SED-container .btn-container button {
     width: 100%;
@@ -750,8 +751,9 @@
     background-color: #7300ff2f;
   }
   .SED-container .btn-container {
-    width: 50%;
+    width: 30%;
     margin: 3rem auto;
+    margin-right: 15%;
   }
   .SED-container .btn-container button {
     width: 100%;

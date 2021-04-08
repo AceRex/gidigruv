@@ -3,8 +3,7 @@ import { useDispatch } from 'react-redux'
 import { login } from '../Redux/UserAction'
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
-// import {Switch} from 'antd'
-// import 'antd/dist/antd.css'
+import Switch from '@material-ui/core/Switch';
 
 
 function ScrollToToponMount() {
@@ -13,6 +12,8 @@ function ScrollToToponMount() {
   }, []);
   return null
 }
+
+
 function Overview() {
   const user = useSelector(selectUser)
 
@@ -30,6 +31,16 @@ function Overview() {
   const [facebookLink, setFacebookLink] = useState("")
   const [instagramLink, setInstagramLink] = useState("")
   const [twitterLink, setTwitterLink] = useState("")
+  // Toggle state
+  const [toggle, setToggle] = useState({
+    checkedA: true,
+    checkedB: true,
+  });
+  const handleToggle = (event) => {
+    setToggle({ ...toggle, [event.target.name]: event.target.checked });
+  };
+
+  // toggle state Ends
 
   const dispatch = useDispatch()
   const handleSubmit = (event) => {
@@ -75,7 +86,6 @@ function Overview() {
             <label>Phone Number</label>
             <input className='db-input'
               type='tel'
-              pattern="[A_Za-z]{3}"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
@@ -181,7 +191,13 @@ function Overview() {
           </div>
           <div className="form-toggle-group">
             <label>Send me notifications of events</label>
-            {/* <Switch /> */}
+            <Switch
+              checked={toggle.checkedB}
+              onChange={handleToggle}
+              color="primary"
+              name="checkedB"
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            />
           </div>
           <div className='account_save_btn'>
             <button className='db-btn' onClick={(e) => handleSubmit(e)}>Save</button>

@@ -176,7 +176,7 @@ class ShowEventDetails extends React.Component {
 
         <section className="SED-container">
           <EventDetail />
-          <div className="map">
+          {/* <div className="map">
             <Map
               containerStyle={containerStyle}
               google={this.props.google}
@@ -190,7 +190,7 @@ class ShowEventDetails extends React.Component {
                 </div>
               </InfoWindow>
             </Map>
-          </div>
+          </div> */}
           <div className="btn-container">
             <button onClick={this.handleClick}>I am interested</button>
           </div>

@@ -34,17 +34,9 @@ function MainCarousel() {
         </div>
         <div className="create-button">
           {user ? (
-            <div className="search">
-            <p>
-              <RiSearch2Line />
-            </p>
-            <input type="text" placeholder="Search For Events Near you" />
-            <button>
-              <p>
-                <CgArrowLongRight />
-              </p>
-            </button>
-          </div>
+            <Link to="/create-event">
+            Create an Event <CgArrowLongRight />{" "}
+          </Link> 
 
             
           ) : (
