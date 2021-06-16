@@ -1,99 +1,205 @@
-import React, { Component, useState } from "react";
-import Header from "../components/header";
-import Preview from "./imageUpload";
-import Select from "react-select";
-import Date from "./DatePicker";
-import Datas from '../Data/data'
+import React from "react";
+import "./createEvent.css";
+import ImageUploader from './imageUpload'
+import { Skeleton } from 'antd';
+import { saveStorageData, getStorageData } from "../authentication/AuthData";
 
-export default class CreateEvent extends Component {
-  
-  render() {
+const previewImage = getStorageData("bannerUrl")
+// console.log(previewImage[0])
 
-    return (
-      <>
-        <div className="CE-container">
-          <form className="CE-form">
-            <div className="CE-form-left">
-              <Preview />
-              <div className="Ev-des ">
-                <label>Give us the full details of this Event :</label>
-                <textarea cols="5" rows="7" />
-              </div>
-            </div>
-            <div className="CE-form-right">
-              <div className="form-group">
-                <label>What's the Title/Theme of this Event?</label>
-                <input
-                  type="text"
-                  maxlength="65"
-                  placeholder="Enter Title of Event Here"
-                  className="Ev-title"
-                />
-              </div>
-              <div className="form-group">
-                <label>Select Category of Event</label>
-                <Select options={Datas.options} />
-              </div>
-              <div className="form-group">
-                <label>
-                  If this Event will be physical, Where will it hold?{" "}
-                  <small>(Kindly Enter Address in Full)</small>
-                </label>
-                <input
-                  type="address"
-                  maxlength="65"
-                  placeholder="Enter Full Address to Event Here"
-                  className="Ev-input"
-                />
-              </div>
+const bgImg = getStorageData("bannerUrl")
+const EventDate = ""
+const EventCategory = [
+  {
+    id: 0,
+    category: "Art"
+  },
+  {
+    id: 1,
+    category: "Music"
+  },
+  {
+    id: 2,
+    category: "Business"
+  },
+  {
+    id: 3,
+    category: "Concert"
+  },
+  {
+    id: 4,
+    category: "Religious"
+  },
+  {
+    id: 5,
+    category: "Workshop"
+  },
+  {
+    id: 6,
+    category: "Seminar"
+  },
+  {
+    id: 7,
+    category: "Lifestyle"
+  },
+  {
+    id: 8,
+    category: "Technology"
+  },
+  {
+    id: 9,
+    category: "Sports"
+  },
+  {
+    id: 10,
+    category: "Health Care and Medical"
+  }]
+const ImageCont = {
+  backgroundImage: bgImg,
+  height: "30%",
+}
+const event_details_preview = {
+  width: "80%",
+  margin: "auto",
+  position: "relative",
+  top: "-1rem",
+  textAlign: "center"
+}
 
-              <div className="form-group">
-                <label>
-                  If this event will be online, Kindly Enter the Link to the
-                  Event
-                </label>
-                <input
-                  type="link"
-                  maxlength="65"
-                  placeholder="Enter Link to Event"
-                  className="Ev-input"
-                />
-              </div>
-              <div className="form-group">
-                <label>Select the correct date and time of the Event</label>
-                <Date />
-              </div>
-              <div className="form-group">
-                <div className="payment">
-                  <label>Will this event be; </label>
-                  <input type="radio" />
-                  Free
-                  <input type="radio" />
-                  Paid
-                </div>
-              </div>
-              <div className='form-group'>
-                <label>Cost for Attending</label>
-                <input type='text' placeholder='₦' className='Ev-input' />
-              </div>
-              <div className='form-group'>
-                <div className='payment'>
-                  <input type='checkbox' />
-                  <label>I agree to Gidi Gruv <a href='/Termsandconditions_201118_154817.pdf'>Terms and Condition.</a></label>
-              </div>
-                </div>
-              <div className="btn">
-                <button type="reset" className="reset-btn">
-                  Reset
-                </button>
-                <button type="submit" className="submit-btn">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </form>
+export default function CreateEvent() {
+  const [title, setTitle] = React.useState("")
+  saveStorageData('ThemeText', title)
+
+
+  const [ThemeText, setThemetext] = React.useState("")
+  React.useEffect(() => {
+    setThemetext(getStorageData("ThemeText"))
+  })
+
+  const [description, setDesc] = React.useState("")
+  const [start_date, setStartDate] = React.useState("")
+  const [end_date, setEndDate] = React.useState("")
+  const [time, setTime] = React.useState("")
+  const [eventType, setEventType] = React.useState("")
+
+
+  return (
+    <div className="create__event__container">
+      <div className="preview">
+        <div style={ImageCont}>
         </div>
-      </>
-    );
-  }
+        <div style={event_details_preview}>
+          <div className="theme-text">
+            {title === "" ? <Skeleton active round paragraph /> : ThemeText}
+          </div>
+          <div className="eventDate">
+            {EventDate === "" ? <Skeleton active rows='1' /> : EventDate}
+          </div>
+        </div>
+      </div>
+      <div className="form__">
+        <div className="form_entry__">
+          <div className="Page__header"> Create New Event </div>
+          <div className="Image__uploader"> <ImageUploader /> </div>
+          <div className="button">
+            <div className="form-group">
+              <label>Event Title</label>
+              <input
+                type="text"
+                name="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+            <div className="form-group">
+              <label>Event Description</label>
+              <textarea
+                name="description"
+                value={description}
+                rows="4"
+                onChange={(e) => setDesc(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+            <div className="form-group">
+              <label>Event Start Date</label>
+              <input
+                type="date"
+                name="start_date"
+                value={start_date}
+                onChange={(e) => setStartDate(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+            <div className="form-group">
+              <label>Event End Date</label>
+              <input
+                type="date"
+                name="end_date"
+                value={end_date}
+                onChange={(e) => setEndDate(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+            <div className="form-group">
+              <label>Time</label>
+              <input
+                type="time"
+                name="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+            <div className="form-group">
+              <label>Event Category</label>
+              <select>
+                {EventCategory.map((Events) => {
+                  return (
+                    <option>
+                      {Events.category}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className='form-radio'>
+              <p>kindly choose one of the options</p>
+
+              <div className="radio">
+                <label>
+                  Free
+              </label>
+                <input
+                  type="radio"
+                  name="eventType"
+                  value="free"
+                  checked={eventType === "free"}
+                  onChange={(e) => setEventType(e.target.value)}
+                />
+              </div>
+              <div className="radio">
+                <label>
+                  Paid
+              </label>
+                <input
+                  type="radio"
+                  name="eventType"
+                  value="paid"
+                  checked={eventType === "paid"}
+                  onChange={(e) => setEventType(e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+          <div className='btn'>
+            <button>
+              Post Event
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

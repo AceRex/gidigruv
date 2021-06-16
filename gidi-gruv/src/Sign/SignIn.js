@@ -11,27 +11,25 @@ import { useDispatch } from 'react-redux'
 import { login } from '../Redux/UserAction'
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { useAuth } from "../authentication/AuthO";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function SignIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("")
-  const [alert, setAlert] = useState(false)
-  const [wrongInput, setWrongInput] = useState(false)
 
+  let auth = useAuth()
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState()
+ 
   const dispatch = useDispatch()
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('https://jsonplaceholder.typicode.com/users', {
-      email,
-      password,
-      loggedIn: true
+    auth.signin(email, password)
 
-    })
-      .then(res =>
-        dispatch(login(res.data))
-      )
-      .catch(err => console.error(err));
   }
 
   return (
@@ -62,18 +60,7 @@ function SignIn() {
         <div className="Logo">
           <img src={Logo} alt="Logo" />
         </div>
-        <div className={alert ? "alert" : "hidden"}>
-          <p className="icon">
-            <FiAlertTriangle />
-          </p>
-            The Feilds below cannot be empty
-          </div>
-        <div className={wrongInput ? "alert" : "hidden"}>
-          <p className="icon">
-            <FiAlertTriangle />
-          </p>
-            Wrong Email or Password
-          </div>
+        
         <form action="/">
           <div className="form-group">
             <label>UserName / Phone no</label>
@@ -95,12 +82,14 @@ function SignIn() {
               placeholder="Password here..."
             />
           </div>
+          <ToastContainer/>
           <button
             type="submit"
             className="signin-btn"
+            disabled={auth.loading ? true : false}
             onClick={(e) => handleSubmit(e)}
           >
-            SIGN IN
+             { auth.loading ? <CircularProgress style={{color:'#fff', padding:'10px', margin: 0}}/> : 'SIGN IN' }
               </button>
         </form>
 

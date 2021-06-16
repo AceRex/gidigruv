@@ -8,9 +8,12 @@ import Banner from "./bbn.png";
 import Datas from "../Data/data";
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
+import { useAuth } from "../authentication/AuthO";
 
 function MainCarousel() {
   const user = useSelector(selectUser);
+
+  let auth = useAuth()
 
   return (
     <div className="carousel">

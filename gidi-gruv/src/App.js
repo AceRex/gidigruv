@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import {
   Redirect,
   Route,
@@ -18,27 +18,46 @@ import CategoryPage from "./categoryPage/categoryPage";
 import contactPage from "./contactPage/contactPage";
 import WWD from "./whatwedo/whatwedo";
 import HIW from "./HowItWorks/HIW";
-import Overview from "./dashboard/Overview"
-import Interest from "./dashboard/Interest"
 import Contact from "./contact/contact";
 import HowItWorks from "./HowItWorks/HowItWorks";
-import Fade from "react-reveal/Fade";
 import { Link } from 'react-router-dom'
 import Data from './Data/data.json'
 import SignIn from "./Sign/SignIn";
 import Register from "./Sign/register";
+import Verification from "./UserVerificationPage/Verification"
 import { useSelector } from "react-redux";
 import { selectUser } from "./Redux/UserAction";
+import { useAuth } from "./authentication/AuthO";
+import { getStorageData } from "./authentication/AuthData";
+import axios from 'axios'
+import "antd/dist/antd.css";
+
 
 function Main() {
+  let Auth = useAuth()
+
+  React.useEffect(() => {
+    axios.get('https://api.gidigruv.com/api/')
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  })
+
+
+
+  const [envList, setEnvList] = React.useState([])
   const EventData = Data["All "]
+  console.log(envList)
   return (
     <>
       <Carousel />
       <WWD />
       <HowItWorks />
-      <HIW />
-      <EventsNearYou Events={EventData} />
+      {/* <HIW /> */}
+      <EventsNearYou Events={envList} />
       <Contact />
     </>
   )
@@ -46,32 +65,20 @@ function Main() {
 }
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = React.useState(true)
   const user = useSelector(selectUser);
 
 
-  // const handleClose = () => {
-  //   setLoading
-  // }
-  // componentDidMount() {
-  //   setTimeout(
-  //     function () {
-  //       setLoading({
-  //         loading: false,
-  //       });
-  //     }.bind(this),
-  //     7000
-  //   );
-  // };
   return (
     <div className="App">
-            <Header />
+      <Header />
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/about" component={AboutUs} />
         <Route path="/contact-us" component={contactPage} />
         <Route path="/not-available" component={NotAvailable} />
         <Route path="/create-event" component={CreateEvent} />
+        <Route path="/verification" component={Verification} />
         <Route path="/category-page" component={CategoryPage} />
         <Route path="/showeventdetails/:title">
           <SED ED={Data["All "]} />
@@ -82,8 +89,8 @@ function App() {
         <Route path="/register" >
           {user ? <Redirect to="/dashboard" /> : <Register />}
         </Route>
-        <Route path="/dashboard" component={Dashboard}/>
-          
+        <Route path="/dashboard" component={Dashboard} />
+
       </Switch>
       <Footer />
     </div>

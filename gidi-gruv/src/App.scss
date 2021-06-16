@@ -9,6 +9,7 @@
     --ColorPurple: #48108d;
     --ColorPink: #ff1493;
     --ColorWhite: #fff;
+    --ColorAsh: #C4C4C4;
     --ColorBlack: #161616;
     --ColorLight: #d8d6d6;
 }
@@ -25,8 +26,53 @@ body {
     max-width: 100%;
 }
 
-@media (max-width: 575.98px) { 
-    .pop-up{
+.Toastify__toast {
+    padding: 0 !important;
+    font-size: 13px !important;
+    font-weight: 600;
+}
+
+.Toastify__close-button {
+    background: none !important;
+    width: 20% !important;
+}
+.Toastify__toast-container--bottom-right{
+bottom: 0 !important;
+}
+.Toastify__toast-body {
+    width: 80% !important;
+    padding: 2px !important;
+    width: 250px !important;
+}
+
+.Toastify__toast-container {
+    padding: 0px !important;
+}
+.Toastify__toast--success{
+    background-color: var(--ColorWhite) !important;
+    color: var(--ColorBlack);
+    border-left: solid 5px #07bc0c ;
+    .Toastify__close-button {
+        svg{
+            color: #07bc0c;
+
+        }
+    }
+}
+.Toastify__toast--error{
+    background-color: var(--ColorWhite) !important;
+        color: var(--ColorBlack);
+
+    border-left: solid 5px #e74c3c ;
+    .Toastify__close-button {
+        svg{
+                color: #e74c3c;
+
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .pop-up {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -35,12 +81,12 @@ body {
         font-weight: 500;
         font-size: 12px;
         z-index: 1;
-       
-        .buttons{
-            width: 90% ;
+
+        .buttons {
+            width: 90%;
             margin: 10px auto;
 
-            a{
+            a {
                 border: solid 2px var(--ColorPink);
                 background-color: transparent;
                 padding: 5px;
@@ -53,30 +99,34 @@ body {
                 width: 50%;
             }
         }
-        .close{
+
+        .close {
             position: absolute;
             right: 20px;
             font-size: 12px;
             cursor: pointer;
         }
-       
+
     }
-    .Notification{
+
+    .Notification {
         background-color: #ff1493;
         text-align: center;
         padding: 10px;
         display: flex;
-        p{
+
+        p {
             width: 5%;
         }
-        span{
+
+        span {
             width: 95%;
         }
-      }
- }
+    }
+}
 
-@media (min-width: 576px) and (max-width: 767.98px) { 
-    .pop-up{
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .pop-up {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -85,12 +135,12 @@ body {
         font-weight: 500;
         font-size: 12px;
         z-index: 1;
-       
-        .buttons{
-            width: 90% ;
+
+        .buttons {
+            width: 90%;
             margin: 10px auto;
 
-            a{
+            a {
                 border: solid 2px var(--ColorPink);
                 background-color: transparent;
                 padding: 5px;
@@ -103,30 +153,34 @@ body {
                 width: 50%;
             }
         }
-        .close{
+
+        .close {
             position: absolute;
             right: 20px;
             cursor: pointer;
             font-size: 12px;
         }
-       
+
     }
-    .Notification{
+
+    .Notification {
         background-color: #ff1493;
         text-align: center;
         padding: 10px;
         display: flex;
-        p{
+
+        p {
             width: 5%;
         }
-        span{
+
+        span {
             width: 95%;
         }
-      }
- }
+    }
+}
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    .pop-up{
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .pop-up {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -135,12 +189,12 @@ body {
         font-weight: 500;
         font-size: 12px;
         z-index: 1;
-       
-        .buttons{
-            width: 90% ;
+
+        .buttons {
+            width: 90%;
             margin: 10px auto;
 
-            a{
+            a {
                 border: solid 2px var(--ColorPink);
                 background-color: transparent;
                 padding: 5px;
@@ -153,30 +207,34 @@ body {
                 width: 50%;
             }
         }
-        .close{
+
+        .close {
             position: absolute;
             right: 20px;
             cursor: pointer;
             font-size: 13px;
         }
-       
+
     }
-    .Notification{
+
+    .Notification {
         background-color: #ff1493;
         text-align: center;
         padding: 10px;
         display: flex;
-        p{
+
+        p {
             width: 5%;
         }
-        span{
+
+        span {
             width: 95%;
         }
-      }
- }
+    }
+}
 
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    .pop-up{
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .pop-up {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -186,12 +244,12 @@ body {
         font-size: 20px;
         z-index: 1;
         text-align: center;
-       
-        .buttons{
-            width: 90% ;
+
+        .buttons {
+            width: 90%;
             margin: 10px auto;
 
-            a{
+            a {
                 border: solid 2px var(--ColorPink);
                 background-color: transparent;
                 padding: 5px;
@@ -204,30 +262,34 @@ body {
                 width: 50%;
             }
         }
-        .close{
+
+        .close {
             position: absolute;
             right: 20px;
             cursor: pointer;
             font-size: 12px;
         }
     }
-    .Notification{
+
+    .Notification {
         background-color: #ff1493;
         text-align: center;
         padding: 10px;
         display: flex;
-        p{
+
+        p {
             width: 5%;
         }
-        span{
+
+        span {
             width: 95%;
         }
-      }
+    }
 
- }
+}
 
-@media (min-width: 1200px) { 
-    .pop-up{
+@media (min-width: 1200px) {
+    .pop-up {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -237,12 +299,12 @@ body {
         font-size: 20px;
         z-index: 1;
         text-align: center;
-       
-        .buttons{
-            width: 90% ;
+
+        .buttons {
+            width: 90%;
             margin: 10px auto;
 
-            a{
+            a {
                 border: solid 2px var(--ColorPink);
                 background-color: transparent;
                 padding: 5px;
@@ -255,25 +317,29 @@ body {
                 width: 50%;
             }
         }
-        .close{
+
+        .close {
             position: absolute;
             right: 20px;
             cursor: pointer;
             font-size: 12px;
         }
-       
+
     }
-    .Notification{
+
+    .Notification {
         background-color: #ff1493;
         text-align: center;
         padding: 10px;
         display: flex;
-        p{
+
+        p {
             width: 5%;
         }
-        span{
+
+        span {
             width: 95%;
         }
-       
-      }
- }
+
+    }
+}

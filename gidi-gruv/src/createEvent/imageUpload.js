@@ -1,54 +1,54 @@
-import React, { useEffect, useState } from "react";
-import { useDropzone } from "react-dropzone";
-import "./createEvent.css";
-import { BsImageAlt } from "react-icons/bs";
+import React, { useState } from 'react';
+import { Upload } from 'antd';
+import ImgCrop from 'antd-img-crop';
+import { saveStorageData } from '../authentication/AuthData'
 
-
-const img = {
-  display: "block",
-  width: '100%',
-  height: "100%",
-};
-
-export default function Previews(props) {
-  const [files, setFiles] = useState([]);
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
-    onDrop: (acceptedFiles) => {
-      setFiles(
-        acceptedFiles.map((file) =>
-          Object.assign(file, {
-            preview: URL.createObjectURL(file),
-          })
-        )
-      );
+export default function Demo() {
+  const [fileList, setFileList] = useState([
+    {
+      uid: '-1',
+      name: 'image.png',
+      status: 'done',
+      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
     },
-  });
+  ]);
 
-  const thumbs = files.map((file) => (
-    <div className='thumb' key={file.name}>
-      <div className='thumbInner'>
-        <img src={file.preview}  />
-      </div>
-    </div>
-  ));
+  saveStorageData("bannerUrl", fileList)
 
-  useEffect(
-    () => () => {
-      // Make sure to revoke the data uris to avoid memory leaks
-      files.forEach((file) => URL.revokeObjectURL(file.preview));
-    },
-    [files]
-  );
+
+  const onChange = ({ fileList: newFileList }) => {
+    setFileList(newFileList);
+    saveStorageData("bannerUrl", fileList)
+
+  };
+
+  const onPreview = async file => {
+    let src = file.url;
+    if (!src) {
+      src = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file.originFileObj);
+        reader.onload = () => resolve(reader.result);
+      });
+    }
+    const image = new Image();
+    image.src = src;
+    const imgWindow = window.open(src);
+    imgWindow.document.write(image.outerHTML);
+  };
 
   return (
-    <section className="dropzone-container">
-      <div {...getRootProps({ className: "dropzone" })}>
-        <input {...getInputProps()} />
-        <aside className='image-container'>{thumbs}</aside>
-        <BsImageAlt className="icon" />
-        <p> Drag 'n' drop some files here, or click to select files</p>
-      </div>
-    </section>
+    <ImgCrop rotate>
+      <Upload
+        action="https://api.gidigruv.com/api/"
+        listType="picture-card"
+        fileList={fileList}
+        onChange={onChange}
+        onPreview={onPreview}
+      >
+        {fileList.length < 1 && '+ Upload'}
+      </Upload>
+    </ImgCrop>
   );
-}
+};
+

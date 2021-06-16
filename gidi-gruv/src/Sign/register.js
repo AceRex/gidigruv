@@ -7,44 +7,39 @@ import TextLoop from "react-text-loop";
 import { AiOutlineHome } from "react-icons/ai";
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import { FiAlertTriangle } from "react-icons/fi";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { useDispatch } from 'react-redux'
 import { login } from '../Redux/UserAction'
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
+import { useAuth } from "../authentication/AuthO";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function Register(props) {
-  const [Name, setName] = useState("");
+function Register() {
+
+  let auth = useAuth()
+
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("")
-  const [region, setRegion] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
-  const [retypePassword, setRetypePassword] = useState("");
-  const [errorPass, setErrorPass] = useState(false);
-  const [alert, setAlert] = useState(false);
+  const [state, setState] = useState("")
+  const [phone_number, setPhoneNumber] = useState("");
+  const [city, setCity] = useState();
+  const [address, setAddress] = useState();
+  const [password, setPassword] = useState();
+  const [password_confirmation, setPasswordConfirmation] = useState();
+
+
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post('https://jsonplaceholder.typicode.com/users', {
-        Name,
-        password,
-        phoneNumber,
-        email,
-        country,
-        region
-      })
-      .then(res =>
-        dispatch(login(res.data))
-      )
-      .catch(err => console.error(err));
-
+    auth.register(email, password, password_confirmation, phone_number, name, city, country, state, address)
   }
-  dispatch(login(Name, email, country))
   return (
     <>
       <div className="reg-container">
@@ -76,30 +71,14 @@ function Register(props) {
             <p>
               Already have an account? <Link to="/signin">Click Here to Log in</Link>
             </p>
-            <div className={errorPass ? "alert" : "hidden"}>
-              <p className="icon">
-                <FiAlertTriangle />
-              </p>
-              <span>
-                Password does not match
-              </span>
-            </div>
-            <div className={alert ? "alert" : "hidden"}>
-              <p className="icon">
-                <FiAlertTriangle />
-              </p>
-              <span>
-                The Fields below cannot be empty
-              </span>
-            </div>
             <div className="form-group">
               <label>Name</label>
               <input
                 type="text"
                 placeholder="Enter First Name and Last Name"
-                name="Name"
+                name="name"
                 onChange={(e) => setName(e.target.value)}
-                value={Name}
+                value={name}
               />
             </div>
             <div className="form-group">
@@ -111,15 +90,36 @@ function Register(props) {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
+
             </div>
             <div className="form-group">
               <label>Phone NO</label>
               <input
                 type="tel"
                 placeholder="Enter Phone Number.."
-                name="phoneNumber"
+                name="phone_number"
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                value={phoneNumber}
+                value={phone_number}
+              />
+            </div>
+            <div className="form-group">
+              <label>Address</label>
+              <input
+                type="address"
+                placeholder="Enter Address.."
+                name="address"
+                onChange={(e) => setAddress(e.target.value)}
+                value={address}
+              />
+            </div>
+            <div className="form-group">
+              <label>City</label>
+              <input
+                type="text"
+                placeholder="Enter City of location.."
+                name="city"
+                onChange={(e) => setCity(e.target.value)}
+                value={city}
               />
             </div>
             <div className="form-group">
@@ -132,8 +132,9 @@ function Register(props) {
               <label>State</label>
               <RegionDropdown
                 country={country}
-                value={region}
-                onChange={(val) => setRegion(val)} />
+                value={state}
+                name='state'
+                onChange={(val) => setState(val)} />
             </div>
             <div className="form-group">
               <label>Password</label>
@@ -150,14 +151,20 @@ function Register(props) {
               <input
                 type="password"
                 placeholder="Password here..."
-                name="password"
-                onChange={(e) => setRetypePassword(e.target.value)}
-                value={retypePassword}
+                name="password_confirmation"
+                onChange={(e) => setPasswordConfirmation(e.target.value)}
+                value={password_confirmation}
               />
+              <ToastContainer />
             </div>
-            <button className="regbtn" onClick={handleSubmit}>
-              REGISTER
-              </button>
+            <button
+              className="regbtn"
+              onClick={handleSubmit}
+              style={{ outline: 'none' }}
+              disabled={auth.loading ? true : false}
+            >
+              {auth.loading ? <CircularProgress style={{ color: '#fff', padding: '10px', margin: 0 }} /> : 'REGISTER'}
+            </button>
           </form>
 
           <div className="home">

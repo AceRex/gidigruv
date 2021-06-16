@@ -86,6 +86,10 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
+  .sigincontainer .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
   .sigincontainer .form .reg-link {
     width: 90%;
     margin: auto;
@@ -201,6 +205,10 @@
     background-color: #d6d5d5;
     color: var(--ColorPink);
   }
+  .reg-container .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
   .reg-container .form .reg-link {
     width: 90%;
     margin: auto;
@@ -219,26 +227,6 @@
   }
   .reg-container .form .home a {
     color: #a0a0a0;
-  }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 10px;
-    border-left: solid 6px #FF1493;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    width: 70%;
-    margin: auto;
-    padding: 5px;
-  }
-  .alert p {
-    color: var(--ColorPink);
-    font-size: 20px;
   }
 }
 
@@ -330,222 +318,7 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
-  .sigincontainer .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPurple);
-    font-size: 13px;
-  }
-  .sigincontainer .form .reg-link a {
-    color: var(--ColorPink);
-  }
-  .sigincontainer .form .home {
-    width: 80%;
-    margin: 10px auto;
-    font-size: 13px;
-    text-align: center;
-  }
-  .sigincontainer .form .home a {
-    color: #a0a0a0;
-  }
-  .reg-container {
-    max-width: 100%;
-    background-image: url("../LogopurpleTrans.png");
-    background-repeat: no-repeat;
-    background-position: 60%;
-  }
-  .reg-container .slider {
-    display: none;
-  }
-  .reg-container .form {
-    width: 90%;
-    margin: 5rem auto;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
-  }
-  .reg-container .form .Logo {
-    display: none;
-    width: 20%;
-    margin: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .reg-container .form .Logo img {
-    width: 70px;
-    margin: auto;
-  }
-  .reg-container .form h3 {
-    color: var(--ColorPink);
-    font-size: 20px;
-    text-align: left;
-    margin: 10px 0px;
-  }
-  .reg-container .form p {
-    font-size: 10px;
-    text-align: left;
-    text-transform: lowercase;
-    font-weight: 500;
-    color: #a0a0a0;
-  }
-  .reg-container .form p a {
-    color: var(--ColorPink);
-  }
-  .reg-container .form .form-group {
-    width: 100%;
-    margin: 2rem auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: solid 1px #a0a0a0;
-    font-size: 8px;
-  }
-  .reg-container .form .form-group label {
-    color: #a0a0a0;
-    text-transform: uppercase;
-    font-weight: 600;
-    width: 25%;
-    text-align: left;
-  }
-  .reg-container .form .form-group input {
-    width: 75%;
-    padding: 10px;
-    margin: auto;
-    outline: none;
-    border: none;
-  }
-  .reg-container .form .form-group input::-webkit-input-placeholder {
-    color: transparent;
-  }
-  .reg-container .form .form-group input:-ms-input-placeholder {
-    color: transparent;
-  }
-  .reg-container .form .form-group input::-ms-input-placeholder {
-    color: transparent;
-  }
-  .reg-container .form .form-group input::placeholder {
-    color: transparent;
-  }
-  .reg-container .form .form-group select {
-    width: 80%;
-    padding: 10px;
-    margin: auto;
-    border: none;
-    outline: none;
-  }
-  .reg-container .form button {
-    margin: 20px auto;
-    width: 100%;
-    height: 50px;
-    background-color: var(--ColorPink);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .reg-container .form button:hover {
-    background-color: #d6d5d5;
-    color: var(--ColorPink);
-  }
-  .reg-container .form .reg-link {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    color: var(--ColorPink);
-    font-size: 13px;
-  }
-  .reg-container .form .reg-link a {
-    color: var(--ColorPurple);
-  }
-  .reg-container .form .home {
-    width: 90%;
-    margin: 10px auto;
-    font-size: 13px;
-    text-align: center;
-  }
-  .reg-container .form .home a {
-    color: #a0a0a0;
-  }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 10px;
-    border-left: solid 6px #FF1493;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    width: 70%;
-    margin: auto;
-    padding: 5px;
-  }
-  .alert p {
-    color: var(--ColorPink);
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sigincontainer {
-    max-width: 100%;
-  }
-  .sigincontainer .slider {
-    display: none;
-  }
-  .sigincontainer .form {
-    width: 90%;
-    margin: 5rem auto;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
-  }
-  .sigincontainer .form .Logo {
-    width: 20%;
-    margin: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .sigincontainer .form .Logo img {
-    width: 70px;
-    margin: auto;
-  }
-  .sigincontainer .form .form-group {
-    width: 80%;
-    margin: 10px auto;
-  }
-  .sigincontainer .form .form-group input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: solid 1px #a0a0a0;
-  }
-  .sigincontainer .form .form-group button {
-    margin: 20px auto;
-    width: 100%;
-    height: 50px;
-    background-color: var(--ColorPurple);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .sigincontainer .form .form-group button:hover {
+  .sigincontainer .form button:disabled {
     background-color: #aaa;
     color: #e7e6e6;
   }
@@ -673,6 +446,10 @@
     background-color: #d6d5d5;
     color: var(--ColorPink);
   }
+  .reg-container .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
   .reg-container .form .reg-link {
     width: 90%;
     margin: auto;
@@ -692,25 +469,237 @@
   .reg-container .form .home a {
     color: #a0a0a0;
   }
-  .alert {
-    background-color: #ff59b23b;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sigincontainer {
+    max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 150%;
+  }
+  .sigincontainer .slider {
+    display: none;
+  }
+  .sigincontainer .form {
+    width: 90%;
+    margin: 5rem auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
+  }
+  .sigincontainer .form .Logo {
+    width: 20%;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+  }
+  .sigincontainer .form .Logo img {
+    width: 70px;
+    margin: auto;
+  }
+  .sigincontainer .form h3 {
+    color: var(--ColorPurple);
+    font-size: 20px;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 10px;
+  }
+  .sigincontainer .form p {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  .sigincontainer .form p a {
     color: var(--ColorPink);
-    font-size: 10px;
-    border-left: solid 6px #FF1493;
+  }
+  .sigincontainer .form .form-group {
+    width: 100%;
+    margin: 3rem auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
-    width: 70%;
-    margin: auto;
-    padding: 5px;
+    border-bottom: solid 1px #a0a0a0;
   }
-  .alert p {
+  .sigincontainer .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 8px;
+    width: 25%;
+    text-align: left;
+  }
+  .sigincontainer .form .form-group input {
+    width: 75%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .sigincontainer .form button {
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    background-color: var(--ColorPurple);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .sigincontainer .form button:hover {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .sigincontainer .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .sigincontainer .form .reg-link {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--ColorPurple);
+    font-size: 13px;
+  }
+  .sigincontainer .form .reg-link a {
+    color: var(--ColorPink);
+  }
+  .sigincontainer .form .home {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 13px;
+    text-align: center;
+  }
+  .sigincontainer .form .home a {
+    color: #a0a0a0;
+  }
+  .reg-container {
+    max-width: 100%;
+    background-image: url("../LogopurpleTrans.png");
+    background-repeat: no-repeat;
+    background-position: 60%;
+  }
+  .reg-container .slider {
+    display: none;
+  }
+  .reg-container .form {
+    width: 90%;
+    margin: 3rem auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--ColorWhite);
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
+  }
+  .reg-container .form .Logo {
+    display: none;
+  }
+  .reg-container .form h3 {
     color: var(--ColorPink);
     font-size: 20px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .reg-container .form p {
+    font-size: 10px;
+    text-align: left;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  .reg-container .form p a {
+    color: var(--ColorPink);
+  }
+  .reg-container .form .form-group {
+    width: 100%;
+    margin: 1rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: solid 1px #a0a0a0;
+    font-size: 8px;
+  }
+  .reg-container .form .form-group label {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 20%;
+    text-align: left;
+  }
+  .reg-container .form .form-group input {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    outline: none;
+    border: none;
+  }
+  .reg-container .form .form-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group input::placeholder {
+    color: transparent;
+  }
+  .reg-container .form .form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    outline: none;
+  }
+  .reg-container .form button {
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    background-color: var(--ColorPink);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .reg-container .form button:hover {
+    background-color: #d6d5d5;
+    color: var(--ColorPink);
+  }
+  .reg-container .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
+  .reg-container .form .reg-link {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--ColorPink);
+    font-size: 13px;
+  }
+  .reg-container .form .reg-link a {
+    color: var(--ColorPurple);
+  }
+  .reg-container .form .home {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 13px;
+    text-align: center;
+  }
+  .reg-container .form .home a {
+    color: #a0a0a0;
   }
 }
 
@@ -859,6 +848,10 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
+  .sigincontainer .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
   .sigincontainer .form .home {
     display: none;
   }
@@ -999,23 +992,9 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    margin: auto;
-    padding: 10px 20px;
-  }
-  .alert p {
-    color: var(--ColorPink);
-    font-size: 20px;
+  .reg-container button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
   }
 }
 
@@ -1164,6 +1143,10 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
+  .sigincontainer .form button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
+  }
   .sigincontainer .form .home {
     display: none;
   }
@@ -1304,23 +1287,9 @@
     background-color: #aaa;
     color: #e7e6e6;
   }
-  .alert {
-    background-color: #ff59b23b;
-    color: var(--ColorPink);
-    font-size: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    margin: auto;
-    padding: 10px 20px;
-  }
-  .alert p {
-    color: var(--ColorPink);
-    font-size: 20px;
+  .reg-container button:disabled {
+    background-color: #aaa;
+    color: #e7e6e6;
   }
 }
 /*# sourceMappingURL=sign.css.map */

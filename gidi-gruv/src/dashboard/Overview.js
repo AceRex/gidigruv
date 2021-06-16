@@ -4,6 +4,7 @@ import { login } from '../Redux/UserAction'
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
 import Switch from '@material-ui/core/Switch';
+import { useAuth } from '../authentication/AuthO';
 
 
 function ScrollToToponMount() {
@@ -15,22 +16,24 @@ function ScrollToToponMount() {
 
 
 function Overview() {
-  const user = useSelector(selectUser)
 
-  const [Name, setName] = useState(user.Name)
-  const [email, setEmail] = useState(user.email)
-  const [phoneNumber, setPhoneNumber] = useState(user.phoneNumber)
+  let auth = useAuth()
+
+  // const user = useSelector(selectUser)
+
+  const [Name, setName] = useState(auth.user.name)
+  const [email, setEmail] = useState(auth.user.email)
+  const [phoneNumber, setPhoneNumber] = useState(auth.user.phone_number)
   const [gender, setGender] = useState("")
   const [DOB, setDOB] = useState("")
-  const [street, setStreet] = useState("")
-  const [region, setRegion] = useState(user.region)
-  const [country, setCountry] = useState(user.country)
-  const [CurrentPassword, setCurrentPassword] = useState(user.password)
+  const [street, setStreet] = useState(auth.user.address)
+  const [region, setRegion] = useState(auth.user.state)
+  const [country, setCountry] = useState(auth.user.country)
+  const [CurrentPassword, setCurrentPassword] = useState(auth.user.password)
   const [newPassword, setNewPassword] = useState("")
   const [retypePassword, setRetypePassword] = useState("")
-  const [facebookLink, setFacebookLink] = useState("")
-  const [instagramLink, setInstagramLink] = useState("")
-  const [twitterLink, setTwitterLink] = useState("")
+  const [facebookLink, setFacebookLink] = useState(auth.user.facebook_id)
+
   // Toggle state
   const [toggle, setToggle] = useState({
     checkedA: true,
@@ -42,24 +45,10 @@ function Overview() {
 
   // toggle state Ends
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    dispatch(
-      login({
-        Name,
-        email,
-        phoneNumber,
-        gender,
-        DOB,
-        newPassword,
-        street,
-        region,
-        country,
-        loggedIn: true
-      })
-    )
   }
   return (
     <div className='account__'>
@@ -166,26 +155,6 @@ function Overview() {
                 placeholder='http://linktofacebook.com/user'
                 onChange={(e) => setFacebookLink(e.target.value)}
                 value={facebookLink}
-              />
-            </div>
-            <div className="form-group">
-              <label>Instagram link</label>
-              <input
-                type="text"
-                name="instagram_link"
-                placeholder='@username'
-                onChange={(e) => setInstagramLink(e.target.value)}
-                value={instagramLink}
-              />
-            </div>
-            <div className="form-group">
-              <label>Twitter link</label>
-              <input
-                type="text"
-                name="twitter_link"
-                placeholder='@username'
-                onChange={(e) => setTwitterLink(e.target.value)}
-                value={twitterLink}
               />
             </div>
           </div>

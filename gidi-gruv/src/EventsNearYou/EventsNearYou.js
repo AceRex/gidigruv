@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import LiveCard from "../LiveNow/Livecard";
 import "./EventsNear.css";
 
-export default class EventByCategory extends React.Component {
- 
 
-  render() {
+export default function EventByCategory({Events}) {
+  // console.log(Events)
     return (
       <div className="container">
         <div className="evn-container">
@@ -13,7 +12,7 @@ export default class EventByCategory extends React.Component {
             Coming <span>Events</span>
           </p>
           <div className="cards">
-            {this.props.Events.map((Events,index) => {
+            {Events.map((Events,index) => {
               return (
                 
                 <LiveCard
@@ -33,4 +32,3 @@ export default class EventByCategory extends React.Component {
       </div>
     );
   }
-}

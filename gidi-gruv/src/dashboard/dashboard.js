@@ -11,6 +11,7 @@ import { logout } from "../Redux/UserAction";
 import { useDropzone } from "react-dropzone";
 import ProfilePhoto from './profilePicture.jpg'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { useAuth } from "../authentication/AuthO";
 
 
 
@@ -18,13 +19,11 @@ function Links() {
 
   const dispatch = useDispatch()
   const history = useHistory()
+  let auth = useAuth()
 
   const handleLogout = (event) => {
     event.preventDefault();
-    history.push('/')
-    dispatch(
-      logout()
-    )
+    auth.logout()
   }
   return (
     <>
@@ -52,9 +51,10 @@ function Links() {
 
 function Dashboard() {
   const user = useSelector(selectUser)
+  let auth = useAuth()
 
   const [displayPicture, setDisplayPicture] = useState(ProfilePhoto)
-  const [Name, setName] = useState(user.Name)
+  const [Name, setName] = useState(auth.user.name)
   const [clicked, setClicked] = useState(false)
   const [close, setClose] = useState(false)
 

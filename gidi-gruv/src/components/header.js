@@ -6,18 +6,22 @@ import { FaTimes, FaBars } from 'react-icons/fa'
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../Redux/UserAction";
+import { useAuth } from "../authentication/AuthO";
 
 
 
-function Navbar(props) {
+function Navbar() {
   const [clicked, setClicked] = useState(false);
   const [img, setImg] = useState('./images/5.png')
-  const user = useSelector(selectUser);
 
+  let auth = useAuth()
   
   return (
     <>
-      {user ? (
+      {auth.user ? 
+
+      // if User is exist
+      (
         <nav className="NavbarItems">
           <nav className="navbar-logo">
             <Link to="/">
@@ -47,13 +51,17 @@ function Navbar(props) {
                   onClick={() => setClicked(!clicked)}
                    >
                     <div className='nav-links user'>
-                    {user.Name} <img src={img} />
+                    {auth.user.name} <img src={img} />
                     </div>
                   </Link>
             </>
           </ul>
         </nav>
-      ) : (
+      ):
+
+      // if User is Doesnt exist
+
+      (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
