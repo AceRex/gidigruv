@@ -3,8 +3,12 @@ import "./createEvent.css";
 import ImageUploader from './imageUpload'
 import { Skeleton } from 'antd';
 import { saveStorageData, getStorageData } from "../authentication/AuthData";
+import { useAuth } from "../authentication/AuthO";
+import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
+
 
 const previewImage = getStorageData("bannerUrl")
+
 // console.log(previewImage[0])
 
 const bgImg = getStorageData("bannerUrl")
@@ -67,6 +71,8 @@ const event_details_preview = {
 }
 
 export default function CreateEvent() {
+ 
+  let auth = useAuth()
   const [title, setTitle] = React.useState("")
   saveStorageData('ThemeText', title)
 
@@ -74,6 +80,9 @@ export default function CreateEvent() {
   const [ThemeText, setThemetext] = React.useState("")
   React.useEffect(() => {
     setThemetext(getStorageData("ThemeText"))
+    const userID = getStorageData("user")
+    setUserId(userID.id)
+
   })
 
   const [description, setDesc] = React.useState("")
@@ -81,6 +90,17 @@ export default function CreateEvent() {
   const [end_date, setEndDate] = React.useState("")
   const [time, setTime] = React.useState("")
   const [eventType, setEventType] = React.useState("")
+  const [state, setState] = React.useState("")
+  const [city, setCity] = React.useState("")
+  const [country, setCountry] = React.useState("")
+  const [user_id, setUserId] = React.useState()
+  const [cover_image, setCoverImage] = React.useState()
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id)
+  }
 
 
   return (
@@ -164,6 +184,7 @@ export default function CreateEvent() {
                 })}
               </select>
             </div>
+            
             <div className='form-radio'>
               <p>kindly choose one of the options</p>
 
@@ -193,8 +214,34 @@ export default function CreateEvent() {
               </div>
             </div>
           </div>
+          <div className="form-group">
+              <label>City</label>
+              <input
+                type="text"
+                name="city"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                placeholder="eg: Gidigruv Events 2021"
+              />
+            </div>
+          <div className="form-group">
+              <label>Country</label>
+              <CountryDropdown
+                value={country}
+                onChange={(val) => setCountry(val)} />
+            </div>
+            <div className="form-group">
+              <label>State</label>
+              <RegionDropdown
+                country={country}
+                value={state}
+                name='state'
+                onChange={(val) => setState(val)} />
+            </div>
           <div className='btn'>
-            <button>
+            <button
+              onClick={(e) => handleSubmit(e)}
+            >
               Post Event
             </button>
           </div>

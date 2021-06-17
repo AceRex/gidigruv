@@ -54,7 +54,6 @@ function Main() {
   return (
     <>
       <Carousel />
-      <WWD />
       <HowItWorks />
       {/* <HIW /> */}
       <EventsNearYou Events={envList} />

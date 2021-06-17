@@ -20,7 +20,7 @@ export default class WWD extends Component {
         <div className="wwd">
           <div className="left-class">
             <Fade right>
-              <h2>What We Do </h2>
+              <h2>Broadcasting your event made easy, No more wallpapers on the streets</h2>
             </Fade>
             <Slide opposite duration={2000} right>
 

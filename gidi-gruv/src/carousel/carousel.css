@@ -1,6 +1,7 @@
 @media (max-width: 575.98px) {
   .carousel {
-    height: 15rem;
+    background-color: var(--ColorWhite);
+    height: 25rem;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8,110 +9,28 @@
     max-width: 100%;
   }
   .carousel .textSlider {
-    width: 60%;
-    margin-top: 2rem;
-    padding: 20px;
-    font-size: 23px;
-    font-weight: 800;
-    color: var(--ColorPurple);
-    white-space: pre-wrap;
-  }
-  .carousel .textSlider .text-loop span {
-    width: 80%;
-    margin: auto;
-    white-space: wrap;
-  }
-  .carousel .textSlider .create-button {
     width: 100%;
-    font-weight: normal;
-  }
-  .carousel .textSlider .create-button a {
-    padding: 10px;
-    background-color: var(--ColorPurple);
-    color: var(--ColorWhite);
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  .carousel .textSlider .create-button a:hover {
-    background-color: var(--ColorPink);
-    color: var(--ColorPurple);
-  }
-  .carousel .slider {
-    display: none;
-  }
-  .carousel .slider img {
-    width: 500px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .carousel {
-    height: 15rem;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-  }
-  .carousel .textSlider {
-    width: 60%;
-    margin-top: 2rem;
-    padding: 20px;
-    font-size: 23px;
+    height: 80%;
+    padding: 2rem 2rem;
+    font-size: 30px;
     font-weight: 800;
     color: var(--ColorPurple);
     white-space: pre-wrap;
   }
-  .carousel .textSlider .text-loop span {
-    width: 80%;
+  .carousel .textSlider .text {
     margin: auto;
-    white-space: wrap;
+    padding: 0px;
+    margin: 0px;
   }
-  .carousel .textSlider .create-button {
-    width: 100%;
-    font-weight: normal;
+  .carousel .textSlider .text p {
+    font-size: 25px;
   }
-  .carousel .textSlider .create-button a {
-    padding: 10px;
-    background-color: var(--ColorPurple);
-    color: var(--ColorWhite);
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-decoration: none;
+  .carousel .textSlider .text .text__text {
+    font-size: 12px;
+    font-weight: 500;
   }
-  .carousel .textSlider .create-button a:hover {
-    background-color: var(--ColorPink);
-    color: var(--ColorPurple);
-  }
-  .carousel .slider {
-    display: none;
-  }
-  .carousel .slider img {
-    width: 500px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .carousel {
-    background-color: var(--ColorPurple);
-    height: 20rem;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-  }
-  .carousel .textSlider {
-    width: 60%;
-    margin-top: 10rem;
-    padding: 20px;
-    font-size: 23px;
-    font-weight: 800;
-    color: var(--ColorWhite);
-    white-space: pre-wrap;
+  .carousel .textSlider .text-loop {
+    padding-top: 4rem;
   }
   .carousel .textSlider .text-loop span {
     width: 80%;
@@ -125,27 +44,91 @@
   }
   .carousel .textSlider .create-button a {
     padding: 10px;
-    background-color: var(--ColorWhite);
-    color: var(--ColorPurple);
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
     border: none;
     border-radius: 5px;
     font-size: 14px;
     text-decoration: none;
   }
   .carousel .textSlider .create-button a:hover {
-    background-color: var(--ColorPink);
+    background-color: var(--ColorPurple);
     color: var(--ColorWhite);
   }
   .carousel .slider {
-    margin: 0;
-    width: 40%;
+    display: none;
   }
   .carousel .slider img {
-    width: 316px;
+    width: 400px;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel {
+    background-color: var(--ColorWhite);
+    height: 25rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .carousel .textSlider {
+    width: 100%;
+    height: 80%;
+    padding: 6rem 5rem;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    white-space: pre-wrap;
+  }
+  .carousel .textSlider .text {
+    margin: auto;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carousel .textSlider .text p {
+    font-size: 25px;
+  }
+  .carousel .textSlider .text .text__text {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .carousel .textSlider .text-loop {
+    padding-top: 4rem;
+  }
+  .carousel .textSlider .text-loop span {
+    width: 80%;
+    margin: auto;
+    white-space: wrap;
+  }
+  .carousel .textSlider .create-button {
+    width: 100%;
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  .carousel .textSlider .create-button a {
+    padding: 10px;
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .carousel .textSlider .create-button a:hover {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+  }
+  .carousel .slider {
+    display: none;
+  }
+  .carousel .slider img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
   .carousel {
     background-color: var(--ColorPurple);
     height: 25rem;
@@ -157,12 +140,27 @@
   }
   .carousel .textSlider {
     width: 60%;
-    margin-top: 12rem;
-    padding: 20px 50px;
-    font-size: 23px;
+    height: 80%;
+    padding: 6rem 6rem;
+    font-size: 30px;
     font-weight: 800;
     color: var(--ColorWhite);
     white-space: pre-wrap;
+  }
+  .carousel .textSlider .text {
+    margin: auto;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carousel .textSlider .text p {
+    font-size: 23px;
+  }
+  .carousel .textSlider .text .text__text {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .carousel .textSlider .text-loop {
+    padding-top: 4rem;
   }
   .carousel .textSlider .text-loop span {
     width: 80%;
@@ -192,7 +190,73 @@
     width: 40%;
   }
   .carousel .slider img {
-    width: 395px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .carousel {
+    background-color: var(--ColorPurple);
+    height: 30rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .carousel .textSlider {
+    width: 60%;
+    height: 80%;
+    padding: 8rem 7rem;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorWhite);
+    white-space: pre-wrap;
+  }
+  .carousel .textSlider .text {
+    margin: auto;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carousel .textSlider .text p {
+    font-size: 27px;
+  }
+  .carousel .textSlider .text .text__text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .carousel .textSlider .text-loop {
+    padding-top: 4rem;
+  }
+  .carousel .textSlider .text-loop span {
+    width: 80%;
+    margin: auto;
+    white-space: wrap;
+  }
+  .carousel .textSlider .create-button {
+    width: 100%;
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  .carousel .textSlider .create-button a {
+    padding: 10px;
+    background-color: var(--ColorWhite);
+    color: var(--ColorPurple);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .carousel .textSlider .create-button a:hover {
+    background-color: var(--ColorPink);
+    color: var(--ColorWhite);
+  }
+  .carousel .slider {
+    margin: 0;
+    width: 40%;
+  }
+  .carousel .slider img {
+    width: 475px;
   }
 }
 
@@ -208,12 +272,28 @@
   }
   .carousel .textSlider {
     width: 60%;
-    margin-top: 12rem;
-    padding: 20px 7rem;
+    height: 80%;
+    padding: 8rem 7rem;
     font-size: 30px;
     font-weight: 800;
     color: var(--ColorWhite);
     white-space: pre-wrap;
+  }
+  .carousel .textSlider .text {
+    width: 90%;
+    margin: auto;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carousel .textSlider .text p {
+    font-size: 32px;
+  }
+  .carousel .textSlider .text .text__text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .carousel .textSlider .text-loop {
+    padding-top: 4rem;
   }
   .carousel .textSlider .text-loop span {
     width: 80%;

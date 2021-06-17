@@ -47,7 +47,8 @@ function ForgotPassword() {
       // ( If Successfully verified
       <div className="rp-container contain">
         <p>Successfully Verified</p>
-        <img src="https://img.icons8.com/color/480/fa314a/verified-account.png" alt='icon'/>
+        <img src="https://img.icons8.com/fluent/500/fa314a/new-post.png" alt='icon'/>
+
         <small>Click the button below or you will be redirected in <strong>00:0{countdown}</strong></small>
 
         <div className='buttons'>
@@ -66,8 +67,8 @@ function ForgotPassword() {
       // ( !Successfully verified 
       <div className="rp-container contain">
         <p>Email Verification Failed</p>
-        <img src="https://img.icons8.com/fluent/240/000000/error.png" alt="icon" />
-        <small>Click the button below to resend verification link to your email.</small>
+        <img src="https://img.icons8.com/fluent/500/fa314a/remove-message.png" alt='icon'/> 
+         <small>Click the button below to resend verification link to your email.</small>
 
         <div className='buttons'>
           <button className="btn" onClick={handleSubmit} disabled={clicked}>

@@ -328,66 +328,69 @@
 
 @media (min-width: 1200px) {
     .mainContainer {
-        // background-image: url('../../bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 100%;
         height: fit-content;
+        padding: 2rem;
 
-    }
-
-    .contain {
-        width: 50%;
-        padding: 30px;
-    }
-
-    .rp-container {
-        width: 50%;
-        margin: auto;
-        background-color: var(--colorWhite);
-        box-shadow: 2px 2px 50px #aaaaaa52;
-        display: flex;
-        flex-direction: column;
-        color: #5e5c5c;
-        justify-content: center;
-        align-items: center;
-
-        p {
-            font-size: 20px;
-            font-weight: 900;
-        }
-
-        small {
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-
-        img {
-            width: 200px;
-        }
-
-        .buttons {
+        .contain {
             width: 50%;
-            button {
-                width: 100%;
-                margin: 1rem auto;
-                padding: 12px;
-                background-color: var(--colorGreen);
+            padding: 30px;
+            background-color: var(--colorWhite);
+
+        }
+    
+        .rp-container {
+            width: 40%;
+            margin: auto;
+            background-color: var(--colorWhite);
+            box-shadow: 2px 2px 50px #aaaaaa52;
+            display: flex;
+            flex-direction: column;
+            color: #5e5c5c;
+            justify-content: center;
+            align-items: center;
+    
+            p {
+                font-size: 20px;
+                font-weight: 900;
+            }
+    
+            small {
+                font-size: 15px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+    
+            img {
+                width: 200px;
+            }
+    
+            .buttons {
+                width: 50%;
+                button {
+                    width: 100%;
+                    margin: 1rem auto;
+                    padding: 12px;
+                    background-color: var(--ColorPurple);
+                    border: none;
+                    color: var(--ColorWhite);
+                    border-radius: 5px;
+                    outline: none;
+                }
+            }
+    
+    
+            a>.back {
+                margin: auto;
+                color: #727171;
+                background-color: #e7e5e5;
                 border: none;
-                color: var(--colorLight);
                 border-radius: 5px;
-                outline: none;
+                padding: 10px;
             }
         }
-
-
-        a>.back {
-            margin: auto;
-            color: #727171;
-            background-color: #e7e5e5;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-        }
     }
+
 }

@@ -2,14 +2,31 @@ import React, { useState } from 'react';
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import { saveStorageData } from '../authentication/AuthData'
+import axios from 'axios'
+
+
+
+
 
 export default function Demo() {
+React.useEffect(() => {
+  setCookie(document.cookie)
+})
+const [cookie, setCookie] = useState()
+
+  const BASEURL = "https://api.gidigruv.com/api/event"
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + cookie
+
+// const instance = axios.create({
+//   baseURL: 'https://api.gidigruv.com/api/event',
+//   timeout: 1000,
+//   headers: {'X-Custom-Header': 'foobar'}
+// });
   const [fileList, setFileList] = useState([
     {
       uid: '-1',
       name: 'image.png',
       status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
     },
   ]);
 
@@ -40,7 +57,7 @@ export default function Demo() {
   return (
     <ImgCrop rotate>
       <Upload
-        action="https://api.gidigruv.com/api/"
+        action={BASEURL}
         listType="picture-card"
         fileList={fileList}
         onChange={onChange}

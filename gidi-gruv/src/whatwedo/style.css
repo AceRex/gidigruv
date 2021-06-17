@@ -22,6 +22,7 @@
     border-right: solid 5px var(--ColorPurple);
   }
   .wwd .left-class h2 {
+    color: var(--ColorPurple);
     padding: 10px 20px;
     width: 100%;
     margin: auto;
@@ -69,6 +70,7 @@
     border-right: solid 5px var(--ColorPurple);
   }
   .wwd .left-class h2 {
+    color: var(--ColorPurple);
     padding: 10px 20px;
     width: 100%;
     margin: auto;
@@ -115,6 +117,7 @@
     border-right: solid 5px var(--ColorPurple);
   }
   .wwd .left-class h2 {
+    color: var(--ColorPurple);
     padding: 20px;
     width: 100%;
     margin: auto;
@@ -161,6 +164,7 @@
     border-right: solid 5px var(--ColorPurple);
   }
   .wwd .left-class h2 {
+    color: var(--ColorPurple);
     padding: 20px;
     width: 100%;
     margin: auto;
@@ -207,6 +211,7 @@
     border-right: solid 5px var(--ColorPurple);
   }
   .wwd .left-class h2 {
+    color: var(--ColorPurple);
     padding: 20px;
     width: 100%;
     margin: auto;

@@ -16,7 +16,7 @@ const authContext = createContext();
 
 export function ProvideAuth({ children }) {
     const auth = useProvideAuth();
-   
+
     return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 // Hook for child components to get the auth object  and re-render when it changes.
@@ -46,23 +46,33 @@ function useProvideAuth() {
         }
         setLoading(false);
     }
-    
-    let history = useHistory()  
+
+    let history = useHistory()
 
     // Wrap any axios methods we want to use making sure to save the user to state.
-const events = () => {
-    axios.get(`${BASEURL}/login`)
-    .then(response  => 
-      console.log(response)
-      // setEnvList(response.data)
-      )
-}
+    const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id) => {
+        return (
+            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, city, country, end_date, start_date, user_id })
+                .then(
+                    (response => {
+                        console.log(response)
+                        setLoading(true)
+                    })
+                )
+                .catch(
+                    (err => {
+                        console.log(err)
+                        setLoading(true)
+                    }
+                    )
+                )
+        )
+    };
     const signin = (email, password) => {
         return (
             axios.post(`${BASEURL}/login`, { email, password })
                 .then(
                     (response => {
-                        console.log(response)
                         setLoading(true)
                         toast.success('Login Successfully', {
                             position: "bottom-right",
@@ -154,7 +164,7 @@ const events = () => {
     };
     const logout = () => {
         return (
-            axios.get(`${BASEURL}/logout`)
+            axios.post(`${BASEURL}/logout`)
                 .then((response => {
                     setUser(null)
                     localStorage.clear()
@@ -167,7 +177,7 @@ const events = () => {
     return {
         user,
         loading,
-        events,
+        createEvents,
         signin,
         register,
         logout

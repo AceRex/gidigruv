@@ -1,140 +1,35 @@
 @media (max-width: 575.98px) {
     .carousel {
-        // background-color: var(--ColorPurple);
-        height: 15rem;
+        background-color: var(--ColorWhite);
+        height: 25rem;
         overflow: hidden;
         display: flex;
         max-width: 100%;
 
         .textSlider {
-            width: 60%;
-            margin-top: 2rem;
-            padding: 20px;
-            font-size: 23px;
+            width: 100%;
+            height: 80%;
+            padding: 2rem 2rem;
+            font-size: 30px;
             font-weight: 800;
             color: var(--ColorPurple);
             white-space: pre-wrap;
 
-            .text-loop {
-                span {
-                    width: 80%;
-                    margin: auto;
-                    white-space: wrap;
-
+            .text {
+                margin: auto;
+                padding: 0px;
+                margin: 0px;
+                p {
+                    font-size: 25px;
+                }
+                .text__text{
+                    font-size: 12px;
+                    font-weight: 500;
                 }
             }
-
-            .create-button {
-                width: 100%;
-                font-weight: normal;
-
-                a {
-                    padding: 10px;
-                    background-color: var(--ColorPurple);
-                    color: var(--ColorWhite);
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    text-decoration: none;
-                }
-
-                a:hover {
-                    background-color: var(--ColorPink);
-                    color: var(--ColorPurple);
-                }
-            }
-        }
-
-        .slider {
-            display: none;
-            // margin: 6px 0px;
-            // width: 40%;
-
-            img {
-                width: 500px;
-            }
-        }
-    }
-
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .carousel {
-        // background-color: var(--ColorPurple);
-        height: 15rem;
-        overflow: hidden;
-        display: flex;
-        max-width: 100%;
-
-        .textSlider {
-            width: 60%;
-            margin-top: 2rem;
-            padding: 20px;
-            font-size: 23px;
-            font-weight: 800;
-            color: var(--ColorPurple);
-            white-space: pre-wrap;
 
             .text-loop {
-                span {
-                    width: 80%;
-                    margin: auto;
-                    white-space: wrap;
-
-                }
-            }
-
-            .create-button {
-                width: 100%;
-                font-weight: normal;
-
-                a {
-                    padding: 10px;
-                    background-color: var(--ColorPurple);
-                    color: var(--ColorWhite);
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    text-decoration: none;
-                }
-
-                a:hover {
-                    background-color: var(--ColorPink);
-                    color: var(--ColorPurple);
-                }
-            }
-        }
-
-        .slider {
-            display: none;
-            // margin: 6px 0px;
-            // width: 40%;
-
-            img {
-                width: 500px;
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .carousel {
-        background-color: var(--ColorPurple);
-        height: 20rem;
-        overflow: hidden;
-        display: flex;
-        max-width: 100%;
-
-        .textSlider {
-            width: 60%;
-            margin-top: 10rem;
-            padding: 20px;
-            font-size: 23px;
-            font-weight: 800;
-            color: var(--ColorWhite);
-            white-space: pre-wrap;
-
-            .text-loop {
+                padding-top: 4rem;
                 span {
                     width: 80%;
                     margin: auto;
@@ -150,8 +45,8 @@
 
                 a {
                     padding: 10px;
-                    background-color: var(--ColorWhite);
-                    color: var(--ColorPurple);
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
                     border: none;
                     border-radius: 5px;
                     font-size: 14px;
@@ -159,24 +54,95 @@
                 }
 
                 a:hover {
-                    background-color: var(--ColorPink);
+                    background-color: var(--ColorPurple);
                     color: var(--ColorWhite);
                 }
             }
         }
 
         .slider {
-            margin: 0;
-            width: 40%;
+            display: none;
 
             img {
-                width: 316px;
+                width: 400px;
             }
         }
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel {
+        background-color: var(--ColorWhite);
+        height: 25rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 100%;
+            height: 80%;
+            padding: 6rem 5rem;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--ColorPurple);
+            white-space: pre-wrap;
+
+            .text {
+                margin: auto;
+                padding: 0px;
+                margin: 0px;
+                p {
+                    font-size: 25px;
+                }
+                .text__text{
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+
+            .text-loop {
+                padding-top: 4rem;
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+                margin: 10px 0;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPurple);
+                    color: var(--ColorWhite);
+                }
+            }
+        }
+
+        .slider {
+            display: none;
+
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
     .carousel {
         background-color: var(--ColorPurple);
         height: 25rem;
@@ -186,14 +152,28 @@
 
         .textSlider {
             width: 60%;
-            margin-top: 12rem;
-            padding: 20px 50px;
-            font-size: 23px;
+            height: 80%;
+            padding: 6rem 6rem;
+            font-size: 30px;
             font-weight: 800;
             color: var(--ColorWhite);
             white-space: pre-wrap;
-            
+
+            .text {
+                margin: auto;
+                padding: 0px;
+                margin: 0px;
+                p {
+                    font-size: 23px;
+                }
+                .text__text{
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+
             .text-loop {
+                padding-top: 4rem;
                 span {
                     width: 80%;
                     margin: auto;
@@ -229,7 +209,80 @@
             width: 40%;
 
             img {
-                width: 395px;
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel {
+        background-color: var(--ColorPurple);
+        height: 30rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+
+        .textSlider {
+            width: 60%;
+            height: 80%;
+            padding: 8rem 7rem;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--ColorWhite);
+            white-space: pre-wrap;
+
+            .text {
+                margin: auto;
+                padding: 0px;
+                margin: 0px;
+                p {
+                    font-size: 27px;
+                }
+                .text__text{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .text-loop {
+                padding-top: 4rem;
+                span {
+                    width: 80%;
+                    margin: auto;
+                    white-space: wrap;
+
+                }
+            }
+
+            .create-button {
+                width: 100%;
+                font-weight: normal;
+                margin: 10px 0;
+
+                a {
+                    padding: 10px;
+                    background-color: var(--ColorWhite);
+                    color: var(--ColorPurple);
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: var(--ColorPink);
+                    color: var(--ColorWhite);
+                }
+            }
+        }
+
+        .slider {
+            margin: 0;
+            width: 40%;
+
+            img {
+                width: 475px;
             }
         }
     }
@@ -245,14 +298,29 @@
 
         .textSlider {
             width: 60%;
-            margin-top: 12rem;
-            padding: 20px 7rem;
+            height: 80%;
+            padding: 8rem 7rem;
             font-size: 30px;
             font-weight: 800;
             color: var(--ColorWhite);
             white-space: pre-wrap;
-            
+
+            .text {
+                width: 90%;
+                margin: auto;
+                padding: 0px;
+                margin: 0px;
+                p {
+                    font-size: 32px;
+                }
+                .text__text{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
             .text-loop {
+                padding-top: 4rem;
                 span {
                     width: 80%;
                     margin: auto;

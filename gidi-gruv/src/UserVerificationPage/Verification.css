@@ -350,13 +350,15 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    padding: 2rem;
   }
-  .contain {
+  .mainContainer .contain {
     width: 50%;
     padding: 30px;
+    background-color: var(--colorWhite);
   }
-  .rp-container {
-    width: 50%;
+  .mainContainer .rp-container {
+    width: 40%;
     margin: auto;
     background-color: var(--colorWhite);
     -webkit-box-shadow: 2px 2px 50px #aaaaaa52;
@@ -376,31 +378,32 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .rp-container p {
+  .mainContainer .rp-container p {
     font-size: 20px;
     font-weight: 900;
   }
-  .rp-container small {
+  .mainContainer .rp-container small {
     font-size: 15px;
     margin-bottom: 15px;
+    text-align: center;
   }
-  .rp-container img {
+  .mainContainer .rp-container img {
     width: 200px;
   }
-  .rp-container .buttons {
+  .mainContainer .rp-container .buttons {
     width: 50%;
   }
-  .rp-container .buttons button {
+  .mainContainer .rp-container .buttons button {
     width: 100%;
     margin: 1rem auto;
     padding: 12px;
-    background-color: var(--colorGreen);
+    background-color: var(--ColorPurple);
     border: none;
-    color: var(--colorLight);
+    color: var(--ColorWhite);
     border-radius: 5px;
     outline: none;
   }
-  .rp-container a > .back {
+  .mainContainer .rp-container a > .back {
     margin: auto;
     color: #727171;
     background-color: #e7e5e5;
