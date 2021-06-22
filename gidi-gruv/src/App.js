@@ -16,7 +16,7 @@ import NotAvailable from './NotAvailable'
 import CreateEvent from "./createEvent/createEvent";
 import CategoryPage from "./categoryPage/categoryPage";
 import contactPage from "./contactPage/contactPage";
-import WWD from "./whatwedo/whatwedo";
+// import WWD from "./whatwedo/whatwedo";
 import HIW from "./HowItWorks/HIW";
 import Contact from "./contact/contact";
 import HowItWorks from "./HowItWorks/HowItWorks";
@@ -25,6 +25,7 @@ import Data from './Data/data.json'
 import SignIn from "./Sign/SignIn";
 import Register from "./Sign/register";
 import Verification from "./UserVerificationPage/Verification"
+import Forgotpassword from "./forgotPassword/forgotPassword"
 import { useSelector } from "react-redux";
 import { selectUser } from "./Redux/UserAction";
 import { useAuth } from "./authentication/AuthO";
@@ -79,6 +80,7 @@ function App() {
         <Route path="/create-event" component={CreateEvent} />
         <Route path="/verification" component={Verification} />
         <Route path="/category-page" component={CategoryPage} />
+        <Route path="/forgot-password" component={Forgotpassword} />
         <Route path="/showeventdetails/:title">
           <SED ED={Data["All "]} />
         </Route>
