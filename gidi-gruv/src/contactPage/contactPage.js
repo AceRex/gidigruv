@@ -1,65 +1,81 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./contactPage.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import { GrFacebookOption, GrTwitter, GrInstagram } from "react-icons/gr";
 
-export default class contactPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Fullname: " ",
-      email: "",
-      message: "",
-    };
+export default function ContactPage() {
+
+  const [fullName, setFullName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   }
-  render() {
-    return (
-      <>
-        <section className="container">
-          <div className="hero">
-            <p>Contact us</p>
-            <span>
-              We always Ready and available to reply to all you complaints, and
-              we are very attentive to your corrections
-            </span>
+
+  return (
+    <div className="contactus__">
+      <div className="contact-contains">
+        <div className="contained">
+          <h2>Contact Us</h2>
+          <p>Write to us about your complaints, support, informations and suggestions we are always available to respond</p>
+        </div>
+        <div className="contact__form">
+          <div className="form_brief">
+            <img src="https://img.icons8.com/nolan/640/filled-sent.png" />
+            <p>Leave us a Message</p>
           </div>
-          <div className="form">
-          <form action="#">
-            <p>
-            Leave Us A Message
-            </p>
+          <form>
             <input
-              id="fullname"
-              name="Fullname"
-              placeholder="Fullname"
-              value={this.state.Fullname}
-              onChange={(e) => this.setState({ Fullname: e.target.value })}
+              type="text"
+              name="fullName"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              placeholder="Your Full Name"
             />
             <input
-              id="email"
+              type="email"
               name="email"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={(e) => this.setState({ email: e.target.value })}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your Email"
             />
             <textarea
-              id="message"
               name="message"
-              placeholder="Message"
-              value={this.state.msg}
-              onChange={(e) => this.setState({ msg: e.target.value })}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Enter your message here"
             />
-            <button
-              type="submit"
-              value="Submit"
-              onChange={e => this.handleFormSubmit(e)}
-            >
-              SEND
+            <div className="btn-send">
+              <button>
+                Send
             </button>
+            <small>You can also connect with us on all our social media platforms or via email links provided</small>
+            </div>
           </form>
+        </div>
+      </div>
+      <div className="our-contacts">
+        <div className="contacts">
+        <p>Connect with us all our social media pages</p>
+          <div className="social-media-links">
+            <p>Our Social Media Links</p>
+            <a href="https://www.facebook.com/Gidigruv"><GrFacebookOption /></a>
+            <a href="www.twitter.com/gidigruv"><GrTwitter /></a>
+            <a href="https://www.instagram.com/gidigruv/"><GrInstagram /></a>
           </div>
-        </section>
-      </>
-    );
-  }
+          <div className="contact-addresses">
+            <p>Our Call Lines</p>
+            <a>+234 813 659 1944</a>
+          </div>
+          <div className="contact-addresses">
+            <p>Send us an email</p>
+            <a href="mailto:info@gidigruv.com">For informations</a>
+            <a href="mailto:support@gidigruv.com">For support</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  );
 }

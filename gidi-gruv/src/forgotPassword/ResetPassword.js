@@ -1,27 +1,33 @@
 import React, { useState } from "react";
-import "./sign.css";
+import axios from 'axios'
+import "./forgotPassword.css"
 import Logo from "../logo.png";
 import Logo2 from "../headerLogo.png";
 import { Link } from "react-router-dom";
 import TextLoop from "react-text-loop";
 import { AiOutlineHome } from "react-icons/ai";
+import { FiAlertTriangle } from "react-icons/fi";
+import { useDispatch } from 'react-redux'
+import { login } from '../Redux/UserAction'
+import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/UserAction";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useAuth } from "../authentication/AuthO";
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function SignIn() {
-
+function ForgotPassword() {
   let auth = useAuth()
 
-  const [email, setEmail] = useState();
   const [password, setPassword] = useState()
+  const [new_password, setnew_password] = useState()
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    auth.signin(email, password)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    auth.passwordreset(password, new_password)
+
   }
-
   return (
     <div className="sigincontainer">
       <div className="slider">
@@ -43,44 +49,49 @@ function SignIn() {
           </div>
       </div>
       <div className="form">
-        <h3>Login</h3>
+        <h3>Password Reset</h3>
         <p>
-          Not registered? <Link to="/register">Sign Up Here</Link>
+          Set up a new password
         </p>
         <div className="Logo">
           <img src={Logo} alt="Logo" />
         </div>
-        
+
         <form style={{width: "80%", margin: "auto"}}>
+
           <div className="form-group">
-            <label>UserName / Phone no</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email / Phone Number here..."
-            />
-          </div>
-          <div className="form-group">
-            <label>Password</label>
+            <label>New Password</label>
             <input
               type="password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password here..."
+              placeholder="Enter registered email here"
             />
           </div>
-          <small><Link to='/forgot-password'>forgot Password?</Link></small>
+          <div className="form-group">
+            <label>confirm password</label>
+            <input
+              type="password "
+              name="new_password"
+              value={new_password}
+              onChange={(e) => setnew_password(e.target.value)}
+              placeholder="Enter registered email here"
+            />
+          </div>
+          <ToastContainer />
           <button
             type="submit"
             className="signin-btn"
             disabled={auth.loading ? true : false}
             onClick={(e) => handleSubmit(e)}
           >
-             { auth.loading ? <CircularProgress style={{color:'#fff', padding:'10px', margin: 0}}/> : 'SIGN IN' }
-              </button>
+            {auth.loading ?
+              <CircularProgress style={{ color: '#fff', padding: '10px', margin: 0 }} />
+              :
+              'Reset Password'
+            }
+             </button>     
         </form>
 
 
@@ -93,7 +104,7 @@ function SignIn() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default SignIn;
+export default ForgotPassword;

@@ -23,7 +23,7 @@ function MainCarousel() {
         <div className="textSlider">
           <div className="text">
             <Fade right>
-              <p>Event Broadcast got easy, No more wallpapers on the streets</p>
+              <p>No more poster on street walls</p>
             </Fade>
             <Slide opposite duration={2000} right>
 

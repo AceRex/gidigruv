@@ -18,14 +18,14 @@ import CategoryPage from "./categoryPage/categoryPage";
 import contactPage from "./contactPage/contactPage";
 // import WWD from "./whatwedo/whatwedo";
 import HIW from "./HowItWorks/HIW";
-import Contact from "./contact/contact";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import { Link } from 'react-router-dom'
 import Data from './Data/data.json'
 import SignIn from "./Sign/SignIn";
 import Register from "./Sign/register";
 import Verification from "./UserVerificationPage/Verification"
-import Forgotpassword from "./forgotPassword/forgotPassword"
+import Forgotpassword from "./forgotPassword/forgotpassword"
+import PasswordReset from "./forgotPassword/ResetPassword"
 import { useSelector } from "react-redux";
 import { selectUser } from "./Redux/UserAction";
 import { useAuth } from "./authentication/AuthO";
@@ -37,18 +37,6 @@ import "antd/dist/antd.css";
 function Main() {
   let Auth = useAuth()
 
-  React.useEffect(() => {
-    axios.get('https://api.gidigruv.com/api/')
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-  })
-
-
-
   const [envList, setEnvList] = React.useState([])
   const EventData = Data["All "]
   console.log(envList)
@@ -58,7 +46,6 @@ function Main() {
       <HowItWorks />
       {/* <HIW /> */}
       <EventsNearYou Events={envList} />
-      <Contact />
     </>
   )
 
@@ -81,6 +68,8 @@ function App() {
         <Route path="/verification" component={Verification} />
         <Route path="/category-page" component={CategoryPage} />
         <Route path="/forgot-password" component={Forgotpassword} />
+        <Route path="/passwordreset" component={PasswordReset} />
+
         <Route path="/showeventdetails/:title">
           <SED ED={Data["All "]} />
         </Route>

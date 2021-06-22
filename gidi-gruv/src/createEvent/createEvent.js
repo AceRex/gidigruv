@@ -8,56 +8,10 @@ import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
 
 const previewImage = getStorageData("bannerUrl")
-
-// console.log(previewImage[0])
+// console.log(previewImage)
 
 const bgImg = getStorageData("bannerUrl")
 const EventDate = ""
-const EventCategory = [
-  {
-    id: 0,
-    category: "Art"
-  },
-  {
-    id: 1,
-    category: "Music"
-  },
-  {
-    id: 2,
-    category: "Business"
-  },
-  {
-    id: 3,
-    category: "Concert"
-  },
-  {
-    id: 4,
-    category: "Religious"
-  },
-  {
-    id: 5,
-    category: "Workshop"
-  },
-  {
-    id: 6,
-    category: "Seminar"
-  },
-  {
-    id: 7,
-    category: "Lifestyle"
-  },
-  {
-    id: 8,
-    category: "Technology"
-  },
-  {
-    id: 9,
-    category: "Sports"
-  },
-  {
-    id: 10,
-    category: "Health Care and Medical"
-  }]
 const ImageCont = {
   backgroundImage: bgImg,
   height: "30%",
@@ -70,57 +24,113 @@ const event_details_preview = {
   textAlign: "center"
 }
 
+
+
 export default function CreateEvent() {
- 
+
   let auth = useAuth()
+
+  //Title && Description state starts
   const [title, setTitle] = React.useState("")
   saveStorageData('ThemeText', title)
 
+  const [description, setDesc] = React.useState("")
+  saveStorageData('Desc', description) 
 
   const [ThemeText, setThemetext] = React.useState("")
+  const [Desc, setDescrp] = React.useState("")
+
   React.useEffect(() => {
     setThemetext(getStorageData("ThemeText"))
+    setDescrp(getStorageData("Desc"))
     const userID = getStorageData("user")
     setUserId(userID.id)
-
   })
 
-  const [description, setDesc] = React.useState("")
-  const [start_date, setStartDate] = React.useState("")
-  const [end_date, setEndDate] = React.useState("")
+  //Title && Description state ends
+
+
+  //Date  state starts
+  const [start_date, setStartDate] = React.useState(" ")
+  saveStorageData('Date1', start_date)
+  const [end_date, setEndDate] = React.useState(" ")
+  saveStorageData('Date2', end_date)
+
+  const [StartDate, setSD] = React.useState("")
+  const [EndDate, setED] = React.useState("")
+
+  React.useEffect(() => {
+    setSD(getStorageData("Date1"))
+    setED(` - ` + getStorageData("Date2"))
+  })
+ 
+
+
+  // Date state Ends
+
+  
+
+  // time
   const [time, setTime] = React.useState("")
+  saveStorageData('Time', time)
+  React.useEffect(() => {
+    setTime(getStorageData("Time"))
+  })
+
+  React.useEffect(() => {
+    setCategory(getStorageData("category"))
+  }, [])
+
+
+  
+
+  const [category, setCategory] = React.useState([])
   const [eventType, setEventType] = React.useState("")
   const [state, setState] = React.useState("")
   const [city, setCity] = React.useState("")
   const [country, setCountry] = React.useState("")
   const [user_id, setUserId] = React.useState()
+  const [event_category_id, setEventCat] = React.useState()
   const [cover_image, setCoverImage] = React.useState()
 
-
+  React.useEffect(() => {
+    saveStorageData("bannerUrl", cover_image)
+  })
   const handleSubmit = (e) => {
     e.preventDefault();
-    auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id)
+    auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id)
   }
 
+  console.log(event_category_id)
 
   return (
+
     <div className="create__event__container">
       <div className="preview">
         <div style={ImageCont}>
+
         </div>
         <div style={event_details_preview}>
           <div className="theme-text">
             {title === "" ? <Skeleton active round paragraph /> : ThemeText}
           </div>
           <div className="eventDate">
-            {EventDate === "" ? <Skeleton active rows='1' /> : EventDate}
+            {StartDate === "" && EndDate === "" ? <Skeleton active rows='1' /> : StartDate + "  " + EndDate}
+          </div>
+          <div className="desc">
+            {Desc === "" ? <Skeleton active round paragraph /> : Desc}
+          </div>
+          <div className="eventDate">
+            {time === "" ? <Skeleton active rows='1' /> : time}
           </div>
         </div>
       </div>
       <div className="form__">
         <div className="form_entry__">
           <div className="Page__header"> Create New Event </div>
-          <div className="Image__uploader"> <ImageUploader /> </div>
+          <div className="Image__uploader">
+            <ImageUploader />
+          </div>
           <div className="button">
             <div className="form-group">
               <label>Event Title</label>
@@ -139,7 +149,7 @@ export default function CreateEvent() {
                 value={description}
                 rows="4"
                 onChange={(e) => setDesc(e.target.value)}
-                placeholder="eg: Gidigruv Events 2021"
+                placeholder="description of the event..."
               />
             </div>
             <div className="form-group">
@@ -149,7 +159,6 @@ export default function CreateEvent() {
                 name="start_date"
                 value={start_date}
                 onChange={(e) => setStartDate(e.target.value)}
-                placeholder="eg: Gidigruv Events 2021"
               />
             </div>
             <div className="form-group">
@@ -159,7 +168,6 @@ export default function CreateEvent() {
                 name="end_date"
                 value={end_date}
                 onChange={(e) => setEndDate(e.target.value)}
-                placeholder="eg: Gidigruv Events 2021"
               />
             </div>
             <div className="form-group">
@@ -169,22 +177,26 @@ export default function CreateEvent() {
                 name="time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                placeholder="eg: Gidigruv Events 2021"
               />
             </div>
             <div className="form-group">
               <label>Event Category</label>
-              <select>
-                {EventCategory.map((Events) => {
+              {/* <select
+                name="event_category_id"
+                value={event_category_id}
+                onChange={(e) => setEventCat(e.target.value)}
+              >
+                {category.map(({ id, name }) => {
                   return (
-                    <option>
-                      {Events.category}
+                    <option key={id}>
+                      {name}
                     </option>
                   );
                 })}
-              </select>
+
+              </select> */}
             </div>
-            
+
             <div className='form-radio'>
               <p>kindly choose one of the options</p>
 
@@ -215,29 +227,29 @@ export default function CreateEvent() {
             </div>
           </div>
           <div className="form-group">
-              <label>City</label>
-              <input
-                type="text"
-                name="city"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                placeholder="eg: Gidigruv Events 2021"
-              />
-            </div>
+            <label>Full Address</label>
+            <input
+              type="text"
+              name="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="eg: 1, gidigruv str,"
+            />
+          </div>
           <div className="form-group">
-              <label>Country</label>
-              <CountryDropdown
-                value={country}
-                onChange={(val) => setCountry(val)} />
-            </div>
-            <div className="form-group">
-              <label>State</label>
-              <RegionDropdown
-                country={country}
-                value={state}
-                name='state'
-                onChange={(val) => setState(val)} />
-            </div>
+            <label>Country</label>
+            <CountryDropdown
+              value={country}
+              onChange={(val) => setCountry(val)} />
+          </div>
+          <div className="form-group">
+            <label>State</label>
+            <RegionDropdown
+              country={country}
+              value={state}
+              name='state'
+              onChange={(val) => setState(val)} />
+          </div>
           <div className='btn'>
             <button
               onClick={(e) => handleSubmit(e)}

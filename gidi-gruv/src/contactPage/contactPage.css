@@ -1,280 +1,710 @@
 @media (max-width: 575.98px) {
-  .hero {
-    margin-top: -13px;
-    padding: 70px;
+  .contactus__ {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .contactus__ .contact-contains {
+    width: 100%;
+    background-color: var(--ColorPurple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactus__ .contact-contains .contained {
+    width: 100%;
     text-align: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
-    background-image: linear-gradient(to bottom right, #48108D, #320070);
+    margin: auto;
+    color: var(--ColorWhite) !important;
+    padding: 5rem;
   }
-  .hero p {
-    font-size: 25px;
+  .contactus__ .contact-contains .contained h2 {
+    color: var(--ColorWhite) !important;
+    font-size: 40px;
     font-weight: 700;
-    text-transform: uppercase;
   }
-  .hero span {
+  .contactus__ .contact-contains .contained p {
     font-size: 12px;
   }
-  .form {
-    margin: 2rem auto;
+  .contactus__ .contact-contains .contact__form {
     width: 90%;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 10px #0000003f;
-            box-shadow: 5px 5px 10px #0000003f;
+    position: absolute;
+    background-color: #E9E1F5;
+    border-radius: 5px;
+    top: 20rem;
+    right: 1rem;
+    -webkit-box-shadow: 10px 10px 20px #00000036;
+            box-shadow: 10px 10px 20px #00000036;
   }
-  .form form {
+  .contactus__ .contact-contains .contact__form .form_brief {
     width: 100%;
-    margin: auto;
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
     padding: 25px;
+    border-radius: 5px 5px 0 0;
   }
-  .form form p {
-    color: var(--ColorPink);
-    font-size: 17px;
-    font-weight: 700;
-    text-transform: uppercase;
+  .contactus__ .contact-contains .contact__form .form_brief img {
+    width: 80px;
   }
-  .form form input {
+  .contactus__ .contact-contains .contact__form .form_brief p {
+    width: 75%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    padding: 5px;
+    text-align: justify;
+  }
+  .contactus__ .contact-contains .contact__form form {
     width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
   }
-  .form form textarea {
-    resize: none;
-    width: 90%;
-    height: 80px;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  .form form button {
-    padding: 10px;
-    width: 70%;
-    color: var(--ColorWhite);
+  .contactus__ .contact-contains .contact__form form input {
+    width: 100%;
     border: none;
-    background-color: var(--ColorPink);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    outline: none;
+  }
+  .contactus__ .contact-contains .contact__form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    resize: none;
+    outline: none;
+    height: 10rem;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send {
+    width: 90%;
+    margin: auto;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send button {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .contactus__ .contact-contains .contact__form form small {
+    text-align: center;
+    margin: auto;
+  }
+  .contactus__ .our-contacts {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+  }
+  .contactus__ .our-contacts .contacts {
+    width: 100%;
+    padding: 20px;
+    padding-top: 32rem;
+  }
+  .contactus__ .our-contacts .contacts p {
+    font-size: 28px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links {
+    margin-bottom: 30px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links a {
+    margin-right: 40px;
+    font-size: 30px;
+    color: var(--ColorPink);
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses a {
+    margin-right: 40px;
+    font-size: 20px;
+    color: var(--ColorPink);
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .hero {
-    margin-top: -13px;
-    padding: 70px;
-    text-align: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
-    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  .contactus__ {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  .hero p {
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .hero span {
-    font-size: 12px;
-  }
-  .form {
-    margin: 2rem auto;
-    width: 90%;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 10px #0000003f;
-            box-shadow: 5px 5px 10px #0000003f;
-  }
-  .form form {
+  .contactus__ .contact-contains {
     width: 100%;
-    margin: auto;
+    background-color: var(--ColorPurple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactus__ .contact-contains .contained {
+    width: 90%;
     text-align: center;
-    padding: 25px;
+    margin: auto;
+    color: var(--ColorWhite) !important;
+    padding: 6rem;
   }
-  .form form p {
-    color: var(--ColorPink);
-    font-size: 17px;
+  .contactus__ .contact-contains .contained h2 {
+    color: var(--ColorWhite) !important;
+    font-size: 50px;
     font-weight: 700;
-    text-transform: uppercase;
   }
-  .form form input {
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+  .contactus__ .contact-contains .contained p {
+    font-size: 15px;
   }
-  .form form textarea {
-    resize: none;
-    width: 90%;
-    height: 80px;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  .form form button {
-    padding: 10px;
+  .contactus__ .contact-contains .contact__form {
     width: 70%;
-    color: var(--ColorWhite);
+    position: absolute;
+    background-color: #E9E1F5;
+    border-radius: 5px;
+    top: 25rem;
+    right: 6rem;
+    -webkit-box-shadow: 10px 10px 20px #00000036;
+            box-shadow: 10px 10px 20px #00000036;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    padding: 25px;
+    border-radius: 5px 5px 0 0;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief img {
+    width: 80px;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief p {
+    width: 75%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    padding: 5px;
+    text-align: justify;
+  }
+  .contactus__ .contact-contains .contact__form form {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+  }
+  .contactus__ .contact-contains .contact__form form input {
+    width: 100%;
     border: none;
-    background-color: var(--ColorPink);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    outline: none;
+  }
+  .contactus__ .contact-contains .contact__form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    resize: none;
+    outline: none;
+    height: 10rem;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send {
+    width: 90%;
+    margin: auto;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send button {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .contactus__ .contact-contains .contact__form form small {
+    text-align: center;
+    margin: auto;
+  }
+  .contactus__ .our-contacts {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+  }
+  .contactus__ .our-contacts .contacts {
+    width: 100%;
+    padding: 20px;
+    padding-top: 32rem;
+  }
+  .contactus__ .our-contacts .contacts p {
+    font-size: 28px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links {
+    margin-bottom: 30px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links a {
+    margin-right: 40px;
+    font-size: 30px;
+    color: var(--ColorPink);
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses a {
+    margin-right: 40px;
+    font-size: 20px;
+    color: var(--ColorPink);
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .hero {
-    margin-top: -13px;
-    padding: 70px;
+  .contactus__ {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .contactus__ .contact-contains {
+    width: 100%;
+    background-color: var(--ColorPurple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactus__ .contact-contains .contained {
+    width: 90%;
     text-align: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
-    background-image: linear-gradient(to bottom right, #48108D, #320070);
-  }
-  .hero p {
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .hero span {
-    font-size: 14px;
-  }
-  .form {
-    margin: 2rem auto;
-    width: 60%;
-    background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 10px #0000003f;
-            box-shadow: 5px 5px 10px #0000003f;
-  }
-  .form form {
-    width: 70%;
     margin: auto;
-    text-align: center;
-    padding: 25px;
+    color: var(--ColorWhite) !important;
+    padding: 6rem;
   }
-  .form form p {
-    color: var(--ColorPink);
-    font-size: 25px;
+  .contactus__ .contact-contains .contained h2 {
+    color: var(--ColorWhite) !important;
+    font-size: 50px;
     font-weight: 700;
-    text-transform: uppercase;
   }
-  .form form input {
+  .contactus__ .contact-contains .contained p {
+    font-size: 15px;
+  }
+  .contactus__ .contact-contains .contact__form {
+    width: 70%;
+    position: absolute;
+    background-color: #E9E1F5;
+    border-radius: 5px;
+    top: 25rem;
+    right: 6rem;
+    -webkit-box-shadow: 10px 10px 20px #00000036;
+            box-shadow: 10px 10px 20px #00000036;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--ColorWhite);
+    padding: 25px;
+    border-radius: 5px 5px 0 0;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief img {
+    width: 80px;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief p {
+    width: 75%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    padding: 5px;
+    text-align: justify;
+  }
+  .contactus__ .contact-contains .contact__form form {
     width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
   }
-  .form form textarea {
-    resize: none;
-    width: 90%;
-    height: 80px;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  .form form button {
-    padding: 10px;
-    width: 50%;
-    color: var(--ColorWhite);
+  .contactus__ .contact-contains .contact__form form input {
+    width: 100%;
     border: none;
-    background-color: var(--ColorPink);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    outline: none;
+  }
+  .contactus__ .contact-contains .contact__form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    resize: none;
+    outline: none;
+    height: 10rem;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send {
+    width: 90%;
+    margin: auto;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send button {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .contactus__ .contact-contains .contact__form form small {
+    text-align: center;
+    margin: auto;
+  }
+  .contactus__ .our-contacts {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+  }
+  .contactus__ .our-contacts .contacts {
+    width: 100%;
+    padding: 20px;
+    padding-top: 32rem;
+  }
+  .contactus__ .our-contacts .contacts p {
+    font-size: 28px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links {
+    margin-bottom: 30px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links a {
+    margin-right: 40px;
+    font-size: 30px;
+    color: var(--ColorPink);
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses a {
+    margin-right: 40px;
+    font-size: 20px;
+    color: var(--ColorPink);
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .hero {
-    margin-top: -13px;
-    padding: 70px;
-    text-align: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
-    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  .contactus__ {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  .hero p {
-    font-size: 40px;
+  .contactus__ .contact-contains {
+    width: 100%;
+    background-color: var(--ColorPurple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactus__ .contact-contains .contained {
+    width: 45%;
+    color: var(--ColorWhite) !important;
+    padding: 6rem;
+  }
+  .contactus__ .contact-contains .contained h2 {
+    color: var(--ColorWhite) !important;
+    font-size: 50px;
     font-weight: 700;
-    text-transform: uppercase;
   }
-  .hero span {
-    font-size: 14px;
+  .contactus__ .contact-contains .contained p {
+    font-size: 15px;
   }
-  .form {
-    margin: 2rem auto;
-    width: 60%;
+  .contactus__ .contact-contains .contact__form {
+    width: 40%;
+    position: absolute;
+    background-color: #E9E1F5;
+    border-radius: 5px;
+    top: 15rem;
+    right: 10rem;
+    -webkit-box-shadow: 10px 10px 20px #00000036;
+            box-shadow: 10px 10px 20px #00000036;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 10px #0000003f;
-            box-shadow: 5px 5px 10px #0000003f;
-  }
-  .form form {
-    width: 70%;
-    margin: auto;
-    text-align: center;
     padding: 25px;
+    border-radius: 5px 5px 0 0;
   }
-  .form form p {
-    color: var(--ColorPink);
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
+  .contactus__ .contact-contains .contact__form .form_brief img {
+    width: 80px;
   }
-  .form form input {
+  .contactus__ .contact-contains .contact__form .form_brief p {
+    width: 75%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    padding: 5px;
+    text-align: justify;
+  }
+  .contactus__ .contact-contains .contact__form form {
     width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
   }
-  .form form textarea {
-    resize: none;
-    width: 90%;
-    height: 80px;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  .form form button {
-    padding: 10px;
-    width: 50%;
-    color: var(--ColorWhite);
+  .contactus__ .contact-contains .contact__form form input {
+    width: 100%;
     border: none;
-    background-color: var(--ColorPink);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    outline: none;
+  }
+  .contactus__ .contact-contains .contact__form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    resize: none;
+    outline: none;
+    height: 10rem;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send {
+    width: 90%;
+    margin: auto;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send button {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .contactus__ .contact-contains .contact__form form small {
+    text-align: center;
+    margin: auto;
+  }
+  .contactus__ .our-contacts {
+    padding: 40px;
+  }
+  .contactus__ .our-contacts .contacts {
+    width: 45%;
+    padding: 20px;
+  }
+  .contactus__ .our-contacts .contacts p {
+    font-size: 28px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links {
+    margin-bottom: 30px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links a {
+    margin-right: 40px;
+    font-size: 30px;
+    color: var(--ColorPink);
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses a {
+    margin-right: 40px;
+    font-size: 20px;
+    color: var(--ColorPink);
   }
 }
 
 @media (min-width: 1200px) {
-  .hero {
-    margin-top: -13px;
-    padding: 70px;
-    text-align: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#48108D), to(#320070));
-    background-image: linear-gradient(to bottom right, #48108D, #320070);
+  .contactus__ {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  .hero p {
-    font-size: 40px;
+  .contactus__ .contact-contains {
+    width: 100%;
+    background-color: var(--ColorPurple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactus__ .contact-contains .contained {
+    width: 45%;
+    color: var(--ColorWhite) !important;
+    padding: 6rem;
+  }
+  .contactus__ .contact-contains .contained h2 {
+    color: var(--ColorWhite) !important;
+    font-size: 50px;
     font-weight: 700;
-    text-transform: uppercase;
   }
-  .hero span {
-    font-size: 14px;
+  .contactus__ .contact-contains .contained p {
+    font-size: 15px;
   }
-  .form {
-    margin: 2rem auto;
-    width: 60%;
+  .contactus__ .contact-contains .contact__form {
+    width: 40%;
+    position: absolute;
+    background-color: #E9E1F5;
+    border-radius: 5px;
+    top: 15rem;
+    right: 10rem;
+    -webkit-box-shadow: 10px 10px 20px #00000036;
+            box-shadow: 10px 10px 20px #00000036;
+  }
+  .contactus__ .contact-contains .contact__form .form_brief {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: var(--ColorWhite);
-    -webkit-box-shadow: 5px 5px 10px #0000003f;
-            box-shadow: 5px 5px 10px #0000003f;
-  }
-  .form form {
-    width: 70%;
-    margin: auto;
-    text-align: center;
     padding: 25px;
+    border-radius: 5px 5px 0 0;
   }
-  .form form p {
-    color: var(--ColorPink);
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
+  .contactus__ .contact-contains .contact__form .form_brief img {
+    width: 80px;
   }
-  .form form input {
+  .contactus__ .contact-contains .contact__form .form_brief p {
+    width: 75%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--ColorPurple);
+    padding: 5px;
+    text-align: justify;
+  }
+  .contactus__ .contact-contains .contact__form form {
     width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
   }
-  .form form textarea {
-    resize: none;
-    width: 90%;
-    height: 80px;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  .form form button {
-    padding: 10px;
-    width: 50%;
-    color: var(--ColorWhite);
+  .contactus__ .contact-contains .contact__form form input {
+    width: 100%;
     border: none;
-    background-color: var(--ColorPink);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    outline: none;
+  }
+  .contactus__ .contact-contains .contact__form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    resize: none;
+    outline: none;
+    height: 10rem;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send {
+    width: 90%;
+    margin: auto;
+  }
+  .contactus__ .contact-contains .contact__form form .btn-send button {
+    background-color: var(--ColorPurple);
+    color: var(--ColorWhite);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .contactus__ .contact-contains .contact__form form small {
+    text-align: center;
+    margin: auto;
+  }
+  .contactus__ .our-contacts {
+    padding: 40px;
+  }
+  .contactus__ .our-contacts .contacts {
+    width: 45%;
+    padding: 20px;
+  }
+  .contactus__ .our-contacts .contacts p {
+    font-size: 28px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links {
+    margin-bottom: 30px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .social-media-links a {
+    margin-right: 40px;
+    font-size: 30px;
+    color: var(--ColorPink);
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses p {
+    font-size: 17px;
+  }
+  .contactus__ .our-contacts .contacts .contact-addresses a {
+    margin-right: 40px;
+    font-size: 20px;
+    color: var(--ColorPink);
   }
 }
 /*# sourceMappingURL=contactPage.css.map */

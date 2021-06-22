@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import axios from 'axios'
 import "./sign.css";
 import { Link } from "react-router-dom";
 import Logo from "../logo.png";
 import TextLoop from "react-text-loop";
 import { AiOutlineHome } from "react-icons/ai";
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
-import { FiAlertTriangle } from "react-icons/fi";
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { useDispatch } from 'react-redux'
-import { login } from '../Redux/UserAction'
-import { useSelector } from "react-redux";
-import { selectUser } from "../Redux/UserAction";
 import { useAuth } from "../authentication/AuthO";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -33,8 +26,6 @@ function Register() {
   const [password_confirmation, setPasswordConfirmation] = useState();
 
 
-  const dispatch = useDispatch();
-  const user = useSelector(selectUser);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -66,7 +57,7 @@ function Register() {
           <div className="Logo">
             <img src={Logo} alt="Logo" />
           </div>
-          <form >
+          <form style={{width: "80%", margin: "auto"}}>
             <h3>Register</h3>
             <p>
               Already have an account? <Link to="/signin">Click Here to Log in</Link>
@@ -155,7 +146,6 @@ function Register() {
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
                 value={password_confirmation}
               />
-              <ToastContainer />
             </div>
             <button
               className="regbtn"

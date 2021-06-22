@@ -14,6 +14,7 @@
     color: var(--ColorPurple);
     font-weight: 700;
     font-size: 20px;
+    margin-bottom: 2rem;
     text-align: right;
   }
   .create__event__container .preview {
@@ -133,6 +134,7 @@
     margin: auto;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
   .create__event__container .form__ .form_entry__ .btn {
     width: 30%;
@@ -174,6 +176,7 @@
     color: var(--ColorPurple);
     font-weight: 700;
     font-size: 20px;
+    margin-bottom: 2rem;
     text-align: right;
   }
   .create__event__container .preview {
@@ -293,6 +296,7 @@
     margin: auto;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
   .create__event__container .form__ .form_entry__ .btn {
     width: 30%;
@@ -334,12 +338,13 @@
     color: var(--ColorPurple);
     font-weight: 700;
     font-size: 20px;
+    margin-bottom: 2rem;
     text-align: right;
   }
   .create__event__container .preview {
     width: 35%;
     background-color: var(--ColorPurple);
-    background-image: url("");
+    color: var(--ColorWhite);
   }
   .create__event__container .preview .theme-text {
     font-size: 23px;
@@ -462,6 +467,7 @@
     margin: auto;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
   .create__event__container .form__ .form_entry__ .btn {
     width: 30%;
@@ -503,12 +509,13 @@
     color: var(--ColorPurple);
     font-weight: 700;
     font-size: 20px;
+    margin-bottom: 2rem;
     text-align: right;
   }
   .create__event__container .preview {
     width: 35%;
     background-color: var(--ColorPurple);
-    background-image: url("");
+    color: var(--ColorWhite);
   }
   .create__event__container .preview .theme-text {
     font-size: 23px;
@@ -631,6 +638,7 @@
     margin: auto;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
   .create__event__container .form__ .form_entry__ .btn {
     width: 30%;
@@ -673,19 +681,28 @@
     font-weight: 700;
     font-size: 20px;
     text-align: right;
+    margin-bottom: 2rem;
   }
   .create__event__container .preview {
     width: 35%;
     background-color: var(--ColorPurple);
-    background-image: url("");
+    color: var(--ColorWhite);
   }
   .create__event__container .preview .theme-text {
     font-size: 23px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 1.5rem;
   }
   .create__event__container .preview .eventDate {
+    margin-bottom: 1.5rem;
     font-size: 15px;
+    font-weight: 800;
+  }
+  .create__event__container .preview .desc {
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    text-align: justify;
   }
   .create__event__container .form__ {
     width: 65%;
@@ -800,6 +817,7 @@
     margin: auto;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
   .create__event__container .form__ .form_entry__ .btn {
     width: 30%;

@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import { getStorageData, saveStorageData, setStorageData, StorageKeys } from './AuthData'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
+import { Button, message } from 'antd';
 
 
 // Axios credentials
@@ -33,14 +34,13 @@ export const useAuth = () => {
 function useProvideAuth() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false)
-
+    const key = 'updatable';
     useEffect(() => {
         initApp()
     }, []);
 
     function initApp() {
         const userStored = getStorageData(StorageKeys.User);
-        console.log(userStored)
         if (userStored) {
             setUser(userStored);
         }
@@ -49,8 +49,7 @@ function useProvideAuth() {
 
     let history = useHistory()
 
-    // Wrap any axios methods we want to use making sure to save the user to state.
-    const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id) => {
+    const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id) => {
         return (
             axios.post(`${BASEURL}/event`, { description, title, state, cover_image, city, country, end_date, start_date, user_id })
                 .then(
@@ -74,15 +73,10 @@ function useProvideAuth() {
                 .then(
                     (response => {
                         setLoading(true)
-                        toast.success('Login Successfully', {
-                            position: "bottom-right",
-                            autoClose: 3500,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                        })
+                        message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.success({ content: 'Login Successful', key, duration: 2 });
+                        }, 1000);
                         saveStorageData('user', response.data.user)
                         document.cookie = `${response.data.token}; secure`
                         setTimeout(() =>
@@ -94,19 +88,30 @@ function useProvideAuth() {
                     }))
                 .catch(
                     (err => {
-                        console.log(err)
-                        setLoading(true)
-                        toast.error(`ERROR: ${err.response.data}`, {
-                            position: "bottom-right",
-                            autoClose: 3500,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                        })
-                        setTimeout(() =>
-                            setLoading(false), 3500)
+                        if (err.response) {
+
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.error({ content: err.response.data, key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else if (err.request) {
+
+                            console.log(err)
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else {
+                            history.push("/")
+                        }
                     })
                 )
         )
@@ -126,15 +131,11 @@ function useProvideAuth() {
             })
                 .then((response => {
                     setUser(response.data.user)
-                    toast.success('Registration Successfully', {
-                        position: "bottom-right",
-                        autoClose: 3500,
-                        hideProgressBar: true,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    })
+                    message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.success({ content: 'Registration Successful', key, duration: 2 });
+                        }, 2000);
+
                     setLoading(true)
                     saveStorageData('user', response.data.user)
                     document.cookie = `${response.data.token}; secure`
@@ -145,19 +146,29 @@ function useProvideAuth() {
                 }))
                 .catch(
                     (err => {
-                        console.log(err)
-                        setLoading(true)
-                        toast.error(`ERROR: Check the details provided.`, {
-                            position: "bottom-right",
-                            autoClose: 3500,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                        })
-                        setTimeout(() =>
-                            setLoading(false), 3500)
+                        if (err.response) {
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.error({ content: err.response.data, key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else if (err.request) {
+
+                            console.log(err)
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else {
+                            history.push("/")
+                        }
                     })
                 )
         )
@@ -166,21 +177,138 @@ function useProvideAuth() {
         return (
             axios.post(`${BASEURL}/logout`)
                 .then((response => {
+                    setTimeout(() => {
+                        history.push('/')
+                    }, 1000);
                     setUser(null)
                     localStorage.clear()
-                    history.push('/')
                 }))
         )
     };
-
+    const forgotpassword = (email) => {
+        return (
+            axios.post(`${BASEURL}/sendPasswordResetLinkEmail`, { email })
+                .then(
+                    (response => {
+                        setLoading(true)
+                        message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.success({ content: 'Registration Successful', key, duration: 2 });
+                        }, 2000);
+                        setTimeout(() =>
+                            setLoading(false), 2500)
+                        setTimeout(() =>
+                            history.push('/passwordreset'), 3000)
+                    }))
+                    .catch(
+                        (err => {
+                            if (err.response) {
+                                setLoading(true)
+                                message.loading({ content: 'Loading...', key });
+                                setTimeout(() => {
+                                    message.error({ content: err.response.data.message, key, duration: 2 });
+                                }, 3000);
+                                setTimeout(() =>
+                                    setLoading(false), 3500)
+    
+                            } else if (err.request) {
+                                setLoading(true)
+                                message.loading({ content: 'Loading...', key });
+                                setTimeout(() => {
+                                    message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                                }, 3000);
+                                setTimeout(() =>
+                                    setLoading(false), 3500)
+    
+                            } else {
+                                history.push("/")
+                            }
+                        })
+                    )
+        )
+    };
+    const passwordreset = (password, new_password) => {
+        return (
+            axios.post(`${BASEURL}/resetPassword`, { password, new_password })
+                .then(
+                    (response => {
+                        setLoading(true)
+                        message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.success({ content: 'Registration Successful', key, duration: 2 });
+                        }, 2000);
+                        setTimeout(() =>
+                            setLoading(false), 2500)
+                        setTimeout(() =>
+                            history.push('/'), 3000)
+                    }))
+                    .catch(
+                        (err => {
+                            if (err.response) {
+    
+                                setLoading(true)
+                                message.loading({ content: 'Loading...', key });
+                                setTimeout(() => {
+                                    message.error({ content: err.response.data, key, duration: 2 });
+                                }, 1000);
+                                setTimeout(() =>
+                                    setLoading(false), 3500)
+    
+                            } else if (err.request) {
+    
+                                console.log(err)
+                                setLoading(true)
+                                message.loading({ content: 'Loading...', key });
+                                setTimeout(() => {
+                                    message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                                }, 1000);
+                                setTimeout(() =>
+                                    setLoading(false), 3500)
+    
+                            } else {
+                                history.push("/")
+                            }
+                        })
+                    )
+        )
+    };
+    const category = () => {
+        axios.get(`${BASEURL}/admin/event/category`)
+            .then(res => {
+                saveStorageData('category', res.data)
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+    const allEvents = () => {
+        axios.get(`${BASEURL}/`)
+            .then((resp) => {
+                console.log(resp)
+            })
+    }
+    const videoProps = {
+        multiple: false,
+        action: BASEURL + '/event/uploadMedia',
+        headers: {
+            Authorization: `Bearer ${document.cookie}`,
+            'Access-Control-Allow-Origin': '*'
+        },
+    }
 
     return {
         user,
         loading,
-        createEvents,
+        videoProps,
+        allEvents,
         signin,
         register,
-        logout
+        logout,
+        createEvents,
+        forgotpassword,
+        passwordreset,
+        category
 
     };
 }

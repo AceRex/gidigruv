@@ -15,53 +15,64 @@ function Navbar() {
   const [img, setImg] = useState('./images/5.png')
 
   let auth = useAuth()
-  
+
   return (
     <>
-      {auth.user ? 
+      {auth.user ?
 
-      // if User is exist
-      (
-        <nav className="NavbarItems">
-          <nav className="navbar-logo">
-            <Link to="/">
-              <img src={Logo} />
-            </Link>
-          </nav>
-          <div className="menu-icon" onClick={() => setClicked(!clicked)}>
-            <li>
-              {clicked ? (
-                <FaTimes />
-              ) : (
+        // if User is exist
+        (
+          <nav className="NavbarItems">
+            <nav className="navbar-logo">
+              <Link to="/">
+                <img src={Logo} />
+              </Link>
+            </nav>
+            <div className="menu-icon" onClick={() => setClicked(!clicked)}>
+              <li>
+                {clicked ? (
+                  <FaTimes />
+                ) : (
                   <FaBars />
                 )}
-            </li>
-          </div>
-          <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-            <>
-              
-                  <Link to='/create-event'
+              </li>
+            </div>
+            <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+              <>
+                <Link to='/contact-us'
                   onClick={() => setClicked(!clicked)}
-                   >
-                    <div className='nav-links'>
+                >
+                  <div className='nav-links'>
+                    Contact Us
+                    </div>
+                </Link>
+                <Link to='/about'
+                  onClick={() => setClicked(!clicked)}
+                >
+                  <div className='nav-links'>
+                    About
+                    </div>
+                </Link>
+                <Link to='/create-event'
+                  onClick={() => setClicked(!clicked)}
+                >
+                  <div className='nav-links'>
                     Create Event
                     </div>
-                  </Link>
-                  <Link to='/dashboard'
+                </Link>
+                <Link to='/dashboard'
                   onClick={() => setClicked(!clicked)}
-                   >
-                    <div className='nav-links user'>
+                >
+                  <div className='nav-links user'>
                     {auth.user.name} <img src={img} />
-                    </div>
-                  </Link>
-            </>
-          </ul>
-        </nav>
-      ):
-
-      // if User is Doesnt exist
-
-      (
+                  </div>
+                </Link>
+              </>
+            </ul>
+          </nav>
+        ) :
+        // if User is Doesnt exist
+        (
           <nav className="NavbarItems">
             <nav className="navbar-logo">
               <Link to="/">
@@ -69,14 +80,14 @@ function Navbar() {
               </Link>
             </nav>
             <div className="menu-icon"
-             onClick={() => setClicked(!clicked)}
-             >
+              onClick={() => setClicked(!clicked)}
+            >
               <li>
                 {clicked ? (
                   <FaTimes />
                 ) : (
-                    <FaBars />
-                  )}
+                  <FaBars />
+                )}
               </li>
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
@@ -84,7 +95,11 @@ function Navbar() {
               {NotLoggedIn.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={item.url} className={item.cName}>
+                    <Link
+                    to={item.url}
+                    className={item.cName}
+                    onClick={() => setClicked(!clicked)}
+                    >
                       {item.title}
                     </Link>
                   </li>
