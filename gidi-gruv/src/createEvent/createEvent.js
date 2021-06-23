@@ -56,16 +56,10 @@ export default function CreateEvent() {
   const [end_date, setEndDate] = React.useState(" ")
   saveStorageData('Date2', end_date)
 
-  const [StartDate, setSD] = React.useState("")
-  const [EndDate, setED] = React.useState("")
-
+  const [Dates, setDates] = React.useState("")
   React.useEffect(() => {
-    setSD(getStorageData("Date1"))
-    setED(` - ` + getStorageData("Date2"))
+    setDates(getStorageData("Date1") + ` - ` + getStorageData("Date2"))
   })
- 
-
-
   // Date state Ends
 
   
@@ -81,14 +75,22 @@ export default function CreateEvent() {
     setCategory(getStorageData("category"))
   }, [])
 
+  
+  const [city, setCity] = React.useState("")
+  const [country, setCountry] = React.useState("")
+  const [state, setState] = React.useState("")
+  saveStorageData('Address', city)
+  saveStorageData('state', state)
+  saveStorageData('country', country)
+  const [Address, setAdd] = React.useState("")
+  React.useEffect(() => {
+    setAdd(getStorageData("Address") + getStorageData("state") + getStorageData("country"))
+  })
 
   
 
   const [category, setCategory] = React.useState([])
   const [eventType, setEventType] = React.useState("")
-  const [state, setState] = React.useState("")
-  const [city, setCity] = React.useState("")
-  const [country, setCountry] = React.useState("")
   const [user_id, setUserId] = React.useState()
   const [event_category_id, setEventCat] = React.useState()
   const [cover_image, setCoverImage] = React.useState()
@@ -115,13 +117,16 @@ export default function CreateEvent() {
             {title === "" ? <Skeleton active round paragraph /> : ThemeText}
           </div>
           <div className="eventDate">
-            {StartDate === "" && EndDate === "" ? <Skeleton active rows='1' /> : StartDate + "  " + EndDate}
+            {Dates === "" ? <Skeleton active rows='1' /> : Dates}
           </div>
           <div className="desc">
             {Desc === "" ? <Skeleton active round paragraph /> : Desc}
           </div>
           <div className="eventDate">
             {time === "" ? <Skeleton active rows='1' /> : time}
+          </div>
+          <div className="eventDate">
+            {Address === "" ? <Skeleton active rows='1' /> : Address}
           </div>
         </div>
       </div>

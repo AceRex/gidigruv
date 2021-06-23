@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Upload, message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import { saveStorageData } from '../authentication/AuthData'
-import axios from 'axios'
 
 
 export default function Demo() {
@@ -15,7 +14,7 @@ export default function Demo() {
         Authorization: `Bearer ${document.cookie}`,
         'Access-Control-Allow-Origin': '*'
     },
-    onChange(info) {
+    onChange(info:any) {
         const { status } = info.file;
         if (status !== 'uploading') {
             console.log(info.file, info.fileList);
@@ -40,7 +39,7 @@ export default function Demo() {
         <p className="ant-upload-hint">
           Drag and drop image here
         </p>
-      </Dragger>,
+      </Dragger>
     </>
   );
 };
