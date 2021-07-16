@@ -8,10 +8,9 @@ import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
 
 const previewImage = getStorageData("bannerUrl")
-// console.log(previewImage)
+// console.log(previewImage.name)
 
 const bgImg = getStorageData("bannerUrl")
-const EventDate = ""
 const ImageCont = {
   backgroundImage: bgImg,
   height: "30%",
@@ -30,12 +29,12 @@ export default function CreateEvent() {
 
   let auth = useAuth()
 
-  //Title && Description state starts
+  //Title && Description state
   const [title, setTitle] = React.useState("")
   saveStorageData('ThemeText', title)
 
   const [description, setDesc] = React.useState("")
-  saveStorageData('Desc', description) 
+  saveStorageData('Desc', description)
 
   const [ThemeText, setThemetext] = React.useState("")
   const [Desc, setDescrp] = React.useState("")
@@ -47,10 +46,9 @@ export default function CreateEvent() {
     setUserId(userID.id)
   })
 
-  //Title && Description state ends
 
 
-  //Date  state starts
+  //Date 
   const [start_date, setStartDate] = React.useState(" ")
   saveStorageData('Date1', start_date)
   const [end_date, setEndDate] = React.useState(" ")
@@ -60,9 +58,7 @@ export default function CreateEvent() {
   React.useEffect(() => {
     setDates(getStorageData("Date1") + ` - ` + getStorageData("Date2"))
   })
-  // Date state Ends
 
-  
 
   // time
   const [time, setTime] = React.useState("")
@@ -75,7 +71,7 @@ export default function CreateEvent() {
     setCategory(getStorageData("category"))
   }, [])
 
-  
+  // address, state, country
   const [city, setCity] = React.useState("")
   const [country, setCountry] = React.useState("")
   const [state, setState] = React.useState("")
@@ -87,23 +83,28 @@ export default function CreateEvent() {
     setAdd(getStorageData("Address") + getStorageData("state") + getStorageData("country"))
   })
 
-  
-
+  // Category
+  React.useEffect(() => {
+    setCategory(getStorageData("category"))
+  },[])
   const [category, setCategory] = React.useState([])
+  const [event_category_id, setEventCat] = React.useState()
+  console.log(category.map(({name}) => {
+    return{
+      name
+    }
+  }))
+
   const [eventType, setEventType] = React.useState("")
   const [user_id, setUserId] = React.useState()
-  const [event_category_id, setEventCat] = React.useState()
   const [cover_image, setCoverImage] = React.useState()
 
-  React.useEffect(() => {
-    saveStorageData("bannerUrl", cover_image)
-  })
   const handleSubmit = (e) => {
     e.preventDefault();
     auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id)
   }
 
-  console.log(event_category_id)
+  // console.log(event_category_id)
 
   return (
 
@@ -186,20 +187,20 @@ export default function CreateEvent() {
             </div>
             <div className="form-group">
               <label>Event Category</label>
-              {/* <select
-                name="event_category_id"
-                value={event_category_id}
-                onChange={(e) => setEventCat(e.target.value)}
+              <select
+                // name="event_category_id"
+                // value={event_category_id}
+                // onChange={(e) => setEventCat(e.target.value)}
               >
                 {category.map(({ id, name }) => {
                   return (
-                    <option key={id}>
+                    <option key={id} value={id}>
                       {name}
                     </option>
                   );
                 })}
 
-              </select> */}
+              </select>
             </div>
 
             <div className='form-radio'>

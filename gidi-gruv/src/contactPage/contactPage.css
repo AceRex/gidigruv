@@ -17,11 +17,11 @@
     text-align: center;
     margin: auto;
     color: var(--ColorWhite) !important;
-    padding: 5rem;
+    padding: 3rem;
   }
   .contactus__ .contact-contains .contained h2 {
     color: var(--ColorWhite) !important;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 700;
   }
   .contactus__ .contact-contains .contained p {
@@ -32,7 +32,7 @@
     position: absolute;
     background-color: #E9E1F5;
     border-radius: 5px;
-    top: 20rem;
+    top: 17rem;
     right: 1rem;
     -webkit-box-shadow: 10px 10px 20px #00000036;
             box-shadow: 10px 10px 20px #00000036;
@@ -47,12 +47,12 @@
     border-radius: 5px 5px 0 0;
   }
   .contactus__ .contact-contains .contact__form .form_brief img {
-    width: 80px;
+    width: 50px;
   }
   .contactus__ .contact-contains .contact__form .form_brief p {
     width: 75%;
     margin: auto;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 800;
     color: var(--ColorPurple);
     padding: 5px;
@@ -99,7 +99,7 @@
     margin: auto;
   }
   .contactus__ .our-contacts {
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding: 40px;
   }
@@ -109,17 +109,17 @@
     padding-top: 32rem;
   }
   .contactus__ .our-contacts .contacts p {
-    font-size: 28px;
+    font-size: 20px;
   }
   .contactus__ .our-contacts .contacts .social-media-links {
     margin-bottom: 30px;
   }
   .contactus__ .our-contacts .contacts .social-media-links p {
-    font-size: 17px;
+    font-size: 15px;
   }
   .contactus__ .our-contacts .contacts .social-media-links a {
     margin-right: 40px;
-    font-size: 30px;
+    font-size: 20px;
     color: var(--ColorPink);
   }
   .contactus__ .our-contacts .contacts .contact-addresses {
@@ -133,11 +133,11 @@
             flex-direction: column;
   }
   .contactus__ .our-contacts .contacts .contact-addresses p {
-    font-size: 17px;
+    font-size: 15px;
   }
   .contactus__ .our-contacts .contacts .contact-addresses a {
     margin-right: 40px;
-    font-size: 20px;
+    font-size: 17px;
     color: var(--ColorPink);
   }
 }
@@ -309,7 +309,7 @@
   }
   .contactus__ .contact-contains .contained h2 {
     color: var(--ColorWhite) !important;
-    font-size: 50px;
+    font-size: 10px;
     font-weight: 700;
   }
   .contactus__ .contact-contains .contained p {

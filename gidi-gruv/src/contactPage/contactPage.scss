@@ -13,11 +13,11 @@
                 text-align: center;
                 margin: auto;
                 color: var(--ColorWhite) !important;
-                padding: 5rem;
+                padding: 3rem;
 
                 h2 {
                     color: var(--ColorWhite) !important;
-                    font-size: 40px;
+                    font-size: 25px;
                     font-weight: 700;
                 }
 
@@ -31,7 +31,7 @@
                 position: absolute;
                 background-color: #E9E1F5;
                 border-radius: 5px;
-                top: 20rem;
+                top: 17rem;
                 right: 1rem;
                 box-shadow: 10px 10px 20px #00000036;
 
@@ -43,13 +43,13 @@
                     border-radius: 5px 5px 0 0;
 
                     img {
-                        width: 80px;
+                        width: 50px;
                     }
 
                     p {
                         width: 75%;
                         margin: auto;
-                        font-size: 30px;
+                        font-size: 16px;
                         font-weight: 800;
                         color: var(--ColorPurple);
                         padding: 5px;
@@ -109,7 +109,7 @@
         }
 
         .our-contacts {
-            width: 90%;
+            width: 95%;
             margin: auto;
             padding: 40px;
             
@@ -120,19 +120,19 @@
                 padding-top: 32rem;
 
                 p {
-                    font-size: 28px;
+                    font-size: 20px;
                 }
 
                 .social-media-links {
                     margin-bottom: 30px;
 
                     p {
-                        font-size: 17px;
+                        font-size: 15px;
                     }
 
                     a {
                         margin-right: 40px;
-                        font-size: 30px;
+                        font-size: 20px;
                         color: var(--ColorPink);
                     }
                 }
@@ -143,12 +143,12 @@
                     flex-direction: column;
 
                     p {
-                        font-size: 17px;
+                        font-size: 15px;
                     }
 
                     a {
                         margin-right: 40px;
-                        font-size: 20px;
+                        font-size: 17px;
                         color: var(--ColorPink);
                     }
                 }
@@ -341,7 +341,7 @@
 
                 h2 {
                     color: var(--ColorWhite) !important;
-                    font-size: 50px;
+                    font-size: 10px;
                     font-weight: 700;
                 }
 

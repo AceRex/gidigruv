@@ -7,9 +7,15 @@ import { Button, message } from 'antd';
 
 
 // Axios credentials
-export const BASEURL = "https://api.gidigruv.com/api"
+export const BASEURL = "https://api.gidigruv.com"
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + document.cookie
 
+// const BASEURL = axios.create({
+//     baseURL: 'https://api.gidigruv.com',
+//     timeout: 1000,
+//     headers: {'X-Custom-Header': 'foobar'},
+    
+//   });
 
 const authContext = createContext();
 // Provider component that wraps your app and makes auth object available to any child component that calls useAuth().
