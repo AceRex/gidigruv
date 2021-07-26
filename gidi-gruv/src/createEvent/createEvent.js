@@ -6,15 +6,6 @@ import { saveStorageData, getStorageData } from "../authentication/AuthData";
 import { useAuth } from "../authentication/AuthO";
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
-
-const previewImage = getStorageData("bannerUrl")
-// console.log(previewImage.name)
-
-const bgImg = getStorageData("bannerUrl")
-const ImageCont = {
-  backgroundImage: bgImg,
-  height: "30%",
-}
 const event_details_preview = {
   width: "80%",
   margin: "auto",
@@ -22,7 +13,6 @@ const event_details_preview = {
   top: "-1rem",
   textAlign: "center"
 }
-
 
 
 export default function CreateEvent() {
@@ -45,8 +35,6 @@ export default function CreateEvent() {
     const userID = getStorageData("user")
     setUserId(userID.id)
   })
-
-
 
   //Date 
   const [start_date, setStartDate] = React.useState(" ")
@@ -86,31 +74,31 @@ export default function CreateEvent() {
   // Category
   React.useEffect(() => {
     setCategory(getStorageData("category"))
-  },[])
+  }, [])
   const [category, setCategory] = React.useState([])
-  const [event_category_id, setEventCat] = React.useState()
-  console.log(category.map(({name}) => {
-    return{
-      name
-    }
-  }))
+  const [event_category_id, setEventCat] = React.useState(1)
 
   const [eventType, setEventType] = React.useState("")
-  const [user_id, setUserId] = React.useState()
-  const [cover_image, setCoverImage] = React.useState()
+  const [user_id, setUserId] = React.useState(1)
+  const [cover_image, setCoverImage] = React.useState(getStorageData("bannerUrl"))
+
+ 
+  const [bgImg, SetBgImg] = React.useState()
+  React.useEffect(() => {
+    SetBgImg(getStorageData("bannerUrl"))
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
     auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id)
   }
 
-  // console.log(event_category_id)
 
   return (
 
     <div className="create__event__container">
       <div className="preview">
-        <div style={ImageCont}>
+        <div style={{backgroundImage:`url(${bgImg})`,backgroundSize:"cover", height: "30%",}}>
 
         </div>
         <div style={event_details_preview}>
@@ -187,7 +175,7 @@ export default function CreateEvent() {
             </div>
             <div className="form-group">
               <label>Event Category</label>
-              <select
+              {/* <select
                 // name="event_category_id"
                 // value={event_category_id}
                 // onChange={(e) => setEventCat(e.target.value)}
@@ -200,7 +188,7 @@ export default function CreateEvent() {
                   );
                 })}
 
-              </select>
+              </select> */}
             </div>
 
             <div className='form-radio'>
@@ -209,7 +197,7 @@ export default function CreateEvent() {
               <div className="radio">
                 <label>
                   Free
-              </label>
+                </label>
                 <input
                   type="radio"
                   name="eventType"
@@ -221,7 +209,7 @@ export default function CreateEvent() {
               <div className="radio">
                 <label>
                   Paid
-              </label>
+                </label>
                 <input
                   type="radio"
                   name="eventType"

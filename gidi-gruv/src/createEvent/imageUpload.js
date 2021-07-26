@@ -10,19 +10,20 @@ export default function Demo() {
   const videoProps = {
     name: "image",
     multiple: false,
-    action: "https://api.gidigruv.com/api/event/uploadMedia",
+    action: "https://api.gidigruv.com/event/uploadMedia",
     headers: {
         Authorization: `Bearer ${document.cookie}`,
         'Access-Control-Allow-Origin': '*'
     },
     onChange(info) {
         const { status } = info.file;
-        if (status !== 'uploading') {
-            console.log(info.file, info.fileList);
+        if (status !== 'uploading') {          
+            console.log("uploading");
         }
         if (status === 'done') {
             message.success(`${info.file.name} file uploaded successfully.`);
-            saveStorageData("bannerUrl", info.file.name)
+            
+            saveStorageData("bannerUrl", info.file.response.image_url)
         } else if (status === 'error') {
             message.error(`${info.file.name} file upload failed.`);
         }

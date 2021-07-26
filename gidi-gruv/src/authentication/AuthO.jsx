@@ -57,7 +57,7 @@ function useProvideAuth() {
 
     const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id) => {
         return (
-            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, city, country, end_date, start_date, user_id })
+            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, city, country, end_date, start_date, user_id,event_category_id })
                 .then(
                     (response => {
                         console.log(response)
@@ -74,6 +74,7 @@ function useProvideAuth() {
         )
     };
     const signin = (email, password) => {
+
         return (
             axios.post(`${BASEURL}/login`, { email, password })
                 .then(
@@ -123,6 +124,7 @@ function useProvideAuth() {
         )
     };
     const register = (email, password, password_confirmation, phone_number, name, city, country, state, address) => {
+        
         return (
             axios.post(`${BASEURL}/register`, {
                 email,
@@ -156,7 +158,7 @@ function useProvideAuth() {
                             setLoading(true)
                             message.loading({ content: 'Loading...', key });
                             setTimeout(() => {
-                                message.error({ content: err.response.data, key, duration: 2 });
+                                message.error({ content: "ERROR: Confirm the details supplied"});
                             }, 1000);
                             setTimeout(() =>
                                 setLoading(false), 3500)
