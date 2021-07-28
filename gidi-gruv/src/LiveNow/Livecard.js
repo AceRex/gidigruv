@@ -54,13 +54,13 @@ export default function Card(props) {
           </div>
           <div className="details">
             <div className="date">
-              <p>{props.MM}</p>
-              <span>{props.DD}</span>
+              <p>{props.start_dateMM}</p>
+              <span>{props.end_date}</span>
             </div>
             <div className="title-details">
               <p>{props.title} </p>
               <span>
-                <GrLocationPin /> {props.location} - <TiTime /> {props.time.HH}{" : "}{props.time.MM}
+                {/* <GrLocationPin /> {props.location} - <TiTime /> {props.time.HH}{" : "}{props.time.MM} */}
               </span>
             </div>
           </div>

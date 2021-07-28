@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./createEvent.css";
 import ImageUploader from './imageUpload'
 import { Skeleton } from 'antd';
 import { saveStorageData, getStorageData } from "../authentication/AuthData";
-import { useAuth } from "../authentication/AuthO";
+import { BASEURL, useAuth } from "../authentication/AuthO";
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
 const event_details_preview = {
@@ -16,7 +16,7 @@ const event_details_preview = {
 
 
 export default function CreateEvent() {
-
+const [Categories, setCategories] = useState([])
   let auth = useAuth()
 
   //Title && Description state
@@ -56,7 +56,7 @@ export default function CreateEvent() {
   })
 
   React.useEffect(() => {
-    setCategory(getStorageData("category"))
+    fetch(`${BASEURL}/event/category`).then(res => res.json().then(data => setCategories(data)))
   }, [])
 
   // address, state, country
@@ -84,12 +84,11 @@ export default function CreateEvent() {
 
  
   const [bgImg, SetBgImg] = React.useState()
-  React.useEffect(() => {
-    SetBgImg(getStorageData("bannerUrl"))
-  })
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    SetBgImg(getStorageData("bannerUrl"))
     auth.createEvents(description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id)
   }
 
@@ -175,20 +174,16 @@ export default function CreateEvent() {
             </div>
             <div className="form-group">
               <label>Event Category</label>
-              {/* <select
+              <select
                 // name="event_category_id"
                 // value={event_category_id}
                 // onChange={(e) => setEventCat(e.target.value)}
               >
-                {category.map(({ id, name }) => {
-                  return (
-                    <option key={id} value={id}>
-                      {name}
-                    </option>
-                  );
-                })}
+                {Categories.map(({ id, name }) => <option key={id} value={id}>
+                  {name}
+                </option>)}
 
-              </select> */}
+              </select>
             </div>
 
             <div className='form-radio'>

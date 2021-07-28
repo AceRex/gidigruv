@@ -21,18 +21,18 @@ function Overview() {
 
   // const user = useSelector(selectUser)
 
-  const [Name, setName] = useState(auth.user.name)
-  const [email, setEmail] = useState(auth.user.email)
-  const [phoneNumber, setPhoneNumber] = useState(auth.user.phone_number)
+  const [Name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [phoneNumber, setPhoneNumber] = useState()
   const [gender, setGender] = useState("")
   const [DOB, setDOB] = useState("")
-  const [street, setStreet] = useState(auth.user.address)
-  const [region, setRegion] = useState(auth.user.state)
-  const [country, setCountry] = useState(auth.user.country)
-  const [CurrentPassword, setCurrentPassword] = useState(auth.user.password)
+  const [street, setStreet] = useState()
+  const [region, setRegion] = useState()
+  const [country, setCountry] = useState()
+  const [CurrentPassword, setCurrentPassword] = useState()
   const [newPassword, setNewPassword] = useState("")
   const [retypePassword, setRetypePassword] = useState("")
-  const [facebookLink, setFacebookLink] = useState(auth.user.facebook_id)
+  const [facebookLink, setFacebookLink] = useState()
 
   // Toggle state
   const [toggle, setToggle] = useState({
@@ -50,6 +50,18 @@ function Overview() {
   const handleSubmit = (event) => {
     event.preventDefault();
   }
+  useEffect(() => {
+    if (auth.user?.name) {
+      setName(auth.user?.name)
+      setEmail(auth.user?.email)
+      setPhoneNumber(auth.user?.phone_number)
+      setStreet(auth.user?.address)
+      setRegion(auth.user?.state)
+      setCountry(auth.user?.country)
+    } else {
+      auth.meFn()
+    }
+  }, [auth.user])
   return (
     <div className='account__'>
       <ScrollToToponMount />
