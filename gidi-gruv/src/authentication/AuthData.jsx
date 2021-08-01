@@ -1,6 +1,7 @@
 export const StorageKeys = {
     User: "workspace_manager_user",
     AuthToken: "workspace_manager_auth_token",
+    tokenkey: 'asweb-token'
 }
 
 export function getStorageData(key) {

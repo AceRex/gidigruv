@@ -17,8 +17,8 @@ function ScrollToToponMount() {
 function Overview() {
   const user = useSelector(selectUser)
 
-  const [categoryInterest, setCategoryInterest] = useState(user.categoryInterest)
-  const [eventInterest, setEventInterest] = useState(user.eventInterest)
+  const [categoryInterest, setCategoryInterest] = useState(user?.categoryInterest)
+  const [eventInterest, setEventInterest] = useState(user?.eventInterest)
   const [saveAlert, setSaveAlert] = useState(false)
 
   console.log(categoryInterest)

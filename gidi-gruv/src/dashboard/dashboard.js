@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import { Route, NavLink, Link, useHistory } from "react-router-dom";
 import Overview from "./Overview";
@@ -54,13 +54,21 @@ function Dashboard() {
   let auth = useAuth()
 
   const [displayPicture, setDisplayPicture] = useState(ProfilePhoto)
-  const [Name, setName] = useState(auth.user.name)
+  const [Name, setName] = useState()
   const [clicked, setClicked] = useState(false)
   const [close, setClose] = useState(false)
 
   const handleClicked = () => {
     setClicked(!clicked)
   }
+
+  useEffect(() => {
+    if (!auth.user?.name){
+      auth.meFn()
+    } else {
+      setName(auth.user?.name) 
+    }
+  }, [auth.user])
   return (
     <div className="db-container">
       <div className={close ? 'hidden' : 'Notification'}>

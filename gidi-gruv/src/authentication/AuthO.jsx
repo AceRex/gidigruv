@@ -6,9 +6,15 @@ import { toast } from 'react-toastify';
 import { Button, message } from 'antd';
 
 
-// Axios credentials
-export const BASEURL = "https://api.gidigruv.com"
-axios.defaults.headers.common['Authorization'] = 'Bearer ' + document.cookie
+// Axios credentials 
+let URL = '';
+if (process.env.NODE_ENV === "production") {
+    URL = "https://api.gidigruv.com"
+} else {
+    URL = "http://127.0.0.1:8000" 
+}
+export const BASEURL = URL;
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
 
 // const BASEURL = axios.create({
 //     baseURL: 'https://api.gidigruv.com',
@@ -36,7 +42,7 @@ export const useAuth = () => {
 
 // Provider hook that creates auth object and handles state
 
-
+ 
 function useProvideAuth() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false)
@@ -57,7 +63,7 @@ function useProvideAuth() {
 
     const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id) => {
         return (
-            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, city, country, end_date, start_date, user_id,event_category_id })
+            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, street_address: city, city, country, end_date, start_date, user_id,event_category_id })
                 .then(
                     (response => {
                         console.log(response)
@@ -70,6 +76,49 @@ function useProvideAuth() {
                         setLoading(true)
                     }
                     )
+                )
+        )
+    };
+    const meFn = () => {
+
+        return (
+            axios.get(`${BASEURL}/me`)
+                .then(
+                    (response => {
+                        setLoading(true)
+                        message.loading({ content: 'Loading...', key }); 
+                        saveStorageData('user', response.data.user)
+                        setUser(response.data) 
+                        saveStorageData(StorageKeys.tokenkey, response.data.token)
+                        document.cookie = `${response.data.token}; secure`
+                    }))
+                .catch(
+                    (err => {
+                        if (err.response) {
+                            if (err.response.status === 401)  window.location.href = '/login'
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.error({ content: err.response.data, key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else if (err.request) {
+
+                            console.log(err)
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else {
+                            history.push("/")
+                        }
+                    })
                 )
         )
     };
@@ -139,6 +188,7 @@ function useProvideAuth() {
             })
                 .then((response => {
                     setUser(response.data.user)
+                    saveStorageData(StorageKeys.tokenkey, response.data.token)
                     message.loading({ content: 'Loading...', key });
                         setTimeout(() => {
                             message.success({ content: 'Registration Successful', key, duration: 2 });
@@ -310,7 +360,8 @@ function useProvideAuth() {
         loading,
         videoProps,
         allEvents,
-        signin,
+        signin, 
+        meFn,
         register,
         logout,
         createEvents,
@@ -319,4 +370,4 @@ function useProvideAuth() {
         category
 
     };
-}
+}  

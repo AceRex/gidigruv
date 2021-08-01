@@ -3,8 +3,7 @@ import LiveCard from "../LiveNow/Livecard";
 import "./EventsNear.css";
 
 
-export default function EventByCategory({Events}) {
-  // console.log(Events)
+export default function EventByCategory({Events}) { 
     return (
       <div className="container">
         <div className="evn-container">
@@ -12,18 +11,26 @@ export default function EventByCategory({Events}) {
             Coming <span>Events</span>
           </p>
           <div className="cards">
-            {Events.map((Events,index) => {
-              return (
-                
+            {Events?.data?.map((e,index) => {
+              return ( 
                 <LiveCard
                   id={index}
-                  pay={Events.pay}
-                  img={Events.img}
-                  MM={Events.date.MM}
-                  DD={Events.date.DD}
-                  title={Events.title}
-                  location={Events.location}
-                  time={Events.time}
+                  pay={e.pay}
+                  img={e.cover_image}
+                  start_date={e.start_date}
+                  end_date={e.end_date}
+                  title={e.title}
+                  location={e.location}
+                  time={e.time}
+                  city={e.city}
+                  state={e.state}
+                  country={e.country}
+                  description={e.description}
+                  street_address={e.street_address}
+                  map_coord={e.map_coord}
+                  attendees={e.attendees}
+                  created_by={e.created_by}
+                  short_description={e.short_description}
                 />
               );
             })}

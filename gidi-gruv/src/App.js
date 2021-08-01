@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import {
   Redirect,
   Route,
@@ -28,18 +28,19 @@ import Forgotpassword from "./forgotPassword/forgotpassword"
 import PasswordReset from "./forgotPassword/ResetPassword"
 import { useSelector } from "react-redux";
 import { selectUser } from "./Redux/UserAction";
-import { useAuth } from "./authentication/AuthO";
-import { getStorageData } from "./authentication/AuthData";
+import { BASEURL, useAuth } from "./authentication/AuthO";
+import { getStorageData, StorageKeys } from "./authentication/AuthData";
 import axios from 'axios'
 import "antd/dist/antd.css";
 
 
 function Main() {
   let Auth = useAuth()
-
   const [envList, setEnvList] = React.useState([])
   const EventData = Data["All "]
-  console.log(envList)
+  useEffect(() => {
+    fetch(`${BASEURL}/all`).then(res => res.json().then(data => setEnvList(data)))
+  }, [])
   return (
     <>
       <Carousel />
@@ -54,6 +55,7 @@ function Main() {
 function App() {
   const [loading, setLoading] = React.useState(true)
   const user = useSelector(selectUser);
+  const token = getStorageData(StorageKeys.tokenkey)
 
 
   return (
@@ -74,10 +76,10 @@ function App() {
           <SED ED={Data["All "]} />
         </Route>
         <Route path="/signin" >
-          {user ? <Redirect to="/" /> : <SignIn />}
+          {token ? <Redirect to="/" /> : <SignIn />}
         </Route>
         <Route path="/register" >
-          {user ? <Redirect to="/dashboard" /> : <Register />}
+          {token ? <Redirect to="/dashboard" /> : <Register />}
         </Route>
         <Route path="/dashboard" component={Dashboard} />
 

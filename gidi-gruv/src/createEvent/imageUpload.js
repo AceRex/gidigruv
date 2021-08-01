@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Upload, message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
-import { saveStorageData } from '../authentication/AuthData'
+import { getStorageData, saveStorageData, StorageKeys } from '../authentication/AuthData'
+import { BASEURL } from '../authentication/AuthO';
 
 
 export default function Demo() {
@@ -10,9 +11,9 @@ export default function Demo() {
   const videoProps = {
     name: "image",
     multiple: false,
-    action: "https://api.gidigruv.com/event/uploadMedia",
+    action:   `${BASEURL}/event/uploadMedia`,
     headers: {
-        Authorization: `Bearer ${document.cookie}`,
+        Authorization: `Bearer ${getStorageData(StorageKeys.tokenkey) }`,
         'Access-Control-Allow-Origin': '*'
     },
     onChange(info) {
