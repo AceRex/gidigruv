@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import "./SED.css";
 import Livecard from "../LiveNow/Livecard";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
@@ -9,51 +9,82 @@ import Zoom from "react-reveal/HeadShake";
 import Flash from "react-reveal/Flash";
 import { FiAlertTriangle } from "react-icons/fi";
 import { useParams } from "react-router-dom";
-
-
+import axios from '../authentication/axios-config'
+import { useAuth} from '../authentication/AuthO.jsx'
 function ScrollToToponMount() {
+  let Auth = useAuth()
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    Auth.meFn()
   }, []);
   return null
 }
 function EventDetail() {
-  const { title } = useParams();
+  const { id } = useParams();
   const Events = Data["All "]
+  const [eventDetail, setEventDetail] = useState({})
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState()
+  const getEvent = () => {
+    setLoading(true)
+    axios.get(`event/${id}`).then(event => {
+      setLoading(false)
+      setEventDetail(event.data)
+    })
+      .catch(err => {
+        setLoading(false);
+        setError(err)
+      })
+  }
+  const attendEvent = () => {
+    setLoading(true)
+    axios.get(`event/attend/${id}`).then(event => {
+      setLoading(false)
+      console.log(event.data)
+    })
+      .catch(err => {
+        setLoading(false);
+        setError(err)
+      })
+  }
+  useEffect(() => {
+    getEvent()
+  }, [id])
 
   return (
     <div className="grp">
-      {Events.filter((items) => items.title === title).map((Event) => (
-        <>
-          <ScrollToToponMount />
-          <div className="img-container">
-            <img src={Event.img} alt="Image" />
-          </div>
-          <div className="SED-details">
-            <p>{Event.title}</p>
-            <table>
-              <tr>
-                <td className="td1">Description</td>
-                <td>
-                  {Event.Description}
-                </td>
-              </tr>
-              <tr>
-                <td className="td1">Date</td>
-                <td>{Event.date.DD} / {Event.date.MM} / {Event.date.YY}</td>
-              </tr>
-              <tr>
-                <td className="td1">Time</td>
-                <td>{Event.time.HH}{" : "}{Event.time.MM}</td>
-              </tr>
-              <tr>
-                <td className="td1">Address</td>
-                <td>{Event.location}</td>
-              </tr>
-            </table>
-          </div>
-        </>
-      ))}
+      {loading ? <p>loading</p> : <>
+        <ScrollToToponMount />
+        <div className="img-container">
+          <img src={eventDetail.img} alt="Image" />
+        </div>
+        <div className="SED-details">
+          <p>{eventDetail.title}</p>
+          <table>
+            <tr>
+              <td className="td1">Description</td>
+              <td>
+                {eventDetail.description}
+              </td>
+            </tr>
+            <tr>
+              <td className="td1">Date</td>
+              <td>{eventDetail.start_date}   / {eventDetail.end_date}</td>
+            </tr>
+            <tr>
+              <td className="td1">Time</td>
+              <td>{eventDetail.time}</td>
+            </tr>
+            <tr>
+              <td className="td1">Address</td>
+              <td>{`${eventDetail.street_address}, ${eventDetail.city}, ${eventDetail.state}, ${eventDetail.country}`}</td>
+            </tr>
+          </table>
+        </div>
+      </>
+      }
+
 
     </div>
   )
@@ -82,9 +113,7 @@ class ShowEventDetails extends React.Component {
     });
   }
   handleClick() {
-    this.setState({
-      clicked: true,
-    });
+    // attendEvent()
   }
   handleClose() {
     this.setState({
@@ -201,11 +230,11 @@ class ShowEventDetails extends React.Component {
                   id={items.id}
                   pay={items.pay}
                   img={items.img}
-                  MM={items.date.MM}
-                  DD={items.date.DD}
+                  // MM={items.date.MM}
+                  // DD={items.date.DD}
                   title={items.title}
                   location={items.location}
-                  time={items.time}
+                // time={items.time}
                 />
               );
             })}

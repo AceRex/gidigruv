@@ -37,8 +37,11 @@ import "antd/dist/antd.css";
 function Main() {
   let Auth = useAuth()
   const [envList, setEnvList] = React.useState([])
+  const token = getStorageData(StorageKeys.tokenkey)
   const EventData = Data["All "]
   useEffect(() => {
+    Auth.meFn()
+
     fetch(`${BASEURL}/all`).then(res => res.json().then(data => setEnvList(data)))
   }, [])
   return (
@@ -54,8 +57,10 @@ function Main() {
 
 function App() {
   const [loading, setLoading] = React.useState(true)
+  let auth = useAuth()
   const user = useSelector(selectUser);
   const token = getStorageData(StorageKeys.tokenkey)
+  auth.allEvents()
 
 
   return (
@@ -72,7 +77,7 @@ function App() {
         <Route path="/forgot-password" component={Forgotpassword} />
         <Route path="/passwordreset" component={PasswordReset} />
 
-        <Route path="/showeventdetails/:title">
+        <Route path="/showeventdetails/:id">
           <SED ED={Data["All "]} />
         </Route>
         <Route path="/signin" >

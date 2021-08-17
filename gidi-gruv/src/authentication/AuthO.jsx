@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
-import axios from 'axios'
+import axios from './axios-config'
 import { useHistory } from 'react-router-dom'
 import { getStorageData, saveStorageData, setStorageData, StorageKeys } from './AuthData'
 import { toast } from 'react-toastify';
@@ -11,17 +11,10 @@ let URL = '';
 if (process.env.NODE_ENV === "production") {
     URL = "https://api.gidigruv.com"
 } else {
-    URL = "http://127.0.0.1:8000" 
+    URL = "http://127.0.0.1:8000/v1"
 }
 export const BASEURL = URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
-
-// const BASEURL = axios.create({
-//     baseURL: 'https://api.gidigruv.com',
-//     timeout: 1000,
-//     headers: {'X-Custom-Header': 'foobar'},
-    
-//   });
 
 const authContext = createContext();
 // Provider component that wraps your app and makes auth object available to any child component that calls useAuth().
@@ -42,7 +35,7 @@ export const useAuth = () => {
 
 // Provider hook that creates auth object and handles state
 
- 
+
 function useProvideAuth() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false)
@@ -63,7 +56,7 @@ function useProvideAuth() {
 
     const createEvents = (description, title, state, cover_image, city, country, end_date, start_date, user_id, event_category_id) => {
         return (
-            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, street_address: city, city, country, end_date, start_date, user_id,event_category_id })
+            axios.post(`${BASEURL}/event`, { description, title, state, cover_image, street_address: city, city, country, end_date, start_date, user_id, event_category_id })
                 .then(
                     (response => {
                         console.log(response)
@@ -80,47 +73,45 @@ function useProvideAuth() {
         )
     };
     const meFn = () => {
+        setLoading(true)
+        axios.get(`/me`)
+            .then(
+                (response => {
+                    setLoading(false)
+                    message.loading({ content: 'Loading...', key });
+                    saveStorageData('user', response.data.user)
+                    setUser(response.data)
+                    saveStorageData(StorageKeys.tokenkey, response.data.token)
+                    document.cookie = `${response.data.token}; secure`
+                }))
+            .catch(
+                (err => {
+                    if (err.response) {
+                        if (err.response.status === 401) window.location.href = '/login'
+                        setLoading(false)
+                        message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.error({ content: err.response.data, key, duration: 2 });
+                        }, 1000);
+                        setTimeout(() =>
+                            setLoading(false), 3500)
 
-        return (
-            axios.get(`${BASEURL}/me`)
-                .then(
-                    (response => {
+                    } else if (err.request) {
+
+                        console.log(err)
                         setLoading(true)
-                        message.loading({ content: 'Loading...', key }); 
-                        saveStorageData('user', response.data.user)
-                        setUser(response.data) 
-                        saveStorageData(StorageKeys.tokenkey, response.data.token)
-                        document.cookie = `${response.data.token}; secure`
-                    }))
-                .catch(
-                    (err => {
-                        if (err.response) {
-                            if (err.response.status === 401)  window.location.href = '/login'
-                            setLoading(true)
-                            message.loading({ content: 'Loading...', key });
-                            setTimeout(() => {
-                                message.error({ content: err.response.data, key, duration: 2 });
-                            }, 1000);
-                            setTimeout(() =>
-                                setLoading(false), 3500)
+                        message.loading({ content: 'Loading...', key });
+                        setTimeout(() => {
+                            message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                        }, 1000);
+                        setTimeout(() =>
+                            setLoading(false), 3500)
 
-                        } else if (err.request) {
-
-                            console.log(err)
-                            setLoading(true)
-                            message.loading({ content: 'Loading...', key });
-                            setTimeout(() => {
-                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
-                            }, 1000);
-                            setTimeout(() =>
-                                setLoading(false), 3500)
-
-                        } else {
-                            history.push("/")
-                        }
-                    })
-                )
-        )
+                    } else {
+                        history.push("/")
+                    }
+                })
+            )
     };
     const signin = (email, password) => {
 
@@ -173,7 +164,7 @@ function useProvideAuth() {
         )
     };
     const register = (email, password, password_confirmation, phone_number, name, city, country, state, address) => {
-        
+
         return (
             axios.post(`${BASEURL}/register`, {
                 email,
@@ -190,9 +181,9 @@ function useProvideAuth() {
                     setUser(response.data.user)
                     saveStorageData(StorageKeys.tokenkey, response.data.token)
                     message.loading({ content: 'Loading...', key });
-                        setTimeout(() => {
-                            message.success({ content: 'Registration Successful', key, duration: 2 });
-                        }, 2000);
+                    setTimeout(() => {
+                        message.success({ content: 'Registration Successful', key, duration: 2 });
+                    }, 2000);
 
                     setLoading(true)
                     saveStorageData('user', response.data.user)
@@ -208,7 +199,7 @@ function useProvideAuth() {
                             setLoading(true)
                             message.loading({ content: 'Loading...', key });
                             setTimeout(() => {
-                                message.error({ content: "ERROR: Confirm the details supplied"});
+                                message.error({ content: "ERROR: Confirm the details supplied" });
                             }, 1000);
                             setTimeout(() =>
                                 setLoading(false), 3500)
@@ -258,31 +249,31 @@ function useProvideAuth() {
                         setTimeout(() =>
                             history.push('/passwordreset'), 3000)
                     }))
-                    .catch(
-                        (err => {
-                            if (err.response) {
-                                setLoading(true)
-                                message.loading({ content: 'Loading...', key });
-                                setTimeout(() => {
-                                    message.error({ content: err.response.data.message, key, duration: 2 });
-                                }, 3000);
-                                setTimeout(() =>
-                                    setLoading(false), 3500)
-    
-                            } else if (err.request) {
-                                setLoading(true)
-                                message.loading({ content: 'Loading...', key });
-                                setTimeout(() => {
-                                    message.warning({ content: 'Connect to an Internet', key, duration: 2 });
-                                }, 3000);
-                                setTimeout(() =>
-                                    setLoading(false), 3500)
-    
-                            } else {
-                                history.push("/")
-                            }
-                        })
-                    )
+                .catch(
+                    (err => {
+                        if (err.response) {
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.error({ content: err.response.data.message, key, duration: 2 });
+                            }, 3000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else if (err.request) {
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                            }, 3000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else {
+                            history.push("/")
+                        }
+                    })
+                )
         )
     };
     const passwordreset = (password, new_password) => {
@@ -300,34 +291,34 @@ function useProvideAuth() {
                         setTimeout(() =>
                             history.push('/'), 3000)
                     }))
-                    .catch(
-                        (err => {
-                            if (err.response) {
-    
-                                setLoading(true)
-                                message.loading({ content: 'Loading...', key });
-                                setTimeout(() => {
-                                    message.error({ content: err.response.data, key, duration: 2 });
-                                }, 1000);
-                                setTimeout(() =>
-                                    setLoading(false), 3500)
-    
-                            } else if (err.request) {
-    
-                                console.log(err)
-                                setLoading(true)
-                                message.loading({ content: 'Loading...', key });
-                                setTimeout(() => {
-                                    message.warning({ content: 'Connect to an Internet', key, duration: 2 });
-                                }, 1000);
-                                setTimeout(() =>
-                                    setLoading(false), 3500)
-    
-                            } else {
-                                history.push("/")
-                            }
-                        })
-                    )
+                .catch(
+                    (err => {
+                        if (err.response) {
+
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.error({ content: err.response.data, key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else if (err.request) {
+
+                            console.log(err)
+                            setLoading(true)
+                            message.loading({ content: 'Loading...', key });
+                            setTimeout(() => {
+                                message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                            }, 1000);
+                            setTimeout(() =>
+                                setLoading(false), 3500)
+
+                        } else {
+                            history.push("/")
+                        }
+                    })
+                )
         )
     };
     const category = () => {
@@ -360,7 +351,7 @@ function useProvideAuth() {
         loading,
         videoProps,
         allEvents,
-        signin, 
+        signin,
         meFn,
         register,
         logout,
@@ -368,6 +359,5 @@ function useProvideAuth() {
         forgotpassword,
         passwordreset,
         category
-
     };
-}  
+}
