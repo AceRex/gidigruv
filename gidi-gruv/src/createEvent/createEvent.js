@@ -122,7 +122,7 @@ const [Categories, setCategories] = useState([])
         <div className="form_entry__">
           <div className="Page__header"> Create New Event </div>
           <div className="Image__uploader">
-            <ImageUploader />
+            <ImageUploader setCoverImage={setCoverImage} />
           </div>
           <div className="button">
             <div className="form-group">

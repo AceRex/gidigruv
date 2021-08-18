@@ -29,7 +29,7 @@ export default function Card(props) {
           <div className="sub">
             <p>{props.pay}</p>
           </div>
-          {/* {Datas.IsLoggedIn ? (
+          {props.user?.id ? (
             <div className="share-like">
               <span>
                 <HiOutlineUpload />
@@ -37,7 +37,7 @@ export default function Card(props) {
               <span
                 style={{ color: `${color}` }}
                 onClick={() =>
-                  setColor(Datas.IsLiked ? "var(--ColorPink)" : `${color}`)
+                  setColor(props.IsLiked ? "var(--ColorPink)" : `${color}`)
                 }
               >
                 <IoIosHeart />
@@ -45,22 +45,22 @@ export default function Card(props) {
             </div>
           ) : (
             ""
-          )} */}
+          )}
         </div>
 
-        <Link to={`/showeventdetails/${props.title}`} className="Card" key={props.id}>
+        <Link to={`/showeventdetails/${props.id}`} className="Card" key={props.id}>
           <div className="image-container">
             <img src={props.img} />
           </div>
           <div className="details">
             <div className="date">
-              <p>{props.start_dateMM}</p>
+              <p>{props.start_date}</p>
               <span>{props.end_date}</span>
             </div>
             <div className="title-details">
-              <p>{props.title} </p>
+              <p>{props.title} </p><br />
               <span>
-                {/* <GrLocationPin /> {props.location} - <TiTime /> {props.time.HH}{" : "}{props.time.MM} */}
+                <GrLocationPin /> {props.location} - <TiTime /> {props.time}
               </span>
             </div>
           </div>

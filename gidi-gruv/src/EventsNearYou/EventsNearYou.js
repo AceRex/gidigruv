@@ -14,7 +14,7 @@ export default function EventByCategory({Events}) {
             {Events?.data?.map((e,index) => {
               return ( 
                 <LiveCard
-                  id={index}
+                  id={e.id}
                   pay={e.pay}
                   img={e.cover_image}
                   start_date={e.start_date}
