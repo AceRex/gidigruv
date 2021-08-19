@@ -7,9 +7,9 @@ const token = getStorageData(StorageKeys.tokenkey)
 // 
 let baseURL = ''
 if (process.env.NODE_ENV === "production") {
-    baseURL = "http://api.penwebpos.com/v1"
+    baseURL = "https://api.gidigruv.com"
 } else {
-    baseURL = "http://127.0.0.1:8000/v1"
+    baseURL = "http://127.0.0.1:8000"
 }
 const instance = axios.create({
     baseURL

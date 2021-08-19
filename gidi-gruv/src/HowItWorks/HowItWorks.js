@@ -3,10 +3,7 @@ import { Component } from "react";
 import "./style.css";
 import Rotate from 'react-reveal/Rotate'
 
-export default class HowItWorks extends Component {
- 
-
-  render() {
+export default function HowItWorks() {
     return (
       <div className="container HIW-container">
         <div className="HIW-contain">
@@ -52,4 +49,3 @@ export default class HowItWorks extends Component {
       </div>
     );
   }
-}

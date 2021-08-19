@@ -2,23 +2,18 @@ import React from "react";
 import { Component } from "react";
 import "./style.css";
 
-export default class HowItWorks extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Fullname: " ",
-      email: "",
-      msg: "",
-      mailSent: false,
-      error: null
-    };
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
-  }
-  handleFormSubmit(event) {
+export default function HowItWorks() {
+  
+  
+  const [Fullname, setFullName] = React.useState()
+  const [email, setEmail] = React.useState()
+  const [msg, setMsg] =  React.useState()
+  const [mailSent, setMailSent] = React.useState()
+  const [error, setError] = React.useState()
+
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.Fullname);
   }
-  render() {
     return (
       <div id="#contact-us" className="container contact-container">
         <div className="contact-contain">
@@ -41,27 +36,27 @@ export default class HowItWorks extends Component {
               id="fullname"
               name="Fullname"
               placeholder="Name"
-              value={this.state.Fullname}
-              onChange={(e) => this.setState({ Fullname: e.target.value })}
+              value={Fullname}
+              onChange={(e) => setFullName(e.target.value)}
             />
             <input
               id="email"
               name="email"
               placeholder="Email"
-              value={this.state.email}
-              onChange={(e) => this.setState({ email: e.target.value })}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               id="msg"
               name="msg"
               placeholder="Message"
-              value={this.state.msg}
-              onChange={(e) => this.setState({ msg: e.target.value })}
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
             />
             <button
               type="submit"
               value="Submit"
-              onChange={e => this.handleFormSubmit(e)}
+              onChange={handleFormSubmit}
             >
               SEND
             </button>
@@ -70,4 +65,3 @@ export default class HowItWorks extends Component {
       </div>
     );
   }
-}

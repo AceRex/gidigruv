@@ -2,19 +2,18 @@ import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from './axios-config'
 import { useHistory } from 'react-router-dom'
 import { getStorageData, saveStorageData, setStorageData, StorageKeys } from './AuthData'
-import { toast } from 'react-toastify';
 import { Button, message } from 'antd';
 
 
 // Axios credentials 
 let URL = '';
 if (process.env.NODE_ENV === "production") {
-    URL = "https://api.gidigruv.com"
+    URL = "https://api.gidigruv.com/v1"
 } else {
-    URL = "http://127.0.0.1:8000/v1"
+    URL = "https://www.api.gidigruv.com"
 }
 export const BASEURL = URL;
-axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
+axios.defaults.headers.common = {'Authorization' : `Bearer  ${getStorageData(StorageKeys.tokenkey)}`}
 
 const authContext = createContext();
 // Provider component that wraps your app and makes auth object available to any child component that calls useAuth().

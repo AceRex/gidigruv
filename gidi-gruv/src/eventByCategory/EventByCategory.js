@@ -9,86 +9,80 @@ import { IoIosThermometer } from "react-icons/io";
 import { AiOutlineShop } from "react-icons/ai";
 import { FaDrawPolygon } from "react-icons/fa";
 
-export default class EventByCategory extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      Categories: [
-        {
-          id: 0,
-          category: "Entertainment",
-          color: "var(--ColorPink)",
-          link: "/category-page",
-          icon: <GiFilmSpool />,
-        },
-        {
-          id: 1,
-          category: "Business Seminar",
-          color: "#9F11E1",
-          link: "/category-page",
-          icon: <MdBusinessCenter />,
-        },
-        {
-          id: 2,
-          category: "Art",
-          color: "#9F11E1",
-          link: "/category-page",
-          icon: <FaDrawPolygon />,
-        },
-        {
-          id: 3,
-          category: "Music",
-          color: "#9F11E1",
-          link: "/category-page",
-          icon: <GiMusicalNotes />,
-        },
-        {
-          id: 4,
-          category: "Life Style",
-          color: "#E99108",
-          link: "/category-page",
-          icon: <GiLifeBuoy />,
-        },
-        {
-          id: 5,
-          category: "Technology",
-          color: "#0817E9",
-          link: "/category-page",
-          icon: <ImConnection />,
-        },
-        {
-          id: 6,
-          category: "Religious",
-          color: "var(--ColorPurple)",
-          link: "/category-page",
-          icon: <BiChurch />,
-        },
-        {
-          id: 7,
-          category: "Sports",
-          color: "#9F11E1",
-          link: "/category-page",
-          icon: <BiBasketball />,
-        },
-        {
-          id: 8,
-          category: "Health Care and Medical",
-          color: "#0817E9",
-          link: "/category-page",
-          icon: <IoIosThermometer />,
-        },
-        {
-          id: 9,
-          category: "Workshop",
-          color: "var(--ColorPink)",
-          link: "/category-page",
-          icon: <AiOutlineShop />,
-        },
-      ],
-    };
-  }
 
-  render() {
+const Categories = [
+  {
+    id: 0,
+    category: "Entertainment",
+    color: "var(--ColorPink)",
+    link: "/category-page",
+    icon: <GiFilmSpool />,
+  },
+  {
+    id: 1,
+    category: "Business Seminar",
+    color: "#9F11E1",
+    link: "/category-page",
+    icon: <MdBusinessCenter />,
+  },
+  {
+    id: 2,
+    category: "Art",
+    color: "#9F11E1",
+    link: "/category-page",
+    icon: <FaDrawPolygon />,
+  },
+  {
+    id: 3,
+    category: "Music",
+    color: "#9F11E1",
+    link: "/category-page",
+    icon: <GiMusicalNotes />,
+  },
+  {
+    id: 4,
+    category: "Life Style",
+    color: "#E99108",
+    link: "/category-page",
+    icon: <GiLifeBuoy />,
+  },
+  {
+    id: 5,
+    category: "Technology",
+    color: "#0817E9",
+    link: "/category-page",
+    icon: <ImConnection />,
+  },
+  {
+    id: 6,
+    category: "Religious",
+    color: "var(--ColorPurple)",
+    link: "/category-page",
+    icon: <BiChurch />,
+  },
+  {
+    id: 7,
+    category: "Sports",
+    color: "#9F11E1",
+    link: "/category-page",
+    icon: <BiBasketball />,
+  },
+  {
+    id: 8,
+    category: "Health Care and Medical",
+    color: "#0817E9",
+    link: "/category-page",
+    icon: <IoIosThermometer />,
+  },
+  {
+    id: 9,
+    category: "Workshop",
+    color: "var(--ColorPink)",
+    link: "/category-page",
+    icon: <AiOutlineShop />,
+  },
+],
+export default function EventByCategory() {
     return (
       <div className="container">
         <div className="sub-container">
@@ -96,7 +90,7 @@ export default class EventByCategory extends React.Component {
             <span>Explore Events</span> by category
           </p>
           <div className="category-cards">
-            {this.state.Categories.map((items) => {
+            {Categories.map((items) => {
               return (
                 <Card
                   Key={items.id}
@@ -112,4 +106,3 @@ export default class EventByCategory extends React.Component {
       </div>
     );
   }
-}
