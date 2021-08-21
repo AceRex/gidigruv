@@ -6,13 +6,13 @@ const token = getStorageData(StorageKeys.tokenkey)
 
 // 
 let baseURL = ''
-if (process.env.NODE_ENV === "production") {
-    baseURL = "http://api.penwebpos.com/v1"
-} else {
-    baseURL = "http://127.0.0.1:8000/v1"
-}
+// if (process.env.NODE_ENV === "production") {
+//     baseURL = "https://www.api.gidigruv.com/"
+// } else {
+//     baseURL = "http://127.0.0.1:8000/v1"
+// }
 const instance = axios.create({
-    baseURL
+    baseURL: "https://www.api.gidigruv.com/"
 }) 
 instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
 instance.defaults.headers.common['Access-Control-Allow-Origin'] = '*'

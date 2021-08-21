@@ -7,12 +7,12 @@ import { Button, message } from 'antd';
 
 
 // Axios credentials 
-let URL = '';
-if (process.env.NODE_ENV === "production") {
-    URL = "https://api.gidigruv.com"
-} else {
-    URL = "http://127.0.0.1:8000/v1"
-}
+let URL = 'https://www.api.gidigruv.com';
+// if (process.env.NODE_ENV === "production") {
+//     URL = "https://api.gidigruv.com"
+// } else {
+//     URL = "http://127.0.0.1:8000/v1"
+// }
 export const BASEURL = URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
 
@@ -332,7 +332,7 @@ function useProvideAuth() {
             })
     }
     const allEvents = () => {
-        axios.get(`${BASEURL}/`)
+        axios.get(`${BASEURL}/all`)
             .then((resp) => {
                 console.log(resp)
             })
