@@ -3,9 +3,12 @@ import { Upload, message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import { getStorageData, saveStorageData, StorageKeys } from '../authentication/AuthData'
 import { BASEURL } from '../authentication/AuthO';
+import axios from '../authentication/axios-config'
 
 
 export default function Demo() {
+
+  const token = JSON.parse(sessionStorage.getItem('gidi-token'))
 
   const { Dragger } = Upload;
   const videoProps = {
@@ -13,7 +16,7 @@ export default function Demo() {
     multiple: false,
     action:   `${BASEURL}/event/uploadMedia`,
     headers: {
-        Authorization: `Bearer ${getStorageData(StorageKeys.tokenkey) }`,
+        Authorization: `Bearer ${token}`,
         'Access-Control-Allow-Origin': '*'
     },
     onChange(info) {

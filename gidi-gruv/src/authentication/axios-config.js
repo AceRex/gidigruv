@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getStorageData, StorageKeys } from './AuthData'
 
 
-const token = getStorageData(StorageKeys.tokenkey)
+const token = JSON.parse(sessionStorage.getItem('gidi-token'))
 
 // 
 let baseURL = ''

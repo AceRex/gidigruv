@@ -14,7 +14,7 @@ let URL = 'https://www.api.gidigruv.com';
 //     URL = "http://127.0.0.1:8000/v1"
 // }
 export const BASEURL = URL;
-axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
+// axios.defaults.headers.common['Authorization'] = 'Bearer ' + getStorageData(StorageKeys.tokenkey)
 
 const authContext = createContext();
 // Provider component that wraps your app and makes auth object available to any child component that calls useAuth().
@@ -78,21 +78,21 @@ function useProvideAuth() {
             .then(
                 (response => {
                     setLoading(false)
-                    message.loading({ content: 'Loading...', key });
+                    // message.loading({ content: 'Loading...', key });
                     saveStorageData('user', response.data.user)
                     setUser(response.data)
                     saveStorageData(StorageKeys.tokenkey, response.data.token)
-                    document.cookie = `${response.data.token}; secure`
+                    // document.cookie = `${response.data.token}; secure`
                 }))
             .catch(
                 (err => {
                     if (err.response) {
-                        if (err.response.status === 401) window.location.href = '/login'
+                        // if (err.response.status === 401) window.location.href = '/signin'
                         setLoading(false)
-                        message.loading({ content: 'Loading...', key });
-                        setTimeout(() => {
-                            message.error({ content: err.response.data, key, duration: 2 });
-                        }, 1000);
+                        // message.loading({ content: 'Loading...', key });
+                        // setTimeout(() => {
+                        //     message.error({ content: err.response.data, key, duration: 2 });
+                        // }, 1000);
                         setTimeout(() =>
                             setLoading(false), 3500)
 
@@ -100,21 +100,20 @@ function useProvideAuth() {
 
                         console.log(err)
                         setLoading(true)
-                        message.loading({ content: 'Loading...', key });
-                        setTimeout(() => {
-                            message.warning({ content: 'Connect to an Internet', key, duration: 2 });
-                        }, 1000);
+                        // message.loading({ content: 'Loading...', key });
+                        // setTimeout(() => {
+                        //     message.warning({ content: 'Connect to an Internet', key, duration: 2 });
+                        // }, 1000);
                         setTimeout(() =>
                             setLoading(false), 3500)
 
                     } else {
-                        history.push("/")
+                        // history.push("/")
                     }
                 })
             )
     };
     const signin = (email, password) => {
-
         return (
             axios.post(`${BASEURL}/login`, { email, password })
                 .then(
@@ -124,8 +123,8 @@ function useProvideAuth() {
                         setTimeout(() => {
                             message.success({ content: 'Login Successful', key, duration: 2 });
                         }, 1000);
-                        saveStorageData('user', response.data.user)
-                        document.cookie = `${response.data.token}; secure`
+                        saveStorageData('user',response.data.user)
+                        saveStorageData(StorageKeys.tokenkey, response.data.token)
                         setTimeout(() =>
                             setUser(response.data.user), 3000)
                         setTimeout(() =>

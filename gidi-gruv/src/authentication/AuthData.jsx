@@ -6,7 +6,7 @@ export const StorageKeys = {
 
 export function getStorageData(key) {
     try {
-        const rawUserData = localStorage.getItem(key);
+        const rawUserData = sessionStorage.getItem(key);
         if (!rawUserData) {
             return null;
         }
@@ -24,7 +24,7 @@ export function saveStorageData(key, value) {
         }
 
         const stringifyValue = JSON.stringify(value);
-        localStorage.setItem(key, stringifyValue);
+        sessionStorage.setItem(key, stringifyValue);
     } catch (e) {
         return null;
     }
