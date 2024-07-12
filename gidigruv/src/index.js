@@ -18,21 +18,21 @@ import CategoryPage from "./categoryPage/categoryPage";
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <Router>
     <Routes>
-      <Route path="/" exact component={App} />
-      {/* <Route path="/about" component={AboutUs} /> */}
-      {/* <Route path="/signin" component={SignIn} /> */}
-      {/* <Route path="/not-available" component={NotAvailable} /> */}
-      {/* <Route path="/create-event" component={CreateEvent} /> */}
-      {/* <Route path="/category-page" component={CategoryPage} /> */}
-      {/* <Route path="/register" component={Register} /> */}
-      {/* <Route path="/showeventdetails" component={SED} /> */}
-      {/* <Route path="/dashboard" component={Dashboard} /> */}
+      <Route path="/" exact element={<App />} />
+      <Route path="/about" element={<AboutUs />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/not-available" element={<NotAvailable />} />
+      <Route path="/create-event" element={<CreateEvent />} />
+      <Route path="/category-page" element={<CategoryPage />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/showeventdetails" element={<SED />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
-  </Router>,
-  document.getElementById("root")
+  </Router>
 );
 
 serviceWorker.unregister();

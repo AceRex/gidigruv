@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./output.css";
 import Header from "./components/header";
 import Carousel from "./carousel/carousel";
 import EventsNearYou from "./EventsNearYou/EventsNearYou";

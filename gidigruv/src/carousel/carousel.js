@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./carousel.css";
 import TextLoop from "react-text-loop";
@@ -11,7 +11,7 @@ function MainCarousel() {
   return (
     <div className="carousel">
       <div className="textSlider">
-        <div className="text-loop">
+        <div className="text-ColorPurple tracking-tight">
           <TextLoop>
             <span>Broadcast your</span>
             <span>Register an</span>
@@ -50,9 +50,9 @@ function MainCarousel() {
           )}{" "}
         </div>
       </div>
-      <div className="slider">
+      {/* <div className="slider">
         <img src={Banner} />
-      </div>
+      </div> */}
     </div>
   );
 }

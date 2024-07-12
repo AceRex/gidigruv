@@ -5,7 +5,7 @@ import { GoSearch } from "react-icons/go";
 import LiveCard from "../LiveNow/Livecard";
 import Footer from "../components/footer";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import {GoPrimitiveDot} from 'react-icons/go'
+// import {GoPrimitiveDot} from 'react-icons/go'
 
 export default class CategoryPage extends Component {
   constructor() {
@@ -217,7 +217,7 @@ export default class CategoryPage extends Component {
           <section className="cat-content">
             <div className="cat-title">
               <h2>Entertainment</h2>
-              <small>Category <GoPrimitiveDot /></small>
+              {/* <small>Category <GoPrimitiveDot /></small> */}
             </div>
               <Tabs className='cat-tab-container'>
                 <TabList className='cat-tab'>

@@ -1,5 +1,5 @@
 .carousel {
-    background-color: var(--ColorPurple);
+    background-color: var(--ColorWhite);
     height: 33rem;
     overflow: hidden;
     display: flex;
@@ -24,7 +24,7 @@
 
 .carousel>.textSlider>.create-button>a:hover {
     background-color: var(--ColorPink);
-    color: var(--ColorWhite);
+    color: var(--ColorPink);
 }
 
 .carousel>.textSlider>.create-button>.search {
